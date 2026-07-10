@@ -1,13 +1,12 @@
 ---
+const ssrnUrl = "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=TU_ID";
 ---
 
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
     <title>Minimal Tolerance</title>
-
     <meta
       name="description"
       content="A theory of minimal tolerance. Exploring the limits of tolerable power, coercion, and political authority."
@@ -15,15 +14,20 @@
   </head>
 
   <body>
+    <header class="site-header">
+      <a href="/" class="logo">Minimal Tolerance</a>
+
+      <nav>
+        <a href="#theorem">Theory</a>
+        <a href="#book">Book</a>
+        <a href={ssrnUrl} target="_blank" rel="noopener noreferrer">Paper</a>
+      </nav>
+    </header>
+
     <main>
-
       <section class="hero">
-
         <div class="hero-content">
-
-          <p class="eyebrow">
-            MINIMAL TOLERANCE
-          </p>
+          <p class="eyebrow">MINIMAL TOLERANCE</p>
 
           <h1>
             A Theory of
@@ -42,7 +46,12 @@
           </div>
 
           <div class="buttons">
-            <a href="#" class="primary">
+            <a
+              href={ssrnUrl}
+              class="primary"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               Read the SSRN Paper
             </a>
 
@@ -50,47 +59,34 @@
               Explore the Theory
             </a>
           </div>
-
         </div>
-
       </section>
 
       <section class="statement">
-
         <blockquote>
           Not every important problem justifies coercion.
         </blockquote>
-
       </section>
 
       <section id="theorem" class="theorem">
-
         <div class="container">
-
-          <h2>
-            The Minimal Tolerance Theorem
-          </h2>
+          <h2>The Minimal Tolerance Theorem</h2>
 
           <p>
-            The State can only be tolerated if all necessary conditions are met simultaneously.
-            If even one condition fails, coercion is prohibited.
+            The State can only be tolerated if all necessary conditions are met
+            simultaneously. If even one condition fails, coercion is prohibited.
           </p>
 
           <img
             src="/images/theorem.png"
             alt="Minimal Tolerance Theorem"
           />
-
         </div>
-
       </section>
 
-      <section class="book">
-
+      <section id="book" class="book">
         <div class="container">
-
           <div class="book-grid">
-
             <div>
               <img
                 src="/images/book-cover.jpg"
@@ -99,238 +95,256 @@
             </div>
 
             <div>
-
-              <h2>
-                Power, Tolerance and Legitimacy
-              </h2>
+              <h2>Power, Tolerance and Legitimacy</h2>
 
               <p>
                 A philosophical and institutional framework for understanding
-                coercion, political authority, and the limits of
-                tolerable power.
+                coercion, political authority, and the limits of tolerable power.
               </p>
-
             </div>
-
           </div>
-
         </div>
-
       </section>
 
       <section class="ssrn">
-
         <div class="container">
-
-          <h2>
-            Read the Original Paper
-          </h2>
+          <h2>Read the Original Paper</h2>
 
           <p>
             Download the complete SSRN publication and explore the theory in detail.
           </p>
 
           <a
-  href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=TU_ID"
-  class="primary"
-  target="_blank"
-  rel="noopener noreferrer"
->
+            href={ssrnUrl}
+            class="primary"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             Download from SSRN
           </a>
-
         </div>
-
       </section>
-
     </main>
+
+    <footer>
+      <p>© 2026 Minimal Tolerance. Created by Federico Rodrigo.</p>
+    </footer>
   </body>
 </html>
 
 <style>
-
-:root{
-  --navy:#0d1b2a;
-  --gold:#a9833a;
-  --paper:#f8f4ed;
+:root {
+  --navy: #0d1b2a;
+  --gold: #a9833a;
+  --paper: #f8f4ed;
+  --cream: #efe7da;
 }
 
-body{
-  margin:0;
-  background:var(--paper);
-  color:var(--navy);
-  font-family:Georgia, serif;
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--navy);
+  font-family: Georgia, serif;
 }
 
-.hero{
-  min-height:90vh;
-  display:flex;
-  align-items:center;
-  padding:0 10vw;
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  padding: 22px 10vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(248, 244, 237, 0.9);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(13, 27, 42, 0.1);
 }
 
-.hero-content{
-  max-width:850px;
+.logo,
+nav a {
+  color: var(--navy);
+  text-decoration: none;
+  font-weight: 700;
 }
 
-.eyebrow{
-  letter-spacing:.25em;
-  color:var(--gold);
-  font-size:.8rem;
-  font-weight:700;
+nav {
+  display: flex;
+  gap: 24px;
 }
 
-h1{
-  font-size:clamp(4rem,8vw,7rem);
-  line-height:.95;
-  margin:0;
+.hero {
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  padding: 0 10vw;
 }
 
-h1 span{
-  display:block;
-  color:var(--gold);
+.hero-content {
+  max-width: 850px;
 }
 
-.lead{
-  font-size:1.5rem;
-  line-height:1.7;
-  max-width:750px;
-  margin:2rem 0;
+.eyebrow {
+  letter-spacing: 0.25em;
+  color: var(--gold);
+  font-size: 0.8rem;
+  font-weight: 700;
 }
 
-.animated-text{
-  height:40px;
-  position:relative;
-  margin-bottom:2rem;
+h1 {
+  font-size: clamp(4rem, 8vw, 7rem);
+  line-height: 0.95;
+  margin: 0;
 }
 
-.animated-text span{
-  position:absolute;
-  opacity:0;
-  color:var(--gold);
-  font-weight:700;
-  animation:rotateText 9s infinite;
+h1 span {
+  display: block;
+  color: var(--gold);
 }
 
-.animated-text span:nth-child(2){
-  animation-delay:3s;
+.lead {
+  font-size: 1.5rem;
+  line-height: 1.7;
+  max-width: 750px;
+  margin: 2rem 0;
 }
 
-.animated-text span:nth-child(3){
-  animation-delay:6s;
+.animated-text {
+  height: 40px;
+  position: relative;
+  margin-bottom: 2rem;
 }
 
-@keyframes rotateText{
-
-  0%{
-    opacity:0;
-    transform:translateY(10px);
-  }
-
-  10%{
-    opacity:1;
-    transform:translateY(0);
-  }
-
-  30%{
-    opacity:1;
-  }
-
-  40%{
-    opacity:0;
-  }
-
-  100%{
-    opacity:0;
-  }
-
+.animated-text span {
+  position: absolute;
+  opacity: 0;
+  color: var(--gold);
+  font-weight: 700;
+  animation: rotateText 9s infinite;
 }
 
-.buttons{
-  display:flex;
-  gap:1rem;
-  flex-wrap:wrap;
+.animated-text span:nth-child(2) {
+  animation-delay: 3s;
+}
+
+.animated-text span:nth-child(3) {
+  animation-delay: 6s;
+}
+
+@keyframes rotateText {
+  0% { opacity: 0; transform: translateY(10px); }
+  10% { opacity: 1; transform: translateY(0); }
+  30% { opacity: 1; }
+  40% { opacity: 0; }
+  100% { opacity: 0; }
+}
+
+.buttons {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
 }
 
 .primary,
-.secondary{
-  text-decoration:none;
-  padding:14px 24px;
-  border-radius:999px;
-  font-weight:700;
+.secondary {
+  text-decoration: none;
+  padding: 14px 24px;
+  border-radius: 999px;
+  font-weight: 700;
+  display: inline-block;
 }
 
-.primary{
-  background:var(--navy);
-  color:white;
+.primary {
+  background: var(--navy);
+  color: white;
 }
 
-.secondary{
-  border:1px solid var(--navy);
-  color:var(--navy);
+.secondary {
+  border: 1px solid var(--navy);
+  color: var(--navy);
 }
 
-.statement{
-  padding:8rem 10vw;
-  text-align:center;
+.statement {
+  padding: 8rem 10vw;
+  text-align: center;
 }
 
-blockquote{
-  font-size:clamp(2rem,5vw,4rem);
-  max-width:900px;
-  margin:auto;
-  line-height:1.1;
+blockquote {
+  font-size: clamp(2rem, 5vw, 4rem);
+  max-width: 900px;
+  margin: auto;
+  line-height: 1.1;
 }
 
-.container{
-  max-width:1200px;
-  margin:auto;
-  padding:0 2rem;
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 2rem;
 }
 
-.theorem{
-  padding:8rem 0;
+.theorem,
+.book {
+  padding: 8rem 0;
 }
 
 .theorem h2,
 .book h2,
-.ssrn h2{
-  font-size:3rem;
+.ssrn h2 {
+  font-size: 3rem;
 }
 
-.theorem img{
-  width:100%;
-  margin-top:2rem;
-  border-radius:12px;
+.theorem p,
+.book p,
+.ssrn p {
+  font-size: 1.2rem;
+  line-height: 1.7;
 }
 
-.book{
-  padding:8rem 0;
+.theorem img {
+  width: 100%;
+  margin-top: 2rem;
+  border-radius: 12px;
+  border: 1px solid rgba(13, 27, 42, 0.12);
 }
 
-.book-grid{
-  display:grid;
-  grid-template-columns:400px 1fr;
-  gap:4rem;
-  align-items:center;
+.book-grid {
+  display: grid;
+  grid-template-columns: 400px 1fr;
+  gap: 4rem;
+  align-items: center;
 }
 
-.book-grid img{
-  width:100%;
+.book-grid img {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 24px 80px rgba(13, 27, 42, 0.25);
 }
 
-.ssrn{
-  padding:8rem 0;
-  text-align:center;
-  background:#efe7da;
+.ssrn {
+  padding: 8rem 0;
+  text-align: center;
+  background: var(--cream);
 }
 
-@media(max-width:900px){
+footer {
+  padding: 32px 10vw;
+  border-top: 1px solid rgba(13, 27, 42, 0.1);
+  font-size: 0.95rem;
+}
 
-  .book-grid{
-    grid-template-columns:1fr;
+@media (max-width: 900px) {
+  .site-header {
+    align-items: flex-start;
+    gap: 16px;
+    flex-direction: column;
   }
 
-}
+  nav {
+    gap: 16px;
+    flex-wrap: wrap;
+  }
 
+  .book-grid {
+    grid-template-columns: 1fr;
+  }
+}
 </style>
