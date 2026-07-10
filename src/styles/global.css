@@ -4,6 +4,7 @@
   --gold: #a9833a;
   --paper: #f8f4ed;
   --cream: #efe7da;
+  --paper-light: #fbf8f2;
   --line: rgba(13, 27, 42, 0.12);
 }
 
@@ -25,9 +26,9 @@ body {
 }
 
 img {
+  display: block;
   max-width: 100%;
   height: auto;
-  display: block;
 }
 
 a {
@@ -38,7 +39,7 @@ a {
   position: sticky;
   top: 0;
   z-index: 20;
-  height: 68px;
+  min-height: 68px;
   padding: 0 7vw;
   display: flex;
   align-items: center;
@@ -56,13 +57,17 @@ a {
 
 nav {
   display: flex;
-  gap: 26px;
+  gap: 24px;
 }
 
 nav a {
   text-decoration: none;
-  font-size: 0.95rem;
+  font-size: 0.92rem;
   font-weight: 700;
+}
+
+nav a:hover {
+  color: var(--gold);
 }
 
 main {
@@ -70,28 +75,28 @@ main {
 }
 
 .container {
+  width: 100%;
   max-width: 1120px;
   margin: 0 auto;
   padding: 0 5vw;
 }
 
 .hero {
-  min-height: auto;
   display: flex;
   align-items: center;
-  padding: 52px 7vw 58px;
+  padding: 58px 7vw 64px;
 }
 
 .hero-content {
-  max-width: 880px;
+  max-width: 940px;
 }
 
 .eyebrow {
-  margin: 0 0 20px;
-  letter-spacing: 0.18em;
+  margin: 0 0 18px;
   color: var(--gold);
   font-size: 0.76rem;
   font-weight: 700;
+  letter-spacing: 0.18em;
   text-transform: uppercase;
 }
 
@@ -102,6 +107,7 @@ p,
 blockquote {
   margin-top: 0;
 }
+
 h1 {
   max-width: 980px;
   margin-bottom: 28px;
@@ -117,29 +123,37 @@ h1 span {
   font-size: 0.46em;
   line-height: 1.15;
   letter-spacing: -0.015em;
-  white-space: normal;
 }
 
-
-
 h2 {
-  margin-bottom: 16px;
+  max-width: 900px;
+  margin-bottom: 18px;
   font-size: clamp(2rem, 3.6vw, 3rem);
-  line-height: 1.05;
+  line-height: 1.07;
   letter-spacing: -0.03em;
 }
 
-.lead {
-  max-width: 760px;
+h3 {
+  margin-bottom: 10px;
+  font-size: 1.25rem;
+  line-height: 1.25;
+}
+
+p {
   margin-bottom: 18px;
-  font-size: clamp(1.2rem, 1.8vw, 1.45rem);
+}
+
+.lead {
+  max-width: 780px;
+  margin-bottom: 20px;
+  font-size: clamp(1.25rem, 1.9vw, 1.55rem);
   line-height: 1.5;
 }
 
 .animated-text {
-  height: 32px;
   position: relative;
-  margin-bottom: 24px;
+  height: 34px;
+  margin-bottom: 28px;
   color: var(--gold);
   font-weight: 700;
 }
@@ -196,8 +210,12 @@ h2 {
   padding: 12px 22px;
   border-radius: 999px;
   text-decoration: none;
-  font-weight: 700;
   font-size: 0.95rem;
+  font-weight: 700;
+  transition:
+    background 160ms ease,
+    color 160ms ease,
+    transform 160ms ease;
 }
 
 .primary {
@@ -207,6 +225,7 @@ h2 {
 
 .primary:hover {
   background: var(--navy-soft);
+  transform: translateY(-1px);
 }
 
 .secondary {
@@ -214,27 +233,47 @@ h2 {
   border: 1px solid var(--navy);
 }
 
+.secondary:hover {
+  background: var(--navy);
+  color: white;
+  transform: translateY(-1px);
+}
+
 .statement {
-  padding: 48px 7vw;
+  padding: 54px 7vw;
   text-align: center;
   border-top: 1px solid var(--line);
   border-bottom: 1px solid var(--line);
 }
 
 blockquote {
-  max-width: 860px;
+  max-width: 920px;
   margin: 0 auto;
-  font-size: clamp(2rem, 4vw, 3.5rem);
-  line-height: 1.08;
-  letter-spacing: -0.04em;
+  font-size: clamp(1.9rem, 3.7vw, 3.3rem);
+  line-height: 1.12;
+  letter-spacing: -0.035em;
 }
 
-.theorem,
-.book {
-  padding: 56px 0;
+.content-section {
+  padding: 64px 0;
+}
+
+.content-section-alt {
+  background: var(--cream);
+}
+
+.content-section .container {
+  max-width: 900px;
+}
+
+.content-section p {
+  max-width: 820px;
+  font-size: 1.08rem;
+  line-height: 1.7;
 }
 
 .theorem {
+  padding: 68px 0;
   background: var(--paper);
 }
 
@@ -242,30 +281,52 @@ blockquote {
   max-width: 1180px;
 }
 
-.theorem h2,
-.theorem p {
+.theorem > .container > .eyebrow,
+.theorem > .container > h2,
+.theorem > .container > p {
   text-align: center;
 }
 
-.theorem p,
-.book p,
-.ssrn p {
+.theorem > .container > p {
   max-width: 760px;
-  font-size: 1.1rem;
-  line-height: 1.65;
-}
-
-.theorem p {
   margin-left: auto;
   margin-right: auto;
+}
+
+.theorem-conditions {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+  margin: 38px 0 32px;
+}
+
+.theorem-conditions article {
+  min-height: 230px;
+  padding: 28px;
+  background: var(--paper-light);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+}
+
+.theorem-conditions article > span {
+  display: inline-block;
+  margin-bottom: 18px;
+  color: var(--gold);
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+}
+
+.theorem-conditions article p {
   margin-bottom: 0;
+  font-size: 1rem;
+  line-height: 1.6;
 }
 
 .theorem img {
   width: 100%;
   max-width: 920px;
-  margin: 26px auto 0;
-  display: block;
+  margin: 30px auto 0;
   border: 0;
   border-radius: 0;
   box-shadow: none;
@@ -273,13 +334,14 @@ blockquote {
 }
 
 .book {
-  background: #fbf8f2;
+  padding: 68px 0;
+  background: var(--paper-light);
 }
 
 .book-grid {
   display: grid;
   grid-template-columns: minmax(240px, 320px) 1fr;
-  gap: 48px;
+  gap: 52px;
   align-items: center;
 }
 
@@ -289,19 +351,40 @@ blockquote {
   box-shadow: 0 20px 56px rgba(13, 27, 42, 0.22);
 }
 
+.book-grid p {
+  max-width: 720px;
+  font-size: 1.08rem;
+  line-height: 1.7;
+}
+
 .ssrn {
-  padding: 56px 0;
+  padding: 64px 0;
   text-align: center;
   background: var(--cream);
 }
 
 .ssrn p {
+  max-width: 760px;
   margin-left: auto;
   margin-right: auto;
+  font-size: 1.08rem;
+  line-height: 1.7;
+}
+
+.author {
+  background: var(--paper);
+}
+
+.author .container {
+  max-width: 820px;
 }
 
 footer {
   padding: 24px 7vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
   border-top: 1px solid var(--line);
   font-size: 0.9rem;
 }
@@ -310,9 +393,16 @@ footer p {
   margin: 0;
 }
 
+footer nav {
+  gap: 18px;
+}
+
+footer nav a {
+  font-size: 0.88rem;
+}
+
 @media (max-width: 900px) {
   .site-header {
-    height: auto;
     min-height: 68px;
     padding: 16px 6vw;
     align-items: flex-start;
@@ -326,26 +416,82 @@ footer p {
   }
 
   .hero {
-    padding: 48px 6vw 52px;
+    padding: 48px 6vw 54px;
+  }
+
+  h1 {
+    font-size: clamp(3rem, 13vw, 5rem);
+  }
+
+  .animated-text {
+    height: 54px;
   }
 
   .statement {
-    padding: 42px 6vw;
+    padding: 44px 6vw;
   }
 
+  .content-section,
   .theorem,
   .book,
   .ssrn {
-    padding: 48px 0;
+    padding: 52px 0;
+  }
+
+  .theorem-conditions {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .theorem-conditions article {
+    min-height: auto;
   }
 
   .theorem img {
     max-width: 100%;
-    margin-top: 22px;
+    margin-top: 24px;
   }
 
   .book-grid {
     grid-template-columns: 1fr;
-    gap: 28px;
+    gap: 32px;
+  }
+
+  .book-grid > div:first-child {
+    max-width: 320px;
+  }
+
+  footer {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 560px) {
+  body {
+    font-size: 17px;
+  }
+
+  .site-header {
+    position: static;
+  }
+
+  .hero {
+    padding-top: 40px;
+  }
+
+  .buttons {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .primary,
+  .secondary {
+    width: 100%;
+    text-align: center;
+  }
+
+  blockquote {
+    font-size: 1.9rem;
   }
 }
