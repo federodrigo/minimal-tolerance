@@ -38,12 +38,12 @@ a {
   position: sticky;
   top: 0;
   z-index: 20;
-  height: 72px;
-  padding: 0 8vw;
+  height: 68px;
+  padding: 0 7vw;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: rgba(248, 244, 237, 0.92);
+  background: rgba(248, 244, 237, 0.94);
   backdrop-filter: blur(10px);
   border-bottom: 1px solid var(--line);
 }
@@ -56,7 +56,7 @@ a {
 
 nav {
   display: flex;
-  gap: 28px;
+  gap: 26px;
 }
 
 nav a {
@@ -72,14 +72,14 @@ main {
 .container {
   max-width: 1120px;
   margin: 0 auto;
-  padding: 0 6vw;
+  padding: 0 5vw;
 }
 
 .hero {
   min-height: auto;
   display: flex;
   align-items: center;
-  padding: 64px 8vw 72px;
+  padding: 52px 7vw 58px;
 }
 
 .hero-content {
@@ -87,7 +87,7 @@ main {
 }
 
 .eyebrow {
-  margin: 0 0 18px;
+  margin: 0 0 14px;
   letter-spacing: 0.24em;
   color: var(--gold);
   font-size: 0.78rem;
@@ -105,9 +105,9 @@ blockquote {
 
 h1 {
   max-width: 900px;
-  margin-bottom: 24px;
-  font-size: clamp(3.4rem, 7vw, 6.8rem);
-  line-height: 0.95;
+  margin-bottom: 20px;
+  font-size: clamp(3.2rem, 6.7vw, 6.3rem);
+  line-height: 0.94;
   letter-spacing: -0.05em;
 }
 
@@ -117,23 +117,23 @@ h1 span {
 }
 
 h2 {
-  margin-bottom: 18px;
-  font-size: clamp(2rem, 4vw, 3.2rem);
+  margin-bottom: 16px;
+  font-size: clamp(2rem, 3.6vw, 3rem);
   line-height: 1.05;
   letter-spacing: -0.03em;
 }
 
 .lead {
   max-width: 760px;
-  margin-bottom: 22px;
-  font-size: clamp(1.25rem, 2vw, 1.55rem);
-  line-height: 1.55;
+  margin-bottom: 18px;
+  font-size: clamp(1.2rem, 1.8vw, 1.45rem);
+  line-height: 1.5;
 }
 
 .animated-text {
-  height: 34px;
+  height: 32px;
   position: relative;
-  margin-bottom: 28px;
+  margin-bottom: 24px;
   color: var(--gold);
   font-weight: 700;
 }
@@ -153,11 +153,29 @@ h2 {
 }
 
 @keyframes rotateText {
-  0% { opacity: 0; transform: translateY(8px); }
-  10% { opacity: 1; transform: translateY(0); }
-  30% { opacity: 1; transform: translateY(0); }
-  40% { opacity: 0; transform: translateY(-8px); }
-  100% { opacity: 0; }
+  0% {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+
+  10% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  30% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  40% {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+
+  100% {
+    opacity: 0;
+  }
 }
 
 .buttons {
@@ -191,38 +209,61 @@ h2 {
 }
 
 .statement {
-  padding: 64px 8vw;
+  padding: 48px 7vw;
   text-align: center;
   border-top: 1px solid var(--line);
   border-bottom: 1px solid var(--line);
 }
 
 blockquote {
-  max-width: 900px;
+  max-width: 860px;
   margin: 0 auto;
-  font-size: clamp(2rem, 4.5vw, 4rem);
+  font-size: clamp(2rem, 4vw, 3.5rem);
   line-height: 1.08;
   letter-spacing: -0.04em;
 }
 
 .theorem,
 .book {
-  padding: 72px 0;
+  padding: 56px 0;
+}
+
+.theorem {
+  background: var(--paper);
+}
+
+.theorem .container {
+  max-width: 1180px;
+}
+
+.theorem h2,
+.theorem p {
+  text-align: center;
 }
 
 .theorem p,
 .book p,
 .ssrn p {
   max-width: 760px;
-  font-size: 1.15rem;
+  font-size: 1.1rem;
+  line-height: 1.65;
+}
+
+.theorem p {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 0;
 }
 
 .theorem img {
   width: 100%;
-  margin-top: 28px;
-  border-radius: 14px;
-  border: 1px solid var(--line);
-  box-shadow: 0 20px 60px rgba(13, 27, 42, 0.12);
+  max-width: 920px;
+  margin: 26px auto 0;
+  display: block;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  mix-blend-mode: multiply;
 }
 
 .book {
@@ -231,19 +272,19 @@ blockquote {
 
 .book-grid {
   display: grid;
-  grid-template-columns: minmax(260px, 360px) 1fr;
-  gap: 56px;
+  grid-template-columns: minmax(240px, 320px) 1fr;
+  gap: 48px;
   align-items: center;
 }
 
 .book-grid img {
   width: 100%;
-  border-radius: 10px;
-  box-shadow: 0 24px 70px rgba(13, 27, 42, 0.25);
+  border-radius: 8px;
+  box-shadow: 0 20px 56px rgba(13, 27, 42, 0.22);
 }
 
 .ssrn {
-  padding: 72px 0;
+  padding: 56px 0;
   text-align: center;
   background: var(--cream);
 }
@@ -254,7 +295,7 @@ blockquote {
 }
 
 footer {
-  padding: 28px 8vw;
+  padding: 24px 7vw;
   border-top: 1px solid var(--line);
   font-size: 0.9rem;
 }
@@ -266,35 +307,39 @@ footer p {
 @media (max-width: 900px) {
   .site-header {
     height: auto;
-    min-height: 72px;
-    padding: 18px 6vw;
+    min-height: 68px;
+    padding: 16px 6vw;
     align-items: flex-start;
     flex-direction: column;
-    gap: 12px;
+    gap: 10px;
   }
 
   nav {
-    gap: 16px;
+    gap: 14px;
     flex-wrap: wrap;
   }
 
   .hero {
-    min-height: auto;
-    padding: 64px 6vw;
+    padding: 48px 6vw 52px;
   }
 
   .statement {
-    padding: 48px 6vw;
+    padding: 42px 6vw;
   }
 
   .theorem,
   .book,
   .ssrn {
-    padding: 56px 0;
+    padding: 48px 0;
+  }
+
+  .theorem img {
+    max-width: 100%;
+    margin-top: 22px;
   }
 
   .book-grid {
     grid-template-columns: 1fr;
-    gap: 32px;
+    gap: 28px;
   }
 }
