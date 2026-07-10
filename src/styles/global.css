@@ -87,10 +87,10 @@ main {
 }
 
 .eyebrow {
-  margin: 0 0 14px;
-  letter-spacing: 0.24em;
+  margin: 0 0 20px;
+  letter-spacing: 0.18em;
   color: var(--gold);
-  font-size: 0.78rem;
+  font-size: 0.76rem;
   font-weight: 700;
   text-transform: uppercase;
 }
@@ -102,19 +102,22 @@ p,
 blockquote {
   margin-top: 0;
 }
-
 h1 {
-  max-width: 900px;
-  margin-bottom: 20px;
-  font-size: clamp(3.2rem, 6.7vw, 6.3rem);
-  line-height: 0.94;
-  letter-spacing: -0.05em;
+  max-width: 980px;
+  margin-bottom: 28px;
+  font-size: clamp(3rem, 6vw, 5.8rem);
+  line-height: 1.02;
+  letter-spacing: -0.035em;
 }
 
 h1 span {
   display: block;
   color: var(--gold);
+  white-space: nowrap;
+  margin-top: 8px;
 }
+
+
 
 h2 {
   margin-bottom: 16px;
