@@ -1,9 +1,331 @@
-<h1>Minimal Tolerance</h1>
+---
+---
 
-<p>
-A Theory of Tolerance and Power
-</p>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<p>
-Coming Soon to yout Galaxy
-</p>
+    <title>Minimal Tolerance</title>
+
+    <meta
+      name="description"
+      content="A theory of minimal tolerance. Exploring the limits of tolerable power, coercion, and political authority."
+    />
+  </head>
+
+  <body>
+    <main>
+
+      <section class="hero">
+
+        <div class="hero-content">
+
+          <p class="eyebrow">
+            MINIMAL TOLERANCE
+          </p>
+
+          <h1>
+            A Theory of
+            <span>Minimal Tolerance</span>
+          </h1>
+
+          <p class="lead">
+            The question is not whether power is legitimate.
+            The question is how much power can be tolerated.
+          </p>
+
+          <div class="animated-text">
+            <span>Power is not legitimized.</span>
+            <span>Power is tolerated.</span>
+            <span>Only under exceptional conditions.</span>
+          </div>
+
+          <div class="buttons">
+            <a href="#" class="primary">
+              Read the SSRN Paper
+            </a>
+
+            <a href="#theorem" class="secondary">
+              Explore the Theory
+            </a>
+          </div>
+
+        </div>
+
+      </section>
+
+      <section class="statement">
+
+        <blockquote>
+          Not every important problem justifies coercion.
+        </blockquote>
+
+      </section>
+
+      <section id="theorem" class="theorem">
+
+        <div class="container">
+
+          <h2>
+            The Minimal Tolerance Theorem
+          </h2>
+
+          <p>
+            The State can only be tolerated if all necessary conditions are met simultaneously.
+            If even one condition fails, coercion is prohibited.
+          </p>
+
+          <img
+            src="/images/theorem.png"
+            alt="Minimal Tolerance Theorem"
+          />
+
+        </div>
+
+      </section>
+
+      <section class="book">
+
+        <div class="container">
+
+          <div class="book-grid">
+
+            <div>
+              <img
+                src="/images/book-cover.jpg"
+                alt="Power, Tolerance and Legitimacy"
+              />
+            </div>
+
+            <div>
+
+              <h2>
+                Power, Tolerance and Legitimacy
+              </h2>
+
+              <p>
+                A philosophical and institutional framework for understanding
+                coercion, political authority, public goods, and the limits of
+                tolerable power.
+              </p>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </section>
+
+      <section class="ssrn">
+
+        <div class="container">
+
+          <h2>
+            Read the Original Paper
+          </h2>
+
+          <p>
+            Download the complete SSRN publication and explore the theory in detail.
+          </p>
+
+          <a href="#" class="primary">
+            Download from SSRN
+          </a>
+
+        </div>
+
+      </section>
+
+    </main>
+  </body>
+</html>
+
+<style>
+
+:root{
+  --navy:#0d1b2a;
+  --gold:#a9833a;
+  --paper:#f8f4ed;
+}
+
+body{
+  margin:0;
+  background:var(--paper);
+  color:var(--navy);
+  font-family:Georgia, serif;
+}
+
+.hero{
+  min-height:90vh;
+  display:flex;
+  align-items:center;
+  padding:0 10vw;
+}
+
+.hero-content{
+  max-width:850px;
+}
+
+.eyebrow{
+  letter-spacing:.25em;
+  color:var(--gold);
+  font-size:.8rem;
+  font-weight:700;
+}
+
+h1{
+  font-size:clamp(4rem,8vw,7rem);
+  line-height:.95;
+  margin:0;
+}
+
+h1 span{
+  display:block;
+  color:var(--gold);
+}
+
+.lead{
+  font-size:1.5rem;
+  line-height:1.7;
+  max-width:750px;
+  margin:2rem 0;
+}
+
+.animated-text{
+  height:40px;
+  position:relative;
+  margin-bottom:2rem;
+}
+
+.animated-text span{
+  position:absolute;
+  opacity:0;
+  color:var(--gold);
+  font-weight:700;
+  animation:rotateText 9s infinite;
+}
+
+.animated-text span:nth-child(2){
+  animation-delay:3s;
+}
+
+.animated-text span:nth-child(3){
+  animation-delay:6s;
+}
+
+@keyframes rotateText{
+
+  0%{
+    opacity:0;
+    transform:translateY(10px);
+  }
+
+  10%{
+    opacity:1;
+    transform:translateY(0);
+  }
+
+  30%{
+    opacity:1;
+  }
+
+  40%{
+    opacity:0;
+  }
+
+  100%{
+    opacity:0;
+  }
+
+}
+
+.buttons{
+  display:flex;
+  gap:1rem;
+  flex-wrap:wrap;
+}
+
+.primary,
+.secondary{
+  text-decoration:none;
+  padding:14px 24px;
+  border-radius:999px;
+  font-weight:700;
+}
+
+.primary{
+  background:var(--navy);
+  color:white;
+}
+
+.secondary{
+  border:1px solid var(--navy);
+  color:var(--navy);
+}
+
+.statement{
+  padding:8rem 10vw;
+  text-align:center;
+}
+
+blockquote{
+  font-size:clamp(2rem,5vw,4rem);
+  max-width:900px;
+  margin:auto;
+  line-height:1.1;
+}
+
+.container{
+  max-width:1200px;
+  margin:auto;
+  padding:0 2rem;
+}
+
+.theorem{
+  padding:8rem 0;
+}
+
+.theorem h2,
+.book h2,
+.ssrn h2{
+  font-size:3rem;
+}
+
+.theorem img{
+  width:100%;
+  margin-top:2rem;
+  border-radius:12px;
+}
+
+.book{
+  padding:8rem 0;
+}
+
+.book-grid{
+  display:grid;
+  grid-template-columns:400px 1fr;
+  gap:4rem;
+  align-items:center;
+}
+
+.book-grid img{
+  width:100%;
+}
+
+.ssrn{
+  padding:8rem 0;
+  text-align:center;
+  background:#efe7da;
+}
+
+@media(max-width:900px){
+
+  .book-grid{
+    grid-template-columns:1fr;
+  }
+
+}
+
+</style>
