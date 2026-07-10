@@ -105,16 +105,19 @@ blockquote {
 h1 {
   max-width: 980px;
   margin-bottom: 28px;
-  font-size: clamp(3rem, 6vw, 5.8rem);
-  line-height: 1.02;
-  letter-spacing: -0.035em;
+  font-size: clamp(3.4rem, 6.5vw, 6.2rem);
+  line-height: 0.98;
+  letter-spacing: -0.04em;
 }
 
 h1 span {
   display: block;
+  margin-top: 14px;
   color: var(--gold);
-  white-space: nowrap;
-  margin-top: 8px;
+  font-size: 0.46em;
+  line-height: 1.15;
+  letter-spacing: -0.015em;
+  white-space: normal;
 }
 
 
