@@ -30,25 +30,21 @@ const ssrnUrl =
         Minimal Tolerance
       </a>
 
-      <nav aria-label="Main navigation">
+      <nav>
         <a href="#theorem">Theory</a>
         <a href="#book">Book</a>
-
-        <a
-          href={ssrnUrl}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Paper
-        </a>
+        <a href="#paper">Paper</a>
       </nav>
     </header>
 
     <main>
+
       <section class="hero">
+
         <div class="hero-content">
+
           <p class="eyebrow">
-            Minimal Tolerance
+            MINIMAL TOLERANCE
           </p>
 
           <h1>
@@ -61,10 +57,7 @@ const ssrnUrl =
             The question is how much power can be tolerated.
           </p>
 
-          <div
-            class="animated-text"
-            aria-label="Power is not legitimized. Power is tolerated only under exceptional conditions."
-          >
+          <div class="animated-text">
             <span>Power is not legitimized.</span>
             <span>Power is tolerated.</span>
             <span>Only under exceptional conditions.</span>
@@ -84,47 +77,59 @@ const ssrnUrl =
               Explore the Theory
             </a>
           </div>
+
         </div>
+
       </section>
 
       <section class="statement">
+
         <blockquote>
           Not every important problem justifies coercion.
         </blockquote>
+
       </section>
 
       <section id="theorem" class="theorem">
+
         <div class="container">
-          <h2>The Minimal Tolerance Theorem</h2>
+
+          <h2>
+            The Minimal Tolerance Theorem
+          </h2>
 
           <p>
-            The State can only be tolerated if all necessary conditions
-            are met simultaneously. If even one condition fails,
-            coercion is prohibited.
+            The State can only be tolerated when a strict set of
+            conditions is simultaneously satisfied. If even one
+            condition fails, coercion is prohibited.
           </p>
 
           <img
             src="/images/theorem.png"
-            alt="Diagram explaining the conditions of the Minimal Tolerance Theorem"
-            loading="lazy"
+            alt="Minimal Tolerance Theorem"
           />
+
         </div>
+
       </section>
 
       <section id="book" class="book">
+
         <div class="container">
+
           <div class="book-grid">
-            <div class="book-cover">
+
+            <div>
               <img
                 src="/images/book-cover.jpg"
-                alt="Cover of Power, Tolerance and Legitimacy by Federico Rodrigo"
-                loading="lazy"
+                alt="Power, Tolerance and Legitimacy"
               />
             </div>
 
-            <div class="book-content">
+            <div>
+
               <p class="eyebrow">
-                The Book
+                THE BOOK
               </p>
 
               <h2>
@@ -133,34 +138,34 @@ const ssrnUrl =
 
               <p>
                 A philosophical and institutional framework for
-                understanding coercion, political authority, and the
-                limits of tolerable power.
+                understanding coercion, political authority,
+                public goods, free riders, and the limits of
+                tolerable power.
               </p>
 
-              <a
-                href={ssrnUrl}
-                class="secondary"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Read the Foundational Paper
-              </a>
             </div>
+
           </div>
+
         </div>
+
       </section>
 
-      <section class="ssrn">
+      <section id="paper" class="ssrn">
+
         <div class="container">
+
           <p class="eyebrow">
-            Original Research
+            ORIGINAL RESEARCH
           </p>
 
-          <h2>Read the Original Paper</h2>
+          <h2>
+            Read the Original Paper
+          </h2>
 
           <p>
             Explore the complete formulation of the theory,
-            its conditions, and its implications.
+            its assumptions, its conditions, and its implications.
           </p>
 
           <a
@@ -169,16 +174,22 @@ const ssrnUrl =
             target="_blank"
             rel="noopener noreferrer"
           >
-            Read on SSRN
+            Open on SSRN
           </a>
+
         </div>
+
       </section>
+
     </main>
 
     <footer>
+
       <p>
         © 2026 Minimal Tolerance · Federico Rodrigo
       </p>
+
     </footer>
+
   </body>
 </html>
