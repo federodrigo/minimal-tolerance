@@ -76,10 +76,10 @@ main {
 }
 
 .hero {
-  min-height: calc(78vh - 72px);
+  min-height: auto;
   display: flex;
   align-items: center;
-  padding: 56px 8vw;
+  padding: 64px 8vw 72px;
 }
 
 .hero-content {
@@ -191,7 +191,7 @@ h2 {
 }
 
 .statement {
-  padding: 56px 8vw;
+  padding: 64px 8vw;
   text-align: center;
   border-top: 1px solid var(--line);
   border-bottom: 1px solid var(--line);
