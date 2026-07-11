@@ -511,18 +511,50 @@ blockquote {
   gap: 18px 32px;
 }
 
-.theorem-summary span {
-  color: var(--navy);
-  font-size: 1.1rem;
-  font-weight: 700;
-  line-height: 1.4;
+.theorem-summary {
+  max-width: 960px;
+  margin: 34px auto 30px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
 }
 
-.theorem-summary span::before {
-  content: "•";
-  color: var(--gold);
-  margin-right: 10px;
+.theorem-summary-card {
+  min-height: 150px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: var(--paper-light);
+  border: 1px solid var(--line);
+  border-radius: 14px;
 }
+
+.theorem-summary-card span {
+  color: var(--gold);
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+}
+
+.theorem-summary-card h3 {
+  max-width: 240px;
+  margin: 24px 0 0;
+  color: var(--navy);
+  font-size: 1.2rem;
+  line-height: 1.25;
+}
+
+@media (max-width: 900px) {
+  .theorem-summary {
+    grid-template-columns: 1fr;
+  }
+
+  .theorem-summary-card {
+    min-height: auto;
+  }
+}
+
 
 
 /* BOOK */
