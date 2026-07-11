@@ -1,0 +1,162 @@
+---
+import "../styles/global.css";
+
+const ssrnUrl =
+  "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5984574";
+---
+
+<!doctype html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+
+    <title>
+      Federico Rodrigo
+    </title>
+
+    <meta
+      name="description"
+      content="Federico Rodrigo, author of the Theory of Minimal Tolerance."
+    />
+  </head>
+
+  <body>
+
+    <header class="site-header">
+
+      <a href="/" class="logo">
+        Minimal Tolerance
+      </a>
+
+      <nav aria-label="Main navigation">
+        <a href="/">Home</a>
+        <a href="/theory">Theory</a>
+        <a href="/theorem">Theorem</a>
+        <a href="/book">Book</a>
+        <a href="/author" class="active">Author</a>
+        <a
+          href={ssrnUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Paper
+        </a>
+      </nav>
+
+    </header>
+
+    <main>
+
+      <section class="page-hero">
+
+        <div class="container">
+
+          <p class="eyebrow">
+            THE AUTHOR
+          </p>
+
+          <h1>
+            Federico Rodrigo
+          </h1>
+
+          <p class="lead">
+            Author of the Theory of Minimal Tolerance
+            and the forthcoming book
+            Power, Tolerance and Legitimacy.
+          </p>
+
+        </div>
+
+      </section>
+
+      <section class="content-section">
+
+        <div class="container">
+
+          <h2>
+            About
+          </h2>
+
+          <p>
+            Federico Rodrigo is an independent author,
+            technology executive and researcher whose work
+            focuses on coercion, political authority,
+            institutional incentives and the limits of
+            state power.
+          </p>
+
+          <p>
+            His research combines moral philosophy,
+            political economy and institutional analysis,
+            with particular attention to public goods,
+            free-rider problems and the burden of proof
+            associated with coercive intervention.
+          </p>
+
+          <p>
+            He is the author of the Theory of Minimal
+            Tolerance and of the book
+            Power, Tolerance and Legitimacy.
+          </p>
+
+        </div>
+
+      </section>
+
+      <section class="statement">
+
+        <blockquote>
+          The burden of proof belongs to power.
+        </blockquote>
+
+      </section>
+
+      <section class="ssrn">
+
+        <div class="container">
+
+          <p class="eyebrow">
+            RESEARCH
+          </p>
+
+          <h2>
+            Read the Paper
+          </h2>
+
+          <p>
+            The formal presentation of the theory is
+            available through SSRN.
+          </p>
+
+          <a
+            href={ssrnUrl}
+            class="primary"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Open on SSRN
+          </a>
+
+        </div>
+
+      </section>
+
+    </main>
+
+    <footer>
+
+      <p>
+        © 2026 Minimal Tolerance · Federico Rodrigo
+      </p>
+
+    </footer>
+
+  </body>
+
+</html>
