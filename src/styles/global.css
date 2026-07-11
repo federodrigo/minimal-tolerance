@@ -147,11 +147,9 @@ p {
 /* HOME HERO */
 
 .hero {
-  min-height: calc(100vh - 68px);
-  padding: 48px 7vw 56px;
   display: flex;
   align-items: center;
-  overflow: visible;
+  padding: 40px 7vw;
 }
 
 .hero-content {
