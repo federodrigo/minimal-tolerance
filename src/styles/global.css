@@ -141,23 +141,40 @@ p {
   font-size: 0.76rem;
   font-weight: 700;
   letter-spacing: 0.18em;
+  line-height: 1.4;
   text-transform: uppercase;
 }
 
 /* HOME HERO */
 
 .hero {
+  min-height: calc(100vh - 68px);
+  padding: 56px 7vw 64px;
   display: flex;
   align-items: center;
-  padding: 40px 7vw;
+  overflow: visible;
 }
 
 .hero-content {
   width: 100%;
-  max-width: 940px;
+  max-width: 1040px;
 }
 
-.lead {
+/*
+  El título principal tiene reglas propias para no afectar
+  los títulos de las páginas internas.
+*/
+
+.hero h1 {
+  max-width: 940px;
+  margin-bottom: 24px;
+  font-size: clamp(4rem, 7vw, 5.6rem);
+  line-height: 0.96;
+  letter-spacing: -0.045em;
+  text-wrap: balance;
+}
+
+.hero .lead {
   max-width: 780px;
   margin-bottom: 20px;
   font-size: clamp(1.25rem, 1.9vw, 1.55rem);
@@ -166,15 +183,20 @@ p {
 
 .animated-text {
   position: relative;
-  min-height: 34px;
+  min-height: 42px;
   margin-bottom: 28px;
+  overflow: visible;
   color: var(--gold);
   font-weight: 700;
+  line-height: 1.45;
 }
 
 .animated-text span {
   position: absolute;
+  top: 0;
   left: 0;
+  display: block;
+  width: 100%;
   opacity: 0;
   animation: rotateText 9s infinite;
 }
@@ -210,6 +232,7 @@ p {
 
   100% {
     opacity: 0;
+    transform: translateY(-8px);
   }
 }
 
@@ -509,15 +532,18 @@ footer nav a {
   }
 
   .hero {
-    padding: 42px 6vw 48px;
+    min-height: auto;
+    padding: 48px 6vw 54px;
+  }
+
+  .hero h1 {
+    max-width: 780px;
+    font-size: clamp(3.7rem, 9vw, 5rem);
+    line-height: 0.97;
   }
 
   .page-hero {
     padding: 32px 6vw 34px;
-  }
-
-  h1 {
-    font-size: clamp(3rem, 13vw, 5rem);
   }
 
   .page-hero h1 {
@@ -525,7 +551,7 @@ footer nav a {
   }
 
   .animated-text {
-    min-height: 54px;
+    min-height: 48px;
   }
 
   .statement {
@@ -593,7 +619,25 @@ footer nav a {
   }
 
   .hero {
-    padding-top: 36px;
+    padding: 36px 6vw 44px;
+  }
+
+  .hero h1 {
+    margin-bottom: 22px;
+    font-size: clamp(3rem, 13vw, 4rem);
+    line-height: 0.98;
+    letter-spacing: -0.035em;
+  }
+
+  .hero .lead {
+    font-size: 1.2rem;
+    line-height: 1.45;
+  }
+
+  .animated-text {
+    min-height: 54px;
+    margin-bottom: 26px;
+    line-height: 1.4;
   }
 
   .page-hero {
