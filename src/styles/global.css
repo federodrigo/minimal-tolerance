@@ -511,7 +511,7 @@ blockquote {
 }
 
 .theorem-summary-card {
-  width: 215px;
+  width: 205px;
   min-height: 64px;
 
   display: flex;
