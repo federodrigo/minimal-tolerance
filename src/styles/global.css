@@ -146,7 +146,7 @@ p {
 .hero {
   display: flex;
   align-items: center;
-  padding: 40px 7vw 40px;
+  padding: 40px 7vw;
 }
 
 .hero-content {
@@ -252,10 +252,11 @@ p {
 }
 
 .statement {
-  padding: 30px 7vw;
+  padding: 62px 7vw;
   text-align: center;
-  border-top: 1px solid var(--line);
-  border-bottom: 1px solid var(--line);
+  background: var(--navy);
+  color: var(--paper);
+  border: 0;
 }
 
 blockquote {
@@ -288,7 +289,6 @@ blockquote {
   margin-bottom: 0;
 }
 
-
 .content-section {
   padding: 60px 0;
 }
@@ -302,12 +302,12 @@ blockquote {
   margin-left: auto;
   margin-right: auto;
 }
+
 .content-section p {
   max-width: 820px;
   font-size: 1.08rem;
   line-height: 1.72;
-  text-align: justify;
-  text-justify: inter-word;
+  text-align: left;
 }
 
 .theorem {
@@ -422,7 +422,6 @@ blockquote {
   background: var(--cream);
 }
 
-
 .ssrn .container {
   max-width: 900px;
 }
@@ -483,9 +482,9 @@ footer nav a {
     padding: 48px 6vw 54px;
   }
 
-.page-hero {
-  padding: 34px 6vw 36px;
-}
+  .page-hero {
+    padding: 34px 6vw 36px;
+  }
 
   h1 {
     font-size: clamp(3rem, 13vw, 5rem);
@@ -495,13 +494,9 @@ footer nav a {
     min-height: 54px;
   }
 
-.statement {
-  padding: 62px 7vw;
-  text-align: center;
-  background: var(--navy);
-  color: var(--paper);
-  border: 0;
-}
+  .statement {
+    padding: 46px 6vw;
+  }
 
   .content-section,
   .theorem,
@@ -557,15 +552,15 @@ footer nav a {
     padding-top: 40px;
   }
 
- .page-hero {
-  padding-top: 30px;
-  padding-bottom: 32px;
-}
+  .page-hero {
+    padding-top: 30px;
+    padding-bottom: 32px;
+  }
 
-.page-hero h1 {
-  font-size: clamp(2.6rem, 12vw, 3.8rem);
-  line-height: 1.04;
-}
+  .page-hero h1 {
+    font-size: clamp(2.6rem, 12vw, 3.8rem);
+    line-height: 1.04;
+  }
 
   .buttons {
     align-items: stretch;
@@ -585,10 +580,6 @@ footer nav a {
   .formal-statement {
     padding: 22px;
     font-size: 1rem;
-  }
-
-  .content-section p {
-    text-align: left;
   }
 }
 
