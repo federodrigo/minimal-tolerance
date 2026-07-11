@@ -502,6 +502,27 @@ blockquote {
   text-align: center !important;
 }
 
+.theorem-summary {
+  max-width: 900px;
+  margin: 34px auto 32px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 18px 32px;
+}
+
+.theorem-summary span {
+  color: var(--navy);
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.theorem-summary span::before {
+  content: "•";
+  color: var(--gold);
+  margin-right: 10px;
+}
 
 
 /* BOOK */
