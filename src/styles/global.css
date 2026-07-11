@@ -401,7 +401,7 @@ blockquote {
 
 .foundation-principles + .secondary {
   display: table;
-  margin: 34px auto 0;
+  margin: 42px auto 0;
 }
 
 @media (max-width: 560px) {
@@ -513,7 +513,7 @@ blockquote {
 
 .theorem-summary span {
   color: var(--navy);
-  font-size: 1rem;
+  font-size: 1.1rem;
   font-weight: 700;
   line-height: 1.4;
 }
@@ -548,6 +548,14 @@ blockquote {
   max-width: 760px;
   font-size: 1.08rem;
   line-height: 1.7;
+}
+
+.book-subtitle {
+  margin-bottom: 14px;
+  color: var(--gold);
+  font-size: 1.15rem;
+  font-weight: 700;
+  line-height: 1.4;
 }
 
 /* SSRN */
