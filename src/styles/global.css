@@ -259,10 +259,9 @@ p {
 /* FEATURED STATEMENTS */
 
 .statement {
-  padding: 48px 7vw;
+  padding: 40px 7vw;
   text-align: center;
-  background: var(--navy);
-  color: var(--paper);
+  background: var(--cream);
   border: 0;
 }
 
