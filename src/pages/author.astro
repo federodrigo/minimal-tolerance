@@ -1,5 +1,6 @@
 ---
 import "../styles/global.css";
+import Header from "../components/Header.astro";
 
 const ssrnUrl =
   "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5984574";
@@ -34,22 +35,7 @@ const ssrnUrl =
         Minimal Tolerance
       </a>
 
-     <nav aria-label="Main navigation">
-  <a href="/">Home</a>
-  <a href="/theory">Theory</a>
-  <a href="/theorem">Theorem</a>
-  <a href="/applications">Applications</a>
-  <a href="/book">Book</a>
-  <a href="/author" class="active">Author</a>
-  <a
-    href={ssrnUrl}
-    target="_blank"
-    rel="noopener noreferrer"
-  >
-    Paper
-  </a>
-</nav>
-    </header>
+    <Header />
 
     <main>
 
