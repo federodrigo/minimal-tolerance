@@ -307,7 +307,7 @@ blockquote {
 
 .theorem {
   padding: 64px 0;
-  background: var(--paper);
+  background: var(--cream);
 }
 
 .theorem .container {
@@ -417,6 +417,7 @@ blockquote {
   background: var(--cream);
 }
 
+
 .ssrn .container {
   max-width: 900px;
 }
@@ -489,9 +490,13 @@ footer nav a {
     min-height: 54px;
   }
 
-  .statement {
-    padding: 42px 6vw;
-  }
+.statement {
+  padding: 62px 7vw;
+  text-align: center;
+  background: var(--navy);
+  color: var(--paper);
+  border: 0;
+}
 
   .content-section,
   .theorem,
