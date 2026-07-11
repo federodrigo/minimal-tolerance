@@ -22,30 +22,39 @@ const ssrnUrl =
 
     <meta
       name="description"
-      content="The formal statement, conditions and corollary of the Minimal Tolerance Theorem by Federico Rodrigo."
+      content="The formal statement, necessary conditions, burden of proof and corollary of the Minimal Tolerance Theorem by Federico Rodrigo."
+    />
+
+    <link
+      rel="canonical"
+      href="https://minimaltolerance.com/theorem"
     />
   </head>
 
   <body>
 
-     <a href="/" class="logo">
-    Minimal Tolerance
-  </a>
+    <header class="site-header">
 
-<nav aria-label="Main navigation">
-  <a href="/">Home</a>
-  <a href="/theory">Theory</a>
-  <a href="/theorem" class="active">Theorem</a>
-  <a href="/book">Book</a>
-  <a href="/author">Author</a>
-  <a
-    href={ssrnUrl}
-    target="_blank"
-    rel="noopener noreferrer"
-  >
-    Paper
-  </a>
-</nav>
+      <a href="/" class="logo">
+        Minimal Tolerance
+      </a>
+
+      <nav aria-label="Main navigation">
+        <a href="/">Home</a>
+        <a href="/theory">Theory</a>
+        <a href="/theorem" class="active">Theorem</a>
+        <a href="/book">Book</a>
+        <a href="/author">Author</a>
+
+        <a
+          href={ssrnUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Paper
+        </a>
+      </nav>
+
     </header>
 
     <main>
@@ -64,7 +73,7 @@ const ssrnUrl =
 
           <p class="lead">
             The State may be tolerated only under an exceptionally
-            narrow set of functional conditions and never as a morally
+            narrow set of functional conditions, and never as a morally
             legitimate or generally efficient institution.
           </p>
 
@@ -87,8 +96,8 @@ const ssrnUrl =
           <p>
             A structural free-rider problem exists when individuals
             can receive the benefit of a good or service regardless
-            of whether they contribute to its provision, weakening
-            the incentives for voluntary participation.
+            of whether they contribute to its provision, thereby
+            weakening the incentives for voluntary participation.
           </p>
 
           <p>
@@ -114,9 +123,15 @@ const ssrnUrl =
             All conditions must hold simultaneously
           </h2>
 
+          <p>
+            A structural free-rider problem exists only when
+            all three of the following conditions are present.
+          </p>
+
           <div class="theorem-conditions">
 
             <article>
+
               <span>01</span>
 
               <h3>
@@ -127,9 +142,11 @@ const ssrnUrl =
                 Individuals cannot be effectively excluded from
                 receiving the relevant benefit.
               </p>
+
             </article>
 
             <article>
+
               <span>02</span>
 
               <h3>
@@ -140,9 +157,11 @@ const ssrnUrl =
                 One person receiving the benefit does not meaningfully
                 reduce its availability to others.
               </p>
+
             </article>
 
             <article>
+
               <span>03</span>
 
               <h3>
@@ -150,10 +169,11 @@ const ssrnUrl =
               </h3>
 
               <p>
-                Stable voluntary provision remains unviable and the
+                Stable voluntary provision remains unviable, and the
                 collapse cannot be attributed to removable regulatory
                 obstacles.
               </p>
+
             </article>
 
           </div>
@@ -213,8 +233,8 @@ const ssrnUrl =
           </p>
 
           <p>
-            The exception is narrow, functional and evidentiary. It
-            cannot be generalized or extended by analogy.
+            The exception is narrow, functional and evidentiary.
+            It cannot be generalized or extended by analogy.
           </p>
 
         </div>
@@ -311,20 +331,21 @@ const ssrnUrl =
 
       <nav aria-label="Footer navigation">
         <a href="/">Home</a>
-        <a href="/theorem">Theorem</a>
-        <a href="/#book">Book</a>
+        <a href="/theory">Theory</a>
+        <a href="/theorem" class="active">Theorem</a>
+        <a href="/book">Book</a>
+        <a href="/author">Author</a>
 
         <a
           href={ssrnUrl}
           target="_blank"
           rel="noopener noreferrer"
         >
-          SSRN
+          Paper
         </a>
       </nav>
 
     </footer>
 
   </body>
-
 </html>
