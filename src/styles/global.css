@@ -504,24 +504,25 @@ blockquote {
 
 .theorem-summary {
   max-width: 820px;
-  margin: 28px auto 24px;
+  margin: 24px auto 24px;
   display: flex;
   justify-content: center;
-  align-items: stretch;
-  gap: 12px;
+  gap: 14px;
 }
 
 .theorem-summary-card {
-  width: 250px;
-  min-height: 68px;
-  padding: 12px 16px;
+  width: 230px;
+  min-height: 64px;
+
   display: flex;
   align-items: center;
   justify-content: center;
+
+  padding: 12px 18px;
+
   background: transparent;
   border: 1px solid var(--line);
   border-radius: 10px;
-  text-align: center;
 }
 
 .theorem-summary-card h3 {
@@ -543,18 +544,10 @@ blockquote {
   }
 
   .theorem-summary-card {
-    width: min(100%, 420px);
+    width: min(100%, 380px);
   }
 }
 
-
-
-@media (max-width: 900px) {
-  .theorem-summary {
-    flex-direction: column;
-    align-items: center;
-  }
-}
 
 
 /* BOOK */
