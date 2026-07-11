@@ -267,7 +267,7 @@ blockquote {
 }
 
 .page-hero {
-  padding: 58px 7vw 64px;
+  padding: 38px 7vw 42px;
 }
 
 .page-hero .container {
@@ -277,12 +277,17 @@ blockquote {
 }
 
 .page-hero h1 {
-  margin-bottom: 20px;
+  max-width: 920px;
+  margin-bottom: 16px;
+  font-size: clamp(3rem, 5.2vw, 5rem);
+  line-height: 1.02;
 }
 
 .page-hero .lead {
   max-width: 760px;
+  margin-bottom: 0;
 }
+
 
 .content-section {
   padding: 60px 0;
@@ -478,9 +483,9 @@ footer nav a {
     padding: 48px 6vw 54px;
   }
 
-  .page-hero {
-    padding: 48px 0 38px;
-  }
+.page-hero {
+  padding: 34px 6vw 36px;
+}
 
   h1 {
     font-size: clamp(3rem, 13vw, 5rem);
@@ -552,9 +557,15 @@ footer nav a {
     padding-top: 40px;
   }
 
-  .page-hero {
-    padding-top: 40px;
-  }
+ .page-hero {
+  padding-top: 30px;
+  padding-bottom: 32px;
+}
+
+.page-hero h1 {
+  font-size: clamp(2.6rem, 12vw, 3.8rem);
+  line-height: 1.04;
+}
 
   .buttons {
     align-items: stretch;
