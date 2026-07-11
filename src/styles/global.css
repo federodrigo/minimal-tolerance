@@ -160,7 +160,7 @@ p {
 .hero h1 {
   max-width: 700px;
   margin-bottom: 24px;
-  font-size: clamp(3.6rem, 5.2vw, 4.9rem);
+  font-size: clamp(2.8rem, 4vw, 4rem);
   line-height: 0.98;
   letter-spacing: -0.04em;
 }
