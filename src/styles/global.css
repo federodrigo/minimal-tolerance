@@ -674,3 +674,48 @@ footer nav a {
     transition: none;
   }
 }
+
+/* PREMISES */
+
+.premise-list {
+  margin: 32px 0;
+}
+
+.premise-item {
+  display: flex;
+  gap: 18px;
+  align-items: flex-start;
+  padding: 16px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.premise-item span {
+  flex-shrink: 0;
+  min-width: 28px;
+  color: var(--gold);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+}
+
+.premise-item p {
+  margin: 0;
+  text-align: left;
+  font-size: 1.08rem;
+  line-height: 1.6;
+}
+
+.premise-conclusion {
+  max-width: 900px;
+  margin-top: 28px;
+}
+
+@media (max-width: 560px) {
+  .premise-item {
+    gap: 14px;
+  }
+
+  .premise-item span {
+    min-width: 24px;
+  }
+}
