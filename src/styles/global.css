@@ -383,8 +383,11 @@ blockquote {
 
 .foundation-principle h3 {
   margin-bottom: 10px;
-  font-size: clamp(1.45rem, 2.2vw, 2rem);
-  line-height: 1.15;
+  font-size: 1.45rem;
+  font-weight: 600;
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+  color: var(--navy-soft);
 }
 
 .foundation-principle p {
