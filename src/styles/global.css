@@ -385,7 +385,7 @@ blockquote {
 .premise-item span {
   padding-top: 3px;
   color: var(--gold);
-  font-size: 0.8rem;
+  font-size: 1rem;
   font-weight: 700;
   letter-spacing: 0.14em;
 }
