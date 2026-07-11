@@ -349,7 +349,7 @@ blockquote {
   max-width: var(--text-width);
 }
 
-.content-section p {
+.content-section p:not(.eyebrow) {
   width: 100%;
   font-size: 1.08rem;
   line-height: 1.72;
@@ -689,10 +689,10 @@ footer nav a {
     font-size: 1rem;
   }
 
-  .content-section p {
-    text-align: left;
-    hyphens: none;
-  }
+.content-section p:not(.eyebrow) {
+  text-align: left;
+  hyphens: none;
+}
 
   .premise-item {
     grid-template-columns: 32px 1fr;
