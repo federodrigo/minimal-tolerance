@@ -1,4 +1,14 @@
-
+:root {
+  --navy: #0d1b2a;
+  --navy-soft: #17263a;
+  --gold: #a9833a;
+  --paper: #f8f4ed;
+  --cream: #efe7da;
+  --paper-light: #fbf8f2;
+  --white: #ffffff;
+  --line: rgba(13, 27, 42, 0.12);
+  --shadow: 0 20px 56px rgba(13, 27, 42, 0.16);
+}
 
 * {
   box-sizing: border-box;
@@ -152,7 +162,7 @@ p {
 .hero h1 {
   max-width: 900px;
   margin-bottom: 24px;
-  font-size: clamp(3.6rem, 5.8vw, 5.2rem);
+  font-size: clamp(3.6rem, 5.2vw, 4.9rem);
   line-height: 0.98;
   letter-spacing: -0.04em;
 }
@@ -175,6 +185,8 @@ p {
   margin-top: 4px;
 }
 
+/* ANIMATED TEXT */
+
 .animated-text {
   position: relative;
   min-height: 34px;
@@ -185,7 +197,9 @@ p {
 
 .animated-text span {
   position: absolute;
+  top: 0;
   left: 0;
+  width: 100%;
   opacity: 0;
   animation: rotateText 9s infinite;
 }
@@ -221,6 +235,7 @@ p {
 
   100% {
     opacity: 0;
+    transform: translateY(-8px);
   }
 }
 
@@ -520,15 +535,17 @@ footer nav a {
   }
 
   .hero {
+    min-height: auto;
     padding: 42px 6vw 48px;
+  }
+
+  .hero h1 {
+    max-width: 760px;
+    font-size: clamp(3rem, 8vw, 4.4rem);
   }
 
   .page-hero {
     padding: 32px 6vw 34px;
-  }
-
-  h1 {
-    font-size: clamp(3rem, 13vw, 5rem);
   }
 
   .page-hero h1 {
@@ -604,7 +621,22 @@ footer nav a {
   }
 
   .hero {
-    padding-top: 36px;
+    padding: 36px 6vw 44px;
+  }
+
+  .hero h1 {
+    font-size: clamp(2.7rem, 12vw, 3.7rem);
+    line-height: 1;
+    letter-spacing: -0.035em;
+  }
+
+  .hero .lead {
+    font-size: 1.2rem;
+    line-height: 1.45;
+  }
+
+  .hero .animated-text {
+    min-height: 54px;
   }
 
   .page-hero {
@@ -663,59 +695,5 @@ footer nav a {
   .primary,
   .secondary {
     transition: none;
-  }
-}
-
-/* HOMEPAGE HERO FIX */
-
-.hero {
-  min-height: calc(100vh - 68px);
-  padding: 48px 7vw 56px;
-  display: flex;
-  align-items: center;
-  overflow: visible;
-}
-
-.hero-content {
-  width: 100%;
-  max-width: 1040px;
-}
-
-.hero h1 {
-  max-width: 900px;
-  margin-bottom: 24px;
-  font-size: clamp(3.6rem, 5.2vw, 4.9rem);
-  line-height: 0.98;
-  letter-spacing: -0.04em;
-}
-
-.hero .animated-text {
-  min-height: 42px;
-  overflow: visible;
-}
-
-@media (max-width: 900px) {
-  .hero {
-    min-height: auto;
-    padding: 42px 6vw 48px;
-  }
-
-  .hero h1 {
-    font-size: clamp(3rem, 8vw, 4.4rem);
-  }
-}
-
-@media (max-width: 560px) {
-  .hero {
-    padding: 36px 6vw 44px;
-  }
-
-  .hero h1 {
-    font-size: clamp(2.7rem, 12vw, 3.7rem);
-    line-height: 1;
-  }
-
-  .hero .animated-text {
-    min-height: 54px;
   }
 }
