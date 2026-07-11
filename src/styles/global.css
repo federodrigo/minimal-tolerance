@@ -155,16 +155,6 @@ p {
   margin-bottom: 18px;
 }
 
-.eyebrow {
-  margin: 0 0 18px;
-  color: var(--gold);
-  font-size: 0.76rem;
-  font-weight: 700;
-  line-height: 1.4;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-}
-
 /* HOME HERO */
 
 .hero {
@@ -344,12 +334,11 @@ blockquote {
 }
 
 .content-section h2,
-.content-section .eyebrow,
 .content-section p {
   max-width: var(--text-width);
 }
 
-.content-section p:not(.eyebrow) {
+.content-section p {
   width: 100%;
   font-size: 1.08rem;
   line-height: 1.72;
@@ -375,7 +364,7 @@ blockquote {
 
 .premise-item {
   display: grid;
-  grid-template-columns: 42px 1fr;
+  grid-template-columns: 52px 1fr;
   gap: 18px;
   align-items: start;
   padding: 18px 0;
@@ -386,10 +375,6 @@ blockquote {
   color: var(--gold);
   font-size: 0.95rem;
   font-weight: 700;
-}
-
-.premise-item {
-  grid-template-columns: 52px 1fr;
 }
 
 .premise-list + .secondary {
@@ -524,6 +509,27 @@ blockquote {
   margin-right: auto;
   font-size: 1.08rem;
   line-height: 1.7;
+}
+
+/*
+  EYEBROWS
+
+  Esta regla está deliberadamente ubicada después de las reglas
+  generales de párrafos. De esta manera, todos los eyebrows tienen
+  exactamente el mismo tamaño y estilo en todas las secciones.
+*/
+
+p.eyebrow {
+  width: auto;
+  margin: 0 0 18px;
+  color: var(--gold);
+  font-size: 0.9rem;
+  font-weight: 700;
+  line-height: 1.4;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  text-justify: auto;
+  hyphens: none;
 }
 
 /* FOOTER */
@@ -689,10 +695,10 @@ footer nav a {
     font-size: 1rem;
   }
 
-.content-section p:not(.eyebrow) {
-  text-align: left;
-  hyphens: none;
-}
+  .content-section p {
+    text-align: left;
+    hyphens: none;
+  }
 
   .premise-item {
     grid-template-columns: 32px 1fr;
