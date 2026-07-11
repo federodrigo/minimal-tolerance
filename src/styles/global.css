@@ -502,11 +502,11 @@ blockquote {
   text-align: center !important;
 }
 .theorem-summary {
-  max-width: 700px;
   margin: 30px auto 26px;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  display: flex;
+  justify-content: center;
   gap: 12px;
+  flex-wrap: wrap;
 }
 
 .theorem-summary-card {
