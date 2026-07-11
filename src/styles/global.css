@@ -146,7 +146,7 @@ p {
 .hero {
   display: flex;
   align-items: center;
-  padding: 58px 7vw 64px;
+  padding: 40px 7vw 40px;
 }
 
 .hero-content {
@@ -252,7 +252,7 @@ p {
 }
 
 .statement {
-  padding: 50px 7vw;
+  padding: 30px 7vw;
   text-align: center;
   border-top: 1px solid var(--line);
   border-bottom: 1px solid var(--line);
