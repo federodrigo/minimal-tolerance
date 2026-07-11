@@ -1,1 +1,205 @@
+---
+import "../styles/global.css";
 
+const ssrnUrl =
+  "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5984574";
+---
+
+<!doctype html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+
+    <title>
+      Power, Tolerance and Legitimacy
+    </title>
+
+    <meta
+      name="description"
+      content="Power, Tolerance and Legitimacy by Federico Rodrigo."
+    />
+  </head>
+
+  <body>
+
+    <header class="site-header">
+
+      <a href="/" class="logo">
+        Minimal Tolerance
+      </a>
+
+      <nav aria-label="Main navigation">
+        <a href="/">Home</a>
+        <a href="/theory">Theory</a>
+        <a href="/theorem">Theorem</a>
+        <a href="/book" class="active">Book</a>
+        <a href="/author">Author</a>
+        <a
+          href={ssrnUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Paper
+        </a>
+      </nav>
+
+    </header>
+
+    <main>
+
+      <section class="page-hero">
+
+        <div class="container">
+
+          <p class="eyebrow">
+            THE BOOK
+          </p>
+
+          <h1>
+            Power, Tolerance and Legitimacy
+          </h1>
+
+          <p class="lead">
+            A book-length exploration of coercion,
+            political authority, public goods,
+            free riders and the limits of state power.
+          </p>
+
+        </div>
+
+      </section>
+
+      <section class="book">
+
+        <div class="container">
+
+          <div class="book-grid">
+
+            <div>
+
+              <img
+                src="/images/book-cover.jpg"
+                alt="Power, Tolerance and Legitimacy"
+              />
+
+            </div>
+
+            <div>
+
+              <h2>
+                About the Book
+              </h2>
+
+              <p>
+                Power, Tolerance and Legitimacy develops the
+                argument that the State is neither morally
+                legitimate nor generally efficient, and that
+                coercion therefore requires justification
+                rather than presumption.
+              </p>
+
+              <p>
+                The book culminates in the Theorem of
+                Minimal Tolerance, a framework designed
+                to identify the exceptionally narrow
+                circumstances under which state coercion
+                may be tolerated.
+              </p>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </section>
+
+      <section class="content-section">
+
+        <div class="container">
+
+          <p class="eyebrow">
+            STRUCTURE
+          </p>
+
+          <h2>
+            Three Acts
+          </h2>
+
+          <p>
+            The book is organized around three major themes:
+            the problem of legitimacy, the problem of
+            efficiency, and the institutional limits of
+            political power.
+          </p>
+
+          <p>
+            It progresses from the moral foundations of
+            coercion, through the economic problems of
+            centralized decision-making, and ultimately
+            toward the formal statement of the theory.
+          </p>
+
+        </div>
+
+      </section>
+
+      <section class="statement">
+
+        <blockquote>
+          The question is not whether power is legitimate.
+          The question is how much power can be tolerated.
+        </blockquote>
+
+      </section>
+
+      <section class="ssrn">
+
+        <div class="container">
+
+          <p class="eyebrow">
+            FOUNDATIONAL PAPER
+          </p>
+
+          <h2>
+            Read the SSRN Paper
+          </h2>
+
+          <p>
+            The original paper presents the formal theorem
+            and serves as the theoretical foundation for
+            the book.
+          </p>
+
+          <a
+            href={ssrnUrl}
+            class="primary"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Open on SSRN
+          </a>
+
+        </div>
+
+      </section>
+
+    </main>
+
+    <footer>
+
+      <p>
+        © 2026 Minimal Tolerance · Federico Rodrigo
+      </p>
+
+    </footer>
+
+  </body>
+
+</html>
