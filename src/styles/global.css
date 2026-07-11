@@ -87,6 +87,10 @@ nav a:hover {
   color: var(--gold);
 }
 
+nav a.active {
+  color: var(--gold);
+}
+
 h1,
 h2,
 h3,
