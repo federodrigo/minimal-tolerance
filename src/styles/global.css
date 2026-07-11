@@ -743,12 +743,6 @@ footer nav a {
   text-align: center !important;
 }
 
-#theory > .container > .secondary {
-  display: block;
-  width: fit-content;
-  margin: 0 auto;
-}
-
 @media (max-width: 560px) {
   .premise-item {
     grid-template-columns: 32px 1fr;
