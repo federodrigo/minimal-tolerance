@@ -324,11 +324,11 @@ blockquote {
 /* LONG-FORM CONTENT */
 
 .content-section {
-  padding: 36px 0;
+  padding: 40px 0;
 }
 
 .content-section-alt {
-  background: var(--cream);
+  background: var(--paper-light);
 }
 
 .content-section .container {
