@@ -450,20 +450,19 @@ blockquote {
   margin: 32px 0 28px;
 }
 
-.theorem-conditions article > span {
-  display: inline-block;
-  margin-bottom: 16px;
-  color: var(--gold);
-  font-size: 1rem;
-  font-weight: 700;
-  letter-spacing: 0.14em;
+.theorem-conditions article {
+  min-height: 220px;
+  padding: 26px;
+  background: var(--paper-light);
+  border: 1px solid var(--line);
+  border-radius: 14px;
 }
 
 .theorem-conditions article > span {
   display: inline-block;
   margin-bottom: 16px;
   color: var(--gold);
-  font-size: 0.82rem;
+  font-size: 1rem;
   font-weight: 700;
   letter-spacing: 0.14em;
 }
@@ -502,6 +501,8 @@ blockquote {
   font-weight: 700;
   text-align: center !important;
 }
+
+
 
 /* BOOK */
 
