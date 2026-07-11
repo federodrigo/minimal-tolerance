@@ -507,11 +507,11 @@ blockquote {
   margin: 24px auto 24px;
   display: flex;
   justify-content: center;
-  gap: 14px;
+  gap: 16px;
 }
 
 .theorem-summary-card {
-  width: 230px;
+  width: 215px;
   min-height: 64px;
 
   display: flex;
