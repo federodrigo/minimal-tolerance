@@ -375,7 +375,7 @@ blockquote {
 
 .foundation-number {
   color: rgba(169, 131, 58, 0.28);
-  font-size: clamp(2.6rem, 5vw, 4.4rem);
+  font-size: clamp(2rem, 4vw, 3rem);
   font-weight: 700;
   line-height: 0.9;
   letter-spacing: -0.05em;
