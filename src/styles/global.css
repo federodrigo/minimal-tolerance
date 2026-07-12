@@ -521,7 +521,7 @@ blockquote {
 
   padding: 12px 18px;
 
-  background: transparent;
+  background: var(--paper-light);
   border: 1px solid var(--line);
   border-radius: 10px;
 }
