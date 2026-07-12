@@ -4,58 +4,70 @@ const ssrnUrl =
 
 const currentPath = Astro.url.pathname;
 
+const isSpanish = currentPath === "/es" || currentPath.startsWith("/es/");
+
 const isActive = (path: string) => {
   if (path === "/") {
-    return currentPath === "/";
+    return currentPath === "/" || currentPath === "/es";
+  }
+
+  if (isSpanish) {
+    return currentPath.startsWith(`/es${path}`);
   }
 
   return currentPath.startsWith(path);
 };
+
+const alternateLanguageUrl = isSpanish
+  ? currentPath.replace(/^\/es/, "") || "/"
+  : `/es${currentPath === "/" ? "" : currentPath}`;
 ---
 
 <header class="site-header">
-  <a href="/" class="logo">
+
+  <a href={isSpanish ? "/es" : "/"} class="logo">
     Minimal Tolerance
   </a>
 
   <nav aria-label="Main navigation">
+
     <a
-      href="/"
+      href={isSpanish ? "/es" : "/"}
       class={isActive("/") ? "active" : undefined}
     >
       Home
     </a>
 
     <a
-      href="/theory"
+      href={isSpanish ? "/es/theory" : "/theory"}
       class={isActive("/theory") ? "active" : undefined}
     >
       Theory
     </a>
 
     <a
-      href="/theorem"
+      href={isSpanish ? "/es/theorem" : "/theorem"}
       class={isActive("/theorem") ? "active" : undefined}
     >
       Theorem
     </a>
 
     <a
-      href="/applications"
+      href={isSpanish ? "/es/applications" : "/applications"}
       class={isActive("/applications") ? "active" : undefined}
     >
       Applications
     </a>
 
     <a
-      href="/book"
+      href={isSpanish ? "/es/book" : "/book"}
       class={isActive("/book") ? "active" : undefined}
     >
       Book
     </a>
 
     <a
-      href="/author"
+      href={isSpanish ? "/es/author" : "/author"}
       class={isActive("/author") ? "active" : undefined}
     >
       Author
@@ -68,5 +80,27 @@ const isActive = (path: string) => {
     >
       Paper
     </a>
+
+    <span class="language-switch">
+
+      <a
+        href={isSpanish ? alternateLanguageUrl : currentPath}
+        class={!isSpanish ? "active" : undefined}
+      >
+        EN
+      </a>
+
+      <span>|</span>
+
+      <a
+        href={isSpanish ? currentPath : alternateLanguageUrl}
+        class={isSpanish ? "active" : undefined}
+      >
+        ES
+      </a>
+
+    </span>
+
   </nav>
+
 </header>
