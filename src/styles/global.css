@@ -89,6 +89,7 @@ main > section + section {
 .logo {
   flex-shrink: 0;
   font-weight: 700;
+  font-size: 1.8rem;
   letter-spacing: 0.02em;
   text-decoration: none;
 }
