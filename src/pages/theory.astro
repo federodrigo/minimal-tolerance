@@ -2,9 +2,6 @@
 import "../styles/global.css";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
-
-const ssrnUrl =
-  "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5984574";
 ---
 
 <!doctype html>
@@ -24,7 +21,7 @@ const ssrnUrl =
 
     <meta
       name="description"
-      content="An introduction to the Theory of Minimal Tolerance and the moral and functional limits of political authority."
+      content="The moral and economic foundations of the Theory of Minimal Tolerance."
     />
 
     <link
@@ -38,11 +35,11 @@ const ssrnUrl =
 
     <main>
 
-      <!-- HERO -->
+      <!-- PAGE INTRO -->
 
-      <section class="hero">
+      <section class="page-hero">
 
-        <div class="hero-content">
+        <div class="container">
 
           <p class="eyebrow">
             THE THEORY
@@ -50,47 +47,14 @@ const ssrnUrl =
 
           <h1>
             Minimal Tolerance
-            <span>
-              The limits of political authority
-            </span>
           </h1>
 
           <p class="lead">
-            State coercion is never morally legitimate.
-            Under exceptional conditions, it may only become
-            tolerable as a narrowly restricted institutional
-            last resort.
+            Coercion is never legitimate.
+            At most, its limited use may be tolerated.
           </p>
 
-          <div class="buttons">
-
-            <a href="/theorem" class="primary">
-              Read the Theorem
-            </a>
-
-            <a
-              href={ssrnUrl}
-              class="secondary"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Read the Paper
-            </a>
-
-          </div>
-
         </div>
-
-      </section>
-
-      <!-- CENTRAL STATEMENT -->
-
-      <section class="statement">
-
-        <blockquote>
-          A coercive relationship does not become voluntary
-          merely because coercion is procedurally regulated.
-        </blockquote>
 
       </section>
 
@@ -109,40 +73,30 @@ const ssrnUrl =
           </h2>
 
           <p>
-            The problem of the State is first and foremost moral.
             Taxation is not voluntary. Compliance ultimately rests
-            on the possibility of sanction rather than individual
-            consent. Elections, constitutional rules and legal
-            procedures may regulate coercion, but they cannot
-            transform an imposed relationship into a voluntary
-            agreement.
+            on the threat of sanction. Elections, constitutions and
+            legal procedures may regulate coercion, but they do not
+            transform it into consent.
           </p>
 
           <p>
             The relationship between the individual and the State
-            is neither symmetric, contractual nor optional. The
-            individual does not negotiate the terms of membership,
-            select the obligations he accepts or retain the right
-            to withdraw while remaining within the territory. He
-            is subjected to an authority that reserves final
-            decision-making power over fundamental aspects of
-            civil and economic life.
+            is neither contractual nor optional. Political authority
+            is imposed territorially, and the individual remains
+            subject to it regardless of personal agreement.
           </p>
 
           <p>
-            State power is territorial rather than consensual.
-            Even those who attempt to minimize their interaction
-            with political institutions remain under their
-            jurisdiction. The State may command obedience and
-            enforce its decisions, but the capacity to impose a
-            rule does not establish a moral right to impose it.
+            The capacity to enforce a rule does not create a moral
+            right to impose it. Power and legitimacy are different
+            things.
           </p>
 
         </div>
 
       </section>
 
-      <!-- FUNCTIONAL PROBLEM -->
+      <!-- EFFICIENCY PROBLEM -->
 
       <section class="content-section content-section-alt">
 
@@ -157,114 +111,42 @@ const ssrnUrl =
           </h2>
 
           <p>
-            The moral objection is reinforced by a functional
-            limitation. Political institutions operate without
-            the information and calculation mechanisms required
-            to allocate scarce resources rationally among
-            competing uses.
+            The knowledge required to coordinate a complex society
+            is dispersed among millions of individuals. It is local,
+            contextual and constantly changing.
           </p>
 
           <p>
-            Market prices communicate changing information about
-            scarcity, preferences, risk and opportunity cost. That
-            information is dispersed among millions of individuals
-            and emerges through their decisions. It is local,
-            contextual and continuously changing. No central
-            authority can fully collect or reproduce it.
+            Market prices communicate information about scarcity,
+            preferences and opportunity costs. Political institutions
+            cannot reproduce that process through centralized
+            decision-making.
           </p>
 
           <p>
-            When decentralized decisions are replaced by political
-            direction, information is compressed, delayed and
-            distorted. Institutions act without genuine price
-            signals, meaningful exit options or mechanisms of error
-            correction comparable to those generated by voluntary
-            exchange.
-          </p>
-
-          <p>
-            Political decision-makers are not merely individuals
-            with imperfect knowledge. They operate inside systems
-            whose incentives reward continuity, budget preservation
-            and institutional expansion. Failed interventions may
-            survive long after their costs become visible, and
-            failure itself may be used as an argument for further
-            intervention.
+            The State replaces decentralized choices with political
+            direction while operating with less information, weaker
+            feedback and fewer mechanisms for correcting error.
           </p>
 
         </div>
 
       </section>
 
-      <!-- MARKET FAILURE -->
-
-      <section class="content-section">
-
-        <div class="container">
-
-          <p class="eyebrow">
-            MARKET FAILURE
-          </p>
-
-          <h2>
-            Imperfection does not justify coercion
-          </h2>
-
-          <p>
-            The concept of market failure is often treated as an
-            automatic justification for state intervention. That
-            inference does not follow. The existence of friction,
-            externalities, incomplete information or an undesirable
-            result does not establish that coercion will produce a
-            superior outcome.
-          </p>
-
-          <p>
-            The relevant comparison is not between an imperfect
-            market and an ideal government. It is between voluntary
-            arrangements capable of adaptation and a coercive
-            institution affected by information loss, calculation
-            problems, political incentives and weak feedback
-            mechanisms.
-          </p>
-
-          <p>
-            Markets do not need to be perfect for intervention to
-            remain unjustified. Property rights may be clarified,
-            agreements developed, incentives redesigned and new
-            technologies introduced. Many coordination problems
-            can be addressed through voluntary experimentation
-            without transferring final authority to a coercive
-            institution.
-          </p>
-
-          <p>
-            An outcome considered insufficient by an external
-            observer is not proof of institutional failure. Nor
-            does the social importance of a good demonstrate that
-            voluntary provision is impossible. Importance,
-            difficulty and imperfection are not equivalent to
-            necessity.
-          </p>
-
-        </div>
-
-      </section>
-
-      <!-- SECOND STATEMENT -->
+      <!-- CENTRAL STATEMENT -->
 
       <section class="statement">
 
         <blockquote>
-          The existence of a social problem does not establish
-          that coercion is an appropriate response.
+          A coercive relationship does not become voluntary
+          because coercion is regulated.
         </blockquote>
 
       </section>
 
       <!-- LEGITIMACY AND TOLERANCE -->
 
-      <section class="content-section content-section-alt">
+      <section class="content-section">
 
         <div class="container">
 
@@ -273,172 +155,59 @@ const ssrnUrl =
           </p>
 
           <h2>
-            Necessity cannot create moral legitimacy
+            Necessity does not create legitimacy
           </h2>
 
           <p>
-            Recognizing a practical constraint does not legitimize
-            the State. It does not convert coercion into consent,
-            transform political authority into voluntary agreement
-            or create a moral entitlement to rule.
+            A practical problem does not create a moral right to
+            coerce. Even where voluntary coordination faces a real
+            limit, coercion remains coercion.
           </p>
 
           <p>
-            The moral ideal remains a social order based on
-            voluntary relations. Yet the rejection of coercion as
-            morally legitimate does not eliminate every practical
-            problem. Certain forms of collective coordination may
-            remain difficult or, in exceptional cases, structurally
-            unviable through stable voluntary provision.
+            Minimal Tolerance separates moral legitimacy from
+            practical tolerance. The State never becomes legitimate.
+            Its limited use may only be tolerated as an exceptional
+            response to a demonstrated necessity.
           </p>
 
           <p>
-            Minimal Tolerance separates those two dimensions.
-            Coercion remains morally illegitimate regardless of the
-            purpose it claims to serve. Its possible tolerance is
-            purely instrumental, limited to circumstances in which
-            a specific institutional necessity has been
-            demonstrated and the available alternatives would
-            produce greater harm.
-          </p>
-
-          <p>
-            Tolerance does not confer moral approval. It marks the
-            boundary of a reluctant exception. The coercive
-            instrument remains dangerous, imprecise and vulnerable
-            to expansion even when its limited use can be tolerated.
+            Tolerance is not approval. It defines the narrow boundary
+            between what must be rejected and what may be reluctantly
+            accepted.
           </p>
 
         </div>
 
       </section>
 
-      <!-- THIRD STATEMENT -->
-
-      <section class="statement">
-
-        <blockquote>
-          The State does not become legitimate.
-          At most, it may be reluctantly tolerated.
-        </blockquote>
-
-      </section>
-
-      <!-- PRESUMPTION -->
-
-      <section class="content-section">
-
-        <div class="container">
-
-          <p class="eyebrow">
-            THE PRESUMPTION
-          </p>
-
-          <h2>
-            Coercion begins with the burden of proof
-          </h2>
-
-          <p>
-            Minimal Tolerance reverses the usual political
-            presumption. Intervention does not begin as legitimate
-            and subsequently require limits. It begins as an act of
-            coercion and must be treated accordingly.
-          </p>
-
-          <p>
-            The burden of proof belongs entirely to those proposing
-            the exercise of coercive power. Good intentions,
-            democratic approval, social importance and expected
-            benefits cannot satisfy that burden on their own.
-          </p>
-
-          <p>
-            Any tolerable exception must be narrowly defined,
-            supported by evidence and resistant to analogical
-            expansion. A justification accepted in one case cannot
-            be extended to another merely because both involve
-            collective benefits, practical difficulty or political
-            importance.
-          </p>
-
-          <p>
-            This presumption does not deny the existence of real
-            coordination problems. It prevents their existence from
-            becoming a general license for political authority.
-          </p>
-
-        </div>
-
-      </section>
-
-      <!-- TRANSITION TO THEOREM -->
+      <!-- NEXT PAGE -->
 
       <section class="content-section content-section-alt">
 
         <div class="container">
 
           <p class="eyebrow">
-            THE NEXT STEP
+            THE THEOREM
           </p>
 
           <h2>
-            Defining the narrow exception
+            Defining the exception
           </h2>
 
           <p>
-            A presumption against coercion requires more than a
-            philosophical preference. It requires a standard capable
-            of distinguishing genuine institutional necessity from
-            political convenience, paternalism and dissatisfaction
-            with voluntary outcomes.
-          </p>
-
-          <p>
-            The Minimal Tolerance Theorem provides that standard.
-            It identifies the conditions that must be satisfied
-            simultaneously before state coercion can be tolerated
-            as a functional last resort.
+            The Minimal Tolerance Theorem establishes the conditions
+            required before any use of state coercion may be
+            tolerated.
           </p>
 
           <div class="buttons">
 
             <a href="/theorem" class="primary">
-              Read the Full Theorem
+              Read the Theorem
             </a>
 
           </div>
-
-        </div>
-
-      </section>
-
-      <!-- SSRN -->
-
-      <section class="ssrn">
-
-        <div class="container">
-
-          <p class="eyebrow">
-            ORIGINAL RESEARCH
-          </p>
-
-          <h2>
-            Read the SSRN paper
-          </h2>
-
-          <p>
-            The paper presents the complete argument, the formal
-            theorem, its evidentiary standard and its corollary.
-          </p>
-
-          <a
-            href={ssrnUrl}
-            class="primary"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Open on SSRN
-          </a>
 
         </div>
 
