@@ -1,1 +1,150 @@
+---
+import "../../styles/global.css";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
 
+const ssrnUrl =
+  "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5984574";
+---
+
+<!doctype html>
+
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+
+    <title>
+      Poder, Tolerancia y Legitimidad | Tolerancia Mínima
+    </title>
+
+    <meta
+      name="description"
+      content="Poder, Tolerancia y Legitimidad, de Federico Rodrigo, examina la coerción, la autoridad política y los límites del poder estatal."
+    />
+
+    <link
+      rel="canonical"
+      href="https://minimaltolerance.com/book"
+    />
+  </head>
+
+  <body>
+
+    <Header />
+
+    <main>
+
+      <section class="page-hero">
+
+        <div class="container">
+
+          <p class="eyebrow">
+            EL LIBRO
+          </p>
+
+          <h1>
+            Poder, Tolerancia y Legitimidad
+          </h1>
+
+        </div>
+
+      </section>
+
+      <section class="statement">
+
+        <blockquote>
+          La pregunta no es si el poder coercitivo es legítimo.
+          La pregunta es cuánto de él puede ser tolerado
+        </blockquote>
+
+      </section>
+
+      <section class="book">
+
+        <div class="container">
+
+          <div class="book-grid">
+
+            <div>
+
+              <img
+                src="/images/book-cover.jpg"
+                alt="Portada de Poder, Tolerancia y Legitimidad, de Federico Rodrigo"
+              />
+
+            </div>
+
+            <div>
+
+              <p class="eyebrow">
+                SOBRE EL LIBRO
+              </p>
+
+              <h2>
+                Una Teoría del Poder y la Legitimidad
+              </h2>
+
+              <p>
+                Poder, Tolerancia y Legitimidad desarrolla los
+                argumentos morales, económicos e institucionales que
+                sustentan la Teoría de la Tolerancia Mínima. Examina
+                la legitimidad, la coerción, los bienes públicos, los
+                problemas de free rider y los límites del poder estatal
+              </p>
+
+              <p>
+                El libro avanza desde los principios fundamentales
+                hasta su aplicación práctica, desarrollando la teoría
+                y sometiéndola a prueba frente a sus objeciones más
+                fuertes y a casos del mundo real
+              </p>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </section>
+
+      <section class="ssrn">
+
+        <div class="container">
+
+          <p class="eyebrow">
+            ARTÍCULO FUNDACIONAL
+          </p>
+
+          <h2>
+            Leer el Artículo en SSRN
+          </h2>
+
+          <p>
+            El artículo original presenta el teorema formal y
+            proporciona la base teórica del libro
+          </p>
+
+          <a
+            href={ssrnUrl}
+            class="primary"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Abrir en SSRN
+          </a>
+
+        </div>
+
+      </section>
+
+    </main>
+
+    <Footer />
+
+  </body>
+</html>
