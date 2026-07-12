@@ -111,6 +111,22 @@ nav a.active {
   color: var(--gold);
 }
 
+.language-switch {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-left: 1rem;
+}
+
+.language-switch a {
+  opacity: 0.6;
+}
+
+.language-switch a.active {
+  opacity: 1;
+  font-weight: 600;
+}
+
 /* TYPOGRAPHY */
 
 h1,
