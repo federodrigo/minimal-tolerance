@@ -26,51 +26,51 @@ const alternateLanguageUrl = isSpanish
 <header class="site-header">
 
   <a href={isSpanish ? "/es" : "/"} class="logo">
-    Minimal Tolerance
+    {isSpanish ? "Tolerancia Mínima" : "Minimal Tolerance"}
   </a>
 
-  <nav aria-label="Main navigation">
+  <nav aria-label={isSpanish ? "Navegación principal" : "Main navigation"}>
 
     <a
       href={isSpanish ? "/es" : "/"}
       class={isActive("/") ? "active" : undefined}
     >
-      Home
+      {isSpanish ? "Inicio" : "Home"}
     </a>
 
     <a
       href={isSpanish ? "/es/theory" : "/theory"}
       class={isActive("/theory") ? "active" : undefined}
     >
-      Theory
+      {isSpanish ? "Teoría" : "Theory"}
     </a>
 
     <a
       href={isSpanish ? "/es/theorem" : "/theorem"}
       class={isActive("/theorem") ? "active" : undefined}
     >
-      Theorem
+      {isSpanish ? "Teorema" : "Theorem"}
     </a>
 
     <a
       href={isSpanish ? "/es/applications" : "/applications"}
       class={isActive("/applications") ? "active" : undefined}
     >
-      Applications
+      {isSpanish ? "Aplicaciones" : "Applications"}
     </a>
 
     <a
       href={isSpanish ? "/es/book" : "/book"}
       class={isActive("/book") ? "active" : undefined}
     >
-      Book
+      {isSpanish ? "Libro" : "Book"}
     </a>
 
     <a
       href={isSpanish ? "/es/author" : "/author"}
       class={isActive("/author") ? "active" : undefined}
     >
-      Author
+      {isSpanish ? "Autor" : "Author"}
     </a>
 
     <a
@@ -78,7 +78,7 @@ const alternateLanguageUrl = isSpanish
       target="_blank"
       rel="noopener noreferrer"
     >
-      Paper
+      {isSpanish ? "Artículo" : "Paper"}
     </a>
 
     <span class="language-switch">
