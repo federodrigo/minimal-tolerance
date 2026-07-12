@@ -1,1 +1,299 @@
+---
+import "../styles/global.css";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
 
+const ssrnUrl =
+  "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5984574";
+---
+
+<!doctype html>
+
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+
+    <title>
+      ¿Cuándo puede tolerarse la coerción? | Tolerancia Mínima
+    </title>
+
+    <meta
+      name="description"
+      content="Tolerancia Mínima es una teoría del poder y la legitimidad que se pregunta bajo qué condiciones excepcionales puede tolerarse la coerción estatal"
+    />
+  </head>
+
+  <body>
+
+    <Header />
+
+    <main>
+
+      <!-- HERO -->
+
+      <section class="hero">
+
+        <div class="hero-content">
+
+          <p class="eyebrow">
+            LA TEORÍA DE LA TOLERANCIA MÍNIMA
+          </p>
+
+          <h1>
+            ¿Cuándo puede la coerción<br />
+            ser tolerada?
+          </h1>
+
+          <p class="lead">
+            Una teoría del poder y la legitimidad
+          </p>
+
+          <div
+            class="animated-text"
+            aria-label="El poder es tolerado. No legitimado. Solo bajo condiciones excepcionales"
+          >
+            <span>El poder es tolerado</span>
+            <span>No legitimado</span>
+            <span>Solo bajo condiciones excepcionales</span>
+          </div>
+
+          <div class="buttons">
+
+            <a href="/theory" class="primary">
+              Explorar la Teoría
+            </a>
+
+            <a
+              href={ssrnUrl}
+              class="secondary"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Leer el Artículo
+            </a>
+
+          </div>
+
+        </div>
+
+      </section>
+
+      <!-- CENTRAL STATEMENT -->
+
+      <section class="statement">
+
+        <blockquote>
+          La carga de la prueba pertenece al poder
+         </blockquote>
+
+      </section>
+
+      <!-- THEORY -->
+
+      <section id="theory" class="content-section">
+
+        <div class="container">
+
+          <p class="eyebrow">
+            LA TEORÍA
+          </p>
+
+          <h2>
+            Fundamentos
+          </h2>
+
+          <div class="foundation-principles">
+
+            <article class="foundation-principle">
+
+              <span class="foundation-number">
+                01
+              </span>
+
+              <div>
+
+                <h3>
+                  Ninguna legitimidad moral intrínseca
+                </h3>
+
+                <p>
+                  El Estado no posee autoridad moral simplemente por
+                  existir o por ejercer poder
+                </p>
+
+              </div>
+
+            </article>
+
+            <article class="foundation-principle">
+
+              <span class="foundation-number">
+                02
+              </span>
+
+              <div>
+
+                <h3>
+                  Los límites institucionales son inevitables
+                </h3>
+
+                <p>
+                  La acción estatal está restringida por limitaciones
+                  informacionales y económicas que el poder no puede eliminar
+                </p>
+
+              </div>
+
+            </article>
+
+          </div>
+
+          <a href="/theory" class="secondary">
+            Continuar leyendo
+          </a>
+
+        </div>
+
+      </section>
+
+      <!-- THEOREM -->
+
+      <section id="theorem" class="theorem">
+
+        <div class="container">
+
+          <p class="eyebrow">
+            LA PRUEBA FORMAL
+          </p>
+
+          <h2>
+            El Teorema de la Tolerancia Mínima
+          </h2>
+
+<div class="theorem-summary">
+
+  <article class="theorem-summary-card">
+
+    <h3>
+      No exclusión efectiva
+    </h3>
+  </article>
+
+  <article class="theorem-summary-card">
+
+    <h3>
+      No rivalidad relevante
+    </h3>
+  </article>
+
+  <article class="theorem-summary-card">
+
+    <h3>
+      Colapso persistente de la provisión voluntaria
+    </h3>
+  </article>
+
+</div>
+
+          <div class="buttons">
+
+            <a href="/theorem" class="primary">
+              Examinar el Teorema
+            </a>
+
+          </div>
+
+        </div>
+
+      </section>
+
+      <!-- BOOK -->
+
+      <section id="book" class="book">
+
+        <div class="container">
+
+          <div class="book-grid">
+
+            <div>
+
+              <img
+                src="/images/book-cover.jpg"
+                alt="Portada de Tolerancia Mínima por Federico Rodrigo"
+                loading="lazy"
+              />
+
+            </div>
+
+            <div>
+
+              <p class="eyebrow">
+                EL LIBRO
+              </p>
+
+              <h2>
+                Poder, Tolerancia y Legitimidad
+              </h2>
+
+              <p class="book-subtitle">
+                Una Teoría de la Tolerancia Mínima
+              </p>
+
+              <p>
+                Un próximo libro que explora los límites excepcionales de la coerción
+              </p>
+
+              <a href="/book" class="secondary">
+                Descubrir el Libro
+              </a>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </section>
+
+      <!-- PAPER -->
+
+      <section id="paper" class="ssrn">
+
+        <div class="container">
+
+          <p class="eyebrow">
+            PREPUBLICACIÓN EN SSRN
+          </p>
+
+          <h2>
+            Leer el Artículo Fundacional
+          </h2>
+
+          <p>
+            Free Riders, el Estado y la “Tecnología Institucional de Último Recurso”
+          </p>
+
+          <a
+            href={ssrnUrl}
+            class="primary"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Abrir en SSRN
+          </a>
+
+        </div>
+
+      </section>
+
+    </main>
+
+    <Footer />
+
+  </body>
+</html>
