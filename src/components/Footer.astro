@@ -1,9 +1,14 @@
 ---
 const today = new Date();
+
+const currentPath = Astro.url.pathname;
+const isSpanish = currentPath === "/es" || currentPath.startsWith("/es/");
 ---
 
 <footer>
   <p>
-    © {today.getFullYear()} Minimal Tolerance · Federico Rodrigo
+    © {today.getFullYear()}
+    {isSpanish ? " Tolerancia Mínima" : " Minimal Tolerance"}
+    · Federico Rodrigo
   </p>
 </footer>
