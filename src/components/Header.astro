@@ -2,73 +2,93 @@
 const ssrnUrl =
   "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5984574";
 
-const currentPath = Astro.url.pathname;
+const normalizePath = (path: string) => {
+  if (path === "/") return "/";
+  return path.replace(/\/+$/, "");
+};
 
-const isSpanish = currentPath === "/es" || currentPath.startsWith("/es/");
+const currentPath = normalizePath(Astro.url.pathname);
+
+const isSpanish =
+  currentPath === "/es" ||
+  currentPath.startsWith("/es/");
+
+const localizedPath = isSpanish
+  ? currentPath.replace(/^\/es/, "") || "/"
+  : currentPath;
 
 const isActive = (path: string) => {
-  if (path === "/") {
-    return currentPath === "/" || currentPath === "/es";
+  const normalizedTarget = normalizePath(path);
+
+  if (normalizedTarget === "/") {
+    return localizedPath === "/";
   }
 
-  if (isSpanish) {
-    return currentPath.startsWith(`/es${path}`);
-  }
-
-  return currentPath.startsWith(path);
+  return (
+    localizedPath === normalizedTarget ||
+    localizedPath.startsWith(`${normalizedTarget}/`)
+  );
 };
 
 const alternateLanguageUrl = isSpanish
-  ? currentPath.replace(/^\/es/, "") || "/"
-  : `/es${currentPath === "/" ? "" : currentPath}`;
+  ? localizedPath
+  : currentPath === "/"
+    ? "/es"
+    : `/es${currentPath}`;
 ---
 
 <header class="site-header">
 
-  <a href={isSpanish ? "/es" : "/"} class="logo">
+  <a href={isSpanish ? "/es/" : "/"} class="logo">
     {isSpanish ? "Tolerancia Mínima" : "Minimal Tolerance"}
   </a>
 
   <nav aria-label={isSpanish ? "Navegación principal" : "Main navigation"}>
 
     <a
-      href={isSpanish ? "/es" : "/"}
-      class={isActive("/") ? "active" : undefined}
+      href={isSpanish ? "/es/" : "/"}
+      class:list={{ active: isActive("/") }}
+      aria-current={isActive("/") ? "page" : undefined}
     >
       {isSpanish ? "Inicio" : "Home"}
     </a>
 
     <a
-      href={isSpanish ? "/es/theory" : "/theory"}
-      class={isActive("/theory") ? "active" : undefined}
+      href={isSpanish ? "/es/theory/" : "/theory/"}
+      class:list={{ active: isActive("/theory") }}
+      aria-current={isActive("/theory") ? "page" : undefined}
     >
       {isSpanish ? "Teoría" : "Theory"}
     </a>
 
     <a
-      href={isSpanish ? "/es/theorem" : "/theorem"}
-      class={isActive("/theorem") ? "active" : undefined}
+      href={isSpanish ? "/es/theorem/" : "/theorem/"}
+      class:list={{ active: isActive("/theorem") }}
+      aria-current={isActive("/theorem") ? "page" : undefined}
     >
       {isSpanish ? "Teorema" : "Theorem"}
     </a>
 
     <a
-      href={isSpanish ? "/es/applications" : "/applications"}
-      class={isActive("/applications") ? "active" : undefined}
+      href={isSpanish ? "/es/applications/" : "/applications/"}
+      class:list={{ active: isActive("/applications") }}
+      aria-current={isActive("/applications") ? "page" : undefined}
     >
       {isSpanish ? "Aplicaciones" : "Applications"}
     </a>
 
     <a
-      href={isSpanish ? "/es/book" : "/book"}
-      class={isActive("/book") ? "active" : undefined}
+      href={isSpanish ? "/es/book/" : "/book/"}
+      class:list={{ active: isActive("/book") }}
+      aria-current={isActive("/book") ? "page" : undefined}
     >
       {isSpanish ? "Libro" : "Book"}
     </a>
 
     <a
-      href={isSpanish ? "/es/author" : "/author"}
-      class={isActive("/author") ? "active" : undefined}
+      href={isSpanish ? "/es/author/" : "/author/"}
+      class:list={{ active: isActive("/author") }}
+      aria-current={isActive("/author") ? "page" : undefined}
     >
       {isSpanish ? "Autor" : "Author"}
     </a>
@@ -85,7 +105,8 @@ const alternateLanguageUrl = isSpanish
 
       <a
         href={isSpanish ? alternateLanguageUrl : currentPath}
-        class={!isSpanish ? "active" : undefined}
+        class:list={{ active: !isSpanish }}
+        aria-label="English"
       >
         EN
       </a>
@@ -94,7 +115,8 @@ const alternateLanguageUrl = isSpanish
 
       <a
         href={isSpanish ? currentPath : alternateLanguageUrl}
-        class={isSpanish ? "active" : undefined}
+        class:list={{ active: isSpanish }}
+        aria-label="Español"
       >
         ES
       </a>
