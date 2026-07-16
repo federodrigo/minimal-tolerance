@@ -1,47 +1,556 @@
+---
+import "../styles/global.css";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+
 const siteUrl = "https://minimaltolerance.com";
-const pageUrl = `${siteUrl}/preguntas`;
+const pageUrl = `${siteUrl}/es/questions`;
 
 const questions = [
   {
-    id: "funciones-del-estado",
+    id: "funciones-apropiadas-del-gobierno",
     number: "01",
-    title: "¿Cuáles son las funciones propias del Estado?",
+    title: "¿Cuáles Son las Funciones Apropiadas del Gobierno?",
     short:
-      "Las distintas teorías políticas ofrecen respuestas diferentes, pero pocas explican el criterio utilizado para justificarlas",
+      "Las teorías políticas proponen diferentes listas de funciones gubernamentales, pero suelen dedicar menos atención al principio utilizado para justificar esas listas",
   },
   {
     id: "por-que-estas-funciones",
     number: "02",
-    title: "¿Por qué estas funciones y no otras?",
+    title: "¿Por Qué Estas Funciones y No Otras?",
     short:
-      "La importancia de una actividad no explica por sí misma por qué debería quedar bajo control político o financiarse mediante coerción",
+      "La importancia de una actividad no explica por qué debería quedar bajo control político o financiarse mediante la coerción",
   },
   {
-    id: "principio-que-limita-al-estado",
+    id: "principio-que-limita-al-gobierno",
     number: "03",
-    title: "¿Existe un principio capaz de limitar al Estado?",
+    title: "¿Existe un Principio que Limite al Gobierno?",
     short:
-      "Un límite duradero requiere un criterio que pueda aplicarse de forma consistente a toda expansión del poder político",
+      "Un límite duradero requiere un criterio que pueda aplicarse de manera consistente a todo ejercicio propuesto de poder político",
   },
   {
     id: "puede-justificarse-la-coercion",
     number: "04",
-    title: "¿Puede justificarse alguna vez la coerción?",
+    title: "¿Puede Justificarse Alguna Vez la Coerción?",
     short:
-      "Los buenos resultados, el apoyo democrático o las buenas intenciones no eliminan el costo moral de imponer decisiones sobre otros",
+      "Los resultados útiles, el apoyo democrático y las buenas intenciones no eliminan el costo moral de imponer decisiones sobre los demás",
   },
   {
     id: "es-legitimo-el-estado",
     number: "05",
-    title: "¿Es legítimo el Estado?",
+    title: "¿Es Legítimo el Estado?",
     short:
-      "Las instituciones políticas suelen considerarse excepcionales desde el punto de vista moral aunque continúan siendo personas ejerciendo poder sobre otras personas",
+      "Las instituciones políticas suelen ser tratadas como moralmente excepcionales, aunque continúan siendo organizaciones compuestas por personas que ejercen poder sobre otras",
   },
   {
     id: "cuanta-coercion-es-demasiada",
     number: "06",
-    title: "¿Cuánta coerción es demasiada?",
+    title: "¿Cuánta Coerción Es Demasiada?",
     short:
-      "El desafío consiste en identificar las circunstancias excepcionales bajo las cuales la coerción puede tolerarse sin transformarse en una autorización general para gobernar",
+      "El desafío consiste en identificar las circunstancias excepcionales en las que la coerción puede tolerarse sin convertir la excepción en una autorización general para gobernar",
   },
 ];
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: questions.map((question) => ({
+    "@type": "Question",
+    name: question.title,
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: question.short,
+    },
+  })),
+};
+---
+
+<!doctype html>
+
+<html lang="es">
+
+  <head>
+
+    <meta charset="UTF-8" />
+
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+
+    <title>
+      Preguntas Sobre el Gobierno, la Coerción y el Poder del Estado |
+      Tolerancia Mínima
+    </title>
+
+    <meta
+      name="description"
+      content="Seis preguntas fundamentales sobre las funciones apropiadas del gobierno, la legitimidad política, la coerción estatal y los principios necesarios para limitar el poder político"
+    />
+
+    <link rel="canonical" href={pageUrl} />
+
+    <meta
+      property="og:title"
+      content="Preguntas Sobre el Gobierno, la Coerción y el Poder del Estado"
+    />
+
+    <meta
+      property="og:description"
+      content="Las preguntas que dieron origen a la Teoría de la Tolerancia Mínima"
+    />
+
+    <meta
+      property="og:type"
+      content="article"
+    />
+
+    <meta
+      property="og:url"
+      content={pageUrl}
+    />
+
+    <meta
+      property="og:site_name"
+      content="Tolerancia Mínima"
+    />
+
+    <meta
+      name="twitter:card"
+      content="summary"
+    />
+
+    <meta
+      name="twitter:title"
+      content="Preguntas Sobre el Gobierno, la Coerción y el Poder del Estado"
+    />
+
+    <meta
+      name="twitter:description"
+      content="Las preguntas que dieron origen a la Teoría de la Tolerancia Mínima"
+    />
+
+    <script
+      type="application/ld+json"
+      set:html={JSON.stringify(faqSchema)}
+    />
+
+  </head>
+
+  <body>
+
+    <Header />
+
+    <main>
+
+      <!-- HERO -->
+
+      <section class="hero questions-page-hero">
+
+        <div class="hero-content">
+
+          <p class="eyebrow">
+            LAS PREGUNTAS
+          </p>
+
+          <h1>
+            ¿Qué debería permitírsele<br />
+            hacer al gobierno?
+          </h1>
+
+          <p class="lead">
+            Las preguntas detrás de la Teoría de la Tolerancia Mínima
+          </p>
+
+        </div>
+
+      </section>
+
+      <!-- CENTRAL STATEMENT -->
+
+      <section class="questions-statement">
+
+        <div class="questions-container">
+
+          <p>
+            Las tradiciones políticas discrepan acerca de lo que el gobierno
+            debería hacer, cuánto poder debería poseer y qué formas de coerción
+            deberían aceptarse, pero la dificultad más profunda consiste en
+            identificar el criterio necesario para evaluar esas conclusiones
+          </p>
+
+        </div>
+
+      </section>
+
+      <!-- EXPLORE -->
+
+      <section class="questions-index">
+
+        <div class="questions-container">
+
+          <p class="eyebrow">
+            EXPLORAR
+          </p>
+
+          <nav
+            class="questions-index-grid"
+            aria-label="Preguntas sobre el gobierno y el poder político"
+          >
+
+            {
+              questions.map((question) => (
+                <a
+                  href={`#${question.id}`}
+                  class="question-index-card"
+                >
+
+                  <span class="question-index-number">
+                    {question.number}
+                  </span>
+
+                  <span class="question-index-title">
+                    {question.title}
+                  </span>
+
+                </a>
+              ))
+            }
+
+          </nav>
+
+        </div>
+
+      </section>
+
+      <!-- QUESTIONS -->
+
+      <section class="questions-content">
+
+        <div class="questions-container">
+
+          <!-- QUESTION 01 -->
+
+          <article
+            id="funciones-apropiadas-del-gobierno"
+            class="question-section"
+          >
+
+            <div class="question-heading">
+
+              <span class="question-number">
+                01
+              </span>
+
+              <h2>
+                ¿Cuáles Son las Funciones Apropiadas del Gobierno?
+              </h2>
+
+            </div>
+
+            <div class="question-copy">
+
+              <p>
+                Toda filosofía política ofrece una respuesta diferente.
+                Algunas limitan al gobierno a la policía, los tribunales
+                y la defensa nacional, mientras que otras también incluyen
+                la educación, la salud, las jubilaciones, la infraestructura,
+                la política monetaria o la investigación científica. El
+                desacuerdo es fácil de observar, pero resulta considerablemente
+                más difícil encontrar el principio capaz de decidir entre
+                esas listas contrapuestas
+              </p>
+
+              <p>
+                Antes de determinar qué debería hacer el gobierno, se necesita
+                un criterio previo que permita evaluar por qué una función
+                determinada debería pertenecer al ámbito de la autoridad
+                política. Sin ese criterio, todo límite propuesto corre el
+                riesgo de convertirse en una colección de preferencias en
+                lugar de constituir una restricción consistente sobre el poder
+              </p>
+
+            </div>
+
+          </article>
+
+          <!-- QUESTION 02 -->
+
+          <article
+            id="por-que-estas-funciones"
+            class="question-section"
+          >
+
+            <div class="question-heading">
+
+              <span class="question-number">
+                02
+              </span>
+
+              <h2>
+                ¿Por Qué Estas Funciones y No Otras?
+              </h2>
+
+            </div>
+
+            <div class="question-copy">
+
+              <p>
+                Los defensores de un gobierno limitado suelen identificar
+                un pequeño grupo de funciones que deberían permanecer bajo
+                control estatal, pero la propia selección requiere una
+                explicación. ¿Por qué la policía, pero no la salud; la defensa
+                nacional, pero no las jubilaciones; los tribunales, pero no
+                la investigación científica? El hecho de que una actividad
+                sea valiosa, difícil o socialmente importante no demuestra
+                que deba proporcionarse mediante la coerción
+              </p>
+
+              <p>
+                Un límite significativo debe explicar por qué una función
+                reúne las condiciones necesarias para convertirse en una
+                excepción, mientras otra permanece dentro de la esfera de
+                la cooperación voluntaria. La tarea difícil no consiste en
+                elaborar una lista más corta o más extensa, sino en identificar
+                un criterio capaz de juzgar toda función propuesta bajo el
+                mismo estándar
+              </p>
+
+            </div>
+
+          </article>
+
+          <!-- QUESTION 03 -->
+
+          <article
+            id="principio-que-limita-al-gobierno"
+            class="question-section"
+          >
+
+            <div class="question-heading">
+
+              <span class="question-number">
+                03
+              </span>
+
+              <h2>
+                ¿Existe un Principio que Limite al Gobierno?
+              </h2>
+
+            </div>
+
+            <div class="question-copy">
+
+              <p>
+                El debate político se concentra en políticas, instituciones
+                y resultados, mientras dedica menos atención al principio
+                que determina qué poderes puede poseer el gobierno. Un límite
+                basado únicamente en la tradición, la preferencia política
+                o una lista fija de funciones conocidas se vuelve difícil
+                de defender cuando aparecen nuevos problemas, tecnologías
+                y demandas
+              </p>
+
+              <p>
+                Un principio limitante duradero debe aplicarse con independencia
+                de quién gobierne, del objetivo que se persiga o de lo atractivo
+                que resulte el desenlace prometido. También debe impedir que
+                la existencia de un problema social se convierta en una
+                autorización automática para la intervención política
+              </p>
+
+            </div>
+
+          </article>
+
+          <!-- QUESTION 04 -->
+
+          <article
+            id="puede-justificarse-la-coercion"
+            class="question-section"
+          >
+
+            <div class="question-heading">
+
+              <span class="question-number">
+                04
+              </span>
+
+              <h2>
+                ¿Puede Justificarse Alguna Vez la Coerción?
+              </h2>
+
+            </div>
+
+            <div class="question-copy">
+
+              <p>
+                Todo gobierno depende en última instancia de la coerción,
+                porque las leyes, los impuestos y las regulaciones continúan
+                siendo obligatorios incluso para quienes los rechazan. Las
+                elecciones, los resultados beneficiosos y las buenas
+                intenciones pueden influir en la forma en que se percibe el
+                poder político, pero no convierten una decisión impuesta en
+                una decisión voluntaria ni eliminan su costo moral
+              </p>
+
+              <p>
+                La Tolerancia Mínima no supone que la coerción se vuelva
+                moralmente legítima bajo circunstancias favorables. Examina
+                si ciertas condiciones prácticas excepcionales pueden hacer
+                tolerable una forma limitada de coerción como último recurso,
+                preservando al mismo tiempo la presunción de que la cooperación
+                voluntaria continúa siendo la regla
+              </p>
+
+            </div>
+
+          </article>
+
+          <!-- QUESTION 05 -->
+
+          <article
+            id="es-legitimo-el-estado"
+            class="question-section"
+          >
+
+            <div class="question-heading">
+
+              <span class="question-number">
+                05
+              </span>
+
+              <h2>
+                ¿Es Legítimo el Estado?
+              </h2>
+
+            </div>
+
+            <div class="question-copy">
+
+              <p>
+                El Estado suele ser tratado como una institución moralmente
+                excepcional cuya autoridad se deriva de las elecciones, las
+                constituciones, el consentimiento colectivo o los beneficios
+                que produce. Ninguno de esos argumentos elimina el hecho
+                subyacente de que las instituciones políticas están compuestas
+                por personas que imponen decisiones sobre otras personas que
+                quizá nunca hayan aceptado su autoridad
+              </p>
+
+              <p>
+                La Teoría de la Tolerancia Mínima distingue la legitimidad de
+                la tolerabilidad. La coerción estatal no se vuelve moral por
+                el simple hecho de ser útil, popular o administrada mediante
+                instituciones conocidas. A lo sumo, una necesidad práctica
+                excepcional puede justificar la tolerancia de una respuesta
+                institucional limitada sin concederle una legitimidad moral
+                intrínseca
+              </p>
+
+            </div>
+
+          </article>
+
+          <!-- QUESTION 06 -->
+
+          <article
+            id="cuanta-coercion-es-demasiada"
+            class="question-section"
+          >
+
+            <div class="question-heading">
+
+              <span class="question-number">
+                06
+              </span>
+
+              <h2>
+                ¿Cuánta Coerción Es Demasiada?
+              </h2>
+
+            </div>
+
+            <div class="question-copy">
+
+              <p>
+                Si toda imperfección, beneficio social o resultado deseable
+                resulta suficiente para justificar la intervención, ningún
+                límite significativo sobre el gobierno puede sobrevivir.
+                Si toda posible excepción se rechaza de antemano, ciertos
+                problemas colectivos pueden permanecer sin una solución
+                voluntaria estable. Una teoría seria debe enfrentar ambos
+                riesgos sin tratar ninguna de las dos conclusiones como
+                evidente por sí misma
+              </p>
+
+              <p>
+                La Teoría de la Tolerancia Mínima desarrolla una prueba formal
+                para distinguir las dificultades ordinarias de aquellos casos
+                excepcionales en los que la provisión voluntaria enfrenta un
+                colapso estructural persistente. La carga de la prueba permanece
+                del lado del poder, y superar la prueba inicial permite examinar
+                una excepción en lugar de presumir su legitimidad
+              </p>
+
+            </div>
+
+          </article>
+
+        </div>
+
+      </section>
+
+      <!-- FINAL CTA -->
+
+      <section class="questions-cta">
+
+        <div class="questions-container questions-cta-content">
+
+          <div>
+
+            <p class="eyebrow">
+              LA TEORÍA DE LA TOLERANCIA MÍNIMA
+            </p>
+
+            <h2>
+              La carga de la prueba pertenece al poder
+            </h2>
+
+            <p>
+              Explora el marco desarrollado para evaluar cuándo un ejercicio
+              excepcional de coerción puede tolerarse sin convertir la
+              necesidad en una autoridad política ilimitada
+            </p>
+
+          </div>
+
+          <div class="questions-cta-buttons">
+
+            <a
+              href="/es/theory"
+              class="primary"
+            >
+              Explorar la Teoría
+            </a>
+
+            <a
+              href="/es/theorem"
+              class="secondary"
+            >
+              Examinar el Teorema
+            </a>
+
+          </div>
+
+        </div>
+
+      </section>
+
+    </main>
+
+    <Footer />
+
+  </body>
+
+</html>
