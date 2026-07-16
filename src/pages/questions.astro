@@ -1,1 +1,855 @@
+---
+import "../styles/global.css";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
 
+const siteUrl = "https://minimaltolerance.com";
+const pageUrl = `${siteUrl}/questions`;
+
+const questions = [
+  {
+    id: "proper-functions-of-government",
+    number: "01",
+    title: "What Are the Proper Functions of Government?",
+    short:
+      "Political theories offer different lists of government functions, but often devote less attention to the principle used to justify those lists.",
+  },
+  {
+    id: "why-these-functions",
+    number: "02",
+    title: "Why These Functions and Not Others?",
+    short:
+      "The importance of an activity does not explain why it should be placed under political control or financed through coercion.",
+  },
+  {
+    id: "principle-that-limits-government",
+    number: "03",
+    title: "Is There a Principle That Limits Government?",
+    short:
+      "A durable limit requires a standard that can be applied consistently to every proposed exercise of political power.",
+  },
+  {
+    id: "can-coercion-be-justified",
+    number: "04",
+    title: "Can Coercion Ever Be Justified?",
+    short:
+      "Useful outcomes, democratic support and good intentions do not erase the moral cost of imposing decisions on others.",
+  },
+  {
+    id: "is-the-state-legitimate",
+    number: "05",
+    title: "Is the State Legitimate?",
+    short:
+      "Political institutions are commonly treated as morally exceptional, although they remain organizations composed of people exercising power over others.",
+  },
+  {
+    id: "how-much-coercion",
+    number: "06",
+    title: "How Much Coercion Is Too Much?",
+    short:
+      "The challenge is to identify the exceptional circumstances in which coercion may be tolerated without converting the exception into a general license to rule.",
+  },
+];
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: questions.map((question) => ({
+    "@type": "Question",
+    name: question.title,
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: question.short,
+    },
+  })),
+};
+---
+
+<!doctype html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+
+    <title>
+      Questions About Government, Coercion and State Power |
+      Minimal Tolerance
+    </title>
+
+    <meta
+      name="description"
+      content="Six fundamental questions about the proper functions of government, political legitimacy, state coercion and the principles required to limit political power."
+    />
+
+    <meta
+      name="keywords"
+      content="proper functions of government, limits of government, state legitimacy, political legitimacy, government coercion, limits of state power, justified coercion, minimal government, political authority, Minimal Tolerance"
+    />
+
+    <link rel="canonical" href={pageUrl} />
+
+    <meta
+      property="og:title"
+      content="Questions About Government, Coercion and State Power"
+    />
+
+    <meta
+      property="og:description"
+      content="The questions that led to the Theory of Minimal Tolerance."
+    />
+
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content={pageUrl} />
+    <meta property="og:site_name" content="Minimal Tolerance" />
+
+    <meta
+      name="twitter:card"
+      content="summary"
+    />
+
+    <meta
+      name="twitter:title"
+      content="Questions About Government, Coercion and State Power"
+    />
+
+    <meta
+      name="twitter:description"
+      content="The questions that led to the Theory of Minimal Tolerance."
+    />
+
+    <script
+      type="application/ld+json"
+      set:html={JSON.stringify(faqSchema)}
+    />
+  </head>
+
+  <body>
+
+    <Header />
+
+    <main>
+
+      <!-- HERO -->
+
+      <section class="questions-hero">
+
+        <div class="questions-container questions-hero-grid">
+
+          <div>
+
+            <p class="eyebrow">
+              THE QUESTIONS
+            </p>
+
+            <h1>
+              Every theory has answers.<br />
+              The harder problem is finding the criterion.
+            </h1>
+
+          </div>
+
+          <div class="questions-introduction">
+
+            <p>
+              Political traditions disagree about what government
+              should do, how much power it should possess and which
+              forms of coercion should be accepted. They provide
+              different conclusions, but often rely on standards that
+              are incomplete, inconsistent or left unstated.
+            </p>
+
+            <p>
+              The Theory of Minimal Tolerance begins before those
+              conclusions. It asks what any proposed exercise of state
+              power must demonstrate before coercion can even be
+              considered tolerable.
+            </p>
+
+          </div>
+
+        </div>
+
+      </section>
+
+      <!-- CENTRAL STATEMENT -->
+
+      <section class="questions-statement">
+
+        <div class="questions-container">
+
+          <p>
+            The purpose is not to begin with a preferred size of
+            government, but to establish a consistent standard for
+            evaluating every claim to political authority.
+          </p>
+
+        </div>
+
+      </section>
+
+      <!-- QUESTION INDEX -->
+
+      <section class="questions-index">
+
+        <div class="questions-container">
+
+          <p class="eyebrow">
+            EXPLORE
+          </p>
+
+          <nav
+            class="questions-index-grid"
+            aria-label="Questions on political power"
+          >
+
+            {
+              questions.map((question) => (
+                <a
+                  href={`#${question.id}`}
+                  class="question-index-card"
+                >
+                  <span class="question-index-number">
+                    {question.number}
+                  </span>
+
+                  <span>
+                    {question.title}
+                  </span>
+                </a>
+              ))
+            }
+
+          </nav>
+
+        </div>
+
+      </section>
+
+      <!-- QUESTIONS -->
+
+      <section class="questions-content">
+
+        <div class="questions-container">
+
+          <!-- 01 -->
+
+          <article
+            id="proper-functions-of-government"
+            class="question-section"
+          >
+
+            <div class="question-heading">
+
+              <span class="question-number">
+                01
+              </span>
+
+              <h2>
+                What Are the Proper Functions of Government?
+              </h2>
+
+            </div>
+
+            <div class="question-copy">
+
+              <p>
+                Every political philosophy offers a different answer.
+                Some restrict government to police, courts and national
+                defense, while others also include education,
+                healthcare, pensions, infrastructure, monetary policy
+                or scientific research. The disagreement is easy to
+                observe, but the principle capable of deciding among
+                those competing lists is considerably harder to find.
+              </p>
+
+              <p>
+                Before determining what government should do, a prior
+                standard is required for evaluating why a particular
+                function belongs within political authority at all.
+                Without such a standard, every proposed boundary risks
+                becoming a collection of preferences rather than a
+                consistent limit on power.
+              </p>
+
+            </div>
+
+          </article>
+
+          <!-- 02 -->
+
+          <article
+            id="why-these-functions"
+            class="question-section"
+          >
+
+            <div class="question-heading">
+
+              <span class="question-number">
+                02
+              </span>
+
+              <h2>
+                Why These Functions and Not Others?
+              </h2>
+
+            </div>
+
+            <div class="question-copy">
+
+              <p>
+                Defenders of limited government usually identify a
+                small group of functions that should remain under state
+                control, but the selection itself requires an
+                explanation. Why police but not healthcare, national
+                defense but not pensions, courts but not scientific
+                research? The fact that an activity is valuable,
+                difficult or socially important does not establish that
+                it must be provided through coercion.
+              </p>
+
+              <p>
+                A meaningful limit must explain why one function
+                qualifies as an exception while another remains within
+                the sphere of voluntary cooperation. The difficult task
+                is not producing a shorter or longer list, but
+                identifying a criterion capable of judging every
+                proposed function under the same standard.
+              </p>
+
+            </div>
+
+          </article>
+
+          <!-- 03 -->
+
+          <article
+            id="principle-that-limits-government"
+            class="question-section"
+          >
+
+            <div class="question-heading">
+
+              <span class="question-number">
+                03
+              </span>
+
+              <h2>
+                Is There a Principle That Limits Government?
+              </h2>
+
+            </div>
+
+            <div class="question-copy">
+
+              <p>
+                Political debate concentrates on policies,
+                institutions and outcomes, while giving less attention
+                to the principle that determines which powers
+                government may possess. A limit based only on
+                tradition, political preference or a fixed list of
+                familiar functions becomes difficult to defend when new
+                problems, technologies and demands appear.
+              </p>
+
+              <p>
+                A durable limiting principle must apply regardless of
+                who governs, which objective is being pursued or how
+                attractive the promised result may be. It must also
+                prevent the existence of a social problem from becoming
+                an automatic authorization for political intervention.
+              </p>
+
+            </div>
+
+          </article>
+
+          <!-- 04 -->
+
+          <article
+            id="can-coercion-be-justified"
+            class="question-section"
+          >
+
+            <div class="question-heading">
+
+              <span class="question-number">
+                04
+              </span>
+
+              <h2>
+                Can Coercion Ever Be Justified?
+              </h2>
+
+            </div>
+
+            <div class="question-copy">
+
+              <p>
+                Every government ultimately relies on coercion because
+                laws, taxes and regulations remain binding even for
+                those who reject them. Elections, beneficial outcomes
+                and good intentions may influence how political power
+                is perceived, but they do not transform an imposed
+                decision into a voluntary one or eliminate its moral
+                cost.
+              </p>
+
+              <p>
+                Minimal Tolerance therefore does not assume that
+                coercion becomes morally legitimate under favorable
+                circumstances. It examines whether exceptional
+                practical conditions may make a limited form of
+                coercion tolerable as a last resort, while preserving
+                the presumption that voluntary cooperation remains the
+                rule.
+              </p>
+
+            </div>
+
+          </article>
+
+          <!-- 05 -->
+
+          <article
+            id="is-the-state-legitimate"
+            class="question-section"
+          >
+
+            <div class="question-heading">
+
+              <span class="question-number">
+                05
+              </span>
+
+              <h2>
+                Is the State Legitimate?
+              </h2>
+
+            </div>
+
+            <div class="question-copy">
+
+              <p>
+                The state is frequently treated as a morally exceptional
+                institution whose authority follows from elections,
+                constitutions, collective consent or the benefits it
+                produces. None of those claims removes the underlying
+                fact that political institutions consist of people
+                imposing decisions on other people who may never have
+                accepted their authority.
+              </p>
+
+              <p>
+                The Theory of Minimal Tolerance separates legitimacy
+                from tolerability. State coercion does not become moral
+                merely because it is useful, popular or administered
+                through familiar institutions. At most, an exceptional
+                practical necessity may justify tolerating a limited
+                institutional response without granting it intrinsic
+                moral legitimacy.
+              </p>
+
+            </div>
+
+          </article>
+
+          <!-- 06 -->
+
+          <article
+            id="how-much-coercion"
+            class="question-section"
+          >
+
+            <div class="question-heading">
+
+              <span class="question-number">
+                06
+              </span>
+
+              <h2>
+                How Much Coercion Is Too Much?
+              </h2>
+
+            </div>
+
+            <div class="question-copy">
+
+              <p>
+                If every imperfection, social benefit or desirable
+                outcome is sufficient to justify intervention, no
+                meaningful limit on government can survive. If every
+                possible exception is rejected in advance, certain
+                collective problems may remain without a stable
+                voluntary solution. A serious theory must confront both
+                risks without treating either conclusion as
+                self-evident.
+              </p>
+
+              <p>
+                The Theory of Minimal Tolerance develops a formal test
+                for distinguishing ordinary difficulties from the
+                exceptional cases in which voluntary provision faces a
+                persistent structural collapse. The burden of proof
+                remains with power, and passing the initial test permits
+                an exception to be examined rather than presumed
+                legitimate.
+              </p>
+
+            </div>
+
+          </article>
+
+        </div>
+
+      </section>
+
+      <!-- CTA -->
+
+      <section class="questions-cta">
+
+        <div class="questions-container questions-cta-content">
+
+          <div>
+
+            <p class="eyebrow">
+              THE THEORY OF MINIMAL TOLERANCE
+            </p>
+
+            <h2>
+              The burden of proof belongs to power
+            </h2>
+
+            <p>
+              Explore the framework developed to evaluate when an
+              exceptional exercise of coercion may be tolerated without
+              converting necessity into unlimited political authority.
+            </p>
+
+          </div>
+
+          <div class="questions-cta-buttons">
+
+            <a href="/theory" class="primary">
+              Explore the Theory
+            </a>
+
+            <a href="/theorem" class="secondary">
+              Examine the Theorem
+            </a>
+
+          </div>
+
+        </div>
+
+      </section>
+
+    </main>
+
+    <Footer />
+
+  </body>
+</html>
+
+<style>
+  .questions-container {
+    width: min(1180px, calc(100% - 48px));
+    margin: 0 auto;
+  }
+
+  .questions-hero {
+    min-height: 72vh;
+    display: flex;
+    align-items: center;
+    padding: 150px 0 110px;
+  }
+
+  .questions-hero-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.25fr) minmax(320px, 0.75fr);
+    gap: 90px;
+    align-items: end;
+  }
+
+  .questions-hero h1 {
+    max-width: 850px;
+    margin: 18px 0 0;
+    font-size: clamp(3.2rem, 7vw, 6.8rem);
+    line-height: 0.98;
+    letter-spacing: -0.055em;
+    font-weight: 500;
+  }
+
+  .questions-introduction {
+    padding-bottom: 8px;
+  }
+
+  .questions-introduction p {
+    margin: 0;
+    font-size: 1.08rem;
+    line-height: 1.8;
+    opacity: 0.78;
+  }
+
+  .questions-introduction p + p {
+    margin-top: 22px;
+  }
+
+  .questions-statement {
+    border-top: 1px solid rgba(255, 255, 255, 0.13);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.13);
+  }
+
+  .questions-statement p {
+    max-width: 950px;
+    margin: 0;
+    padding: 55px 0;
+    font-size: clamp(1.45rem, 2.7vw, 2.45rem);
+    line-height: 1.35;
+    letter-spacing: -0.025em;
+  }
+
+  .questions-index {
+    padding: 105px 0 125px;
+  }
+
+  .questions-index-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    margin-top: 30px;
+    border-top: 1px solid rgba(255, 255, 255, 0.14);
+  }
+
+  .question-index-card {
+    display: grid;
+    grid-template-columns: 58px 1fr;
+    gap: 12px;
+    align-items: center;
+    min-height: 105px;
+    padding: 24px 28px 24px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.14);
+    color: inherit;
+    text-decoration: none;
+    font-size: 1.07rem;
+    line-height: 1.4;
+    transition:
+      opacity 180ms ease,
+      transform 180ms ease;
+  }
+
+  .question-index-card:nth-child(odd) {
+    border-right: 1px solid rgba(255, 255, 255, 0.14);
+  }
+
+  .question-index-card:nth-child(even) {
+    padding-left: 30px;
+  }
+
+  .question-index-card:hover {
+    opacity: 0.65;
+    transform: translateX(4px);
+  }
+
+  .question-index-number,
+  .question-number {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco,
+      Consolas, monospace;
+    font-size: 0.72rem;
+    letter-spacing: 0.14em;
+    opacity: 0.48;
+  }
+
+  .questions-content {
+    padding-bottom: 130px;
+  }
+
+  .question-section {
+    display: grid;
+    grid-template-columns: minmax(310px, 0.85fr) minmax(0, 1.15fr);
+    gap: 90px;
+    scroll-margin-top: 110px;
+    padding: 100px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.14);
+  }
+
+  .question-section:last-child {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.14);
+  }
+
+  .question-heading {
+    display: grid;
+    grid-template-columns: 45px 1fr;
+    gap: 16px;
+    align-items: start;
+  }
+
+  .question-heading h2 {
+    max-width: 540px;
+    margin: 0;
+    font-size: clamp(2rem, 4vw, 3.75rem);
+    line-height: 1.05;
+    letter-spacing: -0.04em;
+    font-weight: 500;
+  }
+
+  .question-number {
+    padding-top: 10px;
+  }
+
+  .question-copy {
+    max-width: 680px;
+  }
+
+  .question-copy p {
+    margin: 0;
+    font-size: 1.1rem;
+    line-height: 1.82;
+    opacity: 0.8;
+  }
+
+  .question-copy p + p {
+    margin-top: 25px;
+  }
+
+  .questions-cta {
+    padding: 120px 0;
+    background: rgba(255, 255, 255, 0.035);
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+  }
+
+  .questions-cta-content {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 80px;
+    align-items: end;
+  }
+
+  .questions-cta h2 {
+    max-width: 790px;
+    margin: 18px 0 24px;
+    font-size: clamp(2.5rem, 5vw, 5rem);
+    line-height: 1;
+    letter-spacing: -0.05em;
+    font-weight: 500;
+  }
+
+  .questions-cta p:not(.eyebrow) {
+    max-width: 720px;
+    margin: 0;
+    font-size: 1.08rem;
+    line-height: 1.75;
+    opacity: 0.75;
+  }
+
+  .questions-cta-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 14px;
+    min-width: 215px;
+  }
+
+  .questions-cta-buttons a {
+    text-align: center;
+  }
+
+  @media (max-width: 900px) {
+    .questions-hero {
+      min-height: auto;
+      padding: 125px 0 85px;
+    }
+
+    .questions-hero-grid,
+    .question-section,
+    .questions-cta-content {
+      grid-template-columns: 1fr;
+    }
+
+    .questions-hero-grid {
+      gap: 50px;
+    }
+
+    .questions-introduction {
+      max-width: 700px;
+    }
+
+    .question-section {
+      gap: 45px;
+      padding: 80px 0;
+    }
+
+    .questions-cta-content {
+      gap: 50px;
+    }
+
+    .questions-cta-buttons {
+      flex-direction: row;
+      min-width: 0;
+    }
+  }
+
+  @media (max-width: 680px) {
+    .questions-container {
+      width: min(100% - 30px, 1180px);
+    }
+
+    .questions-hero {
+      padding-top: 105px;
+    }
+
+    .questions-hero h1 {
+      font-size: clamp(2.7rem, 13vw, 4.2rem);
+    }
+
+    .questions-index {
+      padding: 80px 0 95px;
+    }
+
+    .questions-index-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .question-index-card,
+    .question-index-card:nth-child(even) {
+      min-height: 90px;
+      padding: 20px 0;
+      border-right: 0;
+    }
+
+    .question-heading {
+      grid-template-columns: 34px 1fr;
+      gap: 10px;
+    }
+
+    .question-heading h2 {
+      font-size: clamp(2rem, 10vw, 3rem);
+    }
+
+    .question-copy p {
+      font-size: 1rem;
+      line-height: 1.75;
+    }
+
+    .questions-cta {
+      padding: 90px 0;
+    }
+
+    .questions-cta-buttons {
+      flex-direction: column;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .question-index-card {
+      transition: none;
+    }
+
+    .question-index-card:hover {
+      transform: none;
+    }
+  }
+</style>
