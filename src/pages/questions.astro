@@ -68,7 +68,9 @@ const faqSchema = {
 <!doctype html>
 
 <html lang="en">
+
   <head>
+
     <meta charset="UTF-8" />
 
     <meta
@@ -98,11 +100,25 @@ const faqSchema = {
       content="The questions that led to the Theory of Minimal Tolerance"
     />
 
-    <meta property="og:type" content="article" />
-    <meta property="og:url" content={pageUrl} />
-    <meta property="og:site_name" content="Minimal Tolerance" />
+    <meta
+      property="og:type"
+      content="article"
+    />
 
-    <meta name="twitter:card" content="summary" />
+    <meta
+      property="og:url"
+      content={pageUrl}
+    />
+
+    <meta
+      property="og:site_name"
+      content="Minimal Tolerance"
+    />
+
+    <meta
+      name="twitter:card"
+      content="summary"
+    />
 
     <meta
       name="twitter:title"
@@ -118,6 +134,7 @@ const faqSchema = {
       type="application/ld+json"
       set:html={JSON.stringify(faqSchema)}
     />
+
   </head>
 
   <body>
@@ -128,41 +145,22 @@ const faqSchema = {
 
       <!-- HERO -->
 
-      <section class="questions-hero">
+      <section class="hero questions-page-hero">
 
-        <div class="questions-container questions-hero-grid">
+        <div class="hero-content">
 
-          <div>
+          <p class="eyebrow">
+            THE QUESTIONS
+          </p>
 
-            <p class="eyebrow">
-              THE QUESTIONS
-            </p>
+          <h1>
+            What should government<br />
+            be allowed to do?
+          </h1>
 
-            <h1>
-              Every theory has answers<br />
-              The harder problem is finding the criterion
-            </h1>
-
-          </div>
-
-          <div class="questions-introduction">
-
-            <p>
-              Political traditions disagree about what government
-              should do, how much power it should possess and which
-              forms of coercion should be accepted. They provide
-              different conclusions, but often rely on standards that
-              are incomplete, inconsistent or left unstated
-            </p>
-
-            <p>
-              The Theory of Minimal Tolerance begins before those
-              conclusions. It asks what any proposed exercise of state
-              power must demonstrate before coercion can even be
-              considered tolerable
-            </p>
-
-          </div>
+          <p class="lead">
+            The questions behind the Theory of Minimal Tolerance
+          </p>
 
         </div>
 
@@ -175,16 +173,18 @@ const faqSchema = {
         <div class="questions-container">
 
           <p>
-            The purpose is not to begin with a preferred size of
-            government, but to establish a consistent standard for
-            evaluating every claim to political authority
+            Political traditions disagree about what government should
+            do, how much power it should possess and which forms of
+            coercion should be accepted, but the deeper difficulty lies
+            in identifying the criterion capable of evaluating those
+            competing conclusions
           </p>
 
         </div>
 
       </section>
 
-      <!-- QUESTION INDEX -->
+      <!-- EXPLORE -->
 
       <section class="questions-index">
 
@@ -196,7 +196,7 @@ const faqSchema = {
 
           <nav
             class="questions-index-grid"
-            aria-label="Questions on political power"
+            aria-label="Questions about government and political power"
           >
 
             {
@@ -205,6 +205,7 @@ const faqSchema = {
                   href={`#${question.id}`}
                   class="question-index-card"
                 >
+
                   <span class="question-index-number">
                     {question.number}
                   </span>
@@ -212,6 +213,7 @@ const faqSchema = {
                   <span class="question-index-title">
                     {question.title}
                   </span>
+
                 </a>
               ))
             }
@@ -227,6 +229,8 @@ const faqSchema = {
       <section class="questions-content">
 
         <div class="questions-container">
+
+          <!-- QUESTION 01 -->
 
           <article
             id="proper-functions-of-government"
@@ -269,6 +273,8 @@ const faqSchema = {
             </div>
 
           </article>
+
+          <!-- QUESTION 02 -->
 
           <article
             id="why-these-functions"
@@ -313,6 +319,8 @@ const faqSchema = {
 
           </article>
 
+          <!-- QUESTION 03 -->
+
           <article
             id="principle-that-limits-government"
             class="question-section"
@@ -354,6 +362,8 @@ const faqSchema = {
 
           </article>
 
+          <!-- QUESTION 04 -->
+
           <article
             id="can-coercion-be-justified"
             class="question-section"
@@ -384,18 +394,19 @@ const faqSchema = {
               </p>
 
               <p>
-                Minimal Tolerance therefore does not assume that
-                coercion becomes morally legitimate under favorable
-                circumstances. It examines whether exceptional
-                practical conditions may make a limited form of
-                coercion tolerable as a last resort, while preserving
-                the presumption that voluntary cooperation remains the
-                rule
+                Minimal Tolerance does not assume that coercion becomes
+                morally legitimate under favorable circumstances. It
+                examines whether exceptional practical conditions may
+                make a limited form of coercion tolerable as a last
+                resort, while preserving the presumption that voluntary
+                cooperation remains the rule
               </p>
 
             </div>
 
           </article>
+
+          <!-- QUESTION 05 -->
 
           <article
             id="is-the-state-legitimate"
@@ -439,6 +450,8 @@ const faqSchema = {
             </div>
 
           </article>
+
+          <!-- QUESTION 06 -->
 
           <article
             id="how-much-coercion"
@@ -488,7 +501,7 @@ const faqSchema = {
 
       </section>
 
-      <!-- CTA -->
+      <!-- FINAL CTA -->
 
       <section class="questions-cta">
 
@@ -514,11 +527,17 @@ const faqSchema = {
 
           <div class="questions-cta-buttons">
 
-            <a href="/theory" class="primary">
+            <a
+              href="/theory"
+              class="primary"
+            >
               Explore the Theory
             </a>
 
-            <a href="/theorem" class="secondary">
+            <a
+              href="/theorem"
+              class="secondary"
+            >
               Examine the Theorem
             </a>
 
@@ -533,318 +552,5 @@ const faqSchema = {
     <Footer />
 
   </body>
+
 </html>
-
-<style>
-  .questions-container {
-    width: min(1180px, calc(100% - 48px));
-    margin: 0 auto;
-  }
-
-  .questions-hero {
-    display: flex;
-    align-items: center;
-    padding: 135px 0 90px;
-  }
-
-  .questions-hero-grid {
-    display: grid;
-    grid-template-columns: minmax(0, 1.15fr) minmax(320px, 0.85fr);
-    gap: 70px;
-    align-items: end;
-  }
-
-  .questions-hero h1 {
-    max-width: 760px;
-    margin: 18px 0 0;
-    font-size: clamp(2.8rem, 5vw, 4.8rem);
-    line-height: 1.03;
-    letter-spacing: -0.045em;
-    font-weight: 500;
-  }
-
-  .questions-introduction {
-    padding-bottom: 5px;
-  }
-
-  .questions-introduction p {
-    margin: 0;
-    font-size: 1.08rem;
-    line-height: 1.75;
-    opacity: 0.78;
-  }
-
-  .questions-introduction p + p {
-    margin-top: 18px;
-  }
-
-  .questions-statement {
-    border-top: 1px solid rgba(255, 255, 255, 0.13);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.13);
-  }
-
-  .questions-statement p {
-    max-width: 950px;
-    margin: 0;
-    padding: 45px 0;
-    font-size: clamp(1.35rem, 2.2vw, 2rem);
-    line-height: 1.4;
-    letter-spacing: -0.02em;
-  }
-
-  .questions-index {
-    padding: 75px 0 85px;
-  }
-
-  .questions-index-grid {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    margin-top: 28px;
-    border-top: 1px solid rgba(255, 255, 255, 0.18);
-  }
-
-  .question-index-card {
-    display: grid;
-    grid-template-columns: 72px 1fr;
-    gap: 18px;
-    align-items: center;
-    min-height: 125px;
-    padding: 28px 32px 28px 0;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.18);
-    color: inherit;
-    text-decoration: none;
-    transition:
-      opacity 180ms ease,
-      transform 180ms ease;
-  }
-
-  .question-index-card:nth-child(odd) {
-    border-right: 1px solid rgba(255, 255, 255, 0.18);
-  }
-
-  .question-index-card:nth-child(even) {
-    padding-left: 34px;
-  }
-
-  .question-index-card:hover {
-    opacity: 0.7;
-    transform: translateX(4px);
-  }
-
-  .question-index-number {
-    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco,
-      Consolas, monospace;
-    font-size: 1rem;
-    font-weight: 600;
-    letter-spacing: 0.08em;
-    opacity: 0.82;
-  }
-
-  .question-index-title {
-    max-width: 430px;
-    font-size: clamp(1.25rem, 2vw, 1.65rem);
-    line-height: 1.28;
-    letter-spacing: -0.02em;
-    font-weight: 500;
-  }
-
-  .questions-content {
-    padding-bottom: 90px;
-  }
-
-  .question-section {
-    display: grid;
-    grid-template-columns: minmax(310px, 0.9fr) minmax(0, 1.1fr);
-    gap: 75px;
-    scroll-margin-top: 100px;
-    padding: 62px 0;
-    border-top: 1px solid rgba(255, 255, 255, 0.14);
-  }
-
-  .question-section:last-child {
-    border-bottom: 1px solid rgba(255, 255, 255, 0.14);
-  }
-
-  .question-heading {
-    display: grid;
-    grid-template-columns: 48px 1fr;
-    gap: 14px;
-    align-items: start;
-  }
-
-  .question-heading h2 {
-    max-width: 540px;
-    margin: 0;
-    font-size: clamp(1.85rem, 3.2vw, 3rem);
-    line-height: 1.08;
-    letter-spacing: -0.035em;
-    font-weight: 500;
-  }
-
-  .question-number {
-    padding-top: 8px;
-    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco,
-      Consolas, monospace;
-    font-size: 0.86rem;
-    font-weight: 600;
-    letter-spacing: 0.1em;
-    opacity: 0.68;
-  }
-
-  .question-copy {
-    max-width: 680px;
-  }
-
-  .question-copy p {
-    margin: 0;
-    font-size: 1.08rem;
-    line-height: 1.75;
-    opacity: 0.8;
-  }
-
-  .question-copy p + p {
-    margin-top: 20px;
-  }
-
-  .questions-cta {
-    padding: 95px 0;
-    background: rgba(255, 255, 255, 0.035);
-    border-top: 1px solid rgba(255, 255, 255, 0.12);
-  }
-
-  .questions-cta-content {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) auto;
-    gap: 70px;
-    align-items: end;
-  }
-
-  .questions-cta h2 {
-    max-width: 750px;
-    margin: 18px 0 22px;
-    font-size: clamp(2.3rem, 4.2vw, 4.2rem);
-    line-height: 1.03;
-    letter-spacing: -0.045em;
-    font-weight: 500;
-  }
-
-  .questions-cta p:not(.eyebrow) {
-    max-width: 720px;
-    margin: 0;
-    font-size: 1.08rem;
-    line-height: 1.72;
-    opacity: 0.75;
-  }
-
-  .questions-cta-buttons {
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
-    gap: 14px;
-    min-width: 215px;
-  }
-
-  .questions-cta-buttons a {
-    text-align: center;
-  }
-
-  @media (max-width: 900px) {
-    .questions-hero {
-      padding: 120px 0 75px;
-    }
-
-    .questions-hero-grid,
-    .question-section,
-    .questions-cta-content {
-      grid-template-columns: 1fr;
-    }
-
-    .questions-hero-grid {
-      gap: 42px;
-    }
-
-    .question-section {
-      gap: 34px;
-      padding: 55px 0;
-    }
-
-    .questions-cta-content {
-      gap: 45px;
-    }
-
-    .questions-cta-buttons {
-      flex-direction: row;
-      min-width: 0;
-    }
-  }
-
-  @media (max-width: 680px) {
-    .questions-container {
-      width: min(100% - 30px, 1180px);
-    }
-
-    .questions-hero {
-      padding-top: 105px;
-    }
-
-    .questions-hero h1 {
-      font-size: clamp(2.4rem, 11vw, 3.5rem);
-    }
-
-    .questions-index {
-      padding: 65px 0 75px;
-    }
-
-    .questions-index-grid {
-      grid-template-columns: 1fr;
-    }
-
-    .question-index-card,
-    .question-index-card:nth-child(even) {
-      grid-template-columns: 58px 1fr;
-      min-height: 105px;
-      padding: 22px 0;
-      border-right: 0;
-    }
-
-    .question-index-number {
-      font-size: 0.92rem;
-    }
-
-    .question-index-title {
-      font-size: 1.22rem;
-    }
-
-    .question-heading {
-      grid-template-columns: 38px 1fr;
-      gap: 10px;
-    }
-
-    .question-heading h2 {
-      font-size: clamp(1.8rem, 8.5vw, 2.6rem);
-    }
-
-    .question-copy p {
-      font-size: 1rem;
-      line-height: 1.7;
-    }
-
-    .questions-cta {
-      padding: 80px 0;
-    }
-
-    .questions-cta-buttons {
-      flex-direction: column;
-    }
-  }
-
-  @media (prefers-reduced-motion: reduce) {
-    .question-index-card {
-      transition: none;
-    }
-
-    .question-index-card:hover {
-      transform: none;
-    }
-  }
-</style>
