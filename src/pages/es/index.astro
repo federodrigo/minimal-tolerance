@@ -1,7 +1,7 @@
 ---
-import "../../styles/global.css";
-import Header from "../../components/Header.astro";
-import Footer from "../../components/Footer.astro";
+import "../styles/global.css";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
 
 const ssrnUrl =
   "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5984574";
@@ -24,7 +24,7 @@ const ssrnUrl =
 
     <meta
       name="description"
-      content="Tolerancia Mínima es una teoría del poder y la legitimidad que se pregunta bajo qué condiciones excepcionales puede tolerarse la coerción estatal"
+      content="La Teoría de la Tolerancia Mínima ofrece un marco consistente para determinar bajo qué condiciones excepcionales la coerción estatal puede ser tolerada sin convertirse en moralmente legítima."
     />
   </head>
 
@@ -45,7 +45,7 @@ const ssrnUrl =
           </p>
 
           <h1>
-            ¿Cuándo puede la coerción
+            ¿Cuándo puede la coerción<br />
             ser tolerada?
           </h1>
 
@@ -64,7 +64,7 @@ const ssrnUrl =
 
           <div class="buttons">
 
-            <a href="/es/theory" class="primary">
+            <a href="/theory" class="primary">
               Explorar la Teoría
             </a>
 
@@ -88,8 +88,34 @@ const ssrnUrl =
       <section class="statement">
 
         <blockquote>
-          La carga de la prueba pertenece al poder
-         </blockquote>
+          La carga de la prueba recae sobre el poder
+        </blockquote>
+
+      </section>
+
+      <!-- QUESTIONS -->
+
+      <section id="questions" class="content-section">
+
+        <div class="container">
+
+          <p class="eyebrow">
+            LAS PREGUNTAS CENTRALES
+          </p>
+
+          <h2>
+            ¿Cuáles son las funciones legítimas del gobierno?
+          </h2>
+
+          <p>
+            ¿Por qué estas funciones y no otras? ¿Qué principio determina los límites del poder político?
+          </p>
+
+          <a href="/questions" class="secondary">
+            Explorar las Preguntas
+          </a>
+
+        </div>
 
       </section>
 
@@ -118,12 +144,11 @@ const ssrnUrl =
               <div>
 
                 <h3>
-                  Ninguna legitimidad moral intrínseca
+                  Sin legitimidad moral intrínseca
                 </h3>
 
                 <p>
-                  El Estado no posee autoridad moral simplemente por
-                  existir o por ejercer poder
+                  El Estado no posee autoridad moral simplemente por existir o por ejercer poder
                 </p>
 
               </div>
@@ -143,8 +168,7 @@ const ssrnUrl =
                 </h3>
 
                 <p>
-                  La acción estatal está restringida por limitaciones
-                  informacionales y económicas que el poder no puede eliminar
+                  La acción estatal está restringida por limitaciones informacionales y económicas que el poder no puede eliminar
                 </p>
 
               </div>
@@ -153,8 +177,8 @@ const ssrnUrl =
 
           </div>
 
-          <a href="/es/theory" class="secondary">
-            Continuar leyendo
+          <a href="/theory" class="secondary">
+            Continuar Leyendo
           </a>
 
         </div>
@@ -175,34 +199,37 @@ const ssrnUrl =
             El Teorema de la Tolerancia Mínima
           </h2>
 
-<div class="theorem-summary">
+          <div class="theorem-summary">
 
-  <article class="theorem-summary-card">
+            <article class="theorem-summary-card">
 
-    <h3>
-      No exclusión efectiva
-    </h3>
-  </article>
+              <h3>
+                No exclusión efectiva
+              </h3>
 
-  <article class="theorem-summary-card">
+            </article>
 
-    <h3>
-      No rivalidad relevante
-    </h3>
-  </article>
+            <article class="theorem-summary-card">
 
-  <article class="theorem-summary-card">
+              <h3>
+                No rivalidad relevante
+              </h3>
 
-    <h3>
-      Colapso persistente de la provisión voluntaria
-    </h3>
-  </article>
+            </article>
 
-</div>
+            <article class="theorem-summary-card">
+
+              <h3>
+                Colapso persistente de la provisión voluntaria
+              </h3>
+
+            </article>
+
+          </div>
 
           <div class="buttons">
 
-            <a href="/es/theorem" class="primary">
+            <a href="/theorem" class="primary">
               Examinar el Teorema
             </a>
 
@@ -223,8 +250,8 @@ const ssrnUrl =
             <div>
 
               <img
-                src="/images/book-cover-esp.jpg"
-                alt="Portada de Tolerancia Mínima por Federico Rodrigo"
+                src="/images/book-cover.jpg"
+                alt="Portada de Tolerancia Mínima de Federico Rodrigo"
                 loading="lazy"
               />
 
@@ -237,16 +264,14 @@ const ssrnUrl =
               </p>
 
               <h2>
-                Una Teoría de Tolerancia Mínima
+                Una Teoría de la Tolerancia Mínima
               </h2>
-
-            
 
               <p>
                 Un próximo libro que explora los límites excepcionales de la coerción
               </p>
 
-              <a href="/es/book" class="secondary">
+              <a href="/book" class="secondary">
                 Descubrir el Libro
               </a>
 
@@ -265,7 +290,7 @@ const ssrnUrl =
         <div class="container">
 
           <p class="eyebrow">
-            PREPUBLICACIÓN EN SSRN
+            PREPRINT EN SSRN
           </p>
 
           <h2>
@@ -273,7 +298,7 @@ const ssrnUrl =
           </h2>
 
           <p>
-            Free Riders, el Estado y la “Tecnología Institucional de Último Recurso”
+            Free Riders, el Estado y la «Tecnología Institucional de Último Recurso»
           </p>
 
           <a
