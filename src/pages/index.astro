@@ -2,6 +2,7 @@
 import "../styles/global.css";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
+import SEO from "../components/SEO.astro";
 
 const ssrnUrl =
   "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5984574";
@@ -18,19 +19,18 @@ const ssrnUrl =
       content="width=device-width, initial-scale=1.0"
     />
 
-    <title>
-      When May Coercion Be Tolerated? | Minimal Tolerance
-    </title>
-
-    <meta
-      name="description"
-      content="The Theory of Minimal Tolerance offers a consistent framework for determining under what exceptional conditions state coercion may be tolerated"
+    <SEO
+      title="When May Coercion Be Tolerated? | Minimal Tolerance"
+      description="The Theory of Minimal Tolerance offers a consistent framework for determining under what exceptional conditions state coercion may be tolerated"
+      lang="en"
     />
   </head>
 
   <body>
 
     <Header />
+
+    ...
 
     <main>
 
