@@ -2,6 +2,7 @@
 import "../styles/global.css";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
+import SEO from "../components/SEO.astro";
 ---
 
 <!doctype html>
@@ -15,18 +16,10 @@ import Footer from "../components/Footer.astro";
       content="width=device-width, initial-scale=1.0"
     />
 
-    <title>
-      The Theorem of Minimal Tolerance | Minimal Tolerance
-    </title>
-
-    <meta
-      name="description"
-      content="The formal statement, necessary conditions, burden of proof and corollary of the Minimal Tolerance Theorem by Federico Rodrigo."
-    />
-
-    <link
-      rel="canonical"
-      href="https://minimaltolerance.com/theorem"
+    <SEO
+      title="The Theorem of Minimal Tolerance | Minimal Tolerance"
+      description="The formal statement, necessary conditions, burden of proof and corollary of the Minimal Tolerance Theorem by Federico Rodrigo."
+      lang="en"
     />
   </head>
 
@@ -66,36 +59,35 @@ import Footer from "../components/Footer.astro";
 
       <!-- INSTITUTIONAL LAST RESORT -->
 
-  <section class="content-section content-section-alt">
+      <section class="content-section content-section-alt">
 
-  <div class="container">
+        <div class="container">
 
-    <p class="eyebrow">
-      INSTITUTIONAL LAST RESORT
-    </p>
+          <p class="eyebrow">
+            INSTITUTIONAL LAST RESORT
+          </p>
 
-    <h2>
-      Defining the exception
-    </h2>
+          <h2>
+            Defining the exception
+          </h2>
 
-<p>
-  The State is neither a moral nor an efficient solution.
-  Its justification cannot rest on legitimacy, nor on any
-  claim of superior performance. Both arguments have
-  already failed
-</p>
+          <p>
+            The State is neither a moral nor an efficient solution.
+            Its justification cannot rest on legitimacy, nor on any
+            claim of superior performance. Both arguments have
+            already failed
+          </p>
 
-<p>
-  Any possible tolerance remains exceptional rather than
-  general. The theorem defines a boundary between what
-  may be reluctantly tolerated and what must remain
-  outside that exception
-</p>
- 
+          <p>
+            Any possible tolerance remains exceptional rather than
+            general. The theorem defines a boundary between what
+            may be reluctantly tolerated and what must remain
+            outside that exception
+          </p>
 
-  </div>
+        </div>
 
-</section>
+      </section>
 
       <!-- FORMAL STATEMENT -->
 
@@ -112,10 +104,10 @@ import Footer from "../components/Footer.astro";
           </h2>
 
           <blockquote class="formal-statement">
-          State coercion may be tolerated only when a structural
-          free-rider problem renders stable voluntary provision
-          persistently unviable and non-intervention would
-          produce greater harm
+            State coercion may be tolerated only when a structural
+            free-rider problem renders stable voluntary provision
+            persistently unviable and non-intervention would
+            produce greater harm
           </blockquote>
 
         </div>
@@ -133,10 +125,10 @@ import Footer from "../components/Footer.astro";
           </p>
 
           <h2>
-             A Structural free-rider Problem
+            A Structural free-rider Problem
           </h2>
 
-         <div class="theorem-conditions">
+          <div class="theorem-conditions">
 
             <article>
 
@@ -191,34 +183,31 @@ import Footer from "../components/Footer.astro";
 
       </section>
 
-<!-- COROLLARY -->
+      <!-- COROLLARY -->
 
-<section class="content-section">
+      <section class="content-section">
 
-  <div class="container">
+        <div class="container">
 
-    <p class="eyebrow">
-      COROLLARY
-    </p>
+          <p class="eyebrow">
+            COROLLARY
+          </p>
 
-    <h2>
-      The default remains non-intervention
-    </h2>
+          <h2>
+            The default remains non-intervention
+          </h2>
 
-   <blockquote class="formal-statement">
-  Importance, collective benefit or the existence of a
-  difficulty does not establish a functional
-  justification for coercion. Where no structural
-  free-rider problem exists, state intervention must be
-  presumed illegitimate by default
-</blockquote>
+          <blockquote class="formal-statement">
+            Importance, collective benefit or the existence of a
+            difficulty does not establish a functional
+            justification for coercion. Where no structural
+            free-rider problem exists, state intervention must be
+            presumed illegitimate by default
+          </blockquote>
 
-  </div>
+        </div>
 
-</section>
-
-
-
+      </section>
 
       <!-- APPLICATIONS -->
 
@@ -257,3 +246,4 @@ import Footer from "../components/Footer.astro";
     <Footer />
   </body>
 </html>
+
