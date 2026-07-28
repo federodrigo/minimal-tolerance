@@ -2,6 +2,7 @@
 import "../styles/global.css";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
+import SEO from "../components/SEO.astro";
 
 const ssrnUrl =
   "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5984574";
@@ -18,18 +19,10 @@ const ssrnUrl =
       content="width=device-width, initial-scale=1.0"
     />
 
-    <title>
-      Autor | Minimal Tolerance
-    </title>
-
-    <meta
-      name="description"
-      content="Federico Rodrigo is an independent author and technology executive whose work examines coercion, political authority and the limits of state power."
-    />
-
-    <link
-      rel="canonical"
-      href="https://minimaltolerance.com/author"
+    <SEO
+      title="Author | Minimal Tolerance"
+      description="Federico Rodrigo is an independent author and technology executive whose work examines coercion, political authority and the limits of state power."
+      lang="en"
     />
   </head>
 
@@ -75,53 +68,48 @@ const ssrnUrl =
             Independent author and technology executive
           </h2>
 
-      <p>
-  Federico "Fede" Rodrigo writes about power,
-  legitimacy and coercion. His work explores the
-  conditions under which state authority may be
-  tolerated
-</p>
+          <p>
+            Federico "Fede" Rodrigo writes about power,
+            legitimacy and coercion. His work explores the
+            conditions under which state authority may be
+            tolerated
+          </p>
 
-<p>
-  Political theory is a personal interest rather than a
-  profession. Outside his writing, he works in
-  technology leadership and executive management
-</p>
+          <p>
+            Political theory is a personal interest rather than a
+            profession. Outside his writing, he works in
+            technology leadership and executive management
+          </p>
 
         </div>
 
       </section>
 
-<section class="content-section content-section-alt">
+      <section class="content-section content-section-alt">
 
-  <div class="container">
+        <div class="container">
 
-    <p class="eyebrow">
-      CONTACT
-    </p>
+          <p class="eyebrow">
+            CONTACT
+          </p>
 
-    <h2>
-      Get in touch
-    </h2>
+          <h2>
+            Get in touch
+          </h2>
 
-    <p>
-      Questions, objections and criticism are welcome
-    </p>
+          <p>
+            Questions, objections and criticism are welcome
+          </p>
 
-    <p>
-      <a href="mailto:fede@minimaltolerance.com">
-        fede@minimaltolerance.com
-      </a>
-    </p>
+          <p>
+            <a href="mailto:fede@minimaltolerance.com">
+              fede@minimaltolerance.com
+            </a>
+          </p>
 
-  </div>
+        </div>
 
-</section>
-
-
-
-
-
+      </section>
 
       <section class="ssrn">
 
