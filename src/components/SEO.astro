@@ -1,118 +1,170 @@
 ---
+import '../styles/global.css';
+
 interface Props {
-  title: string;
-  description: string;
-  lang?: "en" | "es";
+	title: string;
+	description: string;
+	lang?: 'en' | 'es';
+	image?: string;
 }
 
 const {
-  title,
-  description,
-  lang = "en",
+	title,
+	description,
+	lang = 'en',
+	image = '/blog-placeholder-1.jpg',
 } = Astro.props;
 
-const site = Astro.site ?? new URL("https://minimaltolerance.com");
+const site = Astro.site ?? new URL('https://minimaltolerance.com');
 
 const currentPath = Astro.url.pathname;
 
 let englishPath: string;
 let spanishPath: string;
 
-if (currentPath === "/es" || currentPath === "/es/") {
-  englishPath = "/";
-  spanishPath = "/es/";
-} else if (currentPath.startsWith("/es/")) {
-  englishPath = currentPath.replace(/^\/es/, "");
-  spanishPath = currentPath;
+if (currentPath === '/es' || currentPath === '/es/') {
+	englishPath = '/';
+	spanishPath = '/es/';
+} else if (currentPath.startsWith('/es/')) {
+	englishPath = currentPath.replace(/^\/es/, '');
+	spanishPath = currentPath;
 } else {
-  englishPath = currentPath;
-  spanishPath =
-    currentPath === "/"
-      ? "/es/"
-      : `/es${currentPath}`;
+	englishPath = currentPath;
+	spanishPath =
+		currentPath === '/'
+			? '/es/'
+			: `/es${currentPath}`;
 }
 
-const canonicalUrl = new URL(currentPath, site).toString();
-const englishUrl = new URL(englishPath, site).toString();
-const spanishUrl = new URL(spanishPath, site).toString();
+const canonicalUrl = new URL(currentPath, site);
+const englishUrl = new URL(englishPath, site);
+const spanishUrl = new URL(spanishPath, site);
+const imageUrl = new URL(image, site);
 ---
 
+<!-- Global Metadata -->
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+<meta name="generator" content={Astro.generator} />
+
+<!-- Font preloads -->
+<link
+	rel="preload"
+	href="/fonts/atkinson-regular.woff"
+	as="font"
+	type="font/woff"
+	crossorigin
+/>
+
+<link
+	rel="preload"
+	href="/fonts/atkinson-bold.woff"
+	as="font"
+	type="font/woff"
+	crossorigin
+/>
+
+<!-- Primary Metadata -->
 <title>{title}</title>
 
 <meta
-  name="description"
-  content={description}
+	name="title"
+	content={title}
+/>
+
+<meta
+	name="description"
+	content={description}
+/>
+
+<!-- Canonical and Languages -->
+<link
+	rel="canonical"
+	href={canonicalUrl}
 />
 
 <link
-  rel="canonical"
-  href={canonicalUrl}
+	rel="alternate"
+	hreflang="en"
+	href={englishUrl}
 />
 
 <link
-  rel="alternate"
-  hreflang="en"
-  href={englishUrl}
+	rel="alternate"
+	hreflang="es"
+	href={spanishUrl}
 />
 
 <link
-  rel="alternate"
-  hreflang="es"
-  href={spanishUrl}
+	rel="alternate"
+	hreflang="x-default"
+	href={englishUrl}
 />
 
-<link
-  rel="alternate"
-  hreflang="x-default"
-  href={englishUrl}
+<!-- Open Graph -->
+<meta
+	property="og:type"
+	content="website"
 />
 
 <meta
-  property="og:type"
-  content="website"
+	property="og:url"
+	content={canonicalUrl}
 />
 
 <meta
-  property="og:title"
-  content={title}
+	property="og:title"
+	content={title}
 />
 
 <meta
-  property="og:description"
-  content={description}
+	property="og:description"
+	content={description}
 />
 
 <meta
-  property="og:url"
-  content={canonicalUrl}
+	property="og:image"
+	content={imageUrl}
 />
 
 <meta
-  property="og:site_name"
-  content="Minimal Tolerance"
+	property="og:site_name"
+	content="Minimal Tolerance"
 />
 
 <meta
-  property="og:locale"
-  content={lang === "es" ? "es_ES" : "en_US"}
+	property="og:locale"
+	content={lang === 'es' ? 'es_ES' : 'en_US'}
 />
 
 <meta
-  property="og:locale:alternate"
-  content={lang === "es" ? "en_US" : "es_ES"}
+	property="og:locale:alternate"
+	content={lang === 'es' ? 'en_US' : 'es_ES'}
+/>
+
+<!-- Twitter -->
+<meta
+	name="twitter:card"
+	content="summary_large_image"
 />
 
 <meta
-  name="twitter:card"
-  content="summary"
+	name="twitter:url"
+	content={canonicalUrl}
 />
 
 <meta
-  name="twitter:title"
-  content={title}
+	name="twitter:title"
+	content={title}
 />
 
 <meta
-  name="twitter:description"
-  content={description}
+	name="twitter:description"
+	content={description}
+/>
+
+<meta
+	name="twitter:image"
+	content={imageUrl}
 />
