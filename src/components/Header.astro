@@ -33,18 +33,16 @@ const isActive = (path: string) => {
 const alternateLanguageUrl = isSpanish
   ? localizedPath
   : currentPath === "/"
-    ? "/es"
+    ? "/es/"
     : `/es${currentPath}`;
 ---
 
 <header class="site-header">
-
   <a href={isSpanish ? "/es/" : "/"} class="logo">
     {isSpanish ? "Tolerancia Mínima" : "Minimal Tolerance"}
   </a>
 
   <nav aria-label={isSpanish ? "Navegación principal" : "Main navigation"}>
-
     <a
       href={isSpanish ? "/es/" : "/"}
       class:list={{ active: isActive("/") }}
@@ -102,7 +100,6 @@ const alternateLanguageUrl = isSpanish
     </a>
 
     <span class="language-switch">
-
       <a
         href={isSpanish ? alternateLanguageUrl : currentPath}
         class:list={{ active: !isSpanish }}
@@ -120,9 +117,6 @@ const alternateLanguageUrl = isSpanish
       >
         ES
       </a>
-
     </span>
-
   </nav>
-
 </header>
