@@ -1,3 +1,4 @@
+```astro
 ---
 import Header from "../../components/Header.astro";
 import Footer from "../../components/Footer.astro";
@@ -65,9 +66,7 @@ const faqSchema = {
 <!doctype html>
 
 <html lang="es">
-
   <head>
-
     <meta charset="UTF-8" />
 
     <meta
@@ -85,21 +84,16 @@ const faqSchema = {
       type="application/ld+json"
       set:html={JSON.stringify(faqSchema)}
     />
-
   </head>
 
   <body>
-
     <Header />
 
     <main>
-
       <!-- HERO -->
 
       <section class="hero questions-page-hero">
-
-        <div class="hero-content">
-
+        <div class="hero-content hero-sequence">
           <p class="eyebrow">
             LAS PREGUNTAS
           </p>
@@ -112,50 +106,42 @@ const faqSchema = {
           <p class="lead">
             Las preguntas detrás de la Teoría de la Tolerancia Mínima
           </p>
-
         </div>
-
       </section>
 
-      <!-- CENTRAL STATEMENT -->
+      <!-- FRASE CENTRAL -->
 
       <section class="questions-statement">
-
         <div class="questions-container">
-
-          <p>
-            Las distintas tradiciones políticas discrepan acerca del papel del gobierno,
-            los límites de su poder y las condiciones bajo las cuales puede tolerarse la coerción.
+          <p class="reveal reveal-scale">
+            Las distintas tradiciones políticas discrepan acerca del
+            papel del gobierno, los límites de su poder y las
+            condiciones bajo las cuales puede tolerarse la coerción.
             <br />
-            Lo que falta es un principio consistente para evaluar esas respuestas
+            Lo que falta es un principio consistente para evaluar esas
+            respuestas
           </p>
-
         </div>
-
       </section>
 
-      <!-- EXPLORE -->
+      <!-- EXPLORAR -->
 
       <section class="questions-index">
-
         <div class="questions-container">
-
-          <p class="eyebrow">
+          <p class="eyebrow reveal">
             EXPLORAR
           </p>
 
           <nav
-            class="questions-index-grid"
+            class="questions-index-grid stagger"
             aria-label="Preguntas sobre el gobierno y el poder político"
           >
-
             {
               questions.map((question) => (
                 <a
                   href={`#${question.id}`}
-                  class="question-index-card"
+                  class="question-index-card reveal"
                 >
-
                   <span class="question-index-number">
                     {question.number}
                   </span>
@@ -163,32 +149,22 @@ const faqSchema = {
                   <span class="question-index-title">
                     {question.title}
                   </span>
-
                 </a>
               ))
             }
-
           </nav>
-
         </div>
-
       </section>
 
-      <!-- QUESTIONS -->
+      <!-- PREGUNTAS -->
 
       <section class="questions-content">
-
         <div class="questions-container">
-
-          <!-- QUESTION 01 -->
-
           <article
             id="funciones-apropiadas-del-gobierno"
             class="question-section"
           >
-
-            <div class="question-heading">
-
+            <div class="question-heading reveal reveal-left">
               <span class="question-number">
                 01
               </span>
@@ -196,44 +172,38 @@ const faqSchema = {
               <h2>
                 ¿Cuáles Son las Funciones del Estado?
               </h2>
-
             </div>
 
-            <div class="question-copy">
-
+            <div class="question-copy reveal reveal-right">
               <p>
                 Toda filosofía política ofrece una respuesta diferente.
                 Algunas limitan al gobierno a la policía, los tribunales
-                y la defensa nacional, mientras que otras también incluyen
-                la educación, la salud, las jubilaciones, la infraestructura,
-                la política monetaria o la investigación científica. El
-                desacuerdo es fácil de observar, pero resulta considerablemente
-                más difícil encontrar el principio capaz de decidir entre
-                esas listas contrapuestas
+                y la defensa nacional, mientras que otras también
+                incluyen la educación, la salud, las jubilaciones, la
+                infraestructura, la política monetaria o la
+                investigación científica. El desacuerdo es fácil de
+                observar, pero resulta considerablemente más difícil
+                encontrar el principio capaz de decidir entre esas
+                listas contrapuestas
               </p>
 
               <p>
-                Antes de determinar qué debería hacer el gobierno, se necesita
-                un criterio previo que permita evaluar por qué una función
-                determinada debería pertenecer al ámbito de la autoridad
-                política. Sin ese criterio, todo límite propuesto corre el
-                riesgo de convertirse en una colección de preferencias en
-                lugar de constituir una restricción consistente sobre el poder
+                Antes de determinar qué debería hacer el gobierno, se
+                necesita un criterio previo que permita evaluar por qué
+                una función determinada debería pertenecer al ámbito de
+                la autoridad política. Sin ese criterio, todo límite
+                propuesto corre el riesgo de convertirse en una
+                colección de preferencias en lugar de constituir una
+                restricción consistente sobre el poder
               </p>
-
             </div>
-
           </article>
-
-          <!-- QUESTION 02 -->
 
           <article
             id="por-que-estas-funciones"
             class="question-section"
           >
-
-            <div class="question-heading">
-
+            <div class="question-heading reveal reveal-left">
               <span class="question-number">
                 02
               </span>
@@ -241,45 +211,39 @@ const faqSchema = {
               <h2>
                 ¿Por Qué Estas Funciones y No Otras?
               </h2>
-
             </div>
 
-            <div class="question-copy">
-
+            <div class="question-copy reveal reveal-right">
               <p>
-                Los defensores de un gobierno limitado suelen identificar
-                un pequeño grupo de funciones que deberían permanecer bajo
-                control estatal, pero la propia selección requiere una
-                explicación. ¿Por qué la policía, pero no la salud; la defensa
-                nacional, pero no las jubilaciones; los tribunales, pero no
-                la investigación científica? El hecho de que una actividad
-                sea valiosa, difícil o socialmente importante no demuestra
-                que deba proporcionarse mediante la coerción
+                Los defensores de un gobierno limitado suelen
+                identificar un pequeño grupo de funciones que deberían
+                permanecer bajo control estatal, pero la propia
+                selección requiere una explicación. ¿Por qué la
+                policía, pero no la salud; la defensa nacional, pero no
+                las jubilaciones; los tribunales, pero no la
+                investigación científica? El hecho de que una actividad
+                sea valiosa, difícil o socialmente importante no
+                demuestra que deba proporcionarse mediante la coerción
               </p>
 
               <p>
-                Un límite significativo debe explicar por qué una función
-                reúne las condiciones necesarias para convertirse en una
-                excepción, mientras otra permanece dentro de la esfera de
-                la cooperación voluntaria. La tarea difícil no consiste en
-                elaborar una lista más corta o más extensa, sino en identificar
-                un criterio capaz de juzgar toda función propuesta bajo el
-                mismo estándar
+                Un límite significativo debe explicar por qué una
+                función reúne las condiciones necesarias para
+                convertirse en una excepción, mientras otra permanece
+                dentro de la esfera de la cooperación voluntaria. La
+                tarea difícil no consiste en elaborar una lista más
+                corta o más extensa, sino en identificar un criterio
+                capaz de juzgar toda función propuesta bajo el mismo
+                estándar
               </p>
-
             </div>
-
           </article>
-
-          <!-- QUESTION 03 -->
 
           <article
             id="principio-que-limita-al-gobierno"
             class="question-section"
           >
-
-            <div class="question-heading">
-
+            <div class="question-heading reveal reveal-left">
               <span class="question-number">
                 03
               </span>
@@ -287,42 +251,36 @@ const faqSchema = {
               <h2>
                 ¿Existe un Principio que Limite al Gobierno?
               </h2>
-
             </div>
 
-            <div class="question-copy">
-
+            <div class="question-copy reveal reveal-right">
               <p>
-                El debate político se concentra en políticas, instituciones
-                y resultados, mientras dedica menos atención al principio
-                que determina qué poderes puede poseer el gobierno. Un límite
-                basado únicamente en la tradición, la preferencia política
-                o una lista fija de funciones conocidas se vuelve difícil
-                de defender cuando aparecen nuevos problemas, tecnologías
-                y demandas
+                El debate político se concentra en políticas,
+                instituciones y resultados, mientras dedica menos
+                atención al principio que determina qué poderes puede
+                poseer el gobierno. Un límite basado únicamente en la
+                tradición, la preferencia política o una lista fija de
+                funciones conocidas se vuelve difícil de defender
+                cuando aparecen nuevos problemas, tecnologías y
+                demandas
               </p>
 
               <p>
-                Un principio limitante duradero debe aplicarse con independencia
-                de quién gobierne, del objetivo que se persiga o de lo atractivo
-                que resulte el desenlace prometido. También debe impedir que
-                la existencia de un problema social se convierta en una
-                autorización automática para la intervención política
+                Un principio limitante duradero debe aplicarse con
+                independencia de quién gobierne, del objetivo que se
+                persiga o de lo atractivo que resulte el desenlace
+                prometido. También debe impedir que la existencia de un
+                problema social se convierta en una autorización
+                automática para la intervención política
               </p>
-
             </div>
-
           </article>
-
-          <!-- QUESTION 04 -->
 
           <article
             id="puede-justificarse-la-coercion"
             class="question-section"
           >
-
-            <div class="question-heading">
-
+            <div class="question-heading reveal reveal-left">
               <span class="question-number">
                 04
               </span>
@@ -330,43 +288,37 @@ const faqSchema = {
               <h2>
                 ¿Puede Justificarse Alguna Vez la Coerción?
               </h2>
-
             </div>
 
-            <div class="question-copy">
-
+            <div class="question-copy reveal reveal-right">
               <p>
-                Todo gobierno depende en última instancia de la coerción,
-                porque las leyes, los impuestos y las regulaciones continúan
-                siendo obligatorios incluso para quienes los rechazan. Las
-                elecciones, los resultados beneficiosos y las buenas
-                intenciones pueden influir en la forma en que se percibe el
-                poder político, pero no convierten una decisión impuesta en
-                una decisión voluntaria ni eliminan su costo moral
+                Todo gobierno depende en última instancia de la
+                coerción, porque las leyes, los impuestos y las
+                regulaciones continúan siendo obligatorios incluso para
+                quienes los rechazan. Las elecciones, los resultados
+                beneficiosos y las buenas intenciones pueden influir en
+                la forma en que se percibe el poder político, pero no
+                convierten una decisión impuesta en una decisión
+                voluntaria ni eliminan su costo moral
               </p>
 
               <p>
                 La Tolerancia Mínima no supone que la coerción se vuelva
-                moralmente legítima bajo circunstancias favorables. Examina
-                si ciertas condiciones prácticas excepcionales pueden hacer
-                tolerable una forma limitada de coerción como último recurso,
-                preservando al mismo tiempo la presunción de que la cooperación
-                voluntaria continúa siendo la regla
+                moralmente legítima bajo circunstancias favorables.
+                Examina si ciertas condiciones prácticas excepcionales
+                pueden hacer tolerable una forma limitada de coerción
+                como último recurso, preservando al mismo tiempo la
+                presunción de que la cooperación voluntaria continúa
+                siendo la regla
               </p>
-
             </div>
-
           </article>
-
-          <!-- QUESTION 05 -->
 
           <article
             id="es-legitimo-el-estado"
             class="question-section"
           >
-
-            <div class="question-heading">
-
+            <div class="question-heading reveal reveal-left">
               <span class="question-number">
                 05
               </span>
@@ -374,44 +326,37 @@ const faqSchema = {
               <h2>
                 ¿Es Legítimo el Estado?
               </h2>
-
             </div>
 
-            <div class="question-copy">
-
+            <div class="question-copy reveal reveal-right">
               <p>
-                El Estado suele ser tratado como una institución moralmente
-                excepcional cuya autoridad se deriva de las elecciones, las
-                constituciones, el consentimiento colectivo o los beneficios
-                que produce. Ninguno de esos argumentos elimina el hecho
-                subyacente de que las instituciones políticas están compuestas
-                por personas que imponen decisiones sobre otras personas que
-                quizá nunca hayan aceptado su autoridad
+                El Estado suele ser tratado como una institución
+                moralmente excepcional cuya autoridad se deriva de las
+                elecciones, las constituciones, el consentimiento
+                colectivo o los beneficios que produce. Ninguno de esos
+                argumentos elimina el hecho subyacente de que las
+                instituciones políticas están compuestas por personas
+                que imponen decisiones sobre otras personas que quizá
+                nunca hayan aceptado su autoridad
               </p>
 
               <p>
-                La Teoría de la Tolerancia Mínima distingue la legitimidad de
-                la tolerabilidad. La coerción estatal no se vuelve moral por
-                el simple hecho de ser útil, popular o administrada mediante
-                instituciones conocidas. A lo sumo, una necesidad práctica
-                excepcional puede justificar la tolerancia de una respuesta
-                institucional limitada sin concederle una legitimidad moral
-                intrínseca
+                La Teoría de la Tolerancia Mínima distingue la
+                legitimidad de la tolerabilidad. La coerción estatal no
+                se vuelve moral por el simple hecho de ser útil, popular
+                o administrada mediante instituciones conocidas. A lo
+                sumo, una necesidad práctica excepcional puede
+                justificar la tolerancia de una respuesta institucional
+                limitada sin concederle una legitimidad moral intrínseca
               </p>
-
             </div>
-
           </article>
-
-          <!-- QUESTION 06 -->
 
           <article
             id="cuanta-coercion-es-demasiada"
             class="question-section"
           >
-
-            <div class="question-heading">
-
+            <div class="question-heading reveal reveal-left">
               <span class="question-number">
                 06
               </span>
@@ -419,47 +364,40 @@ const faqSchema = {
               <h2>
                 ¿Cuánta Coerción Es Demasiada?
               </h2>
-
             </div>
 
-            <div class="question-copy">
-
+            <div class="question-copy reveal reveal-right">
               <p>
-                Si toda imperfección, beneficio social o resultado deseable
-                resulta suficiente para justificar la intervención, ningún
-                límite significativo sobre el gobierno puede sobrevivir.
-                Si toda posible excepción se rechaza de antemano, ciertos
-                problemas colectivos pueden permanecer sin una solución
-                voluntaria estable. Una teoría seria debe enfrentar ambos
-                riesgos sin tratar ninguna de las dos conclusiones como
-                evidente por sí misma
+                Si toda imperfección, beneficio social o resultado
+                deseable resulta suficiente para justificar la
+                intervención, ningún límite significativo sobre el
+                gobierno puede sobrevivir. Si toda posible excepción se
+                rechaza de antemano, ciertos problemas colectivos pueden
+                permanecer sin una solución voluntaria estable. Una
+                teoría seria debe enfrentar ambos riesgos sin tratar
+                ninguna de las dos conclusiones como evidente por sí
+                misma
               </p>
 
               <p>
-                La Teoría de la Tolerancia Mínima desarrolla una prueba formal
-                para distinguir las dificultades ordinarias de aquellos casos
-                excepcionales en los que la provisión voluntaria enfrenta un
-                colapso estructural persistente. La carga de la prueba permanece
-                del lado del poder, y superar la prueba inicial permite examinar
-                una excepción en lugar de presumir su legitimidad
+                La Teoría de la Tolerancia Mínima desarrolla una prueba
+                formal para distinguir las dificultades ordinarias de
+                aquellos casos excepcionales en los que la provisión
+                voluntaria enfrenta un colapso estructural persistente.
+                La carga de la prueba permanece del lado del poder, y
+                superar la prueba inicial permite examinar una excepción
+                en lugar de presumir su legitimidad
               </p>
-
             </div>
-
           </article>
-
         </div>
-
       </section>
 
-      <!-- FINAL CTA -->
+      <!-- CTA FINAL -->
 
       <section class="questions-cta">
-
         <div class="questions-container questions-cta-content">
-
-          <div>
-
+          <div class="reveal reveal-left">
             <p class="eyebrow">
               LA TEORÍA DE LA TOLERANCIA MÍNIMA
             </p>
@@ -469,15 +407,13 @@ const faqSchema = {
             </h2>
 
             <p>
-              Explora el marco desarrollado para evaluar cuándo un ejercicio
-              excepcional de coerción puede tolerarse sin convertir la
-              necesidad en una autoridad política ilimitada
+              Explora el marco desarrollado para evaluar cuándo un
+              ejercicio excepcional de coerción puede tolerarse sin
+              convertir la necesidad en una autoridad política ilimitada
             </p>
-
           </div>
 
-          <div class="questions-cta-buttons">
-
+          <div class="questions-cta-buttons reveal reveal-right">
             <a
               href="/es/theory"
               class="primary"
@@ -491,17 +427,102 @@ const faqSchema = {
             >
               Examinar el Teorema
             </a>
-
           </div>
-
         </div>
-
       </section>
-
     </main>
 
     <Footer />
 
-  </body>
+    <style>
+      .question-index-card {
+        transition:
+          color 220ms ease,
+          background 220ms ease,
+          transform 220ms ease;
+      }
 
+      .question-index-number {
+        transition: transform 220ms ease;
+      }
+
+      .question-section {
+        overflow: hidden;
+      }
+
+      @media (hover: hover) and (pointer: fine) {
+        .question-index-card:hover {
+          transform: translateY(-2px);
+        }
+
+        .question-index-card:hover .question-index-number {
+          transform: translateX(5px);
+        }
+      }
+
+      @media (max-width: 900px) {
+        .question-heading.reveal-left,
+        .question-copy.reveal-right {
+          transform: translateY(24px);
+        }
+
+        .question-heading.reveal-left.is-visible,
+        .question-copy.reveal-right.is-visible {
+          transform: translateY(0);
+        }
+      }
+
+      @media (max-width: 560px) {
+        .questions-statement .reveal {
+          transform: translateY(18px);
+        }
+
+        .questions-statement .reveal.is-visible {
+          transform: translateY(0);
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        .question-index-card,
+        .question-index-number {
+          transition: none;
+        }
+      }
+    </style>
+
+    <script is:inline>
+      const reduceMotion = window.matchMedia(
+        "(prefers-reduced-motion: reduce)"
+      ).matches;
+
+      const revealElements =
+        document.querySelectorAll(".reveal");
+
+      if (reduceMotion || !("IntersectionObserver" in window)) {
+        revealElements.forEach((element) => {
+          element.classList.add("is-visible");
+        });
+      } else {
+        const revealObserver = new IntersectionObserver(
+          (entries, observer) => {
+            entries.forEach((entry) => {
+              if (!entry.isIntersecting) return;
+
+              entry.target.classList.add("is-visible");
+              observer.unobserve(entry.target);
+            });
+          },
+          {
+            threshold: 0.12,
+            rootMargin: "0px 0px -40px 0px",
+          }
+        );
+
+        revealElements.forEach((element) => {
+          revealObserver.observe(element);
+        });
+      }
+    </script>
+  </body>
 </html>
+```
