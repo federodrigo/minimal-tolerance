@@ -1166,3 +1166,211 @@ footer nav a {
     flex-direction: column;
   }
 }
+/* =========================================================
+   MOTION SYSTEM
+   Add .reveal to elements that should appear on scroll.
+   JavaScript will add .is-visible when they enter the viewport.
+   ========================================================= */
+
+:root {
+  --motion-fast: 420ms;
+  --motion-medium: 700ms;
+  --motion-slow: 950ms;
+  --motion-ease: cubic-bezier(0.22, 1, 0.36, 1);
+  --motion-distance: 28px;
+}
+
+/* PAGE-LOAD HERO SEQUENCE */
+
+.hero-content > *,
+.page-hero .container > * {
+  opacity: 0;
+  transform: translateY(22px);
+  animation: heroReveal var(--motion-medium) var(--motion-ease) forwards;
+}
+
+.hero-content > *:nth-child(1),
+.page-hero .container > *:nth-child(1) {
+  animation-delay: 80ms;
+}
+
+.hero-content > *:nth-child(2),
+.page-hero .container > *:nth-child(2) {
+  animation-delay: 180ms;
+}
+
+.hero-content > *:nth-child(3),
+.page-hero .container > *:nth-child(3) {
+  animation-delay: 300ms;
+}
+
+.hero-content > *:nth-child(4),
+.page-hero .container > *:nth-child(4) {
+  animation-delay: 430ms;
+}
+
+.hero-content > *:nth-child(5),
+.page-hero .container > *:nth-child(5) {
+  animation-delay: 560ms;
+}
+
+@keyframes heroReveal {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* GENERIC SCROLL REVEALS */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(var(--motion-distance));
+  transition:
+    opacity var(--motion-medium) var(--motion-ease),
+    transform var(--motion-medium) var(--motion-ease);
+  will-change: opacity, transform;
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-left {
+  transform: translateX(calc(var(--motion-distance) * -1));
+}
+
+.reveal-right {
+  transform: translateX(var(--motion-distance));
+}
+
+.reveal-left.is-visible,
+.reveal-right.is-visible {
+  transform: translateX(0);
+}
+
+.reveal-scale {
+  transform: translateY(18px) scale(0.975);
+}
+
+.reveal-scale.is-visible {
+  transform: translateY(0) scale(1);
+}
+
+/* STAGGERED CHILDREN */
+
+.stagger > * {
+  opacity: 0;
+  transform: translateY(22px);
+  transition:
+    opacity var(--motion-medium) var(--motion-ease),
+    transform var(--motion-medium) var(--motion-ease);
+}
+
+.stagger.is-visible > * {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.stagger.is-visible > *:nth-child(1) { transition-delay: 0ms; }
+.stagger.is-visible > *:nth-child(2) { transition-delay: 110ms; }
+.stagger.is-visible > *:nth-child(3) { transition-delay: 220ms; }
+.stagger.is-visible > *:nth-child(4) { transition-delay: 330ms; }
+.stagger.is-visible > *:nth-child(5) { transition-delay: 440ms; }
+.stagger.is-visible > *:nth-child(6) { transition-delay: 550ms; }
+.stagger.is-visible > *:nth-child(7) { transition-delay: 660ms; }
+.stagger.is-visible > *:nth-child(8) { transition-delay: 770ms; }
+
+/* SECTION-SPECIFIC MOTION */
+
+.statement blockquote {
+  transition:
+    opacity var(--motion-slow) var(--motion-ease),
+    transform var(--motion-slow) var(--motion-ease);
+}
+
+.foundation-principle,
+.theorem-conditions article,
+.theorem-summary-card,
+.question-index-card {
+  transition:
+    opacity var(--motion-medium) var(--motion-ease),
+    transform var(--motion-medium) var(--motion-ease),
+    border-color 220ms ease,
+    box-shadow 220ms ease,
+    background 220ms ease;
+}
+
+.theorem-conditions article:hover,
+.theorem-summary-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(169, 131, 58, 0.38);
+  box-shadow: 0 16px 34px rgba(13, 27, 42, 0.08);
+}
+
+.book-grid img {
+  transition:
+    transform 520ms var(--motion-ease),
+    box-shadow 520ms var(--motion-ease);
+}
+
+.book-grid img:hover {
+  transform: translateY(-6px) rotate(-0.6deg);
+  box-shadow: 0 28px 70px rgba(13, 27, 42, 0.2);
+}
+
+.question-index-card:hover .question-index-number {
+  transform: translateX(4px);
+}
+
+.question-index-number {
+  transition: transform 220ms var(--motion-ease);
+}
+
+/* SUBTLE HEADER ENTRANCE */
+
+.site-header {
+  animation: headerReveal 600ms var(--motion-ease) both;
+}
+
+@keyframes headerReveal {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ACCESSIBILITY: DISABLE ALL DECORATIVE MOTION */
+
+@media (prefers-reduced-motion: reduce) {
+  .site-header,
+  .hero-content > *,
+  .page-hero .container > * {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  .reveal,
+  .reveal-left,
+  .reveal-right,
+  .reveal-scale,
+  .stagger > * {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+
+  .theorem-conditions article:hover,
+  .theorem-summary-card:hover,
+  .book-grid img:hover {
+    transform: none;
+  }
+}
+
