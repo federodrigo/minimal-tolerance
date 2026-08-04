@@ -1,3 +1,4 @@
+```astro
 ---
 import Header from "../../components/Header.astro";
 import Footer from "../../components/Footer.astro";
@@ -32,7 +33,7 @@ const ssrnUrl =
       <!-- HERO -->
 
       <section class="hero">
-        <div class="hero-content">
+        <div class="hero-content hero-sequence">
           <p class="eyebrow">
             LA TEORÍA DE LA TOLERANCIA MÍNIMA
           </p>
@@ -75,7 +76,7 @@ const ssrnUrl =
       <!-- FRASE CENTRAL -->
 
       <section class="statement">
-        <blockquote>
+        <blockquote class="reveal reveal-scale">
           La carga de la prueba pertenece al poder
         </blockquote>
       </section>
@@ -84,21 +85,22 @@ const ssrnUrl =
 
       <section id="questions" class="content-section">
         <div class="container">
-          <p class="eyebrow">
+          <p class="eyebrow reveal">
             LAS PREGUNTAS CENTRALES
           </p>
 
-          <h2>
+          <h2 class="reveal">
             Donde comienza el debate
           </h2>
 
-          <p>
-            ¿Por qué debería el Estado cumplir algunas funciones y no otras?
-            • ¿Cuándo, si alguna vez, puede tolerarse la coerción?
-            • ¿Dónde deberían trazarse los límites del poder político?
+          <p class="reveal">
+            ¿Por qué debería el Estado cumplir algunas funciones y no
+            otras? • ¿Cuándo, si alguna vez, puede tolerarse la
+            coerción? • ¿Dónde deberían trazarse los límites del poder
+            político?
           </p>
 
-          <a href="/es/questions" class="secondary">
+          <a href="/es/questions" class="secondary reveal">
             Leer las Preguntas
           </a>
         </div>
@@ -108,16 +110,16 @@ const ssrnUrl =
 
       <section id="theory" class="content-section">
         <div class="container">
-          <p class="eyebrow">
+          <p class="eyebrow reveal">
             LA TEORÍA
           </p>
 
-          <h2>
+          <h2 class="reveal">
             Fundamentos
           </h2>
 
-          <div class="foundation-principles">
-            <article class="foundation-principle">
+          <div class="foundation-principles stagger">
+            <article class="foundation-principle reveal">
               <span class="foundation-number">
                 01
               </span>
@@ -134,7 +136,7 @@ const ssrnUrl =
               </div>
             </article>
 
-            <article class="foundation-principle">
+            <article class="foundation-principle reveal">
               <span class="foundation-number">
                 02
               </span>
@@ -153,7 +155,7 @@ const ssrnUrl =
               </div>
             </article>
 
-            <article class="foundation-principle">
+            <article class="foundation-principle reveal">
               <span class="foundation-number">
                 03
               </span>
@@ -172,7 +174,7 @@ const ssrnUrl =
             </article>
           </div>
 
-          <a href="/es/theory" class="secondary">
+          <a href="/es/theory" class="secondary reveal">
             Continuar Leyendo
           </a>
         </div>
@@ -182,35 +184,35 @@ const ssrnUrl =
 
       <section id="theorem" class="theorem">
         <div class="container">
-          <p class="eyebrow">
+          <p class="eyebrow reveal">
             EL EXAMEN FORMAL
           </p>
 
-          <h2>
+          <h2 class="reveal">
             El Teorema de la Tolerancia Mínima
           </h2>
 
-          <div class="theorem-summary">
-            <article class="theorem-summary-card">
+          <div class="theorem-summary stagger">
+            <article class="theorem-summary-card reveal reveal-scale">
               <h3>
                 No excluibilidad efectiva
               </h3>
             </article>
 
-            <article class="theorem-summary-card">
+            <article class="theorem-summary-card reveal reveal-scale">
               <h3>
                 No rivalidad relevante
               </h3>
             </article>
 
-            <article class="theorem-summary-card">
+            <article class="theorem-summary-card reveal reveal-scale">
               <h3>
                 Colapso persistente de la provisión voluntaria
               </h3>
             </article>
           </div>
 
-          <div class="buttons">
+          <div class="buttons reveal">
             <a href="/es/theorem" class="primary">
               Examinar el Teorema
             </a>
@@ -223,7 +225,7 @@ const ssrnUrl =
       <section id="book" class="book">
         <div class="container">
           <div class="book-grid">
-            <div>
+            <div class="reveal reveal-left">
               <img
                 src="/images/book-cover.jpg"
                 alt="Portada de Tolerancia Mínima, de Federico Rodrigo"
@@ -231,7 +233,7 @@ const ssrnUrl =
               />
             </div>
 
-            <div>
+            <div class="reveal reveal-right">
               <p class="eyebrow">
                 EL LIBRO
               </p>
@@ -257,22 +259,22 @@ const ssrnUrl =
 
       <section id="paper" class="ssrn">
         <div class="container">
-          <p class="eyebrow">
+          <p class="eyebrow reveal">
             PREPRINT EN SSRN
           </p>
 
-          <h2>
+          <h2 class="reveal">
             Leer el paper fundacional
           </h2>
 
-          <p>
+          <p class="reveal">
             Free Riders, the State, and the “Institutional Technology
             of Last Resort”
           </p>
 
           <a
             href={ssrnUrl}
-            class="primary"
+            class="primary reveal"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -283,5 +285,40 @@ const ssrnUrl =
     </main>
 
     <Footer />
+
+    <script is:inline>
+      const reduceMotion = window.matchMedia(
+        "(prefers-reduced-motion: reduce)"
+      ).matches;
+
+      const revealElements =
+        document.querySelectorAll(".reveal");
+
+      if (reduceMotion || !("IntersectionObserver" in window)) {
+        revealElements.forEach((element) => {
+          element.classList.add("is-visible");
+        });
+      } else {
+        const revealObserver = new IntersectionObserver(
+          (entries, observer) => {
+            entries.forEach((entry) => {
+              if (!entry.isIntersecting) return;
+
+              entry.target.classList.add("is-visible");
+              observer.unobserve(entry.target);
+            });
+          },
+          {
+            threshold: 0.14,
+            rootMargin: "0px 0px -45px 0px",
+          }
+        );
+
+        revealElements.forEach((element) => {
+          revealObserver.observe(element);
+        });
+      }
+    </script>
   </body>
 </html>
+```
