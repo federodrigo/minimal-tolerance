@@ -26,15 +26,13 @@ const ssrnUrl =
   </head>
 
   <body>
-
     <Header />
 
     <main>
+      <!-- PAGE TITLE -->
 
       <section class="page-hero">
-
-        <div class="container">
-
+        <div class="container hero-sequence">
           <p class="eyebrow">
             THE AUTHOR
           </p>
@@ -42,87 +40,84 @@ const ssrnUrl =
           <h1>
             Federico Rodrigo
           </h1>
-
         </div>
-
       </section>
+
+      <!-- STATEMENT -->
 
       <section class="statement">
-
-        <blockquote>
+        <blockquote class="reveal reveal-scale">
           Every argument must survive its strongest objection
         </blockquote>
-
       </section>
 
+      <!-- ABOUT -->
+
       <section class="content-section">
-
         <div class="container">
-
-          <p class="eyebrow">
+          <p class="eyebrow reveal">
             ABOUT
           </p>
 
-          <h2>
+          <h2 class="reveal">
             Independent author and technology executive
           </h2>
 
-          <p>
+          <p class="reveal">
             Federico "Fede" Rodrigo writes about power,
             legitimacy and coercion. His work explores the
             conditions under which state authority may be
             tolerated
           </p>
 
-          <p>
+          <p class="reveal">
             Political theory is a personal interest rather than a
             profession. Outside his writing, he works in
             technology leadership and executive management
           </p>
-
         </div>
-
       </section>
 
+      <!-- CONTACT -->
+
       <section class="content-section content-section-alt">
-
         <div class="container">
-
-          <p class="eyebrow">
+          <p class="eyebrow reveal">
             CONTACT
           </p>
 
-          <h2>
+          <h2 class="reveal">
             Get in touch
           </h2>
 
-          <p>
+          <p class="reveal">
             Questions, objections and criticism are welcome
           </p>
 
-          <p>
-            <a href="mailto:fede@minimaltolerance.com">
+          <p class="reveal">
+            <a
+              class="author-email"
+              href="mailto:fede@minimaltolerance.com"
+            >
               fede@minimaltolerance.com
             </a>
           </p>
-
         </div>
-
       </section>
 
+      <!-- RESEARCH -->
+
       <section class="ssrn">
-
         <div class="container">
-
-          <p class="eyebrow">
+          <p class="eyebrow reveal">
             RESEARCH
           </p>
 
-          <h2>
+          <h2 class="reveal">
             The Theory of Minimal Tolerance
           </h2>
 
-          <p>
+          <p class="reveal">
             The foundational paper presents the formal theorem
             and the conditions under which state coercion may
             be tolerated
@@ -130,20 +125,87 @@ const ssrnUrl =
 
           <a
             href={ssrnUrl}
-            class="primary"
+            class="primary reveal"
             target="_blank"
             rel="noopener noreferrer"
           >
             Open on SSRN
           </a>
-
         </div>
-
       </section>
-
     </main>
 
     <Footer />
 
+    <style>
+      .author-email {
+        position: relative;
+        display: inline-block;
+        color: var(--gold);
+        font-size: 1.08rem;
+        font-weight: 700;
+        text-decoration: none;
+      }
+
+      .author-email::after {
+        position: absolute;
+        right: 0;
+        bottom: -3px;
+        left: 0;
+        height: 1px;
+        background: currentColor;
+        content: "";
+        transform: scaleX(0);
+        transform-origin: right;
+        transition: transform 220ms ease;
+      }
+
+      @media (hover: hover) and (pointer: fine) {
+        .author-email:hover::after {
+          transform: scaleX(1);
+          transform-origin: left;
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        .author-email::after {
+          transition: none;
+        }
+      }
+    </style>
+
+    <script is:inline>
+      const reduceMotion = window.matchMedia(
+        "(prefers-reduced-motion: reduce)"
+      ).matches;
+
+      const revealElements =
+        document.querySelectorAll(".reveal");
+
+      if (reduceMotion || !("IntersectionObserver" in window)) {
+        revealElements.forEach((element) => {
+          element.classList.add("is-visible");
+        });
+      } else {
+        const revealObserver = new IntersectionObserver(
+          (entries, observer) => {
+            entries.forEach((entry) => {
+              if (!entry.isIntersecting) return;
+
+              entry.target.classList.add("is-visible");
+              observer.unobserve(entry.target);
+            });
+          },
+          {
+            threshold: 0.14,
+            rootMargin: "0px 0px -40px 0px",
+          }
+        );
+
+        revealElements.forEach((element) => {
+          revealObserver.observe(element);
+        });
+      }
+    </script>
   </body>
 </html>
