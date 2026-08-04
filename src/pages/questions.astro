@@ -65,9 +65,7 @@ const faqSchema = {
 <!doctype html>
 
 <html lang="en">
-
   <head>
-
     <meta charset="UTF-8" />
 
     <meta
@@ -85,21 +83,16 @@ const faqSchema = {
       type="application/ld+json"
       set:html={JSON.stringify(faqSchema)}
     />
-
   </head>
 
   <body>
-
     <Header />
 
     <main>
-
       <!-- HERO -->
 
       <section class="hero questions-page-hero">
-
-        <div class="hero-content">
-
+        <div class="hero-content hero-sequence">
           <p class="eyebrow">
             THE QUESTIONS
           </p>
@@ -112,50 +105,41 @@ const faqSchema = {
           <p class="lead">
             The questions behind the Theory of Minimal Tolerance
           </p>
-
         </div>
-
       </section>
 
       <!-- CENTRAL STATEMENT -->
 
       <section class="questions-statement">
-
         <div class="questions-container">
-
-          <p>
-            Political traditions disagree about what government should do, 
-            how much power it should possess and which forms of coercion 
-            should be accepted, but the deeper difficulty lies in identifying 
-            the criterion needed to evaluate those conclusions
+          <p class="reveal reveal-scale">
+            Political traditions disagree about what government should
+            do, how much power it should possess and which forms of
+            coercion should be accepted, but the deeper difficulty lies
+            in identifying the criterion needed to evaluate those
+            conclusions
           </p>
-
         </div>
-
       </section>
 
       <!-- EXPLORE -->
 
       <section class="questions-index">
-
         <div class="questions-container">
-
-          <p class="eyebrow">
+          <p class="eyebrow reveal">
             EXPLORE
           </p>
 
           <nav
-            class="questions-index-grid"
+            class="questions-index-grid stagger"
             aria-label="Questions about government and political power"
           >
-
             {
               questions.map((question) => (
                 <a
                   href={`#${question.id}`}
-                  class="question-index-card"
+                  class="question-index-card reveal"
                 >
-
                   <span class="question-index-number">
                     {question.number}
                   </span>
@@ -163,32 +147,24 @@ const faqSchema = {
                   <span class="question-index-title">
                     {question.title}
                   </span>
-
                 </a>
               ))
             }
-
           </nav>
-
         </div>
-
       </section>
 
       <!-- QUESTIONS -->
 
       <section class="questions-content">
-
         <div class="questions-container">
-
           <!-- QUESTION 01 -->
 
           <article
             id="proper-functions-of-government"
             class="question-section"
           >
-
-            <div class="question-heading">
-
+            <div class="question-heading reveal reveal-left">
               <span class="question-number">
                 01
               </span>
@@ -196,11 +172,9 @@ const faqSchema = {
               <h2>
                 What Are the Proper Functions of Government?
               </h2>
-
             </div>
 
-            <div class="question-copy">
-
+            <div class="question-copy reveal reveal-right">
               <p>
                 Every political philosophy offers a different answer.
                 Some restrict government to police, courts and national
@@ -219,9 +193,7 @@ const faqSchema = {
                 becoming a collection of preferences rather than a
                 consistent limit on power
               </p>
-
             </div>
-
           </article>
 
           <!-- QUESTION 02 -->
@@ -230,9 +202,7 @@ const faqSchema = {
             id="why-these-functions"
             class="question-section"
           >
-
-            <div class="question-heading">
-
+            <div class="question-heading reveal reveal-left">
               <span class="question-number">
                 02
               </span>
@@ -240,11 +210,9 @@ const faqSchema = {
               <h2>
                 Why These Functions and Not Others?
               </h2>
-
             </div>
 
-            <div class="question-copy">
-
+            <div class="question-copy reveal reveal-right">
               <p>
                 Defenders of limited government usually identify a
                 small group of functions that should remain under state
@@ -264,9 +232,7 @@ const faqSchema = {
                 identifying a criterion capable of judging every
                 proposed function under the same standard
               </p>
-
             </div>
-
           </article>
 
           <!-- QUESTION 03 -->
@@ -275,9 +241,7 @@ const faqSchema = {
             id="principle-that-limits-government"
             class="question-section"
           >
-
-            <div class="question-heading">
-
+            <div class="question-heading reveal reveal-left">
               <span class="question-number">
                 03
               </span>
@@ -285,11 +249,9 @@ const faqSchema = {
               <h2>
                 Is There a Principle That Limits Government?
               </h2>
-
             </div>
 
-            <div class="question-copy">
-
+            <div class="question-copy reveal reveal-right">
               <p>
                 Political debate concentrates on policies,
                 institutions and outcomes, while giving less attention
@@ -307,9 +269,7 @@ const faqSchema = {
                 prevent the existence of a social problem from becoming
                 an automatic authorization for political intervention
               </p>
-
             </div>
-
           </article>
 
           <!-- QUESTION 04 -->
@@ -318,9 +278,7 @@ const faqSchema = {
             id="can-coercion-be-justified"
             class="question-section"
           >
-
-            <div class="question-heading">
-
+            <div class="question-heading reveal reveal-left">
               <span class="question-number">
                 04
               </span>
@@ -328,11 +286,9 @@ const faqSchema = {
               <h2>
                 Can Coercion Ever Be Justified?
               </h2>
-
             </div>
 
-            <div class="question-copy">
-
+            <div class="question-copy reveal reveal-right">
               <p>
                 Every government ultimately relies on coercion because
                 laws, taxes and regulations remain binding even for
@@ -351,9 +307,7 @@ const faqSchema = {
                 resort, while preserving the presumption that voluntary
                 cooperation remains the rule
               </p>
-
             </div>
-
           </article>
 
           <!-- QUESTION 05 -->
@@ -362,9 +316,7 @@ const faqSchema = {
             id="is-the-state-legitimate"
             class="question-section"
           >
-
-            <div class="question-heading">
-
+            <div class="question-heading reveal reveal-left">
               <span class="question-number">
                 05
               </span>
@@ -372,11 +324,9 @@ const faqSchema = {
               <h2>
                 Is the State Legitimate?
               </h2>
-
             </div>
 
-            <div class="question-copy">
-
+            <div class="question-copy reveal reveal-right">
               <p>
                 The state is frequently treated as a morally exceptional
                 institution whose authority follows from elections,
@@ -396,9 +346,7 @@ const faqSchema = {
                 institutional response without granting it intrinsic
                 moral legitimacy
               </p>
-
             </div>
-
           </article>
 
           <!-- QUESTION 06 -->
@@ -407,9 +355,7 @@ const faqSchema = {
             id="how-much-coercion"
             class="question-section"
           >
-
-            <div class="question-heading">
-
+            <div class="question-heading reveal reveal-left">
               <span class="question-number">
                 06
               </span>
@@ -417,11 +363,9 @@ const faqSchema = {
               <h2>
                 How Much Coercion Is Too Much?
               </h2>
-
             </div>
 
-            <div class="question-copy">
-
+            <div class="question-copy reveal reveal-right">
               <p>
                 If every imperfection, social benefit or desirable
                 outcome is sufficient to justify intervention, no
@@ -442,23 +386,16 @@ const faqSchema = {
                 an exception to be examined rather than presumed
                 legitimate
               </p>
-
             </div>
-
           </article>
-
         </div>
-
       </section>
 
       <!-- FINAL CTA -->
 
       <section class="questions-cta">
-
         <div class="questions-container questions-cta-content">
-
-          <div>
-
+          <div class="reveal reveal-left">
             <p class="eyebrow">
               THE THEORY OF MINIMAL TOLERANCE
             </p>
@@ -472,11 +409,9 @@ const faqSchema = {
               exceptional exercise of coercion may be tolerated without
               converting necessity into unlimited political authority
             </p>
-
           </div>
 
-          <div class="questions-cta-buttons">
-
+          <div class="questions-cta-buttons reveal reveal-right">
             <a
               href="/theory"
               class="primary"
@@ -490,17 +425,101 @@ const faqSchema = {
             >
               Examine the Theorem
             </a>
-
           </div>
-
         </div>
-
       </section>
-
     </main>
 
     <Footer />
 
-  </body>
+    <style>
+      .question-index-card {
+        transition:
+          color 220ms ease,
+          background 220ms ease,
+          transform 220ms ease;
+      }
 
+      .question-index-number {
+        transition: transform 220ms ease;
+      }
+
+      .question-section {
+        overflow: hidden;
+      }
+
+      @media (hover: hover) and (pointer: fine) {
+        .question-index-card:hover {
+          transform: translateY(-2px);
+        }
+
+        .question-index-card:hover .question-index-number {
+          transform: translateX(5px);
+        }
+      }
+
+      @media (max-width: 900px) {
+        .question-heading.reveal-left,
+        .question-copy.reveal-right {
+          transform: translateY(24px);
+        }
+
+        .question-heading.reveal-left.is-visible,
+        .question-copy.reveal-right.is-visible {
+          transform: translateY(0);
+        }
+      }
+
+      @media (max-width: 560px) {
+        .questions-statement .reveal {
+          transform: translateY(18px);
+        }
+
+        .questions-statement .reveal.is-visible {
+          transform: translateY(0);
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        .question-index-card,
+        .question-index-number {
+          transition: none;
+        }
+      }
+    </style>
+
+    <script is:inline>
+      const reduceMotion = window.matchMedia(
+        "(prefers-reduced-motion: reduce)"
+      ).matches;
+
+      const revealElements =
+        document.querySelectorAll(".reveal");
+
+      if (reduceMotion || !("IntersectionObserver" in window)) {
+        revealElements.forEach((element) => {
+          element.classList.add("is-visible");
+        });
+      } else {
+        const revealObserver = new IntersectionObserver(
+          (entries, observer) => {
+            entries.forEach((entry) => {
+              if (!entry.isIntersecting) return;
+
+              entry.target.classList.add("is-visible");
+              observer.unobserve(entry.target);
+            });
+          },
+          {
+            threshold: 0.12,
+            rootMargin: "0px 0px -40px 0px",
+          }
+        );
+
+        revealElements.forEach((element) => {
+          revealObserver.observe(element);
+        });
+      }
+    </script>
+  </body>
 </html>
