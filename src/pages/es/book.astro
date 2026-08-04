@@ -1,3 +1,4 @@
+```astro
 ---
 import Header from "../../components/Header.astro";
 import Footer from "../../components/Footer.astro";
@@ -26,15 +27,13 @@ const ssrnUrl =
   </head>
 
   <body>
-
     <Header />
 
     <main>
+      <!-- TÍTULO -->
 
       <section class="page-hero">
-
-        <div class="container">
-
+        <div class="container hero-sequence">
           <p class="eyebrow">
             EL LIBRO
           </p>
@@ -42,39 +41,33 @@ const ssrnUrl =
           <h1>
             Una Teoría de Tolerancia Mínima
           </h1>
-
         </div>
-
       </section>
 
-      <section class="statement">
+      <!-- FRASE CENTRAL -->
 
-        <blockquote>
+      <section class="statement">
+        <blockquote class="reveal reveal-scale">
           La pregunta no es si el poder coercitivo es legítimo.
           La pregunta es cuánto de él puede ser tolerado
         </blockquote>
-
       </section>
 
-      <section class="book">
+      <!-- LIBRO -->
 
+      <section class="book book-page-section">
         <div class="container">
-
           <div class="book-grid">
-
-            <div>
-
+            <div class="book-cover-wrapper reveal reveal-left">
               <img
                 src="/images/book-cover-esp.jpg"
                 alt="Portada de Una Teoría de Tolerancia Mínima, de Federico Rodrigo"
               />
-
             </div>
 
-            <div>
-
+            <div class="book-copy reveal reveal-right">
               <p class="eyebrow">
-                SOBRE EL LIBRO - AGOSTO 2026
+                SOBRE EL LIBRO — AGOSTO 2026
               </p>
 
               <h2>
@@ -88,48 +81,131 @@ const ssrnUrl =
                 la expansión del poder político y las condiciones de un
                 orden social tolerable
               </p>
-
             </div>
-
           </div>
-
         </div>
-
       </section>
 
+      <!-- ARTÍCULO -->
+
       <section class="ssrn">
-
         <div class="container">
-
-          <p class="eyebrow">
+          <p class="eyebrow reveal">
             ARTÍCULO FUNDACIONAL
           </p>
 
-          <h2>
+          <h2 class="reveal">
             Leer el artículo en SSRN
           </h2>
 
-          <p>
+          <p class="reveal">
             El artículo original presenta el teorema formal y
             proporciona la base teórica del libro
           </p>
 
           <a
             href={ssrnUrl}
-            class="primary"
+            class="primary reveal"
             target="_blank"
             rel="noopener noreferrer"
           >
             Abrir en SSRN
           </a>
-
         </div>
-
       </section>
-
     </main>
 
     <Footer />
 
+    <style>
+      .book-page-section .book-grid {
+        align-items: center;
+      }
+
+      .book-cover-wrapper {
+        perspective: 1000px;
+      }
+
+      .book-cover-wrapper img {
+        transform-origin: center;
+        transition:
+          transform 320ms ease,
+          box-shadow 320ms ease;
+      }
+
+      .book-copy p:not(.eyebrow) {
+        max-width: 760px;
+      }
+
+      @media (hover: hover) and (pointer: fine) {
+        .book-cover-wrapper img:hover {
+          transform:
+            translateY(-7px)
+            rotateY(-2deg)
+            rotateZ(-0.5deg);
+
+          box-shadow:
+            0 30px 76px rgba(13, 27, 42, 0.22);
+        }
+      }
+
+      @media (max-width: 900px) {
+        .book-cover-wrapper {
+          max-width: 320px;
+        }
+      }
+
+      @media (max-width: 560px) {
+        .book-cover-wrapper {
+          max-width: 270px;
+          margin: 0 auto;
+        }
+
+        .book-copy {
+          text-align: left;
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        .book-cover-wrapper img {
+          transition: none;
+        }
+      }
+    </style>
+
+    <script is:inline>
+      const reduceMotion = window.matchMedia(
+        "(prefers-reduced-motion: reduce)"
+      ).matches;
+
+      const revealElements =
+        document.querySelectorAll(".reveal");
+
+      if (reduceMotion || !("IntersectionObserver" in window)) {
+        revealElements.forEach((element) => {
+          element.classList.add("is-visible");
+        });
+      } else {
+        const revealObserver = new IntersectionObserver(
+          (entries, observer) => {
+            entries.forEach((entry) => {
+              if (!entry.isIntersecting) return;
+
+              entry.target.classList.add("is-visible");
+              observer.unobserve(entry.target);
+            });
+          },
+          {
+            threshold: 0.14,
+            rootMargin: "0px 0px -40px 0px",
+          }
+        );
+
+        revealElements.forEach((element) => {
+          revealObserver.observe(element);
+        });
+      }
+    </script>
   </body>
 </html>
+```
