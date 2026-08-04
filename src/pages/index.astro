@@ -26,17 +26,13 @@ const ssrnUrl =
   </head>
 
   <body>
-
     <Header />
 
     <main>
-
       <!-- HERO -->
 
       <section class="hero">
-
-        <div class="hero-content">
-
+        <div class="hero-content hero-sequence">
           <p class="eyebrow">
             THE THEORY OF MINIMAL TOLERANCE
           </p>
@@ -60,7 +56,6 @@ const ssrnUrl =
           </div>
 
           <div class="buttons">
-
             <a href="/theory" class="primary">
               Explore the Theory
             </a>
@@ -73,209 +68,170 @@ const ssrnUrl =
             >
               Read the Paper
             </a>
-
           </div>
-
         </div>
-
       </section>
 
       <!-- CENTRAL STATEMENT -->
 
       <section class="statement">
-
-        <blockquote>
+        <blockquote class="reveal reveal-scale">
           The burden of proof belongs to power
         </blockquote>
-
       </section>
 
       <!-- QUESTIONS -->
 
       <section id="questions" class="content-section">
-
         <div class="container">
-
-          <p class="eyebrow">
+          <p class="eyebrow reveal">
             THE CENTRAL QUESTIONS
           </p>
 
-<h2>
-   Where the debate begins
-</h2>
+          <h2 class="reveal">
+            Where the debate begins
+          </h2>
 
-<p>Why should government perform some functions but not others? • When, if ever, may coercion be tolerated? • Where should the limits of political power be drawn?</p>
+          <p class="reveal">
+            Why should government perform some functions but not
+            others? • When, if ever, may coercion be tolerated? •
+            Where should the limits of political power be drawn?
+          </p>
 
-
-          <a href="/questions" class="secondary">
+          <a href="/questions" class="secondary reveal">
             Read the Questions
           </a>
-
         </div>
-
       </section>
 
       <!-- THEORY -->
 
       <section id="theory" class="content-section">
-
         <div class="container">
-
-          <p class="eyebrow">
+          <p class="eyebrow reveal">
             THE THEORY
           </p>
 
-          <h2>
-           Foundations
+          <h2 class="reveal">
+            Foundations
           </h2>
 
-          <div class="foundation-principles">
-
-            <article class="foundation-principle">
-
+          <div class="foundation-principles stagger">
+            <article class="foundation-principle reveal">
               <span class="foundation-number">
                 01
               </span>
 
               <div>
-
                 <h3>
                   No intrinsic moral legitimacy
                 </h3>
 
                 <p>
-            The State possesses no moral authority merely by existing or by exercising power
+                  The State possesses no moral authority merely by
+                  existing or by exercising power
                 </p>
-
               </div>
-
             </article>
 
-            <article class="foundation-principle">
-
+            <article class="foundation-principle reveal">
               <span class="foundation-number">
                 02
               </span>
 
               <div>
-
                 <h3>
                   Structural functional limits
                 </h3>
 
                 <p>
-          Governments face unavoidable limits of information, economic calculation, incentives, and error correction that no concentration of power can eliminate
+                  Governments face unavoidable limits of information,
+                  economic calculation, incentives, and error
+                  correction that no concentration of power can
+                  eliminate
                 </p>
-
               </div>
-
             </article>
 
-
-
-            <article class="foundation-principle">
-
+            <article class="foundation-principle reveal">
               <span class="foundation-number">
                 03
               </span>
 
               <div>
-
                 <h3>
                   A principle with strict limits
                 </h3>
 
-                <p>Government action may be tolerated only under narrowly defined conditions and an exceptionally high burden of proof
+                <p>
+                  Government action may be tolerated only under
+                  narrowly defined conditions and an exceptionally
+                  high burden of proof
                 </p>
-
               </div>
-
             </article>
-
           </div>
 
-          <a href="/theory" class="secondary">
+          <a href="/theory" class="secondary reveal">
             Continue Reading
           </a>
-
         </div>
-
       </section>
 
       <!-- THEOREM -->
 
       <section id="theorem" class="theorem">
-
         <div class="container">
-
-          <p class="eyebrow">
+          <p class="eyebrow reveal">
             THE FORMAL TEST
           </p>
 
-          <h2>
+          <h2 class="reveal">
             The Theorem of Minimal Tolerance
           </h2>
 
-          <div class="theorem-summary">
-
-            <article class="theorem-summary-card">
-
+          <div class="theorem-summary stagger">
+            <article class="theorem-summary-card reveal reveal-scale">
               <h3>
                 Effective non-excludability
               </h3>
-
             </article>
 
-            <article class="theorem-summary-card">
-
+            <article class="theorem-summary-card reveal reveal-scale">
               <h3>
                 Relevant non-rivalry
               </h3>
-
             </article>
 
-            <article class="theorem-summary-card">
-
+            <article class="theorem-summary-card reveal reveal-scale">
               <h3>
                 Persistent collapse of voluntary provision
               </h3>
-
             </article>
-
           </div>
 
-          <div class="buttons">
-
+          <div class="buttons reveal">
             <a href="/theorem" class="primary">
               Examine the Theorem
             </a>
-
           </div>
-
         </div>
-
       </section>
 
       <!-- BOOK -->
 
       <section id="book" class="book">
-
         <div class="container">
-
           <div class="book-grid">
-
-            <div>
-
+            <div class="reveal reveal-left">
               <img
                 src="/images/book-cover.jpg"
                 alt="Cover of Minimal Tolerance by Federico Rodrigo"
                 loading="lazy"
               />
-
             </div>
 
-            <div>
-
+            <div class="reveal reveal-right">
               <p class="eyebrow">
                 THE BOOK
               </p>
@@ -292,50 +248,74 @@ const ssrnUrl =
               <a href="/book" class="secondary">
                 Discover the Book
               </a>
-
             </div>
-
           </div>
-
         </div>
-
       </section>
 
       <!-- PAPER -->
 
       <section id="paper" class="ssrn">
-
         <div class="container">
-
-          <p class="eyebrow">
+          <p class="eyebrow reveal">
             SSRN PREPRINT
           </p>
 
-          <h2>
+          <h2 class="reveal">
             Read the foundational paper
           </h2>
 
-          <p>
+          <p class="reveal">
             Free Riders, the State, and the “Institutional Technology
             of Last Resort”
           </p>
 
           <a
             href={ssrnUrl}
-            class="primary"
+            class="primary reveal"
             target="_blank"
             rel="noopener noreferrer"
           >
             Open on SSRN
           </a>
-
         </div>
-
       </section>
-
     </main>
 
     <Footer />
 
+    <script is:inline>
+      const reduceMotion = window.matchMedia(
+        "(prefers-reduced-motion: reduce)"
+      ).matches;
+
+      const revealElements =
+        document.querySelectorAll(".reveal");
+
+      if (reduceMotion || !("IntersectionObserver" in window)) {
+        revealElements.forEach((element) => {
+          element.classList.add("is-visible");
+        });
+      } else {
+        const revealObserver = new IntersectionObserver(
+          (entries, observer) => {
+            entries.forEach((entry) => {
+              if (!entry.isIntersecting) return;
+
+              entry.target.classList.add("is-visible");
+              observer.unobserve(entry.target);
+            });
+          },
+          {
+            threshold: 0.14,
+            rootMargin: "0px 0px -45px 0px",
+          }
+        );
+
+        revealElements.forEach((element) => {
+          revealObserver.observe(element);
+        });
+      }
+    </script>
   </body>
 </html>
