@@ -1,3 +1,4 @@
+```astro
 ---
 import Header from "../../components/Header.astro";
 import Footer from "../../components/Footer.astro";
@@ -29,7 +30,7 @@ import SEO from "../../components/SEO.astro";
       <!-- TÍTULO -->
 
       <section class="page-hero">
-        <div class="container">
+        <div class="container hero-sequence">
           <p class="eyebrow">
             APLICACIONES
           </p>
@@ -43,7 +44,7 @@ import SEO from "../../components/SEO.astro";
       <!-- FRASE PRINCIPAL -->
 
       <section class="statement">
-        <blockquote>
+        <blockquote class="reveal reveal-scale">
           El teorema no acepta ni rechaza al Estado en su conjunto.
           Cada función debe superar el examen de manera independiente
         </blockquote>
@@ -53,21 +54,21 @@ import SEO from "../../components/SEO.astro";
 
       <section class="content-section method-section">
         <div class="container">
-          <p class="eyebrow">
+          <p class="eyebrow reveal">
             EL MÉTODO
           </p>
 
-          <h2>
+          <h2 class="reveal">
             Un examen para cada función
           </h2>
 
-          <p class="method-intro">
+          <p class="method-intro reveal">
             Toda excepción propuesta debe cumplir
             <strong>las tres condiciones</strong>
           </p>
 
-          <ol class="condition-list">
-            <li class="condition">
+          <ol class="condition-list stagger">
+            <li class="condition reveal">
               <span class="condition-number" aria-hidden="true">
                 01
               </span>
@@ -77,7 +78,7 @@ import SEO from "../../components/SEO.astro";
               </span>
             </li>
 
-            <li class="condition">
+            <li class="condition reveal">
               <span class="condition-number" aria-hidden="true">
                 02
               </span>
@@ -87,7 +88,7 @@ import SEO from "../../components/SEO.astro";
               </span>
             </li>
 
-            <li class="condition">
+            <li class="condition reveal">
               <span class="condition-number" aria-hidden="true">
                 03
               </span>
@@ -98,8 +99,9 @@ import SEO from "../../components/SEO.astro";
             </li>
           </ol>
 
-          <p class="method-note">
-            La importancia no demuestra necesidad. La dificultad no demuestra imposibilidad
+          <p class="method-note reveal">
+            La importancia no demuestra necesidad. La dificultad no
+            demuestra imposibilidad
           </p>
         </div>
       </section>
@@ -108,16 +110,16 @@ import SEO from "../../components/SEO.astro";
 
       <section class="application-section application-section-pass">
         <div class="container">
-          <p class="eyebrow">
+          <p class="eyebrow reveal">
             LA EXCEPCIÓN
           </p>
 
-          <h2>
+          <h2 class="reveal">
             Funciones que superan el examen
           </h2>
 
-          <div class="application-grid">
-            <article class="application-card">
+          <div class="application-grid stagger">
+            <article class="application-card reveal reveal-scale">
               <p class="application-result">
                 SUPERA
               </p>
@@ -128,14 +130,15 @@ import SEO from "../../components/SEO.astro";
 
               <p>
                 La protección frente a invasiones, violencia organizada,
-                amenazas catastróficas y la aplicación de reglas jurídicas
-                comunes afecta a toda la población. Sus beneficios se
-                extienden más allá de quienes los financian y no pueden
-                limitarse fácilmente a quienes pagan
+                amenazas catastróficas y la aplicación de reglas
+                jurídicas comunes afecta a toda la población. Sus
+                beneficios se extienden más allá de quienes los
+                financian y no pueden limitarse fácilmente a quienes
+                pagan
               </p>
             </article>
 
-            <article class="application-card">
+            <article class="application-card reveal reveal-scale">
               <p class="application-result">
                 SUPERA
               </p>
@@ -145,14 +148,14 @@ import SEO from "../../components/SEO.astro";
               </h3>
 
               <p>
-                El bien relevante no es la supervivencia de un banco o de
-                una empresa en particular, sino el funcionamiento continuo
-                de la infraestructura financiera de la que dependen millones
-                de participantes
+                El bien relevante no es la supervivencia de un banco o
+                de una empresa en particular, sino el funcionamiento
+                continuo de la infraestructura financiera de la que
+                dependen millones de participantes
               </p>
             </article>
 
-            <article class="application-card">
+            <article class="application-card reveal reveal-scale">
               <p class="application-result">
                 SUPERA
               </p>
@@ -162,11 +165,11 @@ import SEO from "../../components/SEO.astro";
               </h3>
 
               <p>
-                Algunos riesgos ambientales atraviesan fronteras, afectan
-                a generaciones futuras y no pueden limitarse únicamente a
-                quienes financian su prevención. Los beneficios son
-                compartidos mientras que los incentivos para asumir los
-                costos siguen siendo débiles
+                Algunos riesgos ambientales atraviesan fronteras,
+                afectan a generaciones futuras y no pueden limitarse
+                únicamente a quienes financian su prevención. Los
+                beneficios son compartidos mientras que los incentivos
+                para asumir los costos siguen siendo débiles
               </p>
             </article>
           </div>
@@ -177,16 +180,16 @@ import SEO from "../../components/SEO.astro";
 
       <section class="application-section application-section-fail">
         <div class="container">
-          <p class="eyebrow">
+          <p class="eyebrow reveal">
             FUERA DE LA EXCEPCIÓN
           </p>
 
-          <h2>
+          <h2 class="reveal">
             Funciones que no superan el examen
           </h2>
 
-          <div class="application-grid">
-            <article class="application-card">
+          <div class="application-grid stagger">
+            <article class="application-card reveal reveal-scale">
               <p class="application-result">
                 NO SUPERA
               </p>
@@ -196,13 +199,13 @@ import SEO from "../../components/SEO.astro";
               </h3>
 
               <p>
-                Estos bienes pueden ser esenciales para el bienestar de las
-                personas, pero siguen siendo excluibles, rivales o
+                Estos bienes pueden ser esenciales para el bienestar de
+                las personas, pero siguen siendo excluibles, rivales o
                 susceptibles de provisión voluntaria
               </p>
             </article>
 
-            <article class="application-card">
+            <article class="application-card reveal reveal-scale">
               <p class="application-result">
                 NO SUPERA
               </p>
@@ -212,27 +215,29 @@ import SEO from "../../components/SEO.astro";
               </h3>
 
               <p>
-                Las restricciones sobre salarios, contratos, beneficios y
-                condiciones de trabajo descansan sobre juicios acerca de qué
-                acuerdos y resultados se consideran aceptables
+                Las restricciones sobre salarios, contratos, beneficios
+                y condiciones de trabajo descansan sobre juicios acerca
+                de qué acuerdos y resultados se consideran aceptables
               </p>
             </article>
 
-            <article class="application-card">
+            <article class="application-card reveal reveal-scale">
               <p class="application-result">
                 NO SUPERA
               </p>
 
               <h3>
-                Partidos políticos y regulación ordinaria de los mercados
+                Partidos políticos y regulación ordinaria de los
+                mercados
               </h3>
 
               <p>
-                La influencia política, el poder de negociación desigual,
-                los monopolios o ciertas conductas pueden generar
-                preocupaciones importantes. Ninguna de ellas demuestra por
-                sí misma la no excluibilidad, la no rivalidad y el colapso
-                persistente de la provisión voluntaria
+                La influencia política, el poder de negociación
+                desigual, los monopolios o ciertas conductas pueden
+                generar preocupaciones importantes. Ninguna de ellas
+                demuestra por sí misma la no excluibilidad, la no
+                rivalidad y el colapso persistente de la provisión
+                voluntaria
               </p>
             </article>
           </div>
@@ -245,16 +250,16 @@ import SEO from "../../components/SEO.astro";
         class="application-section application-section-borderline"
       >
         <div class="container">
-          <p class="eyebrow">
+          <p class="eyebrow reveal">
             CASOS LÍMITE
           </p>
 
-          <h2>
+          <h2 class="reveal">
             No todas las funciones tienen una respuesta clara
           </h2>
 
-          <div class="application-grid">
-            <article class="application-card">
+          <div class="application-grid stagger">
+            <article class="application-card reveal reveal-scale">
               <p class="application-result">
                 DEPENDE DEL CONTEXTO
               </p>
@@ -264,14 +269,14 @@ import SEO from "../../components/SEO.astro";
               </h3>
 
               <p>
-                Las autopistas con peaje y las calles privadas permiten la
-                exclusión. Las grandes redes abiertas pueden no hacerlo. La
-                congestión, la tecnología, la propiedad y la escala de la
-                red pueden modificar el resultado
+                Las autopistas con peaje y las calles privadas permiten
+                la exclusión. Las grandes redes abiertas pueden no
+                hacerlo. La congestión, la tecnología, la propiedad y
+                la escala de la red pueden modificar el resultado
               </p>
             </article>
 
-            <article class="application-card">
+            <article class="application-card reveal reveal-scale">
               <p class="application-result">
                 DEPENDE DEL CONTEXTO
               </p>
@@ -282,13 +287,14 @@ import SEO from "../../components/SEO.astro";
 
               <p>
                 El conocimiento puede beneficiar a personas que nunca
-                financiaron su descubrimiento y utilizarse sin consumirse.
-                La cuestión decisiva es si las instituciones voluntarias
-                siguen siendo capaces de sostener su producción
+                financiaron su descubrimiento y utilizarse sin
+                consumirse. La cuestión decisiva es si las instituciones
+                voluntarias siguen siendo capaces de sostener su
+                producción
               </p>
             </article>
 
-            <article class="application-card">
+            <article class="application-card reveal reveal-scale">
               <p class="application-result">
                 DEPENDE DEL CONTEXTO
               </p>
@@ -298,10 +304,10 @@ import SEO from "../../components/SEO.astro";
               </h3>
 
               <p>
-                Los semiconductores y las monedas normalmente se producen
-                mediante intercambio voluntario. El análisis puede cambiar
-                cuando el bien relevante pasa a ser la resiliencia del
-                sistema y no el producto individual
+                Los semiconductores y las monedas normalmente se
+                producen mediante intercambio voluntario. El análisis
+                puede cambiar cuando el bien relevante pasa a ser la
+                resiliencia del sistema y no el producto individual
               </p>
             </article>
           </div>
@@ -312,21 +318,21 @@ import SEO from "../../components/SEO.astro";
 
       <section class="content-section content-section-alt">
         <div class="container">
-          <p class="eyebrow">
+          <p class="eyebrow reveal">
             EL RESULTADO
           </p>
 
-          <h2>
+          <h2 class="reveal">
             Cada función se evalúa por separado
           </h2>
 
-          <p>
+          <p class="reveal">
             El teorema no acepta ni rechaza al Estado en su conjunto.
             Evalúa cada función de manera independiente y exige que toda
             excepción propuesta supere el mismo examen
           </p>
 
-          <p>
+          <p class="reveal">
             Las excepciones siguen siendo excepciones. Su tolerancia
             depende de las circunstancias y no de una regla permanente.
             Sociedades distintas pueden llegar a conclusiones diferentes
@@ -339,23 +345,24 @@ import SEO from "../../components/SEO.astro";
 
       <section class="content-section">
         <div class="container">
-          <p class="eyebrow">
+          <p class="eyebrow reveal">
             EL LIBRO
           </p>
 
-          <h2>
+          <h2 class="reveal">
             Explore la prueba completa
           </h2>
 
-          <p>
+          <p class="reveal">
             El libro aplica el teorema a la defensa, las emergencias,
             las necesidades básicas, las carreteras, los sistemas
             monetarios, las crisis financieras, la investigación
-            científica, las amenazas ambientales, la regulación laboral
-            y los acuerdos comúnmente considerados inaceptables
+            científica, las amenazas ambientales, la regulación
+            laboral y los acuerdos comúnmente considerados
+            inaceptables
           </p>
 
-          <div class="buttons">
+          <div class="buttons reveal">
             <a href="/es/book" class="primary">
               Explorar el Libro
             </a>
@@ -367,7 +374,7 @@ import SEO from "../../components/SEO.astro";
     <Footer />
 
     <style>
-      /* METHOD */
+      /* MÉTODO */
 
       .method-intro {
         max-width: 680px;
@@ -396,6 +403,9 @@ import SEO from "../../components/SEO.astro";
         font-weight: 700;
         line-height: 1;
         letter-spacing: 0.18em;
+        transition:
+          transform 220ms ease,
+          color 220ms ease;
       }
 
       .condition-name {
@@ -412,7 +422,7 @@ import SEO from "../../components/SEO.astro";
         line-height: 1.6;
       }
 
-      /* APPLICATION SECTIONS */
+      /* SECCIONES DE APLICACIONES */
 
       .application-section {
         padding: var(--section-space) 0;
@@ -451,6 +461,10 @@ import SEO from "../../components/SEO.astro";
         background: var(--paper-light);
         border: 1px solid var(--line);
         border-radius: 14px;
+        transition:
+          transform 240ms ease,
+          border-color 240ms ease,
+          box-shadow 240ms ease;
       }
 
       .application-section-fail .application-card {
@@ -481,6 +495,23 @@ import SEO from "../../components/SEO.astro";
         letter-spacing: 0.16em;
       }
 
+      /* HOVER — SOLO CON MOUSE */
+
+      @media (hover: hover) and (pointer: fine) {
+        .condition:hover .condition-number {
+          color: var(--navy);
+          transform: translateX(5px);
+        }
+
+        .application-card:hover {
+          transform: translateY(-5px);
+          border-color: rgba(169, 131, 58, 0.4);
+          box-shadow: 0 18px 42px rgba(13, 27, 42, 0.09);
+        }
+      }
+
+      /* RESPONSIVE */
+
       @media (max-width: 900px) {
         .application-grid {
           grid-template-columns: 1fr;
@@ -501,7 +532,56 @@ import SEO from "../../components/SEO.astro";
         .condition-name {
           font-size: 1.05rem;
         }
+
+        .application-card {
+          padding: 24px;
+        }
+      }
+
+      /* MOVIMIENTO REDUCIDO */
+
+      @media (prefers-reduced-motion: reduce) {
+        .condition-number,
+        .application-card {
+          transition: none;
+        }
       }
     </style>
+
+    <script is:inline>
+      const reduceMotion = window.matchMedia(
+        "(prefers-reduced-motion: reduce)"
+      ).matches;
+
+      const revealElements =
+        document.querySelectorAll(".reveal");
+
+      if (reduceMotion || !("IntersectionObserver" in window)) {
+        revealElements.forEach((element) => {
+          element.classList.add("is-visible");
+        });
+      } else {
+        const revealObserver = new IntersectionObserver(
+          (entries, observer) => {
+            entries.forEach((entry) => {
+              if (!entry.isIntersecting) return;
+
+              entry.target.classList.add("is-visible");
+              observer.unobserve(entry.target);
+            });
+          },
+          {
+            threshold: 0.12,
+            rootMargin: "0px 0px -40px 0px",
+          }
+        );
+
+        revealElements.forEach((element) => {
+          revealObserver.observe(element);
+        });
+      }
+    </script>
   </body>
 </html>
+```
+
