@@ -26,15 +26,13 @@ const ssrnUrl =
   </head>
 
   <body>
-
     <Header />
 
     <main>
+      <!-- PAGE TITLE -->
 
       <section class="page-hero">
-
-        <div class="container">
-
+        <div class="container hero-sequence">
           <p class="eyebrow">
             THE BOOK
           </p>
@@ -42,39 +40,33 @@ const ssrnUrl =
           <h1>
             A Theory of Minimal Tolerance
           </h1>
-
         </div>
-
       </section>
 
-      <section class="statement">
+      <!-- CENTRAL STATEMENT -->
 
-        <blockquote>
+      <section class="statement">
+        <blockquote class="reveal reveal-scale">
           The question is not whether coercive power is legitimate.
           The question is how much of it can be tolerated
         </blockquote>
-
       </section>
 
-      <section class="book">
+      <!-- BOOK -->
 
+      <section class="book book-page-section">
         <div class="container">
-
           <div class="book-grid">
-
-            <div>
-
+            <div class="book-cover-wrapper reveal reveal-left">
               <img
                 src="/images/book-cover.jpg"
                 alt="Cover of A Theory of Minimal Tolerance by Federico Rodrigo"
               />
-
             </div>
 
-            <div>
-
+            <div class="book-copy reveal reveal-right">
               <p class="eyebrow">
-                ABOUT THE BOOK - AUGUST 2026
+                ABOUT THE BOOK — AUGUST 2026
               </p>
 
               <h2>
@@ -82,50 +74,131 @@ const ssrnUrl =
               </h2>
 
               <p>
-                This book develops the moral, economic, and institutional foundations of the Theory of Minimal Tolerance and explores the limits of coercion, the expansion of political power, and the conditions necessary for a tolerable social order
+                This book develops the moral, economic, and
+                institutional foundations of the Theory of Minimal
+                Tolerance and explores the limits of coercion, the
+                expansion of political power, and the conditions
+                necessary for a tolerable social order
               </p>
-
             </div>
-
           </div>
-
         </div>
-
       </section>
 
+      <!-- PAPER -->
+
       <section class="ssrn">
-
         <div class="container">
-
-          <p class="eyebrow">
+          <p class="eyebrow reveal">
             FOUNDATIONAL PAPER
           </p>
 
-          <h2>
+          <h2 class="reveal">
             Read the SSRN paper
           </h2>
 
-          <p>
+          <p class="reveal">
             The original paper presents the formal theorem and
             provides the theoretical foundation for the book
           </p>
 
           <a
             href={ssrnUrl}
-            class="primary"
+            class="primary reveal"
             target="_blank"
             rel="noopener noreferrer"
           >
             Open on SSRN
           </a>
-
         </div>
-
       </section>
-
     </main>
 
     <Footer />
 
+    <style>
+      .book-page-section .book-grid {
+        align-items: center;
+      }
+
+      .book-cover-wrapper {
+        perspective: 1000px;
+      }
+
+      .book-cover-wrapper img {
+        transform-origin: center;
+        transition:
+          transform 320ms ease,
+          box-shadow 320ms ease;
+      }
+
+      .book-copy p:not(.eyebrow) {
+        max-width: 760px;
+      }
+
+      @media (hover: hover) and (pointer: fine) {
+        .book-cover-wrapper img:hover {
+          transform: translateY(-7px) rotateY(-2deg) rotateZ(-0.5deg);
+          box-shadow: 0 30px 76px rgba(13, 27, 42, 0.22);
+        }
+      }
+
+      @media (max-width: 900px) {
+        .book-cover-wrapper {
+          max-width: 320px;
+        }
+      }
+
+      @media (max-width: 560px) {
+        .book-cover-wrapper {
+          max-width: 270px;
+          margin: 0 auto;
+        }
+
+        .book-copy {
+          text-align: left;
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        .book-cover-wrapper img {
+          transition: none;
+        }
+      }
+    </style>
+
+    <script is:inline>
+      const reduceMotion = window.matchMedia(
+        "(prefers-reduced-motion: reduce)"
+      ).matches;
+
+      const revealElements =
+        document.querySelectorAll(".reveal");
+
+      if (reduceMotion || !("IntersectionObserver" in window)) {
+        revealElements.forEach((element) => {
+          element.classList.add("is-visible");
+        });
+      } else {
+        const revealObserver = new IntersectionObserver(
+          (entries, observer) => {
+            entries.forEach((entry) => {
+              if (!entry.isIntersecting) return;
+
+              entry.target.classList.add("is-visible");
+              observer.unobserve(entry.target);
+            });
+          },
+          {
+            threshold: 0.14,
+            rootMargin: "0px 0px -40px 0px",
+          }
+        );
+
+        revealElements.forEach((element) => {
+          revealObserver.observe(element);
+        });
+      }
+    </script>
   </body>
 </html>
