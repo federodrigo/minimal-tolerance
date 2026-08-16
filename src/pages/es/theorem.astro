@@ -1,7 +1,7 @@
 ---
-import Header from "../../components/Header.astro";
-import Footer from "../../components/Footer.astro";
-import SEO from "../../components/SEO.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import SEO from "../components/SEO.astro";
 ---
 
 <!doctype html>
@@ -17,7 +17,7 @@ import SEO from "../../components/SEO.astro";
 
     <SEO
       title="El Teorema de la Tolerancia Mínima | Tolerancia Mínima"
-      description="La formulación formal, las condiciones necesarias, la carga de la prueba y el corolario del Teorema de la Tolerancia Mínima de Federico Rodrigo."
+      description="Las condiciones necesarias, la carga de la prueba y los límites institucionales del Teorema de la Tolerancia Mínima de Federico Rodrigo."
       lang="es"
     />
   </head>
@@ -26,7 +26,7 @@ import SEO from "../../components/SEO.astro";
     <Header />
 
     <main>
-      <!-- TÍTULO -->
+      <!-- PAGE TITLE -->
 
       <section class="page-hero">
         <div class="container hero-sequence">
@@ -40,16 +40,16 @@ import SEO from "../../components/SEO.astro";
         </div>
       </section>
 
-      <!-- FRASE PRINCIPAL -->
+      <!-- MAIN STATEMENT -->
 
       <section class="statement">
         <blockquote class="reveal reveal-scale">
-          El Estado solo puede ser tolerado como una
-          tecnología institucional de último recurso
+          El Estado sólo puede ser tolerado como una tecnología
+          institucional de último recurso
         </blockquote>
       </section>
 
-      <!-- ÚLTIMO RECURSO INSTITUCIONAL -->
+      <!-- INSTITUTIONAL LAST RESORT -->
 
       <section class="content-section content-section-alt">
         <div class="container">
@@ -58,26 +58,26 @@ import SEO from "../../components/SEO.astro";
           </p>
 
           <h2 class="reveal">
-            Definiendo la excepción
+            Definir la excepción
           </h2>
 
           <p class="reveal">
-            El Estado no constituye ni una solución moral ni una
-            solución eficiente. Su justificación no puede descansar
-            en la legitimidad, ni en ninguna afirmación de desempeño
-            superior. Ambos argumentos ya han fracasado
+            La autoridad política no puede presumir legitimidad moral
+            ni superioridad institucional. La existencia de un problema,
+            un beneficio colectivo o una falla de mercado no justifica
+            por sí sola reemplazar la cooperación voluntaria por coerción
           </p>
 
           <p class="reveal">
-            Cualquier posible tolerancia permanece excepcional y no
-            general. El teorema define la frontera entre aquello que
-            puede ser tolerado con reticencia y aquello que debe
-            permanecer fuera de esa excepción
+            Toda posible tolerancia permanece, por tanto, como una
+            excepción. La carga recae sobre quienes proponen la coerción,
+            y el teorema establece las condiciones mínimas que deben
+            demostrarse antes de que pueda siquiera entrar en consideración
           </p>
         </div>
       </section>
 
-      <!-- FORMULACIÓN FORMAL -->
+      <!-- FORMAL STATEMENT -->
 
       <section class="content-section">
         <div class="container">
@@ -86,19 +86,20 @@ import SEO from "../../components/SEO.astro";
           </p>
 
           <h2 class="reveal">
-            Formulación formal
+            Formulación
           </h2>
 
           <blockquote class="formal-statement reveal reveal-scale">
-            La coerción estatal solo puede ser tolerada cuando un
-            problema estructural de free rider vuelve
-            persistentemente inviable una provisión voluntaria
-            estable y la no intervención produciría un daño mayor
+            La coerción estatal sólo puede entrar en consideración
+            cuando se demuestran conjuntamente la no exclusión efectiva,
+            la no rivalidad relevante y el colapso persistente de la
+            provisión voluntaria. Su presencia es necesaria, pero nunca
+            suficiente
           </blockquote>
         </div>
       </section>
 
-      <!-- TRES CONDICIONES -->
+      <!-- THREE CONDITIONS -->
 
       <section class="theorem">
         <div class="container">
@@ -107,7 +108,7 @@ import SEO from "../../components/SEO.astro";
           </p>
 
           <h2 class="reveal">
-            Un problema estructural de free rider
+            La estructura económica y la prueba institucional
           </h2>
 
           <div class="theorem-conditions stagger">
@@ -119,9 +120,9 @@ import SEO from "../../components/SEO.astro";
               </h3>
 
               <p>
-                Debe resultar física, técnica o económicamente
-                imposible excluir a quienes no pagan del beneficio
-                relevante
+                El acceso no puede condicionarse efectivamente a la
+                contribución: quienes no contribuyen siguen recibiendo
+                el beneficio relevante
               </p>
             </article>
 
@@ -133,9 +134,8 @@ import SEO from "../../components/SEO.astro";
               </h3>
 
               <p>
-                El uso del bien por parte de una persona no debe
-                reducir de manera significativa la cantidad
-                disponible para los demás
+                El beneficio recibido por una persona no debe reducir
+                significativamente lo disponible para las demás
               </p>
             </article>
 
@@ -147,15 +147,17 @@ import SEO from "../../components/SEO.astro";
               </h3>
 
               <p>
-                Fracaso real y continuo de los mecanismos privados,
-                no causado por barreras estatales previas o actuales
+                Los arreglos voluntarios plausibles deben fracasar de
+                manera persistente en sostener la función a lo largo del
+                tiempo y bajo distintas formas institucionales, sin que
+                barreras estatales impidan el surgimiento de alternativas
               </p>
             </article>
           </div>
         </div>
       </section>
 
-      <!-- COROLARIO -->
+      <!-- COROLLARY -->
 
       <section class="content-section">
         <div class="container">
@@ -164,20 +166,20 @@ import SEO from "../../components/SEO.astro";
           </p>
 
           <h2 class="reveal">
-            La no intervención sigue siendo la regla
+            La carga sigue recayendo sobre la coerción
           </h2>
 
           <blockquote class="formal-statement reveal reveal-scale">
-            La importancia, el beneficio colectivo o la existencia
-            de una dificultad no constituyen una justificación
-            funcional para la coerción. Allí donde no exista un
-            problema estructural de free rider, la intervención
-            estatal debe presumirse ilegítima por defecto
+            La importancia, el beneficio colectivo, una provisión
+            insuficiente o la presencia de free riders no demuestran
+            la necesidad de coerción. Si falla una sola de las tres
+            condiciones, la justificación basada en bienes públicos
+            termina allí
           </blockquote>
         </div>
       </section>
 
-      <!-- APLICACIONES -->
+      <!-- APPLICATIONS -->
 
       <section class="content-section content-section-alt">
         <div class="container">
@@ -186,18 +188,18 @@ import SEO from "../../components/SEO.astro";
           </p>
 
           <h2 class="reveal">
-            Poniendo a prueba el límite
+            Poner a prueba el límite
           </h2>
 
           <p class="reveal">
-            El teorema solo importa si puede distinguir la auténtica
-            necesidad institucional de la conveniencia política, el
-            paternalismo y la insatisfacción con los resultados
-            voluntarios
+            El teorema importa sólo si permite distinguir los casos en
+            que la cooperación voluntaria efectivamente alcanzó su límite
+            de la conveniencia política, el paternalismo y la
+            insatisfacción con los resultados voluntarios
           </p>
 
           <div class="buttons reveal">
-            <a href="/es/applications" class="primary">
+            <a href="/applications" class="primary">
               Explorar las Aplicaciones
             </a>
           </div>
