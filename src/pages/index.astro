@@ -2,9 +2,6 @@
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import SEO from "../components/SEO.astro";
-
-const ssrnUrl =
-  "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5984574";
 ---
 
 <!doctype html>
@@ -60,13 +57,8 @@ const ssrnUrl =
               Explore the Theory
             </a>
 
-            <a
-              href={ssrnUrl}
-              class="secondary"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Read the Paper
+            <a href="/papers" class="secondary">
+              Explore the Papers
             </a>
           </div>
         </div>
@@ -226,7 +218,7 @@ const ssrnUrl =
             <div class="reveal reveal-left">
               <img
                 src="/images/book-cover.jpg"
-                alt="Cover of Minimal Tolerance by Fede Rodrigo"
+                alt="Cover of A Theory of Minimal Tolerance by Fede Rodrigo"
                 loading="lazy"
               />
             </div>
@@ -240,10 +232,10 @@ const ssrnUrl =
                 A Theory of Minimal Tolerance
               </h2>
 
-            <p>
-              A forthcoming book on coercion, its limits,<br />
-              and the burden of proof imposed on power
-            </p>
+              <p>
+                A forthcoming book on coercion, its limits,<br />
+                and the burden of proof imposed on power
+              </p>
 
               <a href="/book" class="secondary">
                 Discover the Book
@@ -253,30 +245,28 @@ const ssrnUrl =
         </div>
       </section>
 
-      <!-- PAPER -->
+      <!-- PAPERS -->
 
-      <section id="paper" class="ssrn">
+      <section id="papers" class="ssrn">
         <div class="container">
           <p class="eyebrow reveal">
-            SSRN PREPRINT
+            RESEARCH
           </p>
 
           <h2 class="reveal">
-            Read the foundational paper
+            Explore the papers
           </h2>
 
           <p class="reveal">
-            Free Riders, the State, and the “Institutional Technology
-            of Last Resort”
+            Current research on the Minimal Tolerance Criterion,
+            the development of the theory, and State Free Riding
           </p>
 
           <a
-            href={ssrnUrl}
+            href="/papers"
             class="primary reveal"
-            target="_blank"
-            rel="noopener noreferrer"
           >
-            Open on SSRN
+            View the Papers
           </a>
         </div>
       </section>
