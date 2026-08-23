@@ -2,9 +2,6 @@
 import Header from "../../components/Header.astro";
 import Footer from "../../components/Footer.astro";
 import SEO from "../../components/SEO.astro";
-
-const ssrnUrl =
-  "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5984574";
 ---
 
 <!doctype html>
@@ -19,8 +16,8 @@ const ssrnUrl =
     />
 
     <SEO
-      title="Una Teoría de Tolerancia Mínima | Tolerancia Mínima"
-      description="Una Teoría de Tolerancia Mínima, de Fede Rodrigo, examina la coerción, la autoridad política, la cooperación voluntaria y los límites del poder estatal."
+      title="Una Teoría de la Tolerancia Mínima | Tolerancia Mínima"
+      description="Una Teoría de la Tolerancia Mínima de Fede Rodrigo examina la coerción, la autoridad política, la cooperación voluntaria y los límites del poder estatal."
       lang="es"
     />
   </head>
@@ -38,7 +35,7 @@ const ssrnUrl =
           </p>
 
           <h1>
-            Una Teoría de Tolerancia Mínima
+            Una Teoría de la Tolerancia Mínima
           </h1>
         </div>
       </section>
@@ -58,8 +55,8 @@ const ssrnUrl =
           <div class="book-grid">
             <div class="book-cover-wrapper reveal reveal-left">
               <img
-                src="/images/book-cover-esp.jpg"
-                alt="Portada de Una Teoría de Tolerancia Mínima, de Fede Rodrigo"
+                src="/images/book-cover.jpg"
+                alt="Portada de Una Teoría de la Tolerancia Mínima de Fede Rodrigo"
               />
             </div>
 
@@ -69,44 +66,43 @@ const ssrnUrl =
               </p>
 
               <h2>
-                Una Teoría de Tolerancia Mínima
+                Una Teoría de la Tolerancia Mínima
               </h2>
 
               <p>
-             El libro examina cuándo puede tolerarse la coerción y qué límites deben imponerse al poder. 
-             A partir de sus fundamentos morales, económicos e institucionales, desarrolla un criterio para 
-             distinguir una excepción genuina de una autorización general para ejercer coerción
+                Este libro desarrolla los fundamentos morales, económicos
+                e institucionales de la Teoría de la Tolerancia Mínima.
+                Define las condiciones que una función debe satisfacer para
+                superar el examen de necesidad coercitiva, sin tratar ese
+                resultado como autorización para un arreglo coercitivo
+                particular
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- PAPER -->
+      <!-- PAPERS -->
 
       <section class="ssrn">
         <div class="container">
           <p class="eyebrow reveal">
-            PAPER FUNDACIONAL
+            INVESTIGACIÓN
           </p>
 
           <h2 class="reveal">
-            Leer el paper en SSRN
+            Explorar los papers
           </h2>
 
           <p class="reveal">
-            El paper original presenta el Teorema de la Tolerancia
-            Mínima y la idea del Estado como una tecnología
-            institucional de último recurso
+            Tolerancia Mínima y los límites del poder estatal
           </p>
 
           <a
-            href={ssrnUrl}
+            href="/es/papers"
             class="primary reveal"
-            target="_blank"
-            rel="noopener noreferrer"
           >
-            Abrir en SSRN
+            Ver los Papers
           </a>
         </div>
       </section>
