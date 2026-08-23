@@ -2,9 +2,6 @@
 import Header from "../../components/Header.astro";
 import Footer from "../../components/Footer.astro";
 import SEO from "../../components/SEO.astro";
-
-const ssrnUrl =
-  "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5984574";
 ---
 
 <!doctype html>
@@ -60,13 +57,8 @@ const ssrnUrl =
               Explorar la Teoría
             </a>
 
-            <a
-              href={ssrnUrl}
-              class="secondary"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Leer el Paper
+            <a href="/es/papers" class="secondary">
+              Explorar los Papers
             </a>
           </div>
         </div>
@@ -239,7 +231,7 @@ const ssrnUrl =
               </p>
 
               <h2>
-                Una Teoría de Tolerancia Mínima
+                Una Teoría de la Tolerancia Mínima
               </h2>
 
               <p>
@@ -255,30 +247,27 @@ const ssrnUrl =
         </div>
       </section>
 
-      <!-- PAPER -->
+      <!-- PAPERS -->
 
-      <section id="paper" class="ssrn">
+      <section id="papers" class="ssrn">
         <div class="container">
           <p class="eyebrow reveal">
-            PREPRINT EN SSRN
+            INVESTIGACIÓN
           </p>
 
           <h2 class="reveal">
-            Leer el paper fundacional
+            Explorar los papers
           </h2>
 
           <p class="reveal">
-            Free Riders, the State, and the “Institutional Technology
-            of Last Resort”
+            Tolerancia Mínima y los límites del poder estatal
           </p>
 
           <a
-            href={ssrnUrl}
+            href="/es/papers"
             class="primary reveal"
-            target="_blank"
-            rel="noopener noreferrer"
           >
-            Abrir en SSRN
+            Ver los Papers
           </a>
         </div>
       </section>
