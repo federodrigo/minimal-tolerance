@@ -1,1 +1,276 @@
+---
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import SEO from "../components/SEO.astro";
+---
 
+<!doctype html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+
+    <SEO
+      title="Papers | Minimal Tolerance"
+      description="Research papers on the Theory of Minimal Tolerance, the Minimal Tolerance Criterion, and State Free Riding by Federico Rodrigo."
+      lang="en"
+    />
+  </head>
+
+  <body>
+    <Header />
+
+    <main>
+      <!-- PAGE TITLE -->
+
+      <section class="page-hero">
+        <div class="container hero-sequence">
+          <p class="eyebrow">
+            RESEARCH
+          </p>
+
+          <h1>
+            Papers
+          </h1>
+        </div>
+      </section>
+
+      <!-- MAIN STATEMENT -->
+
+      <section class="statement">
+        <blockquote class="reveal reveal-scale">
+          Research on power, coercion, and the limits of political authority
+        </blockquote>
+      </section>
+
+      <!-- CRITERION OF MINIMAL TOLERANCE -->
+
+      <section class="content-section content-section-alt">
+        <div class="container">
+          <p class="eyebrow reveal">
+            UNDER REVIEW
+          </p>
+
+          <h2 class="reveal">
+            The Criterion of Minimal Tolerance
+          </h2>
+
+          <p class="paper-meta reveal">
+            Federico Rodrigo · 2026
+          </p>
+
+          <p class="reveal">
+            This paper develops a restrictive criterion for determining
+            when coercive provision may enter institutional consideration.
+            It requires effective non-excludability, relevant non-rivalry,
+            and persistent collapse of voluntary provision to be jointly
+            established
+          </p>
+
+          <p class="reveal">
+            The criterion places the burden of proof on coercion:
+            importance, collective benefit, free riding, or dissatisfaction
+            with voluntary outcomes are not sufficient to establish
+            coercive necessity
+          </p>
+
+          <div class="paper-status reveal">
+            <span>Manuscript under review</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- STATE FREE RIDING -->
+
+      <section class="content-section">
+        <div class="container">
+          <p class="eyebrow reveal">
+            WORK IN PROGRESS
+          </p>
+
+          <h2 class="reveal">
+            State Free Riding
+          </h2>
+
+          <p class="paper-meta reveal">
+            Federico Rodrigo · 2026
+          </p>
+
+          <p class="reveal">
+            This paper examines how the continued functioning of a productive
+            society after the imposition of new state burdens can conceal the
+            counterfactual costs of those burdens
+          </p>
+
+          <p class="reveal">
+            Once an absorbed burden becomes part of the institutional
+            baseline, the resilience of the productive base can facilitate
+            further extraction without requiring any assumption of deliberate
+            state maximization
+          </p>
+
+          <div class="paper-status reveal">
+            <span>Research in progress</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- EARLIER WORK -->
+
+      <section class="content-section content-section-alt">
+        <div class="container">
+          <p class="eyebrow reveal">
+            EARLIER WORKING PAPER
+          </p>
+
+          <h2 class="reveal">
+            The Theory of Minimal Tolerance
+          </h2>
+
+          <p class="paper-meta reveal">
+            Federico Rodrigo · 2026 · SSRN
+          </p>
+
+          <p class="reveal">
+            An early formulation of the Theory of Minimal Tolerance,
+            introducing a framework for examining when political coercion
+            may be tolerated only under exceptional conditions
+          </p>
+
+          <p class="paper-note reveal">
+            This paper represents an earlier stage of the theory.
+            The framework has since been substantially developed and refined
+          </p>
+
+          <div class="buttons reveal">
+            <a
+              href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5984574"
+              class="primary"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Read on SSRN
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <Footer />
+
+    <style>
+      .paper-meta {
+        margin-top: -0.5rem;
+        margin-bottom: 2rem;
+        font-size: 0.95rem;
+        letter-spacing: 0.02em;
+        opacity: 0.62;
+      }
+
+      .paper-status {
+        margin-top: 2rem;
+      }
+
+      .paper-status span {
+        display: inline-block;
+        padding: 0.65rem 1rem;
+        border: 1px solid rgba(169, 131, 58, 0.3);
+        font-size: 0.82rem;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        transition:
+          transform 220ms ease,
+          border-color 220ms ease,
+          box-shadow 220ms ease;
+      }
+
+      .paper-note {
+        margin-top: 1.75rem;
+        padding-left: 1.25rem;
+        border-left: 2px solid rgba(169, 131, 58, 0.45);
+        font-style: italic;
+        opacity: 0.78;
+        transition:
+          transform 260ms ease,
+          border-color 260ms ease;
+      }
+
+      @media (hover: hover) and (pointer: fine) {
+        .paper-status span:hover {
+          transform: translateY(-2px);
+          border-color: rgba(169, 131, 58, 0.55);
+          box-shadow: 0 12px 28px rgba(13, 27, 42, 0.06);
+        }
+
+        .paper-note:hover {
+          transform: translateX(3px);
+          border-left-color: var(--navy);
+        }
+      }
+
+      @media (max-width: 560px) {
+        .paper-meta {
+          margin-bottom: 1.5rem;
+        }
+
+        .paper-status span {
+          font-size: 0.75rem;
+        }
+
+        .statement .reveal-scale {
+          transform: translateY(18px) scale(0.99);
+        }
+
+        .statement .reveal-scale.is-visible {
+          transform: translateY(0) scale(1);
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        .paper-status span,
+        .paper-note {
+          transition: none;
+        }
+      }
+    </style>
+
+    <script is:inline>
+      const reduceMotion = window.matchMedia(
+        "(prefers-reduced-motion: reduce)"
+      ).matches;
+
+      const revealElements =
+        document.querySelectorAll(".reveal");
+
+      if (reduceMotion || !("IntersectionObserver" in window)) {
+        revealElements.forEach((element) => {
+          element.classList.add("is-visible");
+        });
+      } else {
+        const revealObserver = new IntersectionObserver(
+          (entries, observer) => {
+            entries.forEach((entry) => {
+              if (!entry.isIntersecting) return;
+
+              entry.target.classList.add("is-visible");
+              observer.unobserve(entry.target);
+            });
+          },
+          {
+            threshold: 0.13,
+            rootMargin: "0px 0px -40px 0px",
+          }
+        );
+
+        revealElements.forEach((element) => {
+          revealObserver.observe(element);
+        });
+      }
+    </script>
+  </body>
+</html>
