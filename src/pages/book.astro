@@ -2,9 +2,6 @@
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import SEO from "../components/SEO.astro";
-
-const ssrnUrl =
-  "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5984574";
 ---
 
 <!doctype html>
@@ -73,40 +70,38 @@ const ssrnUrl =
               </h2>
 
               <p>
-             This book develops the moral, economic, and institutional foundations of the Theory of Minimal Tolerance. 
-             It defines the conditions a function must satisfy to pass the test of coercive necessity, without treating 
-             that result as authorization for a particular coercive arrangement
+                This book develops the moral, economic, and institutional
+                foundations of the Theory of Minimal Tolerance. It defines
+                the conditions a function must satisfy to pass the test of
+                coercive necessity, without treating that result as
+                authorization for a particular coercive arrangement
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- PAPER -->
+      <!-- PAPERS -->
 
       <section class="ssrn">
         <div class="container">
           <p class="eyebrow reveal">
-            FOUNDATIONAL PAPER
+            RESEARCH
           </p>
 
           <h2 class="reveal">
-            Read the SSRN paper
+            Explore the papers
           </h2>
 
           <p class="reveal">
-            The original paper introduces the Minimal Tolerance
-            Theorem and the idea of the State as an institutional
-            technology of last resort
+            Minimal Tolerance and the limits of state power
           </p>
 
           <a
-            href={ssrnUrl}
+            href="/papers"
             class="primary reveal"
-            target="_blank"
-            rel="noopener noreferrer"
           >
-            Open on SSRN
+            View the Papers
           </a>
         </div>
       </section>
