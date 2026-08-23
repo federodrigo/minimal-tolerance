@@ -2,9 +2,6 @@
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import SEO from "../components/SEO.astro";
-
-const ssrnUrl =
-  "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5984574";
 ---
 
 <!doctype html>
@@ -60,7 +57,7 @@ const ssrnUrl =
           </p>
 
           <h2 class="reveal">
-           Author and technology executive
+            Author and technology executive
           </h2>
 
           <p class="reveal">
@@ -105,7 +102,7 @@ const ssrnUrl =
         </div>
       </section>
 
-      <!-- RESEARCH -->
+      <!-- PAPERS -->
 
       <section class="ssrn">
         <div class="container">
@@ -114,21 +111,18 @@ const ssrnUrl =
           </p>
 
           <h2 class="reveal">
-            The Theory of Minimal Tolerance
+            Explore the papers
           </h2>
 
           <p class="reveal">
-            The foundational paper introduces the theory and
-            its test for coercive necessity
+            Minimal Tolerance and the limits of state power
           </p>
 
           <a
-            href={ssrnUrl}
+            href="/papers"
             class="primary reveal"
-            target="_blank"
-            rel="noopener noreferrer"
           >
-            Open on SSRN
+            View the Papers
           </a>
         </div>
       </section>
