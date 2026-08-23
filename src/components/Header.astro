@@ -1,7 +1,4 @@
 ---
-const ssrnUrl =
-  "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5984574";
-
 const normalizePath = (path: string) => {
   if (path === "/") return "/";
   return path.replace(/\/+$/, "");
@@ -92,11 +89,11 @@ const alternateLanguageUrl = isSpanish
     </a>
 
     <a
-      href={ssrnUrl}
-      target="_blank"
-      rel="noopener noreferrer"
+      href={isSpanish ? "/es/papers/" : "/papers/"}
+      class:list={{ active: isActive("/papers") }}
+      aria-current={isActive("/papers") ? "page" : undefined}
     >
-      {isSpanish ? "Artículo" : "Paper"}
+      Papers
     </a>
 
     <span class="language-switch">
