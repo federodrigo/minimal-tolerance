@@ -31,7 +31,7 @@ import SEO from "../../components/SEO.astro";
       <section class="page-hero">
         <div class="container hero-sequence">
           <p class="eyebrow">
-            EL EXAMEN FORMAL
+            EL CRITERIO FORMAL
           </p>
 
           <h1>
@@ -103,7 +103,7 @@ import SEO from "../../components/SEO.astro";
       <section class="theorem">
         <div class="container">
           <p class="eyebrow reveal">
-            EL EXAMEN
+            EL CRITERIO
           </p>
 
        <h2 class="reveal">
@@ -218,11 +218,16 @@ import SEO from "../../components/SEO.astro";
           box-shadow 240ms ease;
       }
 
-      .theorem-conditions article > span {
-        transition:
-          transform 220ms ease,
-          color 220ms ease;
-      }
+  .theorem-conditions article > span {
+  font-size: 1.55rem;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: 0.02em;
+
+  transition:
+    transform 220ms ease,
+    color 220ms ease;
+}
 
       .formal-statement {
         transition:
