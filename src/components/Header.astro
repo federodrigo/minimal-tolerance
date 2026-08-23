@@ -1,9 +1,41 @@
+---
+const normalizePath = (path: string) => {
+  if (path === "/") return "/";
+  return path.replace(/\/+$/, "");
+};
+
+const currentPath = normalizePath(Astro.url.pathname);
+
+const isSpanish =
+  currentPath === "/es" ||
+  currentPath.startsWith("/es/");
+
+const localizedPath = isSpanish
+  ? currentPath.replace(/^\/es/, "") || "/"
+  : currentPath;
+
+const isActive = (path: string) => {
+  const normalizedTarget = normalizePath(path);
+
+  if (normalizedTarget === "/") {
+    return localizedPath === "/";
+  }
+
+  return (
+    localizedPath === normalizedTarget ||
+    localizedPath.startsWith(`${normalizedTarget}/`)
+  );
+};
+
+const alternateLanguageUrl = isSpanish
+  ? localizedPath
+  : currentPath === "/"
+    ? "/es/"
+    : `/es${currentPath}`;
+---
+
 <header class="site-header">
-  <a
-    href={isSpanish ? "/es/" : "/"}
-    class:list={{ logo: true, active: isActive("/") }}
-    aria-current={isActive("/") ? "page" : undefined}
-  >
+  <a href={isSpanish ? "/es/" : "/"} class="logo home-link">
     Minimal Tolerance
   </a>
 
