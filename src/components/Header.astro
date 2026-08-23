@@ -1,53 +1,13 @@
----
-const normalizePath = (path: string) => {
-  if (path === "/") return "/";
-  return path.replace(/\/+$/, "");
-};
-
-const currentPath = normalizePath(Astro.url.pathname);
-
-const isSpanish =
-  currentPath === "/es" ||
-  currentPath.startsWith("/es/");
-
-const localizedPath = isSpanish
-  ? currentPath.replace(/^\/es/, "") || "/"
-  : currentPath;
-
-const isActive = (path: string) => {
-  const normalizedTarget = normalizePath(path);
-
-  if (normalizedTarget === "/") {
-    return localizedPath === "/";
-  }
-
-  return (
-    localizedPath === normalizedTarget ||
-    localizedPath.startsWith(`${normalizedTarget}/`)
-  );
-};
-
-const alternateLanguageUrl = isSpanish
-  ? localizedPath
-  : currentPath === "/"
-    ? "/es/"
-    : `/es${currentPath}`;
----
-
 <header class="site-header">
-  <a href={isSpanish ? "/es/" : "/"} class="logo">
-    {isSpanish ? "Tolerancia Mínima" : "Minimal Tolerance"}
+  <a
+    href={isSpanish ? "/es/" : "/"}
+    class:list={{ logo: true, active: isActive("/") }}
+    aria-current={isActive("/") ? "page" : undefined}
+  >
+    Minimal Tolerance
   </a>
 
   <nav aria-label={isSpanish ? "Navegación principal" : "Main navigation"}>
-    <a
-      href={isSpanish ? "/es/" : "/"}
-      class:list={{ active: isActive("/") }}
-      aria-current={isActive("/") ? "page" : undefined}
-    >
-      {isSpanish ? "INICIO" : "HOME"}
-    </a>
-
     <a
       href={isSpanish ? "/es/theory/" : "/theory/"}
       class:list={{ active: isActive("/theory") }}
