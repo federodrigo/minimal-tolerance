@@ -1,1 +1,278 @@
+---
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+import SEO from "../../components/SEO.astro";
+---
 
+<!doctype html>
+
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+
+    <SEO
+      title="Papers | Tolerancia Mínima"
+      description="Trabajos de investigación sobre la Teoría de la Tolerancia Mínima, el Criterio de Tolerancia Mínima y State Free Riding de Federico Rodrigo."
+      lang="es"
+    />
+  </head>
+
+  <body>
+    <Header />
+
+    <main>
+      <!-- TÍTULO DE PÁGINA -->
+
+      <section class="page-hero">
+        <div class="container hero-sequence">
+          <p class="eyebrow">
+            INVESTIGACIÓN
+          </p>
+
+          <h1>
+            Papers
+          </h1>
+        </div>
+      </section>
+
+      <!-- FRASE CENTRAL -->
+
+      <section class="statement">
+        <blockquote class="reveal reveal-scale">
+          Investigación sobre el poder, la coerción y los límites de la autoridad política
+        </blockquote>
+      </section>
+
+      <!-- CRITERIO DE TOLERANCIA MÍNIMA -->
+
+      <section class="content-section content-section-alt">
+        <div class="container">
+          <p class="eyebrow reveal">
+            EN REVISIÓN
+          </p>
+
+          <h2 class="reveal">
+            El Criterio de Tolerancia Mínima
+          </h2>
+
+          <p class="paper-meta reveal">
+            Federico Rodrigo · 2026
+          </p>
+
+          <p class="reveal">
+            Este trabajo desarrolla un criterio restrictivo para determinar
+            cuándo la provisión coercitiva puede siquiera entrar en
+            consideración institucional. Exige que la no exclusión efectiva,
+            la no rivalidad relevante y el colapso persistente de la provisión
+            voluntaria se establezcan conjuntamente
+          </p>
+
+          <p class="reveal">
+            El criterio sitúa la carga de la prueba del lado de la coerción:
+            la importancia, el beneficio colectivo, la presencia de free riders
+            o la insatisfacción con los resultados voluntarios no bastan para
+            establecer la necesidad coercitiva
+          </p>
+
+          <div class="paper-status reveal">
+            <span>Manuscrito en revisión</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- STATE FREE RIDING -->
+
+      <section class="content-section">
+        <div class="container">
+          <p class="eyebrow reveal">
+            TRABAJO EN DESARROLLO
+          </p>
+
+          <h2 class="reveal">
+            State Free Riding
+          </h2>
+
+          <p class="paper-meta reveal">
+            Federico Rodrigo · 2026
+          </p>
+
+          <p class="reveal">
+            Este trabajo examina cómo la continuidad de una sociedad
+            productiva después de la imposición de nuevas cargas estatales
+            puede ocultar los costos contrafactuales de esas cargas
+          </p>
+
+          <p class="reveal">
+            Una vez que una carga absorbida pasa a formar parte de la línea
+            de base institucional, la resiliencia de la estructura productiva
+            puede facilitar nuevas cargas sin requerir que el Estado actúe
+            como un maximizador deliberado
+          </p>
+
+          <div class="paper-status reveal">
+            <span>Investigación en desarrollo</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- TRABAJO ANTERIOR -->
+
+      <section class="content-section content-section-alt">
+        <div class="container">
+          <p class="eyebrow reveal">
+            TRABAJO ANTERIOR
+          </p>
+
+          <h2 class="reveal">
+            La Teoría de la Tolerancia Mínima
+          </h2>
+
+          <p class="paper-meta reveal">
+            Federico Rodrigo · 2026 · SSRN
+          </p>
+
+          <p class="reveal">
+            Una formulación inicial de la Teoría de la Tolerancia Mínima
+            que introduce el marco general para examinar cuándo la coerción
+            política puede ser tolerada únicamente bajo condiciones
+            excepcionales
+          </p>
+
+          <p class="paper-note reveal">
+            Este trabajo representa una etapa inicial de la teoría.
+            El marco ha sido desarrollado y refinado sustancialmente
+            desde su publicación
+          </p>
+
+          <div class="buttons reveal">
+            <a
+              href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5984574"
+              class="primary"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Leer en SSRN
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <Footer />
+
+    <style>
+      .paper-meta {
+        margin-top: -0.5rem;
+        margin-bottom: 2rem;
+        font-size: 0.95rem;
+        letter-spacing: 0.02em;
+        opacity: 0.62;
+      }
+
+      .paper-status {
+        margin-top: 2rem;
+      }
+
+      .paper-status span {
+        display: inline-block;
+        padding: 0.65rem 1rem;
+        border: 1px solid rgba(169, 131, 58, 0.3);
+        font-size: 0.82rem;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        transition:
+          transform 220ms ease,
+          border-color 220ms ease,
+          box-shadow 220ms ease;
+      }
+
+      .paper-note {
+        margin-top: 1.75rem;
+        padding-left: 1.25rem;
+        border-left: 2px solid rgba(169, 131, 58, 0.45);
+        font-style: italic;
+        opacity: 0.78;
+        transition:
+          transform 260ms ease,
+          border-color 260ms ease;
+      }
+
+      @media (hover: hover) and (pointer: fine) {
+        .paper-status span:hover {
+          transform: translateY(-2px);
+          border-color: rgba(169, 131, 58, 0.55);
+          box-shadow: 0 12px 28px rgba(13, 27, 42, 0.06);
+        }
+
+        .paper-note:hover {
+          transform: translateX(3px);
+          border-left-color: var(--navy);
+        }
+      }
+
+      @media (max-width: 560px) {
+        .paper-meta {
+          margin-bottom: 1.5rem;
+        }
+
+        .paper-status span {
+          font-size: 0.75rem;
+        }
+
+        .statement .reveal-scale {
+          transform: translateY(18px) scale(0.99);
+        }
+
+        .statement .reveal-scale.is-visible {
+          transform: translateY(0) scale(1);
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        .paper-status span,
+        .paper-note {
+          transition: none;
+        }
+      }
+    </style>
+
+    <script is:inline>
+      const reduceMotion = window.matchMedia(
+        "(prefers-reduced-motion: reduce)"
+      ).matches;
+
+      const revealElements =
+        document.querySelectorAll(".reveal");
+
+      if (reduceMotion || !("IntersectionObserver" in window)) {
+        revealElements.forEach((element) => {
+          element.classList.add("is-visible");
+        });
+      } else {
+        const revealObserver = new IntersectionObserver(
+          (entries, observer) => {
+            entries.forEach((entry) => {
+              if (!entry.isIntersecting) return;
+
+              entry.target.classList.add("is-visible");
+              observer.unobserve(entry.target);
+            });
+          },
+          {
+            threshold: 0.13,
+            rootMargin: "0px 0px -40px 0px",
+          }
+        );
+
+        revealElements.forEach((element) => {
+          revealObserver.observe(element);
+        });
+      }
+    </script>
+  </body>
+</html>
