@@ -71,6 +71,14 @@ const alternateLanguageUrl = isSpanish
     >
       {isSpanish ? "Libro" : "Book"}
     </a>
+    <a
+      href={isSpanish ? "/es/papers/" : "/papers/"}
+      class:list={{ active: isActive("/papers") }}
+      aria-current={isActive("/papers") ? "page" : undefined}
+    >
+      Papers
+    </a>
+
 
     <a
       href={isSpanish ? "/es/author/" : "/author/"}
@@ -78,14 +86,6 @@ const alternateLanguageUrl = isSpanish
       aria-current={isActive("/author") ? "page" : undefined}
     >
       {isSpanish ? "Autor" : "Author"}
-    </a>
-
-    <a
-      href={isSpanish ? "/es/papers/" : "/papers/"}
-      class:list={{ active: isActive("/papers") }}
-      aria-current={isActive("/papers") ? "page" : undefined}
-    >
-      Papers
     </a>
 
     <span class="language-switch">
