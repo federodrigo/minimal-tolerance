@@ -57,18 +57,10 @@ import SEO from "../components/SEO.astro";
           </p>
 
           <h2 class="reveal">
-            All three conditions must be satisfied
+            The formal structure
           </h2>
 
-          <div class="criterion-formula reveal reveal-scale">
-            <span class="formula">
-              T → (NE ∧ NR ∧ CV)
-            </span>
-
-            <span class="formula-description">
-              Tolerance requires all three conditions
-            </span>
-          </div>
+          <!-- CONDITIONS -->
 
           <ol class="condition-list stagger">
             <li class="condition reveal">
@@ -102,22 +94,30 @@ import SEO from "../components/SEO.astro";
             </li>
           </ol>
 
+          <!-- FORMAL LOGIC -->
+
+          <div class="criterion-formula reveal reveal-scale">
+            <div class="formula-main">
+              T → (NE ∧ NR ∧ CV)
+            </div>
+
+            <div class="formula-caption">
+              T denotes tolerability on coercive-necessity grounds
+            </div>
+          </div>
+
+          <!-- LOGICAL LIMIT -->
+
           <div class="criterion-converse reveal">
-            <span class="formula formula-secondary">
+            <span class="converse-formula">
               (NE ∧ NR ∧ CV) ⇏ T
             </span>
 
-            <span class="formula-description">
-              Passing the criterion does not itself establish tolerability
+            <span class="converse-text">
+              Passing all three conditions does not itself establish
+              tolerability
             </span>
           </div>
-
-          <p class="criterion-logic reveal">
-            <strong>NE</strong> and <strong>NR</strong> identify the economic
-            structure in which free riding can arise; <strong>CV</strong>
-            tests whether voluntary cooperation fails to sustain the
-            relevant function
-          </p>
         </div>
       </section>
 
@@ -380,41 +380,9 @@ import SEO from "../components/SEO.astro";
     <style>
       /* CRITERION */
 
-      .criterion-formula {
-        display: flex;
-        align-items: baseline;
-        gap: 24px;
-        max-width: 760px;
-        margin: 26px 0 18px;
-        padding: 16px 20px;
-        background: var(--paper-light);
-        border: 1px solid var(--line);
-        border-radius: 12px;
-        transition:
-          transform 240ms ease,
-          border-color 240ms ease,
-          box-shadow 240ms ease;
-      }
-
-      .formula {
-        flex: 0 0 auto;
-        color: var(--navy);
-        font-size: 1.35rem;
-        font-weight: 700;
-        line-height: 1.2;
-        letter-spacing: 0.01em;
-      }
-
-      .formula-description {
-        color: inherit;
-        font-size: 0.98rem;
-        line-height: 1.45;
-        opacity: 0.78;
-      }
-
       .condition-list {
         max-width: 760px;
-        margin: 0;
+        margin: 28px 0 0;
         padding: 0;
         list-style: none;
         border-top: 1px solid var(--line);
@@ -447,31 +415,53 @@ import SEO from "../components/SEO.astro";
         line-height: 1.35;
       }
 
+      .criterion-formula {
+        max-width: 760px;
+        margin: 30px 0 0;
+        padding: 22px 0 20px;
+        border-top: 1px solid var(--line);
+        border-bottom: 1px solid var(--line);
+      }
+
+      .formula-main {
+        color: var(--navy);
+        font-size: clamp(1.9rem, 4vw, 2.65rem);
+        font-weight: 700;
+        line-height: 1.15;
+        letter-spacing: 0.015em;
+      }
+
+      .formula-caption {
+        margin-top: 9px;
+        color: var(--gold);
+        font-size: 0.76rem;
+        font-weight: 700;
+        line-height: 1.4;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
       .criterion-converse {
         display: flex;
         align-items: baseline;
-        gap: 24px;
+        gap: 22px;
         max-width: 760px;
-        margin-top: 18px;
+        margin-top: 20px;
       }
 
-      .formula-secondary {
-        min-width: 205px;
+      .converse-formula {
+        flex: 0 0 auto;
         color: var(--gold);
-        font-size: 1.05rem;
-      }
-
-      .criterion-logic {
-        max-width: 760px;
-        margin-top: 16px;
-        margin-bottom: 0;
-        font-size: 0.96rem;
-        line-height: 1.55;
-      }
-
-      .criterion-logic strong {
-        color: var(--gold);
+        font-size: 1.08rem;
         font-weight: 700;
+        line-height: 1.3;
+        letter-spacing: 0.01em;
+      }
+
+      .converse-text {
+        font-size: 0.95rem;
+        line-height: 1.5;
+        opacity: 0.78;
       }
 
       /* APPLICATION SECTIONS */
@@ -546,12 +536,6 @@ import SEO from "../components/SEO.astro";
           transform: translateX(5px);
         }
 
-        .criterion-formula:hover {
-          transform: translateY(-2px);
-          border-color: rgba(169, 131, 58, 0.4);
-          box-shadow: 0 14px 34px rgba(13, 27, 42, 0.07);
-        }
-
         .application-card:hover {
           transform: translateY(-5px);
           border-color: rgba(169, 131, 58, 0.4);
@@ -573,22 +557,13 @@ import SEO from "../components/SEO.astro";
       }
 
       @media (max-width: 700px) {
-        .criterion-formula,
         .criterion-converse {
           display: block;
         }
 
-        .criterion-formula {
-          padding: 16px 18px;
-        }
-
-        .formula-description {
+        .converse-text {
           display: block;
           margin-top: 6px;
-        }
-
-        .formula-secondary {
-          min-width: 0;
         }
 
         .condition {
@@ -611,7 +586,6 @@ import SEO from "../components/SEO.astro";
 
       @media (prefers-reduced-motion: reduce) {
         .condition-number,
-        .criterion-formula,
         .application-card {
           transition: none;
         }
