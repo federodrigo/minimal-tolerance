@@ -1,319 +1,43 @@
----
-import Header from "../components/Header.astro";
-import Footer from "../components/Footer.astro";
-import SEO from "../components/SEO.astro";
----
+<div class="theorem-conditions stagger">
 
-<!doctype html>
+  <article class="reveal reveal-scale">
+    <span>01 · NE</span>
 
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
+    <h3>
+      Effective non-excludability
+    </h3>
 
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0"
-    />
-
-    <SEO
-      title="The Theorem of Minimal Tolerance | Minimal Tolerance"
-      description="The necessary conditions, burden of proof, and institutional limits of the Minimal Tolerance Theorem by Federico Rodrigo."
-      lang="en"
-    />
-  </head>
-
-  <body>
-    <Header />
-
-    <main>
-      <!-- PAGE TITLE -->
-
-      <section class="page-hero">
-        <div class="container hero-sequence">
-          <p class="eyebrow">
-            THE FORMAL CRITERION
-          </p>
-
-          <h1>
-            The Theorem of Minimal Tolerance
-          </h1>
-        </div>
-      </section>
-
-      <!-- MAIN STATEMENT -->
-
-      <section class="statement">
-        <blockquote class="reveal reveal-scale">
-         The State is an institutional technology of last resort    
-        </blockquote>
-      </section>
-
-      <!-- INSTITUTIONAL LAST RESORT -->
-
-      <section class="content-section content-section-alt">
-        <div class="container">
-          <p class="eyebrow reveal">
-            INSTITUTIONAL LAST RESORT
-          </p>
-
-          <h2 class="reveal">
-            Defining the exception
-          </h2>
-
-          <p class="reveal">
-            Political authority cannot presume moral legitimacy or
-            institutional superiority. The existence of a problem,
-            collective benefit, or market failure does not by itself
-            justify replacing voluntary cooperation with coercion
-          </p>
-
-          <p class="reveal">
-           Any possible tolerance therefore remains exceptional.
-           The burden lies with those proposing coercion, and the
-           theorem defines the conditions a function must satisfy
-           to pass the test of coercive necessity
-          </p>
-        </div>
-      </section>
-
-      <!-- FORMAL STATEMENT -->
-
-      <section class="content-section">
-        <div class="container">
-          <p class="eyebrow reveal">
-            THE THEOREM OF MINIMAL TOLERANCE
-          </p>
-
-          <h2 class="reveal">
-            Formal statement
-          </h2>
-
-          <blockquote class="formal-statement reveal reveal-scale">
-            A function passes the Minimal Tolerance Criterion only when
-            effective non-excludability, relevant non-rivalry, and
-            persistent collapse of voluntary provision are jointly
-            established. This does not by itself justify any particular
-            coercive arrangement
-          </blockquote>
-        </div>
-      </section>
-
-<!-- THREE CONDITIONS -->
-
-<section class="theorem">
-  <div class="container">
-    <p class="eyebrow reveal">
-      THE CRITERION
+    <p>
+      Access cannot be effectively conditioned on contribution:
+      non-contributors continue to receive the relevant benefit
     </p>
+  </article>
 
-    <h2 class="reveal">
-  Two economic conditions<br>
-  One institutional test
-</h2>
+  <article class="reveal reveal-scale">
+    <span>02 · NR</span>
 
-    <div class="theorem-conditions stagger">
+    <h3>
+      Relevant non-rivalry
+    </h3>
 
-      <article class="reveal reveal-scale">
-        <span>01</span>
+    <p>
+      Use of the relevant benefit must not meaningfully reduce
+      what remains available to others
+    </p>
+  </article>
 
-   
-        <h3>
-          Effective non-excludability
-        </h3>
+  <article class="reveal reveal-scale">
+    <span>03 · CV</span>
 
-        <p>
-          Access cannot be effectively conditioned on contribution:
-          non-contributors continue to receive the relevant benefit
-        </p>
-      </article>
+    <h3>
+      Persistent collapse of voluntary provision
+    </h3>
 
-      <article class="reveal reveal-scale">
-        <span>02</span>
+    <p>
+      The incentive to benefit without contributing must undermine
+      the financing, coordination, or participation needed to sustain
+      the function over time
+    </p>
+  </article>
 
- 
-
-        <h3>
-          Relevant non-rivalry
-        </h3>
-
-        <p>
-          Use of the relevant benefit must not meaningfully reduce
-          what remains available to others
-        </p>
-      </article>
-
-      <article class="reveal reveal-scale">
-        <span>03</span>
-
-   
-
-        <h3>
-          Persistent collapse of voluntary provision
-        </h3>
-
-        <p>
-          The incentive to benefit without contributing must undermine
-          the financing, coordination, or participation needed to sustain
-          the function over time
-        </p>
-      </article>
-
-    </div>
-  </div>
-</section>
-
-      <!-- COROLLARY -->
-
-      <section class="content-section">
-        <div class="container">
-          <p class="eyebrow reveal">
-            COROLLARY
-          </p>
-
-          <h2 class="reveal">
-            The burden remains with coercion
-          </h2>
-
-          <blockquote class="formal-statement reveal reveal-scale">
-            Importance, collective benefit, underprovision, or the
-            presence of free riders cannot establish the necessity
-            of coercion.If any one of the three conditions fails, 
-            the public-goods case for coercive necessity ends there
-          </blockquote>
-        </div>
-      </section>
-
-      <!-- APPLICATIONS -->
-
-      <section class="content-section content-section-alt">
-        <div class="container">
-          <p class="eyebrow reveal">
-            APPLICATIONS
-          </p>
-
-          <h2 class="reveal">
-            Testing the boundary
-          </h2>
-
-          <p class="reveal">
-             The theorem distinguishes persistent failure caused by
-             free-rider incentives from political convenience,
-             paternalism, and dissatisfaction with voluntary outcomes
-          </p>
-
-          <div class="buttons reveal">
-            <a href="/applications" class="primary">
-              Explore the Applications
-            </a>
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <Footer />
-
-    <style>
-      .theorem-conditions article {
-        transition:
-          transform 240ms ease,
-          border-color 240ms ease,
-          box-shadow 240ms ease;
-      }
-
-    .theorem-conditions article > span {
-  font-size: 2rem;
-  font-weight: 700;
-  line-height: 1;
-  letter-spacing: 0.02em;
-
-  transition:
-    transform 220ms ease,
-    color 220ms ease;
-}
-
-      .formal-statement {
-        transition:
-          transform 260ms ease,
-          border-color 260ms ease,
-          box-shadow 260ms ease;
-      }
-
-      @media (hover: hover) and (pointer: fine) {
-        .theorem-conditions article:hover {
-          transform: translateY(-5px);
-          border-color: rgba(169, 131, 58, 0.42);
-          box-shadow: 0 18px 42px rgba(13, 27, 42, 0.09);
-        }
-
-        .theorem-conditions article:hover > span {
-          color: var(--navy);
-          transform: translateX(4px);
-        }
-
-        .formal-statement:hover {
-          transform: translateY(-2px);
-          border-left-color: var(--navy);
-          box-shadow: 0 14px 34px rgba(13, 27, 42, 0.07);
-        }
-      }
-
-      @media (max-width: 900px) {
-        .theorem-conditions article {
-          min-height: auto;
-        }
-      }
-
-      @media (max-width: 560px) {
-        .formal-statement.reveal-scale {
-          transform: translateY(18px) scale(0.99);
-        }
-
-        .formal-statement.reveal-scale.is-visible {
-          transform: translateY(0) scale(1);
-        }
-      }
-
-      @media (prefers-reduced-motion: reduce) {
-        .theorem-conditions article,
-        .theorem-conditions article > span,
-        .formal-statement {
-          transition: none;
-        }
-      }
-    </style>
-
-    <script is:inline>
-      const reduceMotion = window.matchMedia(
-        "(prefers-reduced-motion: reduce)"
-      ).matches;
-
-      const revealElements =
-        document.querySelectorAll(".reveal");
-
-      if (reduceMotion || !("IntersectionObserver" in window)) {
-        revealElements.forEach((element) => {
-          element.classList.add("is-visible");
-        });
-      } else {
-        const revealObserver = new IntersectionObserver(
-          (entries, observer) => {
-            entries.forEach((entry) => {
-              if (!entry.isIntersecting) return;
-
-              entry.target.classList.add("is-visible");
-              observer.unobserve(entry.target);
-            });
-          },
-          {
-            threshold: 0.13,
-            rootMargin: "0px 0px -40px 0px",
-          }
-        );
-
-        revealElements.forEach((element) => {
-          revealObserver.observe(element);
-        });
-      }
-    </script>
-  </body>
-</html>
+</div>
