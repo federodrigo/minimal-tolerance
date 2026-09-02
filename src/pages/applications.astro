@@ -2,51 +2,6 @@
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import SEO from "../components/SEO.astro";
-
-const questions = [
-  {
-    id: "proper-functions-of-government",
-    number: "01",
-    title: "What Are the Proper Functions of Government?",
-    short:
-      "Political theories offer different lists of government functions, but the prior question is what standard can justify placing any particular function under coercive authority",
-  },
-  {
-    id: "why-these-functions",
-    number: "02",
-    title: "Why These Functions and Not Others?",
-    short:
-      "The importance of an activity does not explain why it should be placed under political control or financed through coercion",
-  },
-  {
-    id: "principle-limits-government-power",
-    number: "03",
-    title: "Is There a Principle That Limits Government?",
-    short:
-      "A durable limit requires a function-specific standard that places the burden of proof on those proposing coercion",
-  },
-  {
-    id: "can-state-coercion-be-tolerated",
-    number: "04",
-    title: "Can Coercion Ever Be Tolerated?",
-    short:
-      "Useful outcomes, democratic support, and good intentions do not legitimize coercion; only exceptional conditions can support a function-level case for coercive necessity",
-  },
-  {
-    id: "limits-of-voluntary-cooperation",
-    number: "05",
-    title: "When Does Voluntary Cooperation Reach Its Limit?",
-    short:
-      "Free riders are not enough: their incentives must persistently undermine the financing, coordination, or participation needed to sustain the function",
-  },
-  {
-    id: "does-test-legitimize-coercion",
-    number: "06",
-    title: "Does Passing the Test Legitimize Coercion?",
-    short:
-      "No. Passing all three conditions establishes a function-level case for coercive necessity; it does not justify any particular coercive arrangement",
-  },
-];
 ---
 
 <!doctype html>
@@ -61,8 +16,8 @@ const questions = [
     />
 
     <SEO
-      title="Proper Functions and Limits of Government | Minimal Tolerance"
-      description="Six questions on the proper functions and limits of government, state coercion, voluntary cooperation, free riders, and the burden of proof on political power"
+      title="Applications of the Theorem of Minimal Tolerance | Minimal Tolerance"
+      description="Stress testing the Theorem of Minimal Tolerance across defense, public services, basic needs, financial stability, scientific research, and other contested areas."
       lang="en"
     />
   </head>
@@ -71,323 +26,342 @@ const questions = [
     <Header />
 
     <main>
-      <!-- HERO -->
+      <!-- PAGE TITLE -->
 
-      <section class="hero questions-page-hero">
-        <div class="hero-content hero-sequence">
+      <section class="page-hero">
+        <div class="container hero-sequence">
           <p class="eyebrow">
-            THE QUESTIONS
+            APPLICATIONS
           </p>
 
           <h1>
-            What should government<br />
-            be allowed to do?
+            Stress Testing
           </h1>
         </div>
       </section>
 
-      <!-- CENTRAL STATEMENT -->
+      <!-- MAIN STATEMENT -->
 
       <section class="statement">
         <blockquote class="reveal reveal-scale">
-          An exception is not a license for power
+          Every exception must prove itself
         </blockquote>
       </section>
 
-      <!-- EXPLORE -->
+      <!-- CRITERION -->
 
-      <section class="questions-index">
-        <div class="questions-container">
+      <section class="content-section method-section">
+        <div class="container">
           <p class="eyebrow reveal">
-            EXPLORE
+            THE MINIMAL TOLERANCE THEOREM
           </p>
 
-          <nav
-            class="questions-index-grid stagger"
-            aria-label="Questions about government and political power"
-          >
-            {
-              questions.map((question) => (
-                <a
-                  href={`#${question.id}`}
-                  class="question-index-card reveal"
-                >
-                  <span class="question-index-number">
-                    {question.number}
-                  </span>
+          <div class="criterion-panel reveal reveal-scale">
 
-                  <span class="question-index-title">
-                    {question.title}
-                  </span>
-                </a>
-              ))
-            }
-          </nav>
-        </div>
-      </section>
+            <!-- FORMULA -->
 
-      <!-- QUESTIONS -->
-
-      <section class="questions-content">
-        <div class="questions-container">
-
-          <!-- QUESTION 01 -->
-
-          <article
-            id="proper-functions-of-government"
-            class="question-section"
-          >
-            <div class="question-heading reveal reveal-left">
-              <span class="question-number">
-                01
-              </span>
-
-              <h2>
-                What Are the Proper Functions of Government?
-              </h2>
+            <div class="criterion-formal">
+              <div class="formula-expression">
+                T → (NE ∧ NR ∧ CV)
+              </div>
             </div>
 
-            <div class="question-copy reveal reveal-right">
-              <p>
-                Every political philosophy offers a different answer.
-                Some restrict government to police, courts, and national
-                defense, while others also include education, healthcare,
-                pensions, infrastructure, monetary policy, or scientific
-                research. The disagreement is easy to observe; the harder
-                question is what common standard can distinguish among
-                these competing functions
-              </p>
+            <!-- DEFINITIONS -->
 
-              <p>
-                Before deciding what government should do, each proposed
-                function must answer a prior question: why should this
-                activity be removed from voluntary cooperation and placed
-                under coercive authority? Without a common standard,
-                political boundaries become collections of preferences
-                rather than consistent limits on power
-              </p>
-            </div>
-          </article>
+            <div class="criterion-terms">
+              <div class="criterion-term">
+                <span class="criterion-code">
+                  T
+                </span>
 
-          <!-- QUESTION 02 -->
+                <span class="criterion-name">
+                  Tolerability on coercive-necessity grounds
+                </span>
+              </div>
 
-          <article
-            id="why-these-functions"
-            class="question-section"
-          >
-            <div class="question-heading reveal reveal-left">
-              <span class="question-number">
-                02
-              </span>
+              <div class="criterion-term">
+                <span class="criterion-code">
+                  NE
+                </span>
 
-              <h2>
-                Why These Functions and Not Others?
-              </h2>
-            </div>
+                <span class="criterion-name">
+                  Effective non-excludability
+                </span>
+              </div>
 
-            <div class="question-copy reveal reveal-right">
-              <p>
-                Defenders of limited government usually identify a
-                small group of functions that should remain under state
-                control, but the selection itself requires an explanation.
-                Why police but not healthcare, national defense but not
-                pensions, courts but not scientific research? The fact
-                that an activity is valuable, difficult, or socially
-                important does not establish that it must be provided
-                through coercion
-              </p>
+              <div class="criterion-term">
+                <span class="criterion-code">
+                  NR
+                </span>
 
-              <p>
-                A meaningful limit must explain why one function may
-                qualify as an exception while another remains within
-                voluntary cooperation. The task is not to produce a
-                shorter or longer list, but to apply the same burden
-                of proof to every proposed function
-              </p>
-            </div>
-          </article>
+                <span class="criterion-name">
+                  Relevant non-rivalry
+                </span>
+              </div>
 
-          <!-- QUESTION 03 -->
+              <div class="criterion-term">
+                <span class="criterion-code">
+                  CV
+                </span>
 
-          <article
-            id="principle-limits-government-power"
-            class="question-section"
-          >
-            <div class="question-heading reveal reveal-left">
-              <span class="question-number">
-                03
-              </span>
-
-              <h2>
-                Is There a Principle That Limits Government?
-              </h2>
+                <span class="criterion-name">
+                  Persistent collapse of voluntary provision
+                </span>
+              </div>
             </div>
 
-            <div class="question-copy reveal reveal-right">
-              <p>
-                Political debate concentrates on policies, institutions,
-                and outcomes while giving less attention to the principle
-                that determines which powers government may exercise.
-                A limit based on tradition, political preference, or a
-                fixed list of familiar functions becomes unstable when
-                new problems, technologies, and demands appear
-              </p>
-
-              <p>
-                A durable limiting principle must apply regardless of
-                who governs, which objective is pursued, or how attractive
-                the promised result may be. Liberty is the baseline:
-                the burden belongs to coercion, and each proposed
-                exception must establish its own conditions
-              </p>
-            </div>
-          </article>
-
-          <!-- QUESTION 04 -->
-
-          <article
-            id="can-state-coercion-be-tolerated"
-            class="question-section"
-          >
-            <div class="question-heading reveal reveal-left">
-              <span class="question-number">
-                04
-              </span>
-
-              <h2>
-                Can Coercion Ever Be Tolerated?
-              </h2>
-            </div>
-
-            <div class="question-copy reveal reveal-right">
-              <p>
-                Every government ultimately relies on coercion because
-                laws, taxes, and regulations remain binding even for
-                those who reject them. Elections, beneficial outcomes,
-                and good intentions may affect political judgment, but
-                they do not transform an imposed decision into a
-                voluntary one or confer moral legitimacy on coercion
-              </p>
-
-              <p>
-                Minimal Tolerance asks whether a particular function
-                can qualify as an exception on grounds of coercive
-                necessity. The presumption remains with voluntary
-                cooperation, and the burden of establishing the
-                exception belongs to those who would impose coercion
-              </p>
-            </div>
-          </article>
-
-          <!-- QUESTION 05 -->
-
-          <article
-            id="limits-of-voluntary-cooperation"
-            class="question-section"
-          >
-            <div class="question-heading reveal reveal-left">
-              <span class="question-number">
-                05
-              </span>
-
-              <h2>
-                When Does Voluntary Cooperation Reach Its Limit?
-              </h2>
-            </div>
-
-            <div class="question-copy reveal reveal-right">
-              <p>
-                Effective non-excludability (NE) and relevant
-                non-rivalry (NR) can create strong incentives to benefit
-                without contributing. But the existence of free riders
-                does not establish that voluntary institutions cannot
-                sustain the relevant function
-              </p>
-
-              <p>
-                Persistent collapse of voluntary provision (CV) occurs
-                when those incentives undermine the financing,
-                coordination, or participation needed to sustain the
-                function over time and across materially different
-                voluntary arrangements. The failure of one arrangement,
-                observed underprovision, or the absence of a current
-                provider does not by itself establish collapse
-              </p>
-            </div>
-          </article>
-
-          <!-- QUESTION 06 -->
-
-          <article
-            id="does-test-legitimize-coercion"
-            class="question-section"
-          >
-            <div class="question-heading reveal reveal-left">
-              <span class="question-number">
-                06
-              </span>
-
-              <h2>
-                Does Passing the Test Legitimize Coercion?
-              </h2>
-            </div>
-
-            <div class="question-copy reveal reveal-right">
-              <p>
-                No. When effective non-excludability, relevant
-                non-rivalry, and persistent collapse of voluntary
-                provision are jointly established, the function passes
-                the Minimal Tolerance Criterion on coercive-necessity
-                grounds. This does not legitimize coercion or justify
-                any particular coercive arrangement
-              </p>
-
-              <p>
-                Any tax, agency, budget, mandate, enforcement rule,
-                or other coercive instrument must therefore be justified
-                separately. Passing one function creates no presumption
-                in favor of another, and the result must be reconsidered
-                if the conditions that supported it change
-              </p>
-            </div>
-          </article>
-        </div>
-      </section>
-
-      <!-- FINAL CTA -->
-
-      <section class="questions-cta">
-        <div class="questions-container questions-cta-content">
-          <div class="reveal reveal-left">
-            <p class="eyebrow">
-              THE THEORY OF MINIMAL TOLERANCE
-            </p>
-
-            <h2>
-              The burden of proof belongs to power
-            </h2>
-
-            <p>
-              Explore the framework developed to determine when a
-              function can pass the test of coercive necessity without
-              converting that result into a general authorization
-              for political power
-            </p>
           </div>
+        </div>
+      </section>
 
-          <div class="questions-cta-buttons reveal reveal-right">
-            <a
-              href="/theory"
-              class="primary"
-            >
-              Explore the Theory
-            </a>
+      <!-- FUNCTIONS THAT CAN PASS -->
 
-            <a
-              href="/theorem"
-              class="secondary"
-            >
-              Examine the Theorem
+      <section class="application-section application-section-pass">
+        <div class="container">
+          <p class="eyebrow reveal">
+            THE STRONGEST CANDIDATES
+          </p>
+
+          <h2 class="reveal">
+            Functions that can pass the test
+          </h2>
+
+          <div class="application-grid stagger">
+            <article class="application-card reveal reveal-scale">
+              <h3>
+                Territorial defense
+              </h3>
+
+              <p>
+                Territorial defense can satisfy non-excludability and
+                non-rivalry. It passes the test only if free-rider
+                incentives persistently undermine the financing,
+                coordination, or participation needed to sustain the
+                collective function
+              </p>
+            </article>
+
+            <article class="application-card reveal reveal-scale">
+              <h3>
+                Internal security and legal order
+              </h3>
+
+              <p>
+                Some functions of collective security and legal order can
+                satisfy the first two conditions. The remaining burden is
+                to establish that voluntary provision persistently fails
+                to sustain the relevant function
+              </p>
+            </article>
+
+            <article class="application-card reveal reveal-scale">
+              <h3>
+                Major emergencies and epidemics
+              </h3>
+
+              <p>
+                Exceptional emergencies can create functions whose benefits
+                are difficult to exclude and broadly shared. They pass only
+                where persistent voluntary collapse is also established for
+                the specific function under examination
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- FUNCTIONS THAT FAIL -->
+
+      <section class="application-section application-section-fail">
+        <div class="container">
+          <p class="eyebrow reveal">
+            OUTSIDE THE EXCEPTION
+          </p>
+
+          <h2 class="reveal">
+            Functions that fail the test
+          </h2>
+
+          <div class="application-grid stagger">
+            <article class="application-card reveal reveal-scale">
+              <h3>
+                Health, education, and pensions
+              </h3>
+
+              <p>
+                These goods may be essential and socially valuable, but
+                their importance does not remove rivalry or make exclusion
+                ineffective. They therefore fail before persistent voluntary
+                collapse becomes relevant
+              </p>
+            </article>
+
+            <article class="application-card reveal reveal-scale">
+              <h3>
+                Labor regulation and paternalism
+              </h3>
+
+              <p>
+                Restrictions on wages, contracts, benefits, and working
+                conditions may pursue distributive or paternalistic
+                goals, but those grounds do not establish the three
+                conditions required by the theorem
+              </p>
+            </article>
+
+            <article class="application-card reveal reveal-scale">
+              <h3>
+                Political parties and ordinary regulation
+              </h3>
+
+              <p>
+                Political influence, unequal bargaining power,
+                concentration, and undesirable conduct may raise serious
+                concerns. They do not by themselves establish effective
+                non-excludability, relevant non-rivalry, and persistent
+                collapse of voluntary provision
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- BORDERLINE CASES -->
+
+      <section
+        class="application-section application-section-borderline"
+      >
+        <div class="container">
+          <p class="eyebrow reveal">
+            BORDERLINE CASES
+          </p>
+
+          <h2 class="reveal">
+            Not every function has a clear answer
+          </h2>
+
+          <div class="application-grid stagger">
+            <article class="application-card reveal reveal-scale">
+              <h3>
+                Roads and urban networks
+              </h3>
+
+              <p>
+                Toll roads and private streets can permit effective
+                exclusion, while some open networks may not. Congestion,
+                technology, ownership, scale, and alternative financing
+                arrangements can change the result
+              </p>
+            </article>
+
+            <article class="application-card reveal reveal-scale">
+              <h3>
+                Basic scientific research
+              </h3>
+
+              <p>
+                Knowledge can be difficult to exclude and can often be
+                used without diminishing what remains for others. The
+                remaining question is whether free-rider incentives
+                prevent voluntary institutions from sustaining the
+                relevant research function over time
+              </p>
+            </article>
+
+            <article class="application-card reveal reveal-scale">
+              <h3>
+                Strategic infrastructure
+              </h3>
+
+              <p>
+                Semiconductors, currencies, and financial services are
+                ordinarily excludable and rival at the product level.
+                The analysis may change when the function under review
+                is a broader form of systemic resilience, which must
+                then satisfy all three conditions independently
+              </p>
+            </article>
+
+            <article class="application-card reveal reveal-scale">
+              <h3>
+                Systemic financial stability
+              </h3>
+
+              <p>
+                The relevant function may be the continued operation of
+                a financial infrastructure rather than the survival of
+                any particular institution. Whether it passes the test
+                depends on the structure of the system and the available
+                voluntary alternatives
+              </p>
+            </article>
+
+            <article class="application-card reveal reveal-scale">
+              <h3>
+                Environmental protection
+              </h3>
+
+              <p>
+                Some environmental benefits extend across borders and
+                generations and may satisfy non-excludability and
+                non-rivalry. The remaining question is whether free-rider
+                incentives persistently undermine the protective function
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- FINAL PRINCIPLE -->
+
+      <section class="content-section content-section-alt">
+        <div class="container">
+          <p class="eyebrow reveal">
+            THE RESULT
+          </p>
+
+          <h2 class="reveal">
+            Each function stands on its own
+          </h2>
+
+          <p class="reveal">
+            The theorem does not accept or reject the State as a
+            whole. Each function is evaluated independently, and
+            passing one creates no presumption in favor of another
+          </p>
+
+          <p class="reveal">
+            Any tolerance remains contingent on the conditions that
+            supported it. Changes in technology, institutions, or
+            voluntary provision can therefore require the exception
+            to be examined again
+          </p>
+        </div>
+      </section>
+
+      <!-- BOOK -->
+
+      <section class="content-section">
+        <div class="container">
+          <p class="eyebrow reveal">
+            THE BOOK
+          </p>
+
+          <h2 class="reveal">
+            See the complete stress test
+          </h2>
+
+          <p class="reveal">
+            The book applies the theorem to defense, emergencies,
+            basic needs, roads, monetary systems, financial crises,
+            scientific research, environmental threats, labor
+            regulation, and agreements commonly considered
+            unacceptable
+          </p>
+
+          <div class="buttons reveal">
+            <a href="/book" class="primary">
+              Explore the Book
             </a>
           </div>
         </div>
@@ -397,56 +371,196 @@ const questions = [
     <Footer />
 
     <style>
-      .question-index-card {
+      /* CRITERION */
+
+      .criterion-panel {
+        max-width: 760px;
+        margin-top: 20px;
+        padding: 0 30px 20px;
+        background: var(--paper-light);
+        border: 1px solid var(--line);
+        border-radius: 16px;
         transition:
-          color 220ms ease,
-          background 220ms ease,
-          transform 220ms ease;
+          transform 240ms ease,
+          border-color 240ms ease,
+          box-shadow 240ms ease;
       }
 
-      .question-index-number {
-        transition: transform 220ms ease;
+      /* FORMULA */
+
+      .criterion-formal {
+        padding: 25px 0 23px;
+        border-bottom: 1px solid var(--line);
       }
 
-      .question-section {
-        overflow: hidden;
+      .formula-expression {
+        color: var(--navy);
+        font-size: clamp(2rem, 3.6vw, 2.75rem);
+        font-weight: 700;
+        line-height: 1.08;
+        letter-spacing: 0.01em;
       }
+
+      /* DEFINITIONS */
+
+      .criterion-terms {
+        padding-top: 14px;
+      }
+
+      .criterion-term {
+        display: grid;
+        grid-template-columns: 48px 1fr;
+        align-items: baseline;
+        gap: 12px;
+        padding: 5px 0;
+      }
+
+      .criterion-code {
+        color: var(--gold);
+        font-size: 1.15rem;
+        font-weight: 700;
+        line-height: 1.2;
+      }
+
+      .criterion-name {
+        color: var(--navy);
+        font-size: 1.03rem;
+        font-weight: 500;
+        line-height: 1.35;
+      }
+
+      /* APPLICATION SECTIONS */
+
+      .application-section {
+        padding: var(--section-space) 0;
+        border-top: 1px solid var(--line);
+      }
+
+      .application-section-pass {
+        background: var(--cream);
+      }
+
+      .application-section-fail {
+        background: var(--paper);
+      }
+
+      .application-section-borderline {
+        background: var(--paper-light);
+      }
+
+      .application-section > .container > .eyebrow,
+      .application-section > .container > h2 {
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+      }
+
+      .application-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 22px;
+        margin-top: 34px;
+      }
+
+      .application-card {
+        min-height: 290px;
+        padding: 28px;
+        background: var(--paper-light);
+        border: 1px solid var(--line);
+        border-radius: 14px;
+        transition:
+          transform 240ms ease,
+          border-color 240ms ease,
+          box-shadow 240ms ease;
+      }
+
+      .application-section-fail .application-card {
+        background: var(--cream);
+      }
+
+      .application-card h3 {
+        margin-bottom: 14px;
+        color: var(--navy);
+        font-size: 1.35rem;
+        line-height: 1.25;
+      }
+
+      .application-card p {
+        margin-bottom: 0;
+        font-size: 1rem;
+        line-height: 1.62;
+        text-align: left;
+        hyphens: none;
+      }
+
+      /* HOVER — MOUSE ONLY */
 
       @media (hover: hover) and (pointer: fine) {
-        .question-index-card:hover {
-          transform: translateY(-2px);
+        .criterion-panel:hover {
+          transform: translateY(-3px);
+          border-color: rgba(169, 131, 58, 0.35);
+          box-shadow: 0 14px 32px rgba(13, 27, 42, 0.06);
         }
 
-        .question-index-card:hover .question-index-number {
-          transform: translateX(5px);
+        .application-card:hover {
+          transform: translateY(-5px);
+          border-color: rgba(169, 131, 58, 0.4);
+          box-shadow: 0 18px 42px rgba(13, 27, 42, 0.09);
         }
       }
+
+      /* RESPONSIVE */
 
       @media (max-width: 900px) {
-        .question-heading.reveal-left,
-        .question-copy.reveal-right {
-          transform: translateY(24px);
+        .application-grid {
+          grid-template-columns: 1fr;
+          gap: 16px;
         }
 
-        .question-heading.reveal-left.is-visible,
-        .question-copy.reveal-right.is-visible {
-          transform: translateY(0);
+        .application-card {
+          min-height: auto;
         }
       }
 
-      @media (max-width: 560px) {
-        .questions-statement .reveal {
-          transform: translateY(18px);
+      @media (max-width: 700px) {
+        .criterion-panel {
+          padding: 0 22px 18px;
         }
 
-        .questions-statement .reveal.is-visible {
-          transform: translateY(0);
+        .criterion-formal {
+          padding: 22px 0 20px;
+        }
+
+        .formula-expression {
+          font-size: clamp(1.7rem, 7vw, 2.2rem);
+        }
+
+        .criterion-term {
+          grid-template-columns: 42px 1fr;
+          gap: 10px;
+          padding: 5px 0;
+        }
+
+        .criterion-code {
+          font-size: 1.05rem;
+        }
+
+        .criterion-name {
+          font-size: 0.98rem;
         }
       }
+
+      @media (max-width: 600px) {
+        .application-card {
+          padding: 24px;
+        }
+      }
+
+      /* REDUCED MOTION */
 
       @media (prefers-reduced-motion: reduce) {
-        .question-index-card,
-        .question-index-number {
+        .criterion-panel,
+        .application-card {
           transition: none;
         }
       }
