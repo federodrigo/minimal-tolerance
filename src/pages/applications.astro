@@ -48,7 +48,7 @@ import SEO from "../components/SEO.astro";
         </blockquote>
       </section>
 
-      <!-- METHOD -->
+      <!-- CRITERION -->
 
       <section class="content-section method-section">
         <div class="container">
@@ -92,12 +92,31 @@ import SEO from "../components/SEO.astro";
             </li>
           </ol>
 
-          <p class="method-note reveal">
-            <strong>NE</strong> and <strong>NR</strong> define the economic
-            structure. <strong>CV</strong> tests whether that structure
-            actually causes voluntary provision to collapse. Passing all
-            three applies only to the function examined and does not
-            authorize any particular coercive arrangement
+          <div class="criterion-logic reveal">
+            <div class="criterion-logic-row">
+              <span class="criterion-code">
+                NE + NR
+              </span>
+
+              <span>
+                Define the economic structure
+              </span>
+            </div>
+
+            <div class="criterion-logic-row">
+              <span class="criterion-code">
+                CV
+              </span>
+
+              <span>
+                Tests whether that structure causes voluntary provision
+                to collapse
+              </span>
+            </div>
+          </div>
+
+          <p class="criterion-note reveal">
+            Passing all three applies only to the function examined
           </p>
         </div>
       </section>
@@ -359,7 +378,7 @@ import SEO from "../components/SEO.astro";
     <Footer />
 
     <style>
-      /* METHOD */
+      /* CRITERION */
 
       .method-intro {
         max-width: 680px;
@@ -401,15 +420,32 @@ import SEO from "../components/SEO.astro";
         line-height: 1.35;
       }
 
-      .method-note {
-        margin-bottom: 0;
-        font-style: normal;
-        line-height: 1.6;
+      .criterion-logic {
+        max-width: 760px;
+        margin-top: 24px;
       }
 
-      .method-note strong {
-        color: var(--navy);
+      .criterion-logic-row {
+        display: grid;
+        grid-template-columns: 110px 1fr;
+        align-items: baseline;
+        gap: 18px;
+        padding: 8px 0;
+      }
+
+      .criterion-code {
+        color: var(--gold);
         font-weight: 700;
+        letter-spacing: 0.03em;
+      }
+
+      .criterion-note {
+        max-width: 760px;
+        margin-top: 14px;
+        margin-bottom: 0;
+        font-size: 0.95rem;
+        line-height: 1.55;
+        opacity: 0.78;
       }
 
       /* APPLICATION SECTIONS */
@@ -521,6 +557,11 @@ import SEO from "../components/SEO.astro";
 
         .condition-name {
           font-size: 1.05rem;
+        }
+
+        .criterion-logic-row {
+          grid-template-columns: 82px 1fr;
+          gap: 12px;
         }
 
         .application-card {
