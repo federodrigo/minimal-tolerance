@@ -27,6 +27,12 @@ const links = isSpanish
 
 <footer>
   <div class="footer-inner">
+    <p class="footer-copyright">
+      © {today.getFullYear()}
+      {isSpanish ? " Tolerancia Mínima" : " Minimal Tolerance"}
+      · Fede Rodrigo
+    </p>
+
     <div class="footer-navigation">
       <p class="footer-label">
         {isSpanish ? "NAVEGAR" : "NAVIGATE"}
@@ -40,12 +46,6 @@ const links = isSpanish
         ))}
       </nav>
     </div>
-
-    <p class="footer-copyright">
-      © {today.getFullYear()}
-      {isSpanish ? " Tolerancia Mínima" : " Minimal Tolerance"}
-      · Fede Rodrigo
-    </p>
   </div>
 </footer>
 
@@ -57,10 +57,15 @@ const links = isSpanish
   .footer-inner {
     width: min(1180px, calc(100% - 3rem));
     margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 3rem;
   }
 
   .footer-navigation {
-    margin-bottom: 3rem;
+    margin-left: auto;
+    text-align: right;
   }
 
   .footer-label {
@@ -73,6 +78,7 @@ const links = isSpanish
   nav {
     display: flex;
     flex-wrap: wrap;
+    justify-content: flex-end;
     gap: 0.75rem 1.75rem;
   }
 
@@ -80,7 +86,6 @@ const links = isSpanish
     position: relative;
     color: inherit;
     text-decoration: none;
-    transition: opacity 200ms ease;
   }
 
   nav a::after {
@@ -100,6 +105,7 @@ const links = isSpanish
     margin: 0;
     font-size: 0.9rem;
     opacity: 0.6;
+    white-space: nowrap;
   }
 
   @media (hover: hover) and (pointer: fine) {
@@ -109,28 +115,34 @@ const links = isSpanish
     }
   }
 
-  @media (max-width: 560px) {
+  @media (max-width: 700px) {
     footer {
       padding: 3rem 0 2rem;
     }
 
     .footer-inner {
       width: min(100% - 2rem, 1180px);
-    }
-
-    nav {
       flex-direction: column;
       align-items: flex-start;
-      gap: 0.9rem;
+      gap: 2.5rem;
     }
 
     .footer-navigation {
-      margin-bottom: 2.5rem;
+      margin-left: 0;
+      text-align: left;
+    }
+
+    nav {
+      justify-content: flex-start;
+      gap: 0.75rem 1.25rem;
+    }
+
+    .footer-copyright {
+      white-space: normal;
     }
   }
 
   @media (prefers-reduced-motion: reduce) {
-    nav a,
     nav a::after {
       transition: none;
     }
