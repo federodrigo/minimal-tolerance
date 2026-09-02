@@ -91,13 +91,19 @@ import SEO from "../components/SEO.astro";
                   Persistent collapse of voluntary provision
                 </span>
               </div>
+
+              <div class="criterion-term">
+                <span class="criterion-code">
+                  T
+                </span>
+
+                <span class="criterion-name">
+                  Tolerability on coercive-necessity grounds
+                </span>
+              </div>
             </div>
 
             <div class="criterion-formal">
-              <p class="criterion-symbol-note">
-                <strong>T:</strong> tolerability on coercive-necessity grounds
-              </p>
-
               <div class="formula-row">
                 <span class="formula-expression">
                   T → (NE ∧ NR ∧ CV)
@@ -381,7 +387,7 @@ import SEO from "../components/SEO.astro";
       }
 
       .criterion-terms {
-        padding-bottom: 12px;
+        padding-bottom: 14px;
         border-bottom: 1px solid var(--line);
       }
 
@@ -390,7 +396,7 @@ import SEO from "../components/SEO.astro";
         grid-template-columns: 48px 1fr;
         align-items: baseline;
         gap: 12px;
-        padding: 7px 0;
+        padding: 6px 0;
       }
 
       .criterion-code {
@@ -409,28 +415,13 @@ import SEO from "../components/SEO.astro";
       }
 
       .criterion-formal {
-        padding-top: 18px;
-        text-align: center;
-      }
-
-      .criterion-symbol-note {
-        margin: 0 0 14px;
-        color: var(--gold);
-        font-size: 0.78rem;
-        font-weight: 700;
-        line-height: 1.4;
-        letter-spacing: 0.06em;
-        text-transform: uppercase;
-      }
-
-      .criterion-symbol-note strong {
-        color: var(--navy);
-        font-weight: 700;
+        padding-top: 20px;
+        text-align: left;
       }
 
       .formula-row {
         display: flex;
-        justify-content: center;
+        justify-content: flex-start;
         align-items: center;
       }
 
@@ -440,7 +431,7 @@ import SEO from "../components/SEO.astro";
         font-weight: 700;
         line-height: 1.1;
         letter-spacing: 0.015em;
-        text-align: center;
+        text-align: left;
       }
 
       /* APPLICATION SECTIONS */
@@ -544,7 +535,7 @@ import SEO from "../components/SEO.astro";
         .criterion-term {
           grid-template-columns: 42px 1fr;
           gap: 10px;
-          padding: 7px 0;
+          padding: 6px 0;
         }
 
         .criterion-name {
