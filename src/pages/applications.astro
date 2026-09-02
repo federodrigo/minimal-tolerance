@@ -92,32 +92,30 @@ import SEO from "../components/SEO.astro";
             </li>
           </ol>
 
+          <p class="criterion-explainer-label reveal">
+            HOW THE CRITERION WORKS
+          </p>
+
           <div class="criterion-explainer reveal reveal-scale">
-            <p class="criterion-explainer-label">
-              HOW THE CRITERION WORKS
-            </p>
+            <div class="criterion-explainer-row">
+              <span class="criterion-code">
+                NE + NR
+              </span>
 
-            <div class="criterion-explainer-grid">
-              <div class="criterion-explainer-row">
-                <span class="criterion-code">
-                  NE + NR
-                </span>
+              <p>
+                Define the economic structure
+              </p>
+            </div>
 
-                <p>
-                  Define the economic structure
-                </p>
-              </div>
+            <div class="criterion-explainer-row">
+              <span class="criterion-code">
+                CV
+              </span>
 
-              <div class="criterion-explainer-row">
-                <span class="criterion-code">
-                  CV
-                </span>
-
-                <p>
-                  Tests whether that structure causes voluntary provision
-                  to collapse
-                </p>
-              </div>
+              <p>
+                Tests whether that structure causes voluntary provision
+                to collapse
+              </p>
             </div>
 
             <p class="criterion-note">
@@ -393,7 +391,7 @@ import SEO from "../components/SEO.astro";
 
       .condition-list {
         max-width: 760px;
-        margin: 0 0 20px;
+        margin: 0;
         padding: 0;
         list-style: none;
         border-top: 1px solid var(--line);
@@ -426,17 +424,10 @@ import SEO from "../components/SEO.astro";
         line-height: 1.35;
       }
 
-      .criterion-explainer {
-        max-width: 760px;
-        margin-top: 28px;
-        padding: 24px 28px;
-        background: var(--paper-light);
-        border: 1px solid var(--line);
-        border-radius: 14px;
-      }
-
       .criterion-explainer-label {
-        margin-bottom: 16px;
+        max-width: 760px;
+        margin-top: 26px;
+        margin-bottom: 10px;
         color: var(--gold);
         font-size: 0.82rem;
         font-weight: 700;
@@ -444,16 +435,24 @@ import SEO from "../components/SEO.astro";
         letter-spacing: 0.14em;
       }
 
-      .criterion-explainer-grid {
-        display: grid;
-        gap: 12px;
+      .criterion-explainer {
+        max-width: 760px;
+        padding: 18px 22px;
+        background: var(--paper-light);
+        border: 1px solid var(--line);
+        border-radius: 14px;
+        transition:
+          transform 240ms ease,
+          border-color 240ms ease,
+          box-shadow 240ms ease;
       }
 
       .criterion-explainer-row {
         display: grid;
         grid-template-columns: 110px 1fr;
         align-items: baseline;
-        gap: 18px;
+        gap: 16px;
+        padding: 4px 0;
       }
 
       .criterion-code {
@@ -464,14 +463,14 @@ import SEO from "../components/SEO.astro";
 
       .criterion-explainer-row p {
         margin: 0;
-        line-height: 1.55;
+        line-height: 1.45;
       }
 
       .criterion-note {
-        margin-top: 16px;
+        margin-top: 10px;
         margin-bottom: 0;
-        font-size: 0.95rem;
-        line-height: 1.55;
+        font-size: 0.93rem;
+        line-height: 1.45;
         opacity: 0.78;
       }
 
@@ -554,6 +553,7 @@ import SEO from "../components/SEO.astro";
         }
 
         .criterion-explainer:hover {
+          transform: translateY(-2px);
           border-color: rgba(169, 131, 58, 0.4);
           box-shadow: 0 14px 34px rgba(13, 27, 42, 0.07);
         }
@@ -583,7 +583,7 @@ import SEO from "../components/SEO.astro";
         }
 
         .criterion-explainer {
-          padding: 22px 24px;
+          padding: 16px 18px;
         }
 
         .criterion-explainer-row {
