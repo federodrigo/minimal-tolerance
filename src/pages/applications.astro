@@ -60,21 +60,25 @@ import SEO from "../components/SEO.astro";
             All three conditions must be satisfied
           </h2>
 
+          <div class="criterion-formula reveal reveal-scale">
+            <span class="formula">
+              T → (NE ∧ NR ∧ CV)
+            </span>
+
+            <span class="formula-description">
+              Tolerance requires all three conditions
+            </span>
+          </div>
+
           <ol class="condition-list stagger">
             <li class="condition reveal">
               <span class="condition-number" aria-hidden="true">
                 NE
               </span>
 
-              <div class="condition-content">
-                <span class="condition-name">
-                  Effective non-excludability
-                </span>
-
-                <span class="condition-role">
-                  ECONOMIC STRUCTURE
-                </span>
-              </div>
+              <span class="condition-name">
+                Effective non-excludability
+              </span>
             </li>
 
             <li class="condition reveal">
@@ -82,15 +86,9 @@ import SEO from "../components/SEO.astro";
                 NR
               </span>
 
-              <div class="condition-content">
-                <span class="condition-name">
-                  Relevant non-rivalry
-                </span>
-
-                <span class="condition-role">
-                  ECONOMIC STRUCTURE
-                </span>
-              </div>
+              <span class="condition-name">
+                Relevant non-rivalry
+              </span>
             </li>
 
             <li class="condition reveal">
@@ -98,17 +96,28 @@ import SEO from "../components/SEO.astro";
                 CV
               </span>
 
-              <div class="condition-content">
-                <span class="condition-name">
-                  Persistent collapse of voluntary provision
-                </span>
-
-                <span class="condition-role">
-                  INSTITUTIONAL TEST
-                </span>
-              </div>
+              <span class="condition-name">
+                Persistent collapse of voluntary provision
+              </span>
             </li>
           </ol>
+
+          <div class="criterion-converse reveal">
+            <span class="formula formula-secondary">
+              (NE ∧ NR ∧ CV) ⇏ T
+            </span>
+
+            <span class="formula-description">
+              Passing the criterion does not itself establish tolerability
+            </span>
+          </div>
+
+          <p class="criterion-logic reveal">
+            <strong>NE</strong> and <strong>NR</strong> identify the economic
+            structure in which free riding can arise; <strong>CV</strong>
+            tests whether voluntary cooperation fails to sustain the
+            relevant function
+          </p>
         </div>
       </section>
 
@@ -371,6 +380,38 @@ import SEO from "../components/SEO.astro";
     <style>
       /* CRITERION */
 
+      .criterion-formula {
+        display: flex;
+        align-items: baseline;
+        gap: 24px;
+        max-width: 760px;
+        margin: 26px 0 18px;
+        padding: 16px 20px;
+        background: var(--paper-light);
+        border: 1px solid var(--line);
+        border-radius: 12px;
+        transition:
+          transform 240ms ease,
+          border-color 240ms ease,
+          box-shadow 240ms ease;
+      }
+
+      .formula {
+        flex: 0 0 auto;
+        color: var(--navy);
+        font-size: 1.35rem;
+        font-weight: 700;
+        line-height: 1.2;
+        letter-spacing: 0.01em;
+      }
+
+      .formula-description {
+        color: inherit;
+        font-size: 0.98rem;
+        line-height: 1.45;
+        opacity: 0.78;
+      }
+
       .condition-list {
         max-width: 760px;
         margin: 0;
@@ -398,14 +439,6 @@ import SEO from "../components/SEO.astro";
           color 220ms ease;
       }
 
-      .condition-content {
-        display: flex;
-        align-items: baseline;
-        justify-content: space-between;
-        gap: 24px;
-        min-width: 0;
-      }
-
       .condition-name {
         color: var(--navy);
         font-family: inherit;
@@ -414,14 +447,31 @@ import SEO from "../components/SEO.astro";
         line-height: 1.35;
       }
 
-      .condition-role {
-        flex: 0 0 auto;
+      .criterion-converse {
+        display: flex;
+        align-items: baseline;
+        gap: 24px;
+        max-width: 760px;
+        margin-top: 18px;
+      }
+
+      .formula-secondary {
+        min-width: 205px;
         color: var(--gold);
-        font-size: 0.7rem;
+        font-size: 1.05rem;
+      }
+
+      .criterion-logic {
+        max-width: 760px;
+        margin-top: 16px;
+        margin-bottom: 0;
+        font-size: 0.96rem;
+        line-height: 1.55;
+      }
+
+      .criterion-logic strong {
+        color: var(--gold);
         font-weight: 700;
-        line-height: 1.3;
-        letter-spacing: 0.12em;
-        white-space: nowrap;
       }
 
       /* APPLICATION SECTIONS */
@@ -496,6 +546,12 @@ import SEO from "../components/SEO.astro";
           transform: translateX(5px);
         }
 
+        .criterion-formula:hover {
+          transform: translateY(-2px);
+          border-color: rgba(169, 131, 58, 0.4);
+          box-shadow: 0 14px 34px rgba(13, 27, 42, 0.07);
+        }
+
         .application-card:hover {
           transform: translateY(-5px);
           border-color: rgba(169, 131, 58, 0.4);
@@ -517,24 +573,31 @@ import SEO from "../components/SEO.astro";
       }
 
       @media (max-width: 700px) {
-        .condition {
-          grid-template-columns: 46px 1fr;
-          min-height: 72px;
+        .criterion-formula,
+        .criterion-converse {
+          display: block;
         }
 
-        .condition-content {
+        .criterion-formula {
+          padding: 16px 18px;
+        }
+
+        .formula-description {
           display: block;
+          margin-top: 6px;
+        }
+
+        .formula-secondary {
+          min-width: 0;
+        }
+
+        .condition {
+          grid-template-columns: 46px 1fr;
+          min-height: 66px;
         }
 
         .condition-name {
-          display: block;
           font-size: 1.05rem;
-        }
-
-        .condition-role {
-          display: block;
-          margin-top: 3px;
-          font-size: 0.64rem;
         }
       }
 
@@ -548,6 +611,7 @@ import SEO from "../components/SEO.astro";
 
       @media (prefers-reduced-motion: reduce) {
         .condition-number,
+        .criterion-formula,
         .application-card {
           transition: none;
         }
