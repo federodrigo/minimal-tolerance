@@ -9,7 +9,7 @@ const questions = [
     number: "01",
     title: "What Are the Proper Functions of Government?",
     short:
-      "Political theories offer different lists of government functions, but the prior question is what standard could justify placing any particular function under coercive authority",
+      "Political theories offer different lists of government functions, but the prior question is what standard can justify placing any particular function under coercive authority",
   },
   {
     id: "why-these-functions",
@@ -19,47 +19,34 @@ const questions = [
       "The importance of an activity does not explain why it should be placed under political control or financed through coercion",
   },
   {
-    id: "principle-that-limits-government",
+    id: "principle-limits-government-power",
     number: "03",
     title: "Is There a Principle That Limits Government?",
     short:
       "A durable limit requires a function-specific standard that places the burden of proof on those proposing coercion",
   },
   {
-    id: "can-coercion-be-justified",
+    id: "can-state-coercion-be-tolerated",
     number: "04",
     title: "Can Coercion Ever Be Tolerated?",
     short:
-      "Useful outcomes, democratic support and good intentions do not legitimize coercion; only exceptional conditions can support a function-level case for coercive necessity",
+      "Useful outcomes, democratic support, and good intentions do not legitimize coercion; only exceptional conditions can support a function-level case for coercive necessity",
   },
   {
-    id: "is-the-state-legitimate",
+    id: "limits-of-voluntary-cooperation",
     number: "05",
     title: "When Does Voluntary Cooperation Reach Its Limit?",
     short:
       "Free riders are not enough: their incentives must persistently undermine the financing, coordination, or participation needed to sustain the function",
   },
   {
-    id: "how-much-coercion",
+    id: "does-test-legitimize-coercion",
     number: "06",
     title: "Does Passing the Test Legitimize Coercion?",
     short:
-      "No. Passing all three establishes a function-level case for coercive necessity; it does not justify any particular coercive arrangement",
+      "No. Passing all three conditions establishes a function-level case for coercive necessity; it does not justify any particular coercive arrangement",
   },
 ];
-
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: questions.map((question) => ({
-    "@type": "Question",
-    name: question.title,
-    acceptedAnswer: {
-      "@type": "Answer",
-      text: question.short,
-    },
-  })),
-};
 ---
 
 <!doctype html>
@@ -74,14 +61,9 @@ const faqSchema = {
     />
 
     <SEO
-      title="Questions About Government, Coercion and State Power | Minimal Tolerance"
-      description="Six fundamental questions about the functions of government, the limits of voluntary cooperation, coercion, and the burden required to admit an exception"
+      title="Proper Functions and Limits of Government | Minimal Tolerance"
+      description="Six questions on the proper functions and limits of government, state coercion, voluntary cooperation, free riders, and the burden of proof on political power"
       lang="en"
-    />
-
-    <script
-      type="application/ld+json"
-      set:html={JSON.stringify(faqSchema)}
     />
   </head>
 
@@ -101,17 +83,16 @@ const faqSchema = {
             What should government<br />
             be allowed to do?
           </h1>
-
-         
         </div>
       </section>
-<!-- CENTRAL STATEMENT -->
 
-<section class="statement">
-  <blockquote class="reveal reveal-scale">
-    What distinguishes an exception from a license for power?
-  </blockquote>
-</section>
+      <!-- CENTRAL STATEMENT -->
+
+      <section class="statement">
+        <blockquote class="reveal reveal-scale">
+          What distinguishes an exception from a license for power?
+        </blockquote>
+      </section>
 
       <!-- EXPLORE -->
 
@@ -169,12 +150,12 @@ const faqSchema = {
             <div class="question-copy reveal reveal-right">
               <p>
                 Every political philosophy offers a different answer.
-                Some restrict government to police, courts and national
-                defense, while others also include education,
-                healthcare, pensions, infrastructure, monetary policy
-                or scientific research. The disagreement is easy to
-                observe, but the standard capable of deciding among
-                those competing functions is considerably harder to find
+                Some restrict government to police, courts, and national
+                defense, while others also include education, healthcare,
+                pensions, infrastructure, monetary policy, or scientific
+                research. The disagreement is easy to observe; the harder
+                question is what common standard can distinguish among
+                these competing functions
               </p>
 
               <p>
@@ -208,12 +189,12 @@ const faqSchema = {
               <p>
                 Defenders of limited government usually identify a
                 small group of functions that should remain under state
-                control, but the selection itself requires an
-                explanation. Why police but not healthcare, national
-                defense but not pensions, courts but not scientific
-                research? The fact that an activity is valuable,
-                difficult or socially important does not establish that
-                it must be provided through coercion
+                control, but the selection itself requires an explanation.
+                Why police but not healthcare, national defense but not
+                pensions, courts but not scientific research? The fact
+                that an activity is valuable, difficult, or socially
+                important does not establish that it must be provided
+                through coercion
               </p>
 
               <p>
@@ -229,7 +210,7 @@ const faqSchema = {
           <!-- QUESTION 03 -->
 
           <article
-            id="principle-that-limits-government"
+            id="principle-limits-government-power"
             class="question-section"
           >
             <div class="question-heading reveal reveal-left">
@@ -244,21 +225,20 @@ const faqSchema = {
 
             <div class="question-copy reveal reveal-right">
               <p>
-                Political debate concentrates on policies,
-                institutions and outcomes, while giving less attention
-                to the principle that determines which powers
-                government may exercise. A limit based on tradition,
-                political preference or a fixed list of familiar
-                functions becomes unstable when new problems,
-                technologies and demands appear
+                Political debate concentrates on policies, institutions,
+                and outcomes while giving less attention to the principle
+                that determines which powers government may exercise.
+                A limit based on tradition, political preference, or a
+                fixed list of familiar functions becomes unstable when
+                new problems, technologies, and demands appear
               </p>
 
               <p>
                 A durable limiting principle must apply regardless of
-                who governs, which objective is pursued or how
-                attractive the promised result may be. It must place
-                the burden on coercion and require each proposed
-                exception to establish its own conditions
+                who governs, which objective is pursued, or how attractive
+                the promised result may be. Liberty is the baseline:
+                the burden belongs to coercion, and each proposed
+                exception must establish its own conditions
               </p>
             </div>
           </article>
@@ -266,7 +246,7 @@ const faqSchema = {
           <!-- QUESTION 04 -->
 
           <article
-            id="can-coercion-be-justified"
+            id="can-state-coercion-be-tolerated"
             class="question-section"
           >
             <div class="question-heading reveal reveal-left">
@@ -282,19 +262,19 @@ const faqSchema = {
             <div class="question-copy reveal reveal-right">
               <p>
                 Every government ultimately relies on coercion because
-                laws, taxes and regulations remain binding even for
-                those who reject them. Elections, beneficial outcomes
+                laws, taxes, and regulations remain binding even for
+                those who reject them. Elections, beneficial outcomes,
                 and good intentions may affect political judgment, but
                 they do not transform an imposed decision into a
                 voluntary one or confer moral legitimacy on coercion
               </p>
 
               <p>
-                Minimal Tolerance asks whether a function can qualify
-                as an exception on grounds of coercive necessity.
-                The presumption remains with voluntary cooperation,
-                and the burden of establishing the exception belongs
-                to those who would impose it
+                Minimal Tolerance asks whether a particular function
+                can qualify as an exception on grounds of coercive
+                necessity. The presumption remains with voluntary
+                cooperation, and the burden of establishing the
+                exception belongs to those who would impose coercion
               </p>
             </div>
           </article>
@@ -302,7 +282,7 @@ const faqSchema = {
           <!-- QUESTION 05 -->
 
           <article
-            id="is-the-state-legitimate"
+            id="limits-of-voluntary-cooperation"
             class="question-section"
           >
             <div class="question-heading reveal reveal-left">
@@ -317,21 +297,21 @@ const faqSchema = {
 
             <div class="question-copy reveal reveal-right">
               <p>
-                Effective non-excludability and relevant non-rivalry
-                can create strong incentives to benefit without
-                contributing. But free riders alone do not establish
-                that voluntary institutions cannot sustain the
-                relevant function
+                Effective non-excludability (NE) and relevant
+                non-rivalry (NR) can create strong incentives to benefit
+                without contributing. But the existence of free riders
+                does not establish that voluntary institutions cannot
+                sustain the relevant function
               </p>
 
               <p>
-                Persistent collapse occurs when those incentives
-                undermine the financing, coordination, or participation
-                needed to sustain the function over time and across
-                materially different voluntary arrangements. Plausible
-                alternatives must remain genuinely open. The absence
-                of a current provider, by itself, does not establish
-                collapse
+                Persistent collapse of voluntary provision (CV) occurs
+                when those incentives undermine the financing,
+                coordination, or participation needed to sustain the
+                function over time and across materially different
+                voluntary arrangements. The failure of one arrangement,
+                observed underprovision, or the absence of a current
+                provider does not by itself establish collapse
               </p>
             </div>
           </article>
@@ -339,7 +319,7 @@ const faqSchema = {
           <!-- QUESTION 06 -->
 
           <article
-            id="how-much-coercion"
+            id="does-test-legitimize-coercion"
             class="question-section"
           >
             <div class="question-heading reveal reveal-left">
@@ -355,7 +335,7 @@ const faqSchema = {
             <div class="question-copy reveal reveal-right">
               <p>
                 No. When effective non-excludability, relevant
-                non-rivalry and persistent collapse of voluntary
+                non-rivalry, and persistent collapse of voluntary
                 provision are jointly established, the function passes
                 the Minimal Tolerance Criterion on coercive-necessity
                 grounds. This does not legitimize coercion or justify
