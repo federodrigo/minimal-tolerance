@@ -5,61 +5,48 @@ import SEO from "../../components/SEO.astro";
 
 const questions = [
   {
-    id: "proper-functions-of-government",
+    id: "funciones-propias-del-estado",
     number: "01",
     title: "¿Cuáles son las funciones propias del Estado?",
     short:
-      "Las teorías políticas proponen distintas listas de funciones estatales, pero la pregunta previa es qué criterio podría justificar que una función particular quede bajo autoridad coercitiva",
+      "Las teorías políticas proponen distintas listas de funciones estatales, pero la pregunta previa es qué criterio puede justificar que una función determinada quede bajo autoridad coercitiva",
   },
   {
-    id: "why-these-functions",
+    id: "por-que-estas-funciones",
     number: "02",
     title: "¿Por qué estas funciones y no otras?",
     short:
       "La importancia de una actividad no explica por qué debería quedar bajo control político o financiarse mediante coerción",
   },
   {
-    id: "principle-that-limits-government",
+    id: "principio-limita-poder-del-estado",
     number: "03",
     title: "¿Existe un principio que limite al Estado?",
     short:
-      "Un límite duradero requiere un criterio específico para cada función que coloque la carga de la prueba sobre quienes proponen la coerción",
+      "Un límite duradero exige un criterio aplicable a cada función que coloque la carga de la prueba sobre quienes proponen la coerción",
   },
   {
-    id: "can-coercion-be-justified",
+    id: "puede-tolerarse-la-coercion",
     number: "04",
     title: "¿Puede tolerarse alguna vez la coerción?",
     short:
-      "Los resultados útiles, el apoyo democrático y las buenas intenciones no legitiman la coerción; solo condiciones excepcionales pueden sostener, a nivel de una función, un caso de necesidad coercitiva",
+      "Los resultados útiles, el apoyo democrático y las buenas intenciones no legitiman la coerción; solo condiciones excepcionales pueden sostener un caso de necesidad coercitiva para una función específica",
   },
   {
-    id: "is-the-state-legitimate",
+    id: "limites-de-la-cooperacion-voluntaria",
     number: "05",
     title: "¿Cuándo alcanza su límite la cooperación voluntaria?",
     short:
-      "Los free riders no son suficientes: sus incentivos deben socavar persistentemente el financiamiento, la coordinación o la participación necesarios para sostener la función",
+      "La existencia de free riders no basta: sus incentivos deben socavar persistentemente el financiamiento, la coordinación o la participación necesarios para sostener la función",
   },
   {
-    id: "how-much-coercion",
+    id: "superar-examen-legitima-coercion",
     number: "06",
     title: "¿Superar el examen legitima la coerción?",
     short:
-      "No. Cumplir las tres condiciones establece, a nivel de una función, un caso de necesidad coercitiva; no justifica ningún arreglo coercitivo en particular",
+      "No. Cumplir las tres condiciones establece un caso de necesidad coercitiva para una función específica; no justifica ningún arreglo coercitivo en particular",
   },
 ];
-
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: questions.map((question) => ({
-    "@type": "Question",
-    name: question.title,
-    acceptedAnswer: {
-      "@type": "Answer",
-      text: question.short,
-    },
-  })),
-};
 ---
 
 <!doctype html>
@@ -74,14 +61,9 @@ const faqSchema = {
     />
 
     <SEO
-      title="Preguntas sobre el Estado, la coerción y el poder estatal | Tolerancia Mínima"
-      description="Seis preguntas fundamentales sobre las funciones del Estado, los límites de la cooperación voluntaria, la coerción y la carga exigida para admitir una excepción"
+      title="Funciones y límites del Estado | Tolerancia Mínima"
+      description="Seis preguntas sobre las funciones y los límites del Estado, la coerción, la cooperación voluntaria, los free riders y la carga de la prueba sobre el poder político"
       lang="es"
-    />
-
-    <script
-      type="application/ld+json"
-      set:html={JSON.stringify(faqSchema)}
     />
   </head>
 
@@ -98,8 +80,8 @@ const faqSchema = {
           </p>
 
           <h1>
-            ¿Qué debería permitírsele<br />
-            hacer al Estado?
+            ¿Qué debería permitirse<br />
+            al Estado?
           </h1>
         </div>
       </section>
@@ -108,7 +90,7 @@ const faqSchema = {
 
       <section class="statement">
         <blockquote class="reveal reveal-scale">
-          ¿Qué distingue una excepción de una licencia para el poder?
+          Una excepción no es una licencia para el poder
         </blockquote>
       </section>
 
@@ -152,7 +134,7 @@ const faqSchema = {
           <!-- PREGUNTA 01 -->
 
           <article
-            id="proper-functions-of-government"
+            id="funciones-propias-del-estado"
             class="question-section"
           >
             <div class="question-heading reveal reveal-left">
@@ -167,24 +149,22 @@ const faqSchema = {
 
             <div class="question-copy reveal reveal-right">
               <p>
-                Cada filosofía política ofrece una respuesta diferente.
+                Cada filosofía política ofrece una respuesta distinta.
                 Algunas restringen al Estado a la policía, los tribunales
                 y la defensa nacional, mientras que otras incluyen también
                 educación, salud, jubilaciones, infraestructura, política
-                monetaria o investigación científica. El desacuerdo es
-                fácil de observar, pero encontrar un criterio capaz de
-                decidir entre esas funciones en competencia es
-                considerablemente más difícil
+                monetaria o investigación científica. El desacuerdo es fácil
+                de observar; la pregunta más difícil es qué criterio común
+                permite distinguir entre esas funciones
               </p>
 
               <p>
-                Antes de decidir qué debería hacer el Estado, cada función
-                propuesta debe responder una pregunta previa: ¿por qué
-                debería esta actividad ser retirada de la cooperación
-                voluntaria y colocada bajo autoridad coercitiva? Sin un
-                criterio común, los límites políticos se convierten en
-                conjuntos de preferencias en lugar de límites coherentes
-                al poder
+                Antes de decidir qué debe hacer el Estado, cada función
+                propuesta debe responder una pregunta anterior: ¿por qué
+                debería esa actividad retirarse de la cooperación voluntaria
+                y colocarse bajo autoridad coercitiva? Sin un criterio común,
+                los límites políticos se convierten en una colección de
+                preferencias en lugar de límites consistentes al poder
               </p>
             </div>
           </article>
@@ -192,7 +172,7 @@ const faqSchema = {
           <!-- PREGUNTA 02 -->
 
           <article
-            id="why-these-functions"
+            id="por-que-estas-funciones"
             class="question-section"
           >
             <div class="question-heading reveal reveal-left">
@@ -208,22 +188,21 @@ const faqSchema = {
             <div class="question-copy reveal reveal-right">
               <p>
                 Los defensores de un Estado limitado suelen identificar
-                un pequeño grupo de funciones que deberían permanecer
-                bajo control estatal, pero la selección misma exige una
-                explicación. ¿Por qué la policía pero no la salud, la
-                defensa nacional pero no las jubilaciones, los tribunales
-                pero no la investigación científica? Que una actividad
-                sea valiosa, difícil o socialmente importante no
-                demuestra que deba proveerse mediante coerción
+                un pequeño grupo de funciones que deberían permanecer bajo
+                control estatal, pero esa selección también exige una
+                explicación. ¿Por qué policía pero no salud, defensa nacional
+                pero no jubilaciones, tribunales pero no investigación
+                científica? Que una actividad sea valiosa, difícil o
+                socialmente importante no establece que deba proveerse
+                mediante coerción
               </p>
 
               <p>
                 Un límite significativo debe explicar por qué una función
                 puede calificar como excepción mientras otra permanece
                 dentro de la cooperación voluntaria. La tarea no consiste
-                en elaborar una lista más corta o más larga, sino en
-                aplicar la misma carga de la prueba a cada función
-                propuesta
+                en producir una lista más corta o más larga, sino en aplicar
+                la misma carga de la prueba a cada función propuesta
               </p>
             </div>
           </article>
@@ -231,7 +210,7 @@ const faqSchema = {
           <!-- PREGUNTA 03 -->
 
           <article
-            id="principle-that-limits-government"
+            id="principio-limita-poder-del-estado"
             class="question-section"
           >
             <div class="question-heading reveal reveal-left">
@@ -246,21 +225,21 @@ const faqSchema = {
 
             <div class="question-copy reveal reveal-right">
               <p>
-                El debate político se concentra en políticas,
-                instituciones y resultados, mientras presta menos
-                atención al principio que determina qué poderes puede
-                ejercer el Estado. Un límite basado en la tradición,
-                la preferencia política o una lista fija de funciones
-                conocidas se vuelve inestable cuando aparecen nuevos
-                problemas, tecnologías y demandas
+                El debate político se concentra en políticas, instituciones
+                y resultados, mientras presta menos atención al principio
+                que determina qué poderes puede ejercer el Estado. Un límite
+                basado en la tradición, la preferencia política o una lista
+                fija de funciones conocidas se vuelve inestable cuando
+                aparecen nuevos problemas, tecnologías y demandas
               </p>
 
               <p>
-                Un principio limitante duradero debe aplicarse sin
-                importar quién gobierne, qué objetivo se persiga o cuán
-                atractivo pueda resultar el resultado prometido. Debe
-                colocar la carga sobre la coerción y exigir que cada
-                excepción propuesta establezca sus propias condiciones
+                Un principio limitante duradero debe aplicarse con
+                independencia de quién gobierne, qué objetivo se persiga
+                o cuán atractivo parezca el resultado prometido. La libertad
+                es el punto de partida: la carga pertenece a la coerción,
+                y cada excepción propuesta debe establecer sus propias
+                condiciones
               </p>
             </div>
           </article>
@@ -268,7 +247,7 @@ const faqSchema = {
           <!-- PREGUNTA 04 -->
 
           <article
-            id="can-coercion-be-justified"
+            id="puede-tolerarse-la-coercion"
             class="question-section"
           >
             <div class="question-heading reveal reveal-left">
@@ -283,21 +262,21 @@ const faqSchema = {
 
             <div class="question-copy reveal reveal-right">
               <p>
-                Todo Estado depende en última instancia de la coerción,
+                Todo Estado descansa en última instancia sobre la coerción,
                 porque las leyes, los impuestos y las regulaciones siguen
                 siendo obligatorios incluso para quienes los rechazan.
                 Las elecciones, los resultados beneficiosos y las buenas
                 intenciones pueden influir en el juicio político, pero no
-                transforman una decisión impuesta en una decisión
-                voluntaria ni confieren legitimidad moral a la coerción
+                transforman una decisión impuesta en una decisión voluntaria
+                ni confieren legitimidad moral a la coerción
               </p>
 
               <p>
-                La Tolerancia Mínima pregunta si una función puede
-                calificar como excepción por razones de necesidad
-                coercitiva. La presunción permanece del lado de la
-                cooperación voluntaria, y la carga de establecer la
-                excepción pertenece a quienes pretenden imponerla
+                La Tolerancia Mínima pregunta si una función determinada
+                puede calificar como excepción por razones de necesidad
+                coercitiva. La presunción permanece del lado de la cooperación
+                voluntaria, y la carga de establecer la excepción pertenece
+                a quienes pretenden imponer coerción
               </p>
             </div>
           </article>
@@ -305,7 +284,7 @@ const faqSchema = {
           <!-- PREGUNTA 05 -->
 
           <article
-            id="is-the-state-legitimate"
+            id="limites-de-la-cooperacion-voluntaria"
             class="question-section"
           >
             <div class="question-heading reveal reveal-left">
@@ -320,21 +299,21 @@ const faqSchema = {
 
             <div class="question-copy reveal reveal-right">
               <p>
-                La no exclusión efectiva y la no rivalidad relevante
-                pueden crear fuertes incentivos para beneficiarse sin
-                contribuir. Pero la existencia de free riders, por sí
-                sola, no demuestra que las instituciones voluntarias
-                sean incapaces de sostener la función relevante
+                La no exclusión efectiva (NE) y la no rivalidad relevante
+                (NR) pueden crear fuertes incentivos para beneficiarse sin
+                contribuir. Pero la existencia de free riders no establece
+                que las instituciones voluntarias sean incapaces de sostener
+                la función relevante
               </p>
 
               <p>
-                El colapso persistente ocurre cuando esos incentivos
-                socavan el financiamiento, la coordinación o la
-                participación necesarios para sostener la función a lo
-                largo del tiempo y bajo arreglos voluntarios materialmente
-                diferentes. Las alternativas plausibles deben permanecer
-                genuinamente abiertas. La ausencia de un proveedor actual,
-                por sí sola, no demuestra el colapso
+                El colapso persistente de la provisión voluntaria (CV)
+                ocurre cuando esos incentivos socavan el financiamiento,
+                la coordinación o la participación necesarios para sostener
+                la función en el tiempo y bajo arreglos voluntarios
+                materialmente distintos. El fracaso de un arreglo, la
+                provisión insuficiente observada o la ausencia de un
+                proveedor actual no establecen por sí solos el colapso
               </p>
             </div>
           </article>
@@ -342,7 +321,7 @@ const faqSchema = {
           <!-- PREGUNTA 06 -->
 
           <article
-            id="how-much-coercion"
+            id="superar-examen-legitima-coercion"
             class="question-section"
           >
             <div class="question-heading reveal reveal-left">
@@ -357,21 +336,21 @@ const faqSchema = {
 
             <div class="question-copy reveal reveal-right">
               <p>
-                No. Cuando se establecen conjuntamente la no exclusión
-                efectiva, la no rivalidad relevante y el colapso
-                persistente de la provisión voluntaria, la función supera
+                No. Cuando la no exclusión efectiva, la no rivalidad
+                relevante y el colapso persistente de la provisión
+                voluntaria se establecen conjuntamente, la función supera
                 el Criterio de Tolerancia Mínima por razones de necesidad
                 coercitiva. Esto no legitima la coerción ni justifica
                 ningún arreglo coercitivo en particular
               </p>
 
               <p>
-                Todo impuesto, organismo, presupuesto, mandato, norma de
-                ejecución u otro instrumento coercitivo debe, por tanto,
-                justificarse por separado. Que una función supere el
-                examen no crea ninguna presunción a favor de otra, y el
-                resultado debe reconsiderarse si cambian las condiciones
-                que lo sustentaron
+                Cualquier impuesto, agencia, presupuesto, mandato, regla
+                de cumplimiento u otro instrumento coercitivo debe,
+                por tanto, justificarse por separado. Que una función
+                supere el examen no crea ninguna presunción a favor de
+                otra, y el resultado debe reconsiderarse si cambian las
+                condiciones que lo sustentaron
               </p>
             </div>
           </article>
@@ -392,10 +371,10 @@ const faqSchema = {
             </h2>
 
             <p>
-              Explorar el marco desarrollado para determinar cuándo una
-              función puede superar el examen de necesidad coercitiva sin
-              convertir ese resultado en una autorización general para
-              el poder político
+              Explora el marco desarrollado para determinar cuándo una
+              función puede superar el examen de necesidad coercitiva
+              sin convertir ese resultado en una autorización general
+              para el poder político
             </p>
           </div>
 
