@@ -60,68 +60,60 @@ import SEO from "../components/SEO.astro";
             The formal structure
           </h2>
 
-          <!-- CONDITIONS -->
+          <div class="criterion-panel reveal reveal-scale">
+            <div class="criterion-terms">
+              <div class="criterion-term">
+                <span class="criterion-code">
+                  NE
+                </span>
 
-          <ol class="condition-list stagger">
-            <li class="condition reveal">
-              <span class="condition-number" aria-hidden="true">
-                NE
-              </span>
+                <span class="criterion-name">
+                  Effective non-excludability
+                </span>
+              </div>
 
-              <span class="condition-name">
-                Effective non-excludability
-              </span>
-            </li>
+              <div class="criterion-term">
+                <span class="criterion-code">
+                  NR
+                </span>
 
-            <li class="condition reveal">
-              <span class="condition-number" aria-hidden="true">
-                NR
-              </span>
+                <span class="criterion-name">
+                  Relevant non-rivalry
+                </span>
+              </div>
 
-              <span class="condition-name">
-                Relevant non-rivalry
-              </span>
-            </li>
+              <div class="criterion-term">
+                <span class="criterion-code">
+                  CV
+                </span>
 
-            <li class="condition reveal">
-              <span class="condition-number" aria-hidden="true">
-                CV
-              </span>
-
-              <span class="condition-name">
-                Persistent collapse of voluntary provision
-              </span>
-            </li>
-          </ol>
-
-          <!-- FORMAL LOGIC -->
-
-          <div class="criterion-formula reveal reveal-scale">
-            <div class="formula-main">
-              T → (NE ∧ NR ∧ CV)
+                <span class="criterion-name">
+                  Persistent collapse of voluntary provision
+                </span>
+              </div>
             </div>
 
-            <div class="formula-caption">
-              T denotes tolerability on coercive-necessity grounds
+            <div class="criterion-formal">
+              <p class="criterion-symbol-note">
+                <strong>T</strong> denotes tolerability on
+                coercive-necessity grounds
+              </p>
+
+              <div class="formula-row">
+                <span class="formula-expression">
+                  T → (NE ∧ NR ∧ CV)
+                </span>
+
+                <span class="formula-text">
+                  Tolerance requires all three conditions
+                </span>
+              </div>
             </div>
-          </div>
-
-          <!-- LOGICAL LIMIT -->
-
-          <div class="criterion-converse reveal">
-            <span class="converse-formula">
-              (NE ∧ NR ∧ CV) ⇏ T
-            </span>
-
-            <span class="converse-text">
-              Passing all three conditions does not itself establish
-              tolerability
-            </span>
           </div>
         </div>
       </section>
 
-      <!-- FUNCTIONS THAT PASS -->
+      <!-- FUNCTIONS THAT CAN PASS -->
 
       <section class="application-section application-section-pass">
         <div class="container">
@@ -154,7 +146,7 @@ import SEO from "../components/SEO.astro";
               </h3>
 
               <p>
-                Some functions of collective security and legal order may
+                Some functions of collective security and legal order can
                 satisfy the first two conditions. The remaining burden is
                 to establish that voluntary provision persistently fails
                 to sustain the relevant function
@@ -167,7 +159,7 @@ import SEO from "../components/SEO.astro";
               </h3>
 
               <p>
-                Exceptional emergencies may create functions whose benefits
+                Exceptional emergencies can create functions whose benefits
                 are difficult to exclude and broadly shared. They pass only
                 where persistent voluntary collapse is also established for
                 the specific function under examination
@@ -380,59 +372,53 @@ import SEO from "../components/SEO.astro";
     <style>
       /* CRITERION */
 
-      .condition-list {
+      .criterion-panel {
         max-width: 760px;
-        margin: 28px 0 0;
-        padding: 0;
-        list-style: none;
-        border-top: 1px solid var(--line);
+        margin-top: 28px;
+        padding: 28px 30px;
+        background: var(--paper-light);
+        border: 1px solid var(--line);
+        border-radius: 16px;
+        transition:
+          transform 240ms ease,
+          border-color 240ms ease,
+          box-shadow 240ms ease;
       }
 
-      .condition {
-        display: grid;
-        grid-template-columns: 62px 1fr;
-        align-items: center;
-        min-height: 68px;
+      .criterion-terms {
+        padding-bottom: 8px;
         border-bottom: 1px solid var(--line);
       }
 
-      .condition-number {
+      .criterion-term {
+        display: grid;
+        grid-template-columns: 48px 1fr;
+        align-items: baseline;
+        gap: 14px;
+        padding: 12px 0;
+      }
+
+      .criterion-code {
         color: var(--gold);
         font-size: 1.4rem;
         font-weight: 700;
         line-height: 1;
         letter-spacing: 0;
-        transition:
-          transform 220ms ease,
-          color 220ms ease;
       }
 
-      .condition-name {
+      .criterion-name {
         color: var(--navy);
-        font-family: inherit;
         font-size: 1.15rem;
         font-weight: 700;
         line-height: 1.35;
       }
 
-      .criterion-formula {
-        max-width: 760px;
-        margin: 30px 0 0;
-        padding: 22px 0 20px;
-        border-top: 1px solid var(--line);
-        border-bottom: 1px solid var(--line);
+      .criterion-formal {
+        padding-top: 18px;
       }
 
-      .formula-main {
-        color: var(--navy);
-        font-size: clamp(1.9rem, 4vw, 2.65rem);
-        font-weight: 700;
-        line-height: 1.15;
-        letter-spacing: 0.015em;
-      }
-
-      .formula-caption {
-        margin-top: 9px;
+      .criterion-symbol-note {
+        margin-bottom: 14px;
         color: var(--gold);
         font-size: 0.76rem;
         font-weight: 700;
@@ -441,27 +427,30 @@ import SEO from "../components/SEO.astro";
         text-transform: uppercase;
       }
 
-      .criterion-converse {
-        display: flex;
-        align-items: baseline;
-        gap: 22px;
-        max-width: 760px;
-        margin-top: 20px;
+      .criterion-symbol-note strong {
+        color: var(--navy);
+        font-weight: 700;
       }
 
-      .converse-formula {
-        flex: 0 0 auto;
-        color: var(--gold);
-        font-size: 1.08rem;
+      .formula-row {
+        display: grid;
+        grid-template-columns: minmax(240px, auto) 1fr;
+        align-items: baseline;
+        gap: 20px;
+        padding: 10px 0 2px;
+      }
+
+      .formula-expression {
+        color: var(--navy);
+        font-size: 1.45rem;
         font-weight: 700;
-        line-height: 1.3;
+        line-height: 1.2;
         letter-spacing: 0.01em;
       }
 
-      .converse-text {
-        font-size: 0.95rem;
-        line-height: 1.5;
-        opacity: 0.78;
+      .formula-text {
+        font-size: 0.98rem;
+        line-height: 1.55;
       }
 
       /* APPLICATION SECTIONS */
@@ -531,9 +520,10 @@ import SEO from "../components/SEO.astro";
       /* HOVER — MOUSE ONLY */
 
       @media (hover: hover) and (pointer: fine) {
-        .condition:hover .condition-number {
-          color: var(--navy);
-          transform: translateX(5px);
+        .criterion-panel:hover {
+          transform: translateY(-3px);
+          border-color: rgba(169, 131, 58, 0.4);
+          box-shadow: 0 16px 38px rgba(13, 27, 42, 0.08);
         }
 
         .application-card:hover {
@@ -557,22 +547,27 @@ import SEO from "../components/SEO.astro";
       }
 
       @media (max-width: 700px) {
-        .criterion-converse {
-          display: block;
+        .criterion-panel {
+          padding: 22px;
         }
 
-        .converse-text {
-          display: block;
-          margin-top: 6px;
+        .criterion-term {
+          grid-template-columns: 42px 1fr;
+          gap: 12px;
+          padding: 10px 0;
         }
 
-        .condition {
-          grid-template-columns: 46px 1fr;
-          min-height: 66px;
-        }
-
-        .condition-name {
+        .criterion-name {
           font-size: 1.05rem;
+        }
+
+        .formula-row {
+          grid-template-columns: 1fr;
+          gap: 6px;
+        }
+
+        .formula-expression {
+          font-size: 1.28rem;
         }
       }
 
@@ -585,7 +580,7 @@ import SEO from "../components/SEO.astro";
       /* REDUCED MOTION */
 
       @media (prefers-reduced-motion: reduce) {
-        .condition-number,
+        .criterion-panel,
         .application-card {
           transition: none;
         }
