@@ -61,6 +61,17 @@ import SEO from "../components/SEO.astro";
           </h2>
 
           <div class="criterion-panel reveal reveal-scale">
+
+            <!-- FORMULA -->
+
+            <div class="criterion-formal">
+              <div class="formula-expression">
+                T → (NE ∧ NR ∧ CV)
+              </div>
+            </div>
+
+            <!-- DEFINITIONS -->
+
             <div class="criterion-terms">
               <div class="criterion-term">
                 <span class="criterion-code">
@@ -103,13 +114,6 @@ import SEO from "../components/SEO.astro";
               </div>
             </div>
 
-            <div class="criterion-formal">
-              <div class="formula-row">
-                <span class="formula-expression">
-                  T → (NE ∧ NR ∧ CV)
-                </span>
-              </div>
-            </div>
           </div>
         </div>
       </section>
@@ -376,7 +380,7 @@ import SEO from "../components/SEO.astro";
       .criterion-panel {
         max-width: 760px;
         margin-top: 24px;
-        padding: 24px 30px 28px;
+        padding: 0 30px 20px;
         background: var(--paper-light);
         border: 1px solid var(--line);
         border-radius: 16px;
@@ -386,9 +390,25 @@ import SEO from "../components/SEO.astro";
           box-shadow 240ms ease;
       }
 
-      .criterion-terms {
-        padding-bottom: 14px;
+      /* FORMULA */
+
+      .criterion-formal {
+        padding: 27px 0 25px;
         border-bottom: 1px solid var(--line);
+      }
+
+      .formula-expression {
+        color: var(--navy);
+        font-size: clamp(2.25rem, 4.7vw, 3.25rem);
+        font-weight: 700;
+        line-height: 1.08;
+        letter-spacing: 0.01em;
+      }
+
+      /* DEFINITIONS */
+
+      .criterion-terms {
+        padding-top: 14px;
       }
 
       .criterion-term {
@@ -396,42 +416,21 @@ import SEO from "../components/SEO.astro";
         grid-template-columns: 48px 1fr;
         align-items: baseline;
         gap: 12px;
-        padding: 6px 0;
+        padding: 5px 0;
       }
 
       .criterion-code {
         color: var(--gold);
-        font-size: 1.3rem;
+        font-size: 1.15rem;
         font-weight: 700;
-        line-height: 1;
-        letter-spacing: 0;
+        line-height: 1.2;
       }
 
       .criterion-name {
         color: var(--navy);
-        font-size: 1.1rem;
-        font-weight: 700;
-        line-height: 1.3;
-      }
-
-      .criterion-formal {
-        padding-top: 20px;
-        text-align: left;
-      }
-
-      .formula-row {
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-      }
-
-      .formula-expression {
-        color: var(--navy);
-        font-size: clamp(2.2rem, 4.5vw, 3.2rem);
-        font-weight: 700;
-        line-height: 1.1;
-        letter-spacing: 0.015em;
-        text-align: left;
+        font-size: 1.03rem;
+        font-weight: 500;
+        line-height: 1.35;
       }
 
       /* APPLICATION SECTIONS */
@@ -503,8 +502,8 @@ import SEO from "../components/SEO.astro";
       @media (hover: hover) and (pointer: fine) {
         .criterion-panel:hover {
           transform: translateY(-3px);
-          border-color: rgba(169, 131, 58, 0.4);
-          box-shadow: 0 16px 38px rgba(13, 27, 42, 0.08);
+          border-color: rgba(169, 131, 58, 0.35);
+          box-shadow: 0 14px 32px rgba(13, 27, 42, 0.06);
         }
 
         .application-card:hover {
@@ -529,21 +528,29 @@ import SEO from "../components/SEO.astro";
 
       @media (max-width: 700px) {
         .criterion-panel {
-          padding: 20px 22px 24px;
+          padding: 0 22px 18px;
+        }
+
+        .criterion-formal {
+          padding: 23px 0 21px;
+        }
+
+        .formula-expression {
+          font-size: clamp(1.8rem, 8vw, 2.4rem);
         }
 
         .criterion-term {
           grid-template-columns: 42px 1fr;
           gap: 10px;
-          padding: 6px 0;
+          padding: 5px 0;
+        }
+
+        .criterion-code {
+          font-size: 1.05rem;
         }
 
         .criterion-name {
-          font-size: 1.03rem;
-        }
-
-        .formula-expression {
-          font-size: clamp(1.8rem, 8vw, 2.4rem);
+          font-size: 0.98rem;
         }
       }
 
