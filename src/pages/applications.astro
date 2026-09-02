@@ -95,17 +95,12 @@ import SEO from "../components/SEO.astro";
 
             <div class="criterion-formal">
               <p class="criterion-symbol-note">
-                <strong>T</strong> denotes tolerability on
-                coercive-necessity grounds
+                <strong>T:</strong> tolerability on coercive-necessity grounds
               </p>
 
               <div class="formula-row">
                 <span class="formula-expression">
                   T → (NE ∧ NR ∧ CV)
-                </span>
-
-                <span class="formula-text">
-                  Tolerance requires all three conditions
                 </span>
               </div>
             </div>
@@ -374,8 +369,8 @@ import SEO from "../components/SEO.astro";
 
       .criterion-panel {
         max-width: 760px;
-        margin-top: 28px;
-        padding: 28px 30px;
+        margin-top: 24px;
+        padding: 24px 30px 28px;
         background: var(--paper-light);
         border: 1px solid var(--line);
         border-radius: 16px;
@@ -386,7 +381,7 @@ import SEO from "../components/SEO.astro";
       }
 
       .criterion-terms {
-        padding-bottom: 8px;
+        padding-bottom: 12px;
         border-bottom: 1px solid var(--line);
       }
 
@@ -394,13 +389,13 @@ import SEO from "../components/SEO.astro";
         display: grid;
         grid-template-columns: 48px 1fr;
         align-items: baseline;
-        gap: 14px;
-        padding: 12px 0;
+        gap: 12px;
+        padding: 7px 0;
       }
 
       .criterion-code {
         color: var(--gold);
-        font-size: 1.4rem;
+        font-size: 1.3rem;
         font-weight: 700;
         line-height: 1;
         letter-spacing: 0;
@@ -408,22 +403,23 @@ import SEO from "../components/SEO.astro";
 
       .criterion-name {
         color: var(--navy);
-        font-size: 1.15rem;
+        font-size: 1.1rem;
         font-weight: 700;
-        line-height: 1.35;
+        line-height: 1.3;
       }
 
       .criterion-formal {
         padding-top: 18px;
+        text-align: center;
       }
 
       .criterion-symbol-note {
-        margin-bottom: 14px;
+        margin: 0 0 14px;
         color: var(--gold);
-        font-size: 0.76rem;
+        font-size: 0.78rem;
         font-weight: 700;
         line-height: 1.4;
-        letter-spacing: 0.08em;
+        letter-spacing: 0.06em;
         text-transform: uppercase;
       }
 
@@ -433,24 +429,18 @@ import SEO from "../components/SEO.astro";
       }
 
       .formula-row {
-        display: grid;
-        grid-template-columns: minmax(240px, auto) 1fr;
-        align-items: baseline;
-        gap: 20px;
-        padding: 10px 0 2px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
       }
 
       .formula-expression {
         color: var(--navy);
-        font-size: 1.45rem;
+        font-size: clamp(2.2rem, 4.5vw, 3.2rem);
         font-weight: 700;
-        line-height: 1.2;
-        letter-spacing: 0.01em;
-      }
-
-      .formula-text {
-        font-size: 0.98rem;
-        line-height: 1.55;
+        line-height: 1.1;
+        letter-spacing: 0.015em;
+        text-align: center;
       }
 
       /* APPLICATION SECTIONS */
@@ -548,26 +538,21 @@ import SEO from "../components/SEO.astro";
 
       @media (max-width: 700px) {
         .criterion-panel {
-          padding: 22px;
+          padding: 20px 22px 24px;
         }
 
         .criterion-term {
           grid-template-columns: 42px 1fr;
-          gap: 12px;
-          padding: 10px 0;
+          gap: 10px;
+          padding: 7px 0;
         }
 
         .criterion-name {
-          font-size: 1.05rem;
-        }
-
-        .formula-row {
-          grid-template-columns: 1fr;
-          gap: 6px;
+          font-size: 1.03rem;
         }
 
         .formula-expression {
-          font-size: 1.28rem;
+          font-size: clamp(1.8rem, 8vw, 2.4rem);
         }
       }
 
