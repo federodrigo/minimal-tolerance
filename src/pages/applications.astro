@@ -92,32 +92,38 @@ import SEO from "../components/SEO.astro";
             </li>
           </ol>
 
-          <div class="criterion-logic reveal">
-            <div class="criterion-logic-row">
-              <span class="criterion-code">
-                NE + NR
-              </span>
+          <div class="criterion-explainer reveal reveal-scale">
+            <p class="criterion-explainer-label">
+              HOW THE CRITERION WORKS
+            </p>
 
-              <span>
-                Define the economic structure
-              </span>
+            <div class="criterion-explainer-grid">
+              <div class="criterion-explainer-row">
+                <span class="criterion-code">
+                  NE + NR
+                </span>
+
+                <p>
+                  Define the economic structure
+                </p>
+              </div>
+
+              <div class="criterion-explainer-row">
+                <span class="criterion-code">
+                  CV
+                </span>
+
+                <p>
+                  Tests whether that structure causes voluntary provision
+                  to collapse
+                </p>
+              </div>
             </div>
 
-            <div class="criterion-logic-row">
-              <span class="criterion-code">
-                CV
-              </span>
-
-              <span>
-                Tests whether that structure causes voluntary provision
-                to collapse
-              </span>
-            </div>
+            <p class="criterion-note">
+              Passing all three applies only to the function examined
+            </p>
           </div>
-
-          <p class="criterion-note reveal">
-            Passing all three applies only to the function examined
-          </p>
         </div>
       </section>
 
@@ -420,17 +426,34 @@ import SEO from "../components/SEO.astro";
         line-height: 1.35;
       }
 
-      .criterion-logic {
+      .criterion-explainer {
         max-width: 760px;
-        margin-top: 24px;
+        margin-top: 28px;
+        padding: 24px 28px;
+        background: var(--paper-light);
+        border: 1px solid var(--line);
+        border-radius: 14px;
       }
 
-      .criterion-logic-row {
+      .criterion-explainer-label {
+        margin-bottom: 16px;
+        color: var(--gold);
+        font-size: 0.82rem;
+        font-weight: 700;
+        line-height: 1.3;
+        letter-spacing: 0.14em;
+      }
+
+      .criterion-explainer-grid {
+        display: grid;
+        gap: 12px;
+      }
+
+      .criterion-explainer-row {
         display: grid;
         grid-template-columns: 110px 1fr;
         align-items: baseline;
         gap: 18px;
-        padding: 8px 0;
       }
 
       .criterion-code {
@@ -439,9 +462,13 @@ import SEO from "../components/SEO.astro";
         letter-spacing: 0.03em;
       }
 
+      .criterion-explainer-row p {
+        margin: 0;
+        line-height: 1.55;
+      }
+
       .criterion-note {
-        max-width: 760px;
-        margin-top: 14px;
+        margin-top: 16px;
         margin-bottom: 0;
         font-size: 0.95rem;
         line-height: 1.55;
@@ -512,15 +539,6 @@ import SEO from "../components/SEO.astro";
         hyphens: none;
       }
 
-      .application-card .application-result {
-        margin-bottom: 14px;
-        color: var(--gold);
-        font-size: 0.78rem;
-        font-weight: 700;
-        line-height: 1.3;
-        letter-spacing: 0.16em;
-      }
-
       /* HOVER — MOUSE ONLY */
 
       @media (hover: hover) and (pointer: fine) {
@@ -533,6 +551,11 @@ import SEO from "../components/SEO.astro";
           transform: translateY(-5px);
           border-color: rgba(169, 131, 58, 0.4);
           box-shadow: 0 18px 42px rgba(13, 27, 42, 0.09);
+        }
+
+        .criterion-explainer:hover {
+          border-color: rgba(169, 131, 58, 0.4);
+          box-shadow: 0 14px 34px rgba(13, 27, 42, 0.07);
         }
       }
 
@@ -559,7 +582,11 @@ import SEO from "../components/SEO.astro";
           font-size: 1.05rem;
         }
 
-        .criterion-logic-row {
+        .criterion-explainer {
+          padding: 22px 24px;
+        }
+
+        .criterion-explainer-row {
           grid-template-columns: 82px 1fr;
           gap: 12px;
         }
@@ -573,7 +600,8 @@ import SEO from "../components/SEO.astro";
 
       @media (prefers-reduced-motion: reduce) {
         .condition-number,
-        .application-card {
+        .application-card,
+        .criterion-explainer {
           transition: none;
         }
       }
