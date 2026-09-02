@@ -3,12 +3,136 @@ const today = new Date();
 
 const currentPath = Astro.url.pathname;
 const isSpanish = currentPath === "/es" || currentPath.startsWith("/es/");
+
+const links = isSpanish
+  ? [
+      { label: "Preguntas", href: "/es/#questions" },
+      { label: "Teoría", href: "/es/theory" },
+      { label: "Teorema", href: "/es/theorem" },
+      { label: "Aplicaciones", href: "/es/applications" },
+      { label: "Libro", href: "/es/book" },
+      { label: "Papers", href: "/es/papers" },
+      { label: "Autor", href: "/es/author" },
+    ]
+  : [
+      { label: "Questions", href: "/#questions" },
+      { label: "Theory", href: "/theory" },
+      { label: "Theorem", href: "/theorem" },
+      { label: "Applications", href: "/applications" },
+      { label: "Book", href: "/book" },
+      { label: "Papers", href: "/papers" },
+      { label: "Author", href: "/author" },
+    ];
 ---
 
 <footer>
-  <p>
-    © {today.getFullYear()}
-    {isSpanish ? " Tolerancia Mínima" : " Minimal Tolerance"}
-    · Fede Rodrigo
-  </p>
+  <div class="footer-inner">
+    <div class="footer-navigation">
+      <p class="footer-label">
+        {isSpanish ? "NAVEGAR" : "NAVIGATE"}
+      </p>
+
+      <nav aria-label={isSpanish ? "Navegación del sitio" : "Site navigation"}>
+        {links.map((link) => (
+          <a href={link.href}>
+            {link.label}
+          </a>
+        ))}
+      </nav>
+    </div>
+
+    <p class="footer-copyright">
+      © {today.getFullYear()}
+      {isSpanish ? " Tolerancia Mínima" : " Minimal Tolerance"}
+      · Fede Rodrigo
+    </p>
+  </div>
 </footer>
+
+<style>
+  footer {
+    padding: 4rem 0 2rem;
+  }
+
+  .footer-inner {
+    width: min(1180px, calc(100% - 3rem));
+    margin: 0 auto;
+  }
+
+  .footer-navigation {
+    margin-bottom: 3rem;
+  }
+
+  .footer-label {
+    margin: 0 0 1.25rem;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+  }
+
+  nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem 1.75rem;
+  }
+
+  nav a {
+    position: relative;
+    color: inherit;
+    text-decoration: none;
+    transition: opacity 200ms ease;
+  }
+
+  nav a::after {
+    position: absolute;
+    right: 0;
+    bottom: -4px;
+    left: 0;
+    height: 1px;
+    background: currentColor;
+    content: "";
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 220ms ease;
+  }
+
+  .footer-copyright {
+    margin: 0;
+    font-size: 0.9rem;
+    opacity: 0.6;
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    nav a:hover::after {
+      transform: scaleX(1);
+      transform-origin: left;
+    }
+  }
+
+  @media (max-width: 560px) {
+    footer {
+      padding: 3rem 0 2rem;
+    }
+
+    .footer-inner {
+      width: min(100% - 2rem, 1180px);
+    }
+
+    nav {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.9rem;
+    }
+
+    .footer-navigation {
+      margin-bottom: 2.5rem;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    nav a,
+    nav a::after {
+      transition: none;
+    }
+  }
+</style>
