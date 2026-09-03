@@ -89,10 +89,10 @@ const institutionalConcepts = [
       "Institutional alternatives require time, experience, capital, and repeated use to develop. When the State occupies a function for long periods and prevents alternatives from maturing, their later absence cannot be treated as evidence that voluntary provision was inherently incapable of sustaining the function.",
   },
   {
-    id: "paradox-of-tutelage",
-    name: "Paradox of Tutelage",
+    id: "state-self-limitation",
+    name: "The State Cannot Reliably Self-Limit",
     description:
-      "Intervention can weaken precisely the social capacities whose absence is later invoked to justify its continuation. Dependence may therefore emerge partly from the institution created to relieve it.",
+      "A formal limit on state power does not guarantee that the limit will hold. The institutions that create, interpret, administer, and enforce those boundaries remain part of the same structure they are meant to restrain. Durable limits therefore depend on more than rules written by the power they constrain.",
   },
   {
     id: "law-of-benevolent-disguise",
@@ -101,10 +101,28 @@ const institutionalConcepts = [
       "Politically acceptable coercion tends to present itself as assistance. Taxes become solidarity, restrictions become protection, surveillance becomes security, and expanded authority is described through the benefits it promises rather than through the coercive means it requires.",
   },
   {
+    id: "paradox-of-tutelage",
+    name: "Paradox of Tutelage",
+    description:
+      "Intervention can weaken precisely the social capacities whose absence is later invoked to justify its continuation. When people have fewer opportunities to organize, cooperate, solve problems, and bear responsibility, dependence can become partly a product of the institution created to relieve it.",
+  },
+  {
+    id: "right-to-be-wrong",
+    name: "The Right to Be Wrong",
+    description:
+      "Treating individuals as adults requires preserving their authority over their own lives, including the possibility of making bad decisions. Freedom is not limited to choices considered wise by an authority; learning, responsibility, and adaptation depend partly on allowing decisions and their consequences to remain connected.",
+  },
+  {
+    id: "tolerable-order",
+    name: "Tolerable Order",
+    description:
+      "An institutional order in which coercion is confined to the exceptional functions that satisfy the Minimal Tolerance standard. Outside that boundary, decisions remain dispersed among individuals, associations, communities, and voluntary institutions, limiting the scale and permanence that error acquires when backed by political power.",
+  },
+  {
     id: "paradox-of-institutional-strength",
     name: "Paradox of Institutional Strength",
     description:
-      "The more stable an institution becomes, the more it can appear to sustain itself automatically. Yet its ultimate force still depends on people choosing to obey its limits when they possess the practical capacity to violate them.",
+      "The more stable an institution becomes, the more it can appear to sustain itself automatically. Yet its ultimate force still depends on people choosing to obey its limits when they possess the practical capacity to violate them. Institutional stability can therefore conceal institutional vulnerability.",
   },
 ];
 
@@ -130,7 +148,7 @@ const bookSchema = {
   url: pageUrl,
   inLanguage: "en",
   description:
-    "A theory of coercion, political authority, voluntary provision, institutional limits, and the conditions under which state power may be tolerated as an exception.",
+    "A theory of coercion, political authority, voluntary provision, institutional limits, state production, State Free Riding, and the conditions under which political power may be tolerated as an exception.",
   about: allConcepts.map((concept) => concept.name),
 };
 
@@ -233,7 +251,7 @@ const conceptSchema = {
                 It moves from the moral and economic limits of state power to
                 the Minimal Tolerance Theorem, a second test for direct state
                 production, and the institutional forces that allow power to
-                expand and persist.
+                expand, persist, and reshape the society beneath it.
               </p>
             </div>
           </div>
@@ -277,10 +295,11 @@ const conceptSchema = {
               The analysis then moves beyond the first threshold. State
               responsibility does not imply direct state production, and the
               Principle of Separability establishes a second filter. The final
-              part examines how power behaves once established, including State
-              Free Riding, the Paradox of Resilience, institutional persistence,
-              and the effects of extended political tutelage on voluntary
-              cooperation.
+              part examines what happens once power exists: how productive
+              resilience can facilitate successive burdens, why political power
+              cannot be expected to limit itself reliably, how intervention can
+              weaken voluntary capacities, and what an institutional order
+              constrained by the same standard would look like.
             </p>
           </div>
         </div>
