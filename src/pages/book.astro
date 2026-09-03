@@ -2,6 +2,166 @@
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import SEO from "../components/SEO.astro";
+
+const coreConcepts = [
+  {
+    id: "minimal-tolerance-theorem",
+    name: "Minimal Tolerance Theorem",
+    original: "Teorema de la Tolerancia Mínima",
+    description:
+      "A function may enter consideration as a coercive exception only when three necessary conditions are jointly satisfied: effective non-excludability, relevant non-rivalry, and persistent collapse of voluntary provision. Passing the theorem does not automatically justify any particular coercive intervention.",
+  },
+  {
+    id: "presumption-of-liberty",
+    name: "Presumption of Liberty",
+    original: "Presunción de Libertad",
+    description:
+      "Voluntary cooperation is the default. Coercion is the exception. Individuals do not bear the burden of explaining why they should remain free; the burden belongs to whoever proposes restricting that freedom.",
+  },
+  {
+    id: "burden-of-proof-reversal",
+    name: "Principle of Reversal of the Burden of Proof",
+    original: "Principio de Inversión de la Carga de la Prueba",
+    description:
+      "The existence of a social problem does not establish the superiority of state intervention. Whoever proposes coercion must show why the proposed response improves upon the available alternatives rather than treating intervention as the default.",
+  },
+  {
+    id: "voluntary-provision",
+    name: "Voluntary Provision",
+    original: "Provisión Voluntaria",
+    description:
+      "The set of stable ways in which people can produce, finance, or provide a function without coercion. It includes markets and contracts, but also cooperatives, mutual arrangements, charities, community organizations, associations, and other forms of voluntary coordination.",
+  },
+  {
+    id: "persistent-collapse",
+    name: "Persistent Collapse of Voluntary Provision",
+    original: "Colapso Persistente de la Provisión Voluntaria",
+    description:
+      "The third and most demanding condition of the theorem. Free riding or the present absence of a voluntary solution is insufficient. The relevant question is whether voluntary provision persistently fails to sustain the function under conditions in which genuine alternatives have been allowed to develop.",
+  },
+  {
+    id: "institutional-last-resort",
+    name: "State as an Institutional Technology of Last Resort",
+    original: "Estado como tecnología institucional de último recurso",
+    description:
+      "The State is not the starting point of institutional design. It enters consideration only after the conditions for a coercive exception have been established. If voluntary institutions or technological change can later sustain the function, the basis for the exception disappears.",
+  },
+];
+
+const secondFilterConcepts = [
+  {
+    id: "second-burden-of-proof",
+    name: "Second Burden of Proof",
+    original: "Segunda Carga de la Prueba",
+    description:
+      "Passing the first test determines whether the State may become responsible for guaranteeing a function. It does not establish that the State must directly produce every activity required to perform it. Direct state production therefore faces a second burden of proof.",
+  },
+  {
+    id: "principle-of-separability",
+    name: "Principle of Separability",
+    original: "Principio de Separabilidad",
+    description:
+      "State responsibility and state production are separate decisions. A function may remain fully under state responsibility while parts of its execution are performed outside the public administration, provided the guarantee over the function remains intact.",
+  },
+  {
+    id: "authority-verifiability-substitutability",
+    name: "Authority, Verifiability, and Substitutability",
+    original: "Autoridad, Verificabilidad y Sustituibilidad",
+    description:
+      "The second filter is sequential. Inseparable sovereign authority creates a presumption of state execution. Outside that core, external execution gains priority when performance can be sufficiently verified and the producer can be replaced without compromising the function. Failure of either condition calls first for institutional redesign, not automatic state production.",
+  },
+  {
+    id: "perimeter-and-depth",
+    name: "Perimeter and Depth",
+    original: "Perímetro y profundidad",
+    description:
+      "The first filter limits the perimeter of the State by asking which functions may fall under its responsibility. The second limits its depth by asking how much of the productive chain must actually remain inside the State.",
+  },
+];
+
+const institutionalConcepts = [
+  {
+    id: "state-free-riding",
+    name: "State Free Riding",
+    original: "State Free Riding",
+    description:
+      "A process in which a productive society absorbs an additional state burden and continues operating. That continuity reveals adaptive capacity, while the absorbed burden becomes part of the inherited baseline. Both can make a subsequent burden appear more feasible. The process describes facilitation, not causal necessity.",
+  },
+  {
+    id: "paradox-of-resilience",
+    name: "Paradox of Resilience",
+    original: "Paradoja de la Resiliencia",
+    description:
+      "The stronger and more adaptable a productive society is, the more state burdens it may absorb before producing a visible signal of distress. The same resilience that protects society from immediate breakdown can therefore expand the perceived room for further demands.",
+  },
+  {
+    id: "institutional-bootstrap",
+    name: "Institutional Bootstrap",
+    original: "Bootstrap Institucional",
+    description:
+      "Institutional alternatives require time, experience, capital, and repeated use to develop. When the State occupies a function for long periods and prevents alternatives from maturing, their later absence cannot be treated as evidence that voluntary provision was inherently incapable of sustaining the function.",
+  },
+  {
+    id: "paradox-of-tutelage",
+    name: "Paradox of Tutelage",
+    original: "Paradoja de la Tutela",
+    description:
+      "Intervention can weaken precisely the social capacities whose absence is later invoked to justify its continuation. When people have fewer opportunities to organize, cooperate, solve problems, and bear responsibility, dependence can become partly a product of the institution created to relieve it.",
+  },
+  {
+    id: "law-of-benevolent-disguise",
+    name: "Law of Benevolent Disguise",
+    original: "Ley del Disfraz Benevolente",
+    description:
+      "Politically acceptable coercion tends to present itself as assistance. Taxes become solidarity, restrictions become protection, surveillance becomes security, and expanded authority is described through the benefits it promises rather than through the coercive means it requires.",
+  },
+  {
+    id: "paradox-of-institutional-strength",
+    name: "Paradox of Institutional Strength",
+    original: "Paradoja de la Fortaleza Institucional",
+    description:
+      "The more stable an institution becomes, the more it can appear to sustain itself automatically. Yet its ultimate force still depends on people choosing to obey its limits when they possess the practical capacity to violate them. Institutional stability can therefore conceal institutional vulnerability.",
+  },
+];
+
+const allConcepts = [
+  ...coreConcepts,
+  ...secondFilterConcepts,
+  ...institutionalConcepts,
+];
+
+const pageUrl = new URL(
+  Astro.url.pathname,
+  "https://minimaltolerance.com"
+).href;
+
+const bookSchema = {
+  "@context": "https://schema.org",
+  "@type": "Book",
+  name: "A Theory of Minimal Tolerance",
+  author: {
+    "@type": "Person",
+    name: "Fede Rodrigo",
+  },
+  url: pageUrl,
+  description:
+    "A theory of coercion, political authority, voluntary provision, institutional limits, and the conditions under which state power may be tolerated as an exception.",
+  about: allConcepts.map((concept) => concept.name),
+};
+
+const conceptSchema = {
+  "@context": "https://schema.org",
+  "@type": "DefinedTermSet",
+  name: "Key Concepts in A Theory of Minimal Tolerance",
+  url: `${pageUrl}#key-concepts`,
+  hasDefinedTerm: allConcepts.map((concept) => ({
+    "@type": "DefinedTerm",
+    name: concept.name,
+    alternateName: concept.original,
+    description: concept.description,
+    url: `${pageUrl}#${concept.id}`,
+  })),
+};
 ---
 
 <!doctype html>
@@ -17,9 +177,19 @@ import SEO from "../components/SEO.astro";
 
     <SEO
       title="A Theory of Minimal Tolerance | Minimal Tolerance"
-      description="A Theory of Minimal Tolerance by Fede Rodrigo examines coercion, political authority, voluntary cooperation, and the limits of state power."
+      description="A Theory of Minimal Tolerance by Fede Rodrigo develops the Minimal Tolerance Theorem, persistent collapse of voluntary provision, the Principle of Separability, State Free Riding, and a framework for limiting coercive power."
       lang="en"
     />
+
+    <script
+      type="application/ld+json"
+      set:html={JSON.stringify(bookSchema)}
+    ></script>
+
+    <script
+      type="application/ld+json"
+      set:html={JSON.stringify(conceptSchema)}
+    ></script>
   </head>
 
   <body>
@@ -62,7 +232,7 @@ import SEO from "../components/SEO.astro";
 
             <div class="book-copy reveal reveal-right">
               <p class="eyebrow">
-                ABOUT THE BOOK - COMING LATE SEPTEMBER 2026
+                ABOUT THE BOOK — COMING LATE SEPTEMBER 2026
               </p>
 
               <h2>
@@ -70,14 +240,240 @@ import SEO from "../components/SEO.astro";
               </h2>
 
               <p>
-                This book develops the moral, economic, and institutional
-                foundations of the Theory of Minimal Tolerance. It defines
-                the conditions a function must satisfy to pass the test of
-                coercive necessity, without treating that result as
-                authorization for a particular coercive arrangement
+                This book develops a framework for determining when coercive
+                political power may be tolerated as an exception rather than
+                assumed as a legitimate starting point.
+              </p>
+
+              <p>
+                It begins with the moral and economic limits of state power,
+                develops the Minimal Tolerance Theorem, tests its implications,
+                and then asks a second question: even when a function may fall
+                under state responsibility, how much of it must the State
+                actually produce?
               </p>
             </div>
           </div>
+        </div>
+      </section>
+
+      <!-- ABSTRACT -->
+
+      <section class="book-abstract">
+        <div class="container abstract-inner">
+          <p class="eyebrow reveal">
+            ABSTRACT
+          </p>
+
+          <h2 class="reveal">
+            When may coercion be tolerated?
+          </h2>
+
+          <div class="abstract-copy reveal">
+            <p>
+              <em>A Theory of Minimal Tolerance</em> begins from a distinction
+              between legitimacy and tolerance. Political power does not acquire
+              a different moral nature simply because it is exercised by the
+              State. If coercion is to be admitted, the relevant question is
+              therefore not whether it is legitimate by definition, but under
+              what exceptional conditions it may be tolerated.
+            </p>
+
+            <p>
+              The book develops a Presumption of Liberty under which voluntary
+              cooperation remains the rule and coercion bears the burden of
+              proof. The Minimal Tolerance Theorem then establishes three
+              necessary conditions for a function to enter consideration as a
+              coercive exception: effective non-excludability, relevant
+              non-rivalry, and persistent collapse of voluntary provision.
+              Satisfying all three conditions is necessary, but does not
+              automatically authorize every intervention undertaken in the
+              function's name.
+            </p>
+
+            <p>
+              A second burden follows. State responsibility for a function does
+              not imply that the State must directly produce every activity
+              required to perform it. The Principle of Separability distinguishes
+              sovereign authority from activities that may be executed externally
+              when they remain sufficiently verifiable and substitutable.
+            </p>
+
+            <p>
+              The final part examines the institutional consequences of power
+              once it exists. State Free Riding describes how productive
+              resilience can facilitate successive burdens, while the Paradox of
+              Tutelage, the Law of Benevolent Disguise, and the Paradox of
+              Institutional Strength examine how authority expands, persists, and
+              reshapes the society operating beneath it.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- KEY CONCEPTS -->
+
+      <section
+        class="concepts"
+        id="key-concepts"
+      >
+        <div class="container">
+          <div class="section-intro">
+            <p class="eyebrow reveal">
+              KEY CONCEPTS
+            </p>
+
+            <h2 class="reveal">
+              The conceptual architecture
+            </h2>
+
+            <p class="section-lead reveal">
+              The book develops a set of connected ideas rather than a single
+              proposition. Some are original formulations; others are established
+              concepts assigned a specific role within the theory.
+            </p>
+          </div>
+
+          <!-- CORE FRAMEWORK -->
+
+          <div class="concept-group">
+            <div class="concept-group-heading reveal">
+              <span>01</span>
+
+              <div>
+                <p class="concept-kicker">
+                  THE FIRST FILTER
+                </p>
+
+                <h3>
+                  When may a function enter the State?
+                </h3>
+              </div>
+            </div>
+
+            <div class="concept-grid">
+              {
+                coreConcepts.map((concept) => (
+                  <article
+                    class="concept-card reveal"
+                    id={concept.id}
+                  >
+                    <p class="concept-original">
+                      {concept.original}
+                    </p>
+
+                    <h4>
+                      {concept.name}
+                    </h4>
+
+                    <p>
+                      {concept.description}
+                    </p>
+                  </article>
+                ))
+              }
+            </div>
+          </div>
+
+          <!-- SECOND FILTER -->
+
+          <div class="concept-group">
+            <div class="concept-group-heading reveal">
+              <span>02</span>
+
+              <div>
+                <p class="concept-kicker">
+                  THE SECOND FILTER
+                </p>
+
+                <h3>
+                  How much State is required?
+                </h3>
+              </div>
+            </div>
+
+            <div class="concept-grid">
+              {
+                secondFilterConcepts.map((concept) => (
+                  <article
+                    class="concept-card reveal"
+                    id={concept.id}
+                  >
+                    <p class="concept-original">
+                      {concept.original}
+                    </p>
+
+                    <h4>
+                      {concept.name}
+                    </h4>
+
+                    <p>
+                      {concept.description}
+                    </p>
+                  </article>
+                ))
+              }
+            </div>
+          </div>
+
+          <!-- INSTITUTIONAL CONSEQUENCES -->
+
+          <div class="concept-group">
+            <div class="concept-group-heading reveal">
+              <span>03</span>
+
+              <div>
+                <p class="concept-kicker">
+                  THE CONSEQUENCES
+                </p>
+
+                <h3>
+                  What happens once power exists?
+                </h3>
+              </div>
+            </div>
+
+            <div class="concept-grid">
+              {
+                institutionalConcepts.map((concept) => (
+                  <article
+                    class="concept-card reveal"
+                    id={concept.id}
+                  >
+                    <p class="concept-original">
+                      {concept.original}
+                    </p>
+
+                    <h4>
+                      {concept.name}
+                    </h4>
+
+                    <p>
+                      {concept.description}
+                    </p>
+                  </article>
+                ))
+              }
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CLOSING PRINCIPLE -->
+
+      <section class="book-principle">
+        <div class="container">
+          <p class="eyebrow reveal">
+            THE STANDARD
+          </p>
+
+          <blockquote class="reveal reveal-scale">
+            The burden of proof belongs to power
+          </blockquote>
+
+          <p class="reveal">
+            First when power seeks to enter. Again when it seeks to produce.
+          </p>
         </div>
       </section>
 
@@ -130,6 +526,143 @@ import SEO from "../components/SEO.astro";
         max-width: 760px;
       }
 
+      .book-copy p + p {
+        margin-top: 1.15rem;
+      }
+
+      .book-abstract {
+        padding: clamp(5rem, 9vw, 8rem) 0;
+      }
+
+      .abstract-inner {
+        max-width: 980px;
+      }
+
+      .abstract-inner h2 {
+        max-width: 760px;
+        margin-bottom: 2rem;
+      }
+
+      .abstract-copy {
+        max-width: 880px;
+        font-size: clamp(1.05rem, 1.5vw, 1.18rem);
+        line-height: 1.8;
+      }
+
+      .abstract-copy p + p {
+        margin-top: 1.45rem;
+      }
+
+      .concepts {
+        padding: clamp(5rem, 9vw, 9rem) 0;
+      }
+
+      .section-intro {
+        max-width: 850px;
+        margin-bottom: clamp(4rem, 7vw, 6rem);
+      }
+
+      .section-lead {
+        max-width: 760px;
+        margin-top: 1.4rem;
+        font-size: clamp(1.05rem, 1.5vw, 1.18rem);
+        line-height: 1.75;
+      }
+
+      .concept-group + .concept-group {
+        margin-top: clamp(5rem, 9vw, 8rem);
+      }
+
+      .concept-group-heading {
+        display: grid;
+        grid-template-columns: auto 1fr;
+        gap: 1.5rem;
+        align-items: start;
+        margin-bottom: 2.4rem;
+      }
+
+      .concept-group-heading > span {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 2.9rem;
+        height: 2.9rem;
+        border: 1px solid rgba(13, 27, 42, 0.2);
+        border-radius: 50%;
+        font-size: 0.78rem;
+        letter-spacing: 0.08em;
+      }
+
+      .concept-kicker {
+        margin: 0 0 0.45rem;
+        font-size: 0.73rem;
+        font-weight: 700;
+        letter-spacing: 0.15em;
+      }
+
+      .concept-group-heading h3 {
+        margin: 0;
+        font-size: clamp(1.8rem, 3vw, 2.6rem);
+        line-height: 1.12;
+      }
+
+      .concept-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        border-top: 1px solid rgba(13, 27, 42, 0.16);
+      }
+
+      .concept-card {
+        padding: 2.3rem 2.3rem 2.5rem 0;
+        border-bottom: 1px solid rgba(13, 27, 42, 0.16);
+      }
+
+      .concept-card:nth-child(even) {
+        padding-left: 2.3rem;
+        border-left: 1px solid rgba(13, 27, 42, 0.16);
+      }
+
+      .concept-original {
+        margin: 0 0 0.75rem;
+        font-size: 0.74rem;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        opacity: 0.58;
+      }
+
+      .concept-card h4 {
+        margin: 0 0 1rem;
+        font-size: clamp(1.3rem, 2vw, 1.65rem);
+        line-height: 1.2;
+      }
+
+      .concept-card > p:last-child {
+        margin: 0;
+        max-width: 620px;
+        line-height: 1.72;
+      }
+
+      .book-principle {
+        padding: clamp(5rem, 9vw, 8rem) 0;
+        text-align: center;
+      }
+
+      .book-principle blockquote {
+        max-width: 950px;
+        margin: 1.2rem auto;
+        font-size: clamp(2rem, 5vw, 4.6rem);
+        line-height: 1.05;
+        letter-spacing: -0.03em;
+      }
+
+      .book-principle > .container > p:last-child {
+        max-width: 620px;
+        margin: 1.5rem auto 0;
+        font-size: clamp(1rem, 1.4vw, 1.15rem);
+        opacity: 0.72;
+      }
+
       @media (hover: hover) and (pointer: fine) {
         .book-cover-wrapper img:hover {
           transform: translateY(-7px) rotateY(-2deg) rotateZ(-0.5deg);
@@ -141,6 +674,16 @@ import SEO from "../components/SEO.astro";
         .book-cover-wrapper {
           max-width: 320px;
         }
+
+        .concept-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .concept-card,
+        .concept-card:nth-child(even) {
+          padding: 2rem 0;
+          border-left: 0;
+        }
       }
 
       @media (max-width: 560px) {
@@ -151,6 +694,20 @@ import SEO from "../components/SEO.astro";
 
         .book-copy {
           text-align: left;
+        }
+
+        .concept-group-heading {
+          grid-template-columns: 1fr;
+          gap: 1rem;
+        }
+
+        .concept-group-heading > span {
+          width: 2.5rem;
+          height: 2.5rem;
+        }
+
+        .concept-card {
+          padding: 1.8rem 0 2rem;
         }
       }
 
