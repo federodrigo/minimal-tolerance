@@ -2,6 +2,168 @@
 import Header from "../../components/Header.astro";
 import Footer from "../../components/Footer.astro";
 import SEO from "../../components/SEO.astro";
+
+const conceptosCentrales = [
+  {
+    id: "teorema-tolerancia-minima",
+    name: "Teorema de la Tolerancia Mínima",
+    description:
+      "Un criterio para determinar cuándo una función puede entrar en consideración como excepción coercitiva. Deben cumplirse conjuntamente tres condiciones necesarias: no exclusión efectiva, no rivalidad relevante y colapso persistente de la provisión voluntaria. Superar el criterio no justifica automáticamente una intervención coercitiva particular",
+  },
+  {
+    id: "presuncion-libertad",
+    name: "Presunción de Libertad",
+    description:
+      "La cooperación voluntaria constituye el punto de partida y la coerción, la excepción. Las personas no cargan con la obligación de explicar por qué deberían conservar su libertad; la carga pertenece a quien propone restringirla",
+  },
+  {
+    id: "inversion-carga-prueba",
+    name: "Inversión de la Carga de la Prueba",
+    description:
+      "La existencia de un problema social no demuestra la superioridad de la intervención estatal. Quien propone utilizar coerción debe mostrar por qué la respuesta planteada mejora las alternativas disponibles",
+  },
+  {
+    id: "provision-voluntaria",
+    name: "Provisión Voluntaria",
+    description:
+      "Las formas estables mediante las cuales una sociedad puede sostener una función sin recurrir a la coerción. Incluye mercados y contratos, pero también cooperativas, acuerdos mutuos, organizaciones benéficas, asociaciones, comunidades y otras formas de coordinación voluntaria",
+  },
+  {
+    id: "colapso-persistente",
+    name: "Colapso Persistente de la Provisión Voluntaria",
+    description:
+      "El free riding o la ausencia actual de una solución voluntaria no bastan. La pregunta relevante es si la provisión voluntaria fracasa de manera persistente en sostener la función después de que alternativas genuinas hayan tenido oportunidad de desarrollarse",
+  },
+  {
+    id: "ultimo-recurso-institucional",
+    name: "Estado como Tecnología Institucional de Último Recurso",
+    description:
+      "El Estado no constituye el punto de partida del diseño institucional. Entra en consideración únicamente después de que se hayan establecido las condiciones para una excepción coercitiva. Si instituciones voluntarias o cambios tecnológicos logran luego sostener la función, desaparece la base de la excepción",
+  },
+];
+
+const conceptosSegundoFiltro = [
+  {
+    id: "segunda-carga-prueba",
+    name: "Segunda Carga de la Prueba",
+    description:
+      "Superar el primer examen determina si el Estado puede asumir la responsabilidad de garantizar una función. No establece que deba producir directamente cada actividad necesaria para cumplirla. La producción estatal enfrenta, por lo tanto, una segunda carga de la prueba",
+  },
+  {
+    id: "principio-separabilidad",
+    name: "Principio de Separabilidad",
+    description:
+      "Responsabilidad estatal y producción estatal son decisiones distintas. Una función puede permanecer plenamente bajo responsabilidad del Estado mientras partes de su ejecución se realizan fuera de la administración pública, siempre que la garantía sobre la función permanezca intacta",
+  },
+  {
+    id: "autoridad-verificabilidad-sustituibilidad",
+    name: "Autoridad, Verificabilidad y Sustituibilidad",
+    description:
+      "El segundo filtro es secuencial. La autoridad soberana inseparable genera una presunción de ejecución estatal. Fuera de ese núcleo, la ejecución externa adquiere prioridad cuando puede verificarse suficientemente el desempeño y sustituirse al productor sin comprometer la función",
+  },
+  {
+    id: "perimetro-profundidad",
+    name: "Perímetro y Profundidad",
+    description:
+      "El primer filtro limita el perímetro del Estado al determinar qué funciones pueden quedar bajo su responsabilidad. El segundo limita su profundidad al determinar cuánto de la cadena productiva debe permanecer efectivamente dentro del Estado",
+  },
+];
+
+const conceptosInstitucionales = [
+  {
+    id: "state-free-riding",
+    name: "State Free Riding",
+    description:
+      "Un proceso en el que una sociedad productiva absorbe una carga estatal adicional y continúa funcionando. Esa continuidad revela capacidad de adaptación, mientras la carga absorbida pasa a integrar el punto de partida heredado. Ambos efectos pueden hacer que una carga posterior parezca más viable. El proceso describe facilitación, no causalidad necesaria",
+  },
+  {
+    id: "paradoja-resiliencia",
+    name: "Paradoja de la Resiliencia",
+    description:
+      "Cuanto más fuerte y adaptable es una sociedad productiva, más cargas estatales puede absorber antes de mostrar señales visibles de deterioro. La misma resiliencia que la protege frente al colapso inmediato puede ampliar el margen percibido para nuevas exigencias",
+  },
+  {
+    id: "bootstrap-institucional",
+    name: "Bootstrap Institucional",
+    description:
+      "Las alternativas institucionales necesitan tiempo, experiencia, capital y uso repetido para desarrollarse. Cuando el Estado ocupa una función durante largos períodos e impide que esas alternativas maduren, su ausencia posterior no puede utilizarse como evidencia de que la provisión voluntaria era inherentemente incapaz de sostenerla",
+  },
+  {
+    id: "estado-no-puede-autolimitarse",
+    name: "El Estado No Puede Autolimitarse",
+    description:
+      "Un límite formal al poder estatal no garantiza que ese límite vaya a mantenerse. Las instituciones que crean, interpretan, administran y ejecutan esas fronteras pertenecen a la misma estructura que pretenden restringir. Los límites duraderos dependen, por lo tanto, de algo más que reglas escritas por el poder al que buscan contener",
+  },
+  {
+    id: "ley-disfraz-benevolente",
+    name: "Ley del Disfraz Benevolente",
+    description:
+      "La coerción políticamente aceptable tiende a presentarse como ayuda. Los impuestos se convierten en solidaridad, las restricciones en protección, la vigilancia en seguridad y la expansión de la autoridad se describe a través de los beneficios que promete antes que de los medios coercitivos que requiere",
+  },
+  {
+    id: "paradoja-tutela",
+    name: "Paradoja de la Tutela",
+    description:
+      "La intervención puede debilitar precisamente las capacidades sociales cuya ausencia termina utilizándose para justificar su continuidad. Cuando existen menos oportunidades de organizarse, cooperar, resolver y asumir responsabilidades, la dependencia puede convertirse parcialmente en producto de la institución creada para aliviarla",
+  },
+  {
+    id: "derecho-equivocarse",
+    name: "El Derecho a Equivocarse",
+    description:
+      "Tratar a las personas como adultas exige preservar su autoridad sobre sus propias vidas, incluida la posibilidad de tomar malas decisiones. La libertad no se limita a las elecciones consideradas sensatas por una autoridad; aprender, asumir responsabilidades y adaptarse depende también de mantener conectadas las decisiones con sus consecuencias",
+  },
+  {
+    id: "orden-tolerable",
+    name: "Orden Tolerable",
+    description:
+      "Un orden institucional en el que la coerción queda confinada a las funciones excepcionales que satisfacen el criterio de Tolerancia Mínima. Fuera de esa frontera, las decisiones permanecen dispersas entre individuos, asociaciones, comunidades e instituciones voluntarias, limitando la escala y permanencia que adquiere el error cuando está respaldado por poder político",
+  },
+  {
+    id: "paradoja-fortaleza-institucional",
+    name: "Paradoja de la Fortaleza Institucional",
+    description:
+      "Los límites institucionales suelen parecer más sólidos cuando nadie intenta atravesarlos. Una Constitución carece de fuerza física propia: su autoridad depende, en última instancia, de que quienes poseen la capacidad de violarla elijan no hacerlo. Una obediencia prolongada puede hacer que una institución parezca sostenerse por sí sola y ocultar la conducta humana de la que depende su supervivencia",
+  },
+];
+
+const todosLosConceptos = [
+  ...conceptosCentrales,
+  ...conceptosSegundoFiltro,
+  ...conceptosInstitucionales,
+];
+
+const pageUrl = new URL(
+  Astro.url.pathname,
+  "https://minimaltolerance.com"
+).href;
+
+const bookSchema = {
+  "@context": "https://schema.org",
+  "@type": "Book",
+  name: "Una Teoría de la Tolerancia Mínima",
+  author: {
+    "@type": "Person",
+    name: "Fede Rodrigo",
+  },
+  url: pageUrl,
+  inLanguage: "es",
+  description:
+    "Una teoría sobre coerción, autoridad política, provisión voluntaria, límites institucionales, producción estatal, State Free Riding y las condiciones bajo las cuales el poder político puede ser tolerado como excepción",
+  about: todosLosConceptos.map((concepto) => concepto.name),
+};
+
+const conceptSchema = {
+  "@context": "https://schema.org",
+  "@type": "DefinedTermSet",
+  name: "Conceptos Clave de Una Teoría de la Tolerancia Mínima",
+  url: `${pageUrl}#conceptos-clave`,
+  hasDefinedTerm: todosLosConceptos.map((concepto) => ({
+    "@type": "DefinedTerm",
+    name: concepto.name,
+    description: concepto.description,
+    url: `${pageUrl}#${concepto.id}`,
+  })),
+};
 ---
 
 <!doctype html>
@@ -17,9 +179,19 @@ import SEO from "../../components/SEO.astro";
 
     <SEO
       title="Una Teoría de la Tolerancia Mínima | Tolerancia Mínima"
-      description="Una Teoría de la Tolerancia Mínima de Fede Rodrigo examina la coerción, la autoridad política, la cooperación voluntaria y los límites del poder estatal."
+      description="Una Teoría de la Tolerancia Mínima de Fede Rodrigo desarrolla el Teorema de la Tolerancia Mínima como criterio para las excepciones coercitivas, el colapso persistente de la provisión voluntaria, el Principio de Separabilidad, State Free Riding y los límites institucionales del poder"
       lang="es"
     />
+
+    <script
+      type="application/ld+json"
+      set:html={JSON.stringify(bookSchema)}
+    ></script>
+
+    <script
+      type="application/ld+json"
+      set:html={JSON.stringify(conceptSchema)}
+    ></script>
   </head>
 
   <body>
@@ -62,7 +234,7 @@ import SEO from "../../components/SEO.astro";
 
             <div class="book-copy reveal reveal-right">
               <p class="eyebrow">
-                SOBRE EL LIBRO - DISPONIBLE A FINES DE SEPTIEMBRE DE 2026
+                DISPONIBLE A FINES DE SEPTIEMBRE DE 2026
               </p>
 
               <h2>
@@ -70,15 +242,225 @@ import SEO from "../../components/SEO.astro";
               </h2>
 
               <p>
-                Este libro desarrolla los fundamentos morales, económicos
-                e institucionales de la Teoría de la Tolerancia Mínima.
-                Define las condiciones que una función debe satisfacer para
-                superar el examen de necesidad coercitiva, sin tratar ese
-                resultado como autorización para un arreglo coercitivo
-                particular
+                Este libro desarrolla un marco para determinar cuándo el poder
+                político coercitivo puede ser tolerado como excepción en lugar
+                de asumirse como un punto de partida legítimo
+              </p>
+
+              <p>
+                Parte de los límites morales y económicos del poder estatal,
+                desarrolla el Teorema de la Tolerancia Mínima, introduce un
+                segundo examen para la producción estatal directa y analiza
+                las fuerzas institucionales que permiten al poder expandirse,
+                persistir y transformar la sociedad sobre la que actúa
               </p>
             </div>
           </div>
+        </div>
+      </section>
+
+      <!-- ABSTRACT -->
+
+      <section class="book-abstract">
+        <div class="container abstract-inner">
+          <p class="eyebrow reveal">
+            ABSTRACT
+          </p>
+
+          <h2 class="reveal">
+            ¿Cuándo puede tolerarse la coerción?
+          </h2>
+
+          <div class="abstract-copy reveal">
+            <p>
+              <em>Una Teoría de la Tolerancia Mínima</em> parte de una
+              distinción entre legitimidad y tolerancia. El poder político no
+              adquiere una naturaleza moral diferente por el simple hecho de
+              ser ejercido por el Estado. Si la coerción ha de ser admitida, la
+              pregunta relevante no es entonces si resulta legítima por
+              definición, sino bajo qué condiciones excepcionales puede ser
+              tolerada
+            </p>
+
+            <p>
+              El libro desarrolla una Presunción de Libertad bajo la cual la
+              cooperación voluntaria permanece como regla y la coerción carga
+              con la prueba. El Teorema de la Tolerancia Mínima es un criterio
+              para identificar el conjunto restringido de funciones que pueden
+              entrar en consideración como excepciones coercitivas. Exige tres
+              condiciones necesarias: no exclusión efectiva, no rivalidad
+              relevante y colapso persistente de la provisión voluntaria.
+              Satisfacer las tres es necesario, pero no autoriza automáticamente
+              cualquier intervención realizada en nombre de la función
+            </p>
+
+            <p>
+              El análisis avanza luego más allá de ese primer umbral. La
+              responsabilidad estatal no implica producción estatal directa y
+              el Principio de Separabilidad establece un segundo filtro. La
+              parte final examina qué ocurre una vez que el poder existe: cómo
+              la resiliencia productiva puede facilitar cargas sucesivas, por
+              qué no puede esperarse que el poder político se autolimite de
+              manera confiable, cómo la intervención puede debilitar capacidades
+              voluntarias y qué forma tendría un orden institucional sometido
+              al mismo estándar
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONCEPTOS CLAVE -->
+
+      <section
+        class="concepts"
+        id="conceptos-clave"
+      >
+        <div class="container">
+          <div class="section-intro">
+            <p class="eyebrow reveal">
+              CONCEPTOS CLAVE
+            </p>
+
+            <h2 class="reveal">
+              La arquitectura conceptual
+            </h2>
+
+            <p class="section-lead reveal">
+              La teoría se desarrolla en tres etapas: el criterio para admitir
+              responsabilidad coercitiva, los límites de la producción estatal
+              directa y las consecuencias institucionales del poder una vez que
+              existe
+            </p>
+          </div>
+
+          <!-- PRIMER FILTRO -->
+
+          <div class="concept-group">
+            <div class="concept-group-heading reveal">
+              <span class="concept-number">01</span>
+
+              <div>
+                <p class="concept-kicker">
+                  EL PRIMER FILTRO
+                </p>
+
+                <h3>
+                  ¿Cuándo puede una función entrar al Estado?
+                </h3>
+              </div>
+            </div>
+
+            <div class="concept-grid">
+              {
+                conceptosCentrales.map((concepto) => (
+                  <article
+                    class="concept-card reveal"
+                    id={concepto.id}
+                  >
+                    <h4>
+                      {concepto.name}
+                    </h4>
+
+                    <p>
+                      {concepto.description}
+                    </p>
+                  </article>
+                ))
+              }
+            </div>
+          </div>
+
+          <!-- SEGUNDO FILTRO -->
+
+          <div class="concept-group">
+            <div class="concept-group-heading reveal">
+              <span class="concept-number">02</span>
+
+              <div>
+                <p class="concept-kicker">
+                  EL SEGUNDO FILTRO
+                </p>
+
+                <h3>
+                  ¿Cuánto Estado hace falta?
+                </h3>
+              </div>
+            </div>
+
+            <div class="concept-grid">
+              {
+                conceptosSegundoFiltro.map((concepto) => (
+                  <article
+                    class="concept-card reveal"
+                    id={concepto.id}
+                  >
+                    <h4>
+                      {concepto.name}
+                    </h4>
+
+                    <p>
+                      {concepto.description}
+                    </p>
+                  </article>
+                ))
+              }
+            </div>
+          </div>
+
+          <!-- CONSECUENCIAS -->
+
+          <div class="concept-group">
+            <div class="concept-group-heading reveal">
+              <span class="concept-number">03</span>
+
+              <div>
+                <p class="concept-kicker">
+                  LAS CONSECUENCIAS
+                </p>
+
+                <h3>
+                  ¿Qué ocurre una vez que el poder existe?
+                </h3>
+              </div>
+            </div>
+
+            <div class="concept-grid">
+              {
+                conceptosInstitucionales.map((concepto) => (
+                  <article
+                    class="concept-card reveal"
+                    id={concepto.id}
+                  >
+                    <h4>
+                      {concepto.name}
+                    </h4>
+
+                    <p>
+                      {concepto.description}
+                    </p>
+                  </article>
+                ))
+              }
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PRINCIPIO CENTRAL -->
+
+      <section class="book-principle">
+        <div class="container">
+          <p class="eyebrow reveal">
+            EL ESTÁNDAR
+          </p>
+
+          <blockquote class="reveal reveal-scale">
+            La carga de la prueba pertenece al poder
+          </blockquote>
+
+          <p class="reveal">
+            Primero cuando pretende entrar. Otra vez cuando pretende producir
+          </p>
         </div>
       </section>
 
@@ -129,7 +511,149 @@ import SEO from "../../components/SEO.astro";
       }
 
       .book-copy p:not(.eyebrow) {
+        max-width: 720px;
+      }
+
+      .book-copy p + p {
+        margin-top: 0.9rem;
+      }
+
+      /* ABSTRACT */
+
+      .book-abstract {
+        padding: 3rem 0 3.5rem;
+      }
+
+      .abstract-inner {
+        max-width: 980px;
+      }
+
+      .abstract-inner h2 {
         max-width: 760px;
+        margin-bottom: 1.25rem;
+      }
+
+      .abstract-copy {
+        max-width: 900px;
+        font-size: 1.03rem;
+        line-height: 1.65;
+      }
+
+      .abstract-copy p {
+        margin: 0;
+      }
+
+      .abstract-copy p + p {
+        margin-top: 0.9rem;
+      }
+
+      /* CONCEPTOS CLAVE */
+
+      .concepts {
+        padding: 3.5rem 0 4rem;
+      }
+
+      .section-intro {
+        max-width: 850px;
+        margin-bottom: 2.4rem;
+      }
+
+      .section-intro h2 {
+        margin-bottom: 0;
+      }
+
+      .section-lead {
+        max-width: 760px;
+        margin-top: 0.8rem;
+        font-size: 1.03rem;
+        line-height: 1.6;
+      }
+
+      .concept-group + .concept-group {
+        margin-top: 3rem;
+      }
+
+      .concept-group-heading {
+        display: grid;
+        grid-template-columns: 96px 1fr;
+        gap: 1.1rem;
+        align-items: start;
+        margin-bottom: 1.2rem;
+      }
+
+      .concept-number {
+        display: block;
+        margin-top: -0.05rem;
+        color: var(--gold, #b49355);
+        font-size: clamp(3rem, 5vw, 4.6rem);
+        font-weight: 800;
+        line-height: 0.82;
+        letter-spacing: -0.065em;
+      }
+
+      .concept-kicker {
+        margin: 0 0 0.18rem;
+        font-size: 0.68rem;
+        font-weight: 700;
+        letter-spacing: 0.14em;
+      }
+
+      .concept-group-heading h3 {
+        margin: 0;
+        font-size: clamp(1.45rem, 2.3vw, 2rem);
+        line-height: 1.15;
+      }
+
+      .concept-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        border-top: 1px solid rgba(13, 27, 42, 0.16);
+      }
+
+      .concept-card {
+        padding: 1.35rem 1.65rem 1.45rem 0;
+        border-bottom: 1px solid rgba(13, 27, 42, 0.16);
+        scroll-margin-top: 100px;
+      }
+
+      .concept-card:nth-child(even) {
+        padding-left: 1.65rem;
+        border-left: 1px solid rgba(13, 27, 42, 0.16);
+      }
+
+      .concept-card h4 {
+        margin: 0 0 0.5rem;
+        font-size: clamp(1.1rem, 1.5vw, 1.32rem);
+        line-height: 1.2;
+      }
+
+      .concept-card p {
+        margin: 0;
+        max-width: 620px;
+        font-size: 0.96rem;
+        line-height: 1.55;
+      }
+
+      /* PRINCIPIO CENTRAL */
+
+      .book-principle {
+        padding: 3.2rem 0 3.5rem;
+        text-align: center;
+      }
+
+      .book-principle blockquote {
+        max-width: 950px;
+        margin: 0.7rem auto;
+        font-size: clamp(2rem, 4vw, 3.6rem);
+        line-height: 1.05;
+        letter-spacing: -0.03em;
+      }
+
+      .book-principle > .container > p:last-child {
+        max-width: 620px;
+        margin: 0.85rem auto 0;
+        font-size: 0.98rem;
+        opacity: 0.72;
       }
 
       @media (hover: hover) and (pointer: fine) {
@@ -143,6 +667,16 @@ import SEO from "../../components/SEO.astro";
         .book-cover-wrapper {
           max-width: 320px;
         }
+
+        .concept-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .concept-card,
+        .concept-card:nth-child(even) {
+          padding: 1.25rem 0;
+          border-left: 0;
+        }
       }
 
       @media (max-width: 560px) {
@@ -153,6 +687,35 @@ import SEO from "../../components/SEO.astro";
 
         .book-copy {
           text-align: left;
+        }
+
+        .book-abstract {
+          padding: 2.6rem 0 3rem;
+        }
+
+        .concepts {
+          padding: 3rem 0 3.5rem;
+        }
+
+        .concept-group + .concept-group {
+          margin-top: 2.6rem;
+        }
+
+        .concept-group-heading {
+          grid-template-columns: 64px 1fr;
+          gap: 0.75rem;
+        }
+
+        .concept-number {
+          font-size: 2.9rem;
+        }
+
+        .concept-card {
+          padding: 1.15rem 0 1.25rem;
+        }
+
+        .book-principle {
+          padding: 2.8rem 0 3rem;
         }
       }
 
@@ -171,25 +734,33 @@ import SEO from "../../components/SEO.astro";
       const revealElements =
         document.querySelectorAll(".reveal");
 
-      if (reduceMotion || !("IntersectionObserver" in window)) {
+      if (
+        reduceMotion ||
+        !("IntersectionObserver" in window)
+      ) {
         revealElements.forEach((element) => {
           element.classList.add("is-visible");
         });
       } else {
-        const revealObserver = new IntersectionObserver(
-          (entries, observer) => {
-            entries.forEach((entry) => {
-              if (!entry.isIntersecting) return;
+        const revealObserver =
+          new IntersectionObserver(
+            (entries, observer) => {
+              entries.forEach((entry) => {
+                if (!entry.isIntersecting) return;
 
-              entry.target.classList.add("is-visible");
-              observer.unobserve(entry.target);
-            });
-          },
-          {
-            threshold: 0.14,
-            rootMargin: "0px 0px -40px 0px",
-          }
-        );
+                entry.target.classList.add(
+                  "is-visible"
+                );
+
+                observer.unobserve(entry.target);
+              });
+            },
+            {
+              threshold: 0.14,
+              rootMargin:
+                "0px 0px -40px 0px",
+            }
+          );
 
         revealElements.forEach((element) => {
           revealObserver.observe(element);
