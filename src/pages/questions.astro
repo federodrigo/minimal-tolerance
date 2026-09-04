@@ -53,7 +53,7 @@ const questions = [
     title: "Do Public Goods Require Government Provision?",
     answer: [
       "No. Non-excludability and non-rivalry describe a structure of the good, not an institutional conclusion",
-      "Provision can be sustained through voluntary arrangements. Samuelson formalized the structure of collective consumption goods in The Pure Theory of Public Expenditure; it does not follow that the State must provide them",
+      "Provision can be sustained through voluntary arrangements. Samuelson formalized the structure of collective consumption goods in <em>The Pure Theory of Public Expenditure</em>; it does not follow that the State must provide them",
     ],
   },
   {
@@ -79,7 +79,7 @@ const questions = [
     number: "09",
     title: "What Does David Schmidtz Argue About Public Goods and Free Riders?",
     answer: [
-      "In The Limits of Government, Schmidtz shows that public goods and free riders do not by themselves justify state authority and that some voluntary arrangements can work",
+      "In <em>The Limits of Government</em>, Schmidtz shows that public goods and free riders do not by themselves justify state authority and that some voluntary arrangements can work",
       "This theory adds a stricter requirement: persistent collapse of voluntary provision must be established before coercion can be considered",
     ],
   },
@@ -151,7 +151,7 @@ const questions = [
     number: "17",
     title: "Is Nozick's Minimal State Morally Legitimate?",
     answer: [
-      "Yes, in Nozick's theory. In Anarchy, State, and Utopia, he defends a morally legitimate minimal state grounded in a theory of rights",
+      "Yes, in Nozick's theory. In <em>Anarchy, State, and Utopia</em>, he defends a morally legitimate minimal state grounded in a theory of rights",
       "Here, state coercion never becomes morally legitimate. It can only be tolerated exceptionally on grounds of necessity",
     ],
   },
@@ -184,6 +184,9 @@ const questions = [
   },
 ];
 
+const stripHtml = (value) =>
+  value.replace(/<[^>]*>/g, "");
+
 const faqSchema = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
@@ -192,7 +195,7 @@ const faqSchema = {
     name: question.title,
     acceptedAnswer: {
       "@type": "Answer",
-      text: question.answer.join(" "),
+      text: question.answer.map(stripHtml).join(" "),
     },
   })),
 };
@@ -305,7 +308,7 @@ const faqSchema = {
 
                 <div class="question-copy reveal reveal-right">
                   {question.answer.map((paragraph) => (
-                    <p>{paragraph}</p>
+                    <p set:html={paragraph}></p>
                   ))}
                 </div>
               </article>
@@ -525,3 +528,4 @@ const faqSchema = {
     </script>
   </body>
 </html>
+
