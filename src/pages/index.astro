@@ -39,14 +39,22 @@ import SEO from "../components/SEO.astro";
             be tolerated?
           </h1>
 
+          <!--
+            IMPORTANT:
+            Keep exactly 3 spans here so the original site animation
+            remains unchanged.
+
+            JavaScript rotates the 4 phrases through these 3 animation
+            slots without modifying the original CSS animation.
+          -->
+
           <div
-            class="animated-text animated-text-four"
+            class="animated-text"
             aria-label="Power is tolerated. Not legitimized. Only under exceptional conditions. A theory of coercion and its limits"
           >
             <span>Power is tolerated</span>
             <span>Not legitimized</span>
             <span>Only under exceptional conditions</span>
-            <span>A theory of coercion and its limits</span>
           </div>
 
           <div class="buttons">
@@ -74,6 +82,7 @@ import SEO from "../components/SEO.astro";
       <section id="book" class="book">
         <div class="container">
           <div class="book-grid">
+
             <div class="reveal reveal-left">
               <a
                 href="/book"
@@ -106,6 +115,7 @@ import SEO from "../components/SEO.astro";
                 Explore the Book
               </a>
             </div>
+
           </div>
         </div>
       </section>
@@ -114,6 +124,7 @@ import SEO from "../components/SEO.astro";
 
       <section id="questions" class="content-section">
         <div class="container">
+
           <p class="eyebrow reveal">
             THE CENTRAL QUESTIONS
           </p>
@@ -131,6 +142,7 @@ import SEO from "../components/SEO.astro";
           <a href="/questions" class="secondary reveal">
             Read the Questions
           </a>
+
         </div>
       </section>
 
@@ -138,6 +150,7 @@ import SEO from "../components/SEO.astro";
 
       <section id="theory" class="content-section">
         <div class="container">
+
           <p class="eyebrow reveal">
             THE THEORY
           </p>
@@ -147,6 +160,7 @@ import SEO from "../components/SEO.astro";
           </h2>
 
           <div class="foundation-principles stagger">
+
             <article class="foundation-principle reveal">
               <span class="foundation-number">
                 01
@@ -199,11 +213,13 @@ import SEO from "../components/SEO.astro";
                 </p>
               </div>
             </article>
+
           </div>
 
           <a href="/theory" class="secondary reveal">
             Continue Reading
           </a>
+
         </div>
       </section>
 
@@ -211,6 +227,7 @@ import SEO from "../components/SEO.astro";
 
       <section id="theorem" class="theorem">
         <div class="container">
+
           <p class="eyebrow reveal">
             THE CRITERION
           </p>
@@ -220,6 +237,7 @@ import SEO from "../components/SEO.astro";
           </h2>
 
           <div class="theorem-summary stagger">
+
             <article class="theorem-summary-card reveal reveal-scale">
               <h3>
                 Effective non-excludability
@@ -237,6 +255,7 @@ import SEO from "../components/SEO.astro";
                 Persistent collapse of voluntary provision
               </h3>
             </article>
+
           </div>
 
           <div class="buttons reveal">
@@ -244,6 +263,7 @@ import SEO from "../components/SEO.astro";
               Examine the Theorem
             </a>
           </div>
+
         </div>
       </section>
 
@@ -251,6 +271,7 @@ import SEO from "../components/SEO.astro";
 
       <section id="papers" class="ssrn">
         <div class="container">
+
           <p class="eyebrow reveal">
             RESEARCH
           </p>
@@ -269,6 +290,7 @@ import SEO from "../components/SEO.astro";
           >
             View the Papers
           </a>
+
         </div>
       </section>
     </main>
@@ -279,6 +301,10 @@ import SEO from "../components/SEO.astro";
       const reduceMotion = window.matchMedia(
         "(prefers-reduced-motion: reduce)"
       ).matches;
+
+      /*
+        REVEAL ANIMATIONS
+      */
 
       const revealElements =
         document.querySelectorAll(".reveal");
@@ -307,80 +333,55 @@ import SEO from "../components/SEO.astro";
           revealObserver.observe(element);
         });
       }
+
+      /*
+        HERO TEXT
+
+        The site's original animation was designed for 3 spans.
+
+        We keep those 3 spans untouched so the original animation,
+        timing and transitions remain exactly as defined in the
+        existing stylesheet.
+
+        Each time one animation slot completes a cycle, its text is
+        replaced with the phrase that comes three positions later.
+        This lets four phrases rotate through the original three-slot
+        animation.
+      */
+
+      if (!reduceMotion) {
+        const heroPhrases = [
+          "Power is tolerated",
+          "Not legitimized",
+          "Only under exceptional conditions",
+          "A theory of coercion and its limits",
+        ];
+
+        const heroSpans =
+          document.querySelectorAll(".animated-text > span");
+
+        heroSpans.forEach((span, index) => {
+          let phraseIndex = index;
+
+          span.addEventListener("animationiteration", () => {
+            phraseIndex =
+              (phraseIndex + heroSpans.length) %
+              heroPhrases.length;
+
+            span.textContent = heroPhrases[phraseIndex];
+          });
+        });
+      }
     </script>
   </body>
 </html>
 
 <style>
   /*
-    HERO ANIMATION — 4 PHRASES
-  */
+    BOOK COVER
 
-  .hero .animated-text-four {
-    position: relative;
-    min-height: 1.6em;
-  }
-
-  .hero .animated-text-four > span {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-
-    opacity: 0;
-
-    animation-name: minimalToleranceHeroFour;
-    animation-duration: 12s;
-    animation-timing-function: ease;
-    animation-iteration-count: infinite;
-    animation-fill-mode: both;
-  }
-
-  .hero .animated-text-four > span:nth-child(1) {
-    animation-delay: 0s;
-  }
-
-  .hero .animated-text-four > span:nth-child(2) {
-    animation-delay: 3s;
-  }
-
-  .hero .animated-text-four > span:nth-child(3) {
-    animation-delay: 6s;
-  }
-
-  .hero .animated-text-four > span:nth-child(4) {
-    animation-delay: 9s;
-  }
-
-  @keyframes minimalToleranceHeroFour {
-    0% {
-      opacity: 0;
-      transform: translateY(6px);
-    }
-
-    5% {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    20% {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    25% {
-      opacity: 0;
-      transform: translateY(-6px);
-    }
-
-    100% {
-      opacity: 0;
-      transform: translateY(-6px);
-    }
-  }
-
-  /*
-    BOOK COVER LINK
+    Only the book-cover interaction is added here.
+    Nothing related to .animated-text is overridden.
   */
 
   .book-cover-link {
@@ -389,9 +390,7 @@ import SEO from "../components/SEO.astro";
 
   .book-cover-link img {
     display: block;
-    transition:
-      transform 0.25s ease,
-      opacity 0.25s ease;
+    transition: transform 0.25s ease;
   }
 
   .book-cover-link:hover img {
@@ -403,23 +402,7 @@ import SEO from "../components/SEO.astro";
     outline-offset: 6px;
   }
 
-  /*
-    REDUCED MOTION
-  */
-
   @media (prefers-reduced-motion: reduce) {
-    .hero .animated-text-four > span {
-      display: none;
-      animation: none;
-    }
-
-    .hero .animated-text-four > span:first-child {
-      display: block;
-      position: static;
-      opacity: 1;
-      transform: none;
-    }
-
     .book-cover-link img {
       transition: none;
     }
