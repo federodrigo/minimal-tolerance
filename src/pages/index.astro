@@ -39,18 +39,13 @@ import SEO from "../components/SEO.astro";
             be tolerated?
           </h1>
 
-          <!--
-            IMPORTANT:
-            Keep exactly 3 spans here so the original site animation
-            remains unchanged.
-
-            JavaScript rotates the 4 phrases through these 3 animation
-            slots without modifying the original CSS animation.
-          -->
+          <p class="lead">
+            A theory of power and its limits
+          </p>
 
           <div
             class="animated-text"
-            aria-label="Power is tolerated. Not legitimized. Only under exceptional conditions. A theory of coercion and its limits"
+            aria-label="Power is tolerated. Not legitimized. Only under exceptional conditions"
           >
             <span>Power is tolerated</span>
             <span>Not legitimized</span>
@@ -82,11 +77,9 @@ import SEO from "../components/SEO.astro";
       <section id="book" class="book">
         <div class="container">
           <div class="book-grid">
-
             <div class="reveal reveal-left">
               <a
                 href="/book"
-                class="book-cover-link"
                 aria-label="Explore the book A Theory of Minimal Tolerance"
               >
                 <img
@@ -115,7 +108,6 @@ import SEO from "../components/SEO.astro";
                 Explore the Book
               </a>
             </div>
-
           </div>
         </div>
       </section>
@@ -124,7 +116,6 @@ import SEO from "../components/SEO.astro";
 
       <section id="questions" class="content-section">
         <div class="container">
-
           <p class="eyebrow reveal">
             THE CENTRAL QUESTIONS
           </p>
@@ -142,7 +133,6 @@ import SEO from "../components/SEO.astro";
           <a href="/questions" class="secondary reveal">
             Read the Questions
           </a>
-
         </div>
       </section>
 
@@ -150,7 +140,6 @@ import SEO from "../components/SEO.astro";
 
       <section id="theory" class="content-section">
         <div class="container">
-
           <p class="eyebrow reveal">
             THE THEORY
           </p>
@@ -160,7 +149,6 @@ import SEO from "../components/SEO.astro";
           </h2>
 
           <div class="foundation-principles stagger">
-
             <article class="foundation-principle reveal">
               <span class="foundation-number">
                 01
@@ -213,13 +201,11 @@ import SEO from "../components/SEO.astro";
                 </p>
               </div>
             </article>
-
           </div>
 
           <a href="/theory" class="secondary reveal">
             Continue Reading
           </a>
-
         </div>
       </section>
 
@@ -227,7 +213,6 @@ import SEO from "../components/SEO.astro";
 
       <section id="theorem" class="theorem">
         <div class="container">
-
           <p class="eyebrow reveal">
             THE CRITERION
           </p>
@@ -237,7 +222,6 @@ import SEO from "../components/SEO.astro";
           </h2>
 
           <div class="theorem-summary stagger">
-
             <article class="theorem-summary-card reveal reveal-scale">
               <h3>
                 Effective non-excludability
@@ -255,7 +239,6 @@ import SEO from "../components/SEO.astro";
                 Persistent collapse of voluntary provision
               </h3>
             </article>
-
           </div>
 
           <div class="buttons reveal">
@@ -263,7 +246,6 @@ import SEO from "../components/SEO.astro";
               Examine the Theorem
             </a>
           </div>
-
         </div>
       </section>
 
@@ -271,7 +253,6 @@ import SEO from "../components/SEO.astro";
 
       <section id="papers" class="ssrn">
         <div class="container">
-
           <p class="eyebrow reveal">
             RESEARCH
           </p>
@@ -290,7 +271,6 @@ import SEO from "../components/SEO.astro";
           >
             View the Papers
           </a>
-
         </div>
       </section>
     </main>
@@ -301,10 +281,6 @@ import SEO from "../components/SEO.astro";
       const reduceMotion = window.matchMedia(
         "(prefers-reduced-motion: reduce)"
       ).matches;
-
-      /*
-        REVEAL ANIMATIONS
-      */
 
       const revealElements =
         document.querySelectorAll(".reveal");
@@ -333,82 +309,6 @@ import SEO from "../components/SEO.astro";
           revealObserver.observe(element);
         });
       }
-
-      /*
-        HERO TEXT
-
-        The site's original animation was designed for 3 spans.
-
-        We keep those 3 spans untouched so the original animation,
-        timing and transitions remain exactly as defined in the
-        existing stylesheet.
-
-        Each time one animation slot completes a cycle, its text is
-        replaced with the phrase that comes three positions later.
-        This lets four phrases rotate through the original three-slot
-        animation.
-      */
-
-      if (!reduceMotion) {
-        const heroPhrases = [
-          "Power is tolerated",
-          "Not legitimized",
-          "Only under exceptional conditions",
-          "A theory of coercion and its limits",
-        ];
-
-        const heroSpans =
-          document.querySelectorAll(".animated-text > span");
-
-        heroSpans.forEach((span, index) => {
-          let phraseIndex = index;
-
-          span.addEventListener("animationiteration", () => {
-            phraseIndex =
-              (phraseIndex + heroSpans.length) %
-              heroPhrases.length;
-
-            span.textContent = heroPhrases[phraseIndex];
-          });
-        });
-      }
     </script>
   </body>
 </html>
-
-<style>
-  /*
-    BOOK COVER
-
-    Only the book-cover interaction is added here.
-    Nothing related to .animated-text is overridden.
-  */
-
-  .book-cover-link {
-    display: inline-block;
-  }
-
-  .book-cover-link img {
-    display: block;
-    transition: transform 0.25s ease;
-  }
-
-  .book-cover-link:hover img {
-    transform: scale(1.02);
-  }
-
-  .book-cover-link:focus-visible {
-    outline: 2px solid currentColor;
-    outline-offset: 6px;
-  }
-
-  @media (prefers-reduced-motion: reduce) {
-    .book-cover-link img {
-      transition: none;
-    }
-
-    .book-cover-link:hover img {
-      transform: none;
-    }
-  }
-</style>
