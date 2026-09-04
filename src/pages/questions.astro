@@ -75,12 +75,12 @@ const questions = [
     ],
   },
   {
-    id: "schmidtz-difference",
+    id: "schmidtz-public-goods-free-riders",
     number: "09",
-    title: "How Does This Theory Differ from Schmidtz?",
+    title: "What Does David Schmidtz Argue About Public Goods and Free Riders?",
     answer: [
-      "In The Limits of Government, David Schmidtz shows that public goods and free riders do not by themselves justify state authority and that some voluntary arrangements can work",
-      "This theory makes persistent collapse of voluntary provision a necessary condition before coercion can be considered",
+      "In The Limits of Government, Schmidtz shows that public goods and free riders do not by themselves justify state authority and that some voluntary arrangements can work",
+      "This theory adds a stricter requirement: persistent collapse of voluntary provision must be established before coercion can be considered",
     ],
   },
   {
@@ -102,56 +102,56 @@ const questions = [
     ],
   },
   {
-    id: "libertarian-theory",
+    id: "libertarianism-state-coercion",
     number: "12",
-    title: "Is This a Libertarian Theory?",
+    title: "Is Libertarianism Compatible with State Coercion?",
     answer: [
-      "Yes. It treats liberty as the baseline and denies intrinsic moral legitimacy to coercion, whether it comes from the State or anyone else",
-      "It allows exceptional tolerance on grounds of necessity, but never turns coercion into legitimacy",
+      "Not as moral legitimacy. This theory is libertarian because liberty is the baseline and coercion is never intrinsically legitimate, whether exercised by the State or anyone else",
+      "It nevertheless allows a narrowly bounded coercive function to be tolerated on grounds of necessity without becoming legitimate",
     ],
   },
   {
-    id: "hayek-limited-government",
+    id: "hayek-government-power",
     number: "13",
-    title: "How Does It Differ from Hayek's Limited Government?",
+    title: "What Limits Government Power in Hayek's Political Theory?",
     answer: [
-      "Hayek examines the limits of knowledge, spontaneous order, general rules, and the rule of law",
+      "Hayek emphasizes the limits of knowledge, spontaneous order, general rules, and the rule of law",
       "The question here comes earlier: which functions may be placed under coercive authority at all",
     ],
   },
   {
-    id: "buchanan-constitutional-limits",
+    id: "buchanan-constitutional-political-economy",
     number: "14",
-    title: "How Does It Differ from Buchanan?",
+    title: "What Limits Government in Buchanan's Constitutional Political Economy?",
     answer: [
       "Buchanan examines the constitutional rules within which collective decisions are made and the role of agreement",
       "Here the function must pass a prior filter before its institutional design is considered",
     ],
   },
   {
-    id: "rothbard-anarcho-capitalism",
+    id: "rothbard-anarcho-capitalism-state-coercion",
     number: "15",
-    title: "How Does It Differ from Rothbard's Anarcho-Capitalism?",
+    title: "Does Rothbard's Anarcho-Capitalism Reject All State Coercion?",
     answer: [
-      "It shares with Rothbard the view that coercion is morally illegitimate, whether it comes from the State or anyone else",
-      "It differs by allowing a specific coercive function to be tolerated on grounds of necessity when it passes the criterion, without becoming legitimate",
+      "Yes. Rothbard treats coercion as morally illegitimate whether it comes from the State or anyone else and rejects compulsory state provision",
+      "This theory shares that philosophical rejection of legitimacy but allows a specific coercive function to be tolerated on grounds of necessity when it passes the criterion",
     ],
   },
   {
-    id: "minarchism",
+    id: "minarchism-minimal-state-functions",
     number: "16",
-    title: "Does It Lead to Minarchism?",
+    title: "What Is Minarchism, and What Functions Does a Minimal State Perform?",
     answer: [
-      "No. Minarchism usually begins with a fixed set of state functions such as defense, police, and courts",
+      "Minarchism usually begins with a fixed set of state functions such as defense, police, and courts",
       "This theory does not start from a predefined list. Every function must pass the same criterion",
     ],
   },
   {
-    id: "nozick-minimal-state",
+    id: "nozick-minimal-state-legitimacy",
     number: "17",
-    title: "How Does It Differ from Nozick's Minimal State?",
+    title: "Is Nozick's Minimal State Morally Legitimate?",
     answer: [
-      "In Anarchy, State, and Utopia, Nozick defends a morally legitimate minimal state grounded in a theory of rights",
+      "Yes, in Nozick's theory. In Anarchy, State, and Utopia, he defends a morally legitimate minimal state grounded in a theory of rights",
       "Here, state coercion never becomes morally legitimate. It can only be tolerated exceptionally on grounds of necessity",
     ],
   },
@@ -174,11 +174,11 @@ const questions = [
     ],
   },
   {
-    id: "function-justifies-any-intervention",
+    id: "necessary-function-scope-government-intervention",
     number: "20",
-    title: "Does Passing the Criterion Authorize Any Government Intervention?",
+    title: "If a State Function Is Necessary, How Far May Government Intervention Go?",
     answer: [
-      "No. Passing the criterion does not authorize any tax, agency, monopoly, mandate, budget, or form of enforcement",
+      "Only as far as separately justified. Necessity of the function does not authorize any tax, agency, monopoly, mandate, budget, or form of enforcement",
       "Each coercive instrument faces a second burden of proof",
     ],
   },
@@ -209,8 +209,8 @@ const faqSchema = {
     />
 
     <SEO
-      title="Limits of Government, Coercion & Public Goods | Minimal Tolerance"
-      description="Questions on state coercion, public goods, free riders, market failure, externalities, libertarianism, anarcho-capitalism, minarchism, and the limits of government"
+      title="Limits of Government, State Coercion & Public Goods | Minimal Tolerance"
+      description="Questions on government power, state coercion, public goods, free riders, market failure, libertarianism, Hayek, Buchanan, Rothbard, minarchism, and Nozick"
       lang="en"
     />
 
@@ -224,6 +224,8 @@ const faqSchema = {
     <Header />
 
     <main>
+      <!-- HERO -->
+
       <section class="hero questions-page-hero">
         <div class="hero-content hero-sequence">
           <p class="eyebrow">
@@ -237,11 +239,15 @@ const faqSchema = {
         </div>
       </section>
 
+      <!-- CENTRAL STATEMENT -->
+
       <section class="statement">
         <blockquote class="reveal reveal-scale">
           An exception is not a license for power
         </blockquote>
       </section>
+
+      <!-- EXPLORE -->
 
       <section class="questions-index">
         <div class="questions-container">
@@ -277,6 +283,8 @@ const faqSchema = {
         </div>
       </section>
 
+      <!-- QUESTIONS -->
+
       <section class="questions-content">
         <div class="questions-container">
           {
@@ -305,6 +313,8 @@ const faqSchema = {
           }
         </div>
       </section>
+
+      <!-- FINAL CTA -->
 
       <section class="questions-cta">
         <div class="questions-container questions-cta-content">
@@ -340,18 +350,60 @@ const faqSchema = {
     <Footer />
 
     <style>
+      /*
+       * Force a true two-column grid here so each pair of questions
+       * shares the exact same row height.
+       */
+      .questions-index-grid {
+        display: grid !important;
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        grid-auto-flow: row !important;
+        gap: 0 !important;
+        align-items: stretch !important;
+      }
+
       .question-index-card {
-        padding-block: 1.45rem !important;
+        box-sizing: border-box !important;
+        display: grid !important;
+        grid-template-columns: 3.1rem minmax(0, 1fr) !important;
+        align-items: start !important;
+        align-content: start !important;
+        column-gap: 1rem !important;
+        width: 100% !important;
+        height: 100% !important;
         min-height: 0 !important;
-        height: auto !important;
+        margin: 0 !important;
+        padding: 1rem 1.15rem 1rem 0 !important;
         transition:
           color 220ms ease,
           background 220ms ease,
           transform 220ms ease;
       }
 
+      .question-index-card:nth-child(odd) {
+        border-right: 1px solid var(--line, rgba(20, 30, 40, 0.14)) !important;
+        padding-right: 1.4rem !important;
+      }
+
+      .question-index-card:nth-child(even) {
+        padding-left: 2rem !important;
+      }
+
+      .question-index-number,
+      .question-index-title {
+        align-self: start !important;
+        margin: 0 !important;
+        padding: 0 !important;
+      }
+
       .question-index-number {
+        line-height: 1.28 !important;
         transition: transform 220ms ease;
+      }
+
+      .question-index-title {
+        display: block !important;
+        line-height: 1.28;
       }
 
       .questions-intro {
@@ -362,11 +414,17 @@ const faqSchema = {
         opacity: 0.82;
       }
 
+      /*
+       * Keep the index type exactly at the approved size.
+       */
       .question-index-title {
         font-size: clamp(0.95rem, 1vw, 1.08rem);
-        line-height: 1.28;
       }
 
+      /*
+       * Developed-question title: 10% smaller than the previous version.
+       * Right-side answer size is untouched.
+       */
       .question-heading h2 {
         font-size: clamp(1.08rem, 1.62vw, 1.62rem);
         line-height: 1.12;
@@ -387,13 +445,22 @@ const faqSchema = {
       }
 
       @media (max-width: 900px) {
+        .questions-index-grid {
+          grid-template-columns: 1fr !important;
+        }
+
+        .question-index-card,
+        .question-index-card:nth-child(odd),
+        .question-index-card:nth-child(even) {
+          grid-template-columns: 2.75rem minmax(0, 1fr) !important;
+          column-gap: 0.85rem !important;
+          padding: 0.9rem 0 !important;
+          border-right: 0 !important;
+        }
+
         .questions-intro {
           margin-bottom: 1.1rem;
           font-size: 0.98rem;
-        }
-
-        .question-index-card {
-          padding-block: 1.25rem !important;
         }
 
         .question-index-title {
@@ -458,4 +525,3 @@ const faqSchema = {
     </script>
   </body>
 </html>
-
