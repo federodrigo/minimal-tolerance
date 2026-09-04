@@ -5,57 +5,57 @@ import SEO from "../../components/SEO.astro";
 
 const questions = [
   {
-    id: "funcion-propia-del-estado",
+    id: "funciones-del-estado",
     number: "01",
-    title: "¿Cuál es la función propia del Estado?",
+    title: "¿Qué funciones debe cumplir el Estado?",
     answer: [
-      "Las teorías políticas asignan al Estado funciones muy distintas. Algunas conservan defensa, policía y tribunales; otras agregan educación, salud, jubilaciones, infraestructura, política monetaria, investigación o asistencia social. La pregunta previa es qué principio separa las funciones que pueden quedar bajo autoridad coercitiva de aquellas que deben permanecer en la cooperación voluntaria",
-      "La Tolerancia Mínima aplica un mismo criterio a cada función propuesta. La importancia, la popularidad, el valor estratégico o el precedente histórico no bastan para que una función califique",
+      "No existe una lista válida por tradición. Defensa, justicia, salud, educación o cualquier otra función deben pasar el mismo examen",
+      "La pregunta no es qué función parece importante, sino cuál puede justificar una excepción a la cooperación voluntaria",
     ],
   },
   {
     id: "limites-del-poder-del-estado",
     number: "02",
-    title: "¿Cuáles son los límites del poder del Estado?",
+    title: "¿Qué limita el poder del Estado?",
     answer: [
-      "Un límite que depende de quién gobierna, qué política es popular o qué resultado se promete no es estable. El poder político necesita un criterio que sobreviva a cambios de partidos, objetivos, tecnologías y circunstancias",
-      "La Tolerancia Mínima coloca a la libertad como punto de partida y la carga de la prueba sobre el poder. Cada excepción debe establecerse función por función",
+      "Un límite no puede depender de quién gobierna, qué política es popular o qué fin se persigue",
+      "El criterio debe valer para cualquier gobierno y colocar la carga de la prueba sobre la coerción",
     ],
   },
   {
-    id: "coercion-estatal-justificada",
+    id: "legitimidad-coercion-estatal",
     number: "03",
-    title: "¿Puede justificarse alguna vez la coerción estatal?",
+    title: "¿Puede ser legítima la coerción estatal?",
     answer: [
-      "Si justificar significa volverla moralmente legítima, no. Las elecciones, la aprobación de la mayoría, los resultados beneficiosos y las buenas intenciones no convierten un acto impuesto en voluntario ni otorgan legitimidad moral intrínseca a la coerción",
-      "La Tolerancia Mínima formula otra pregunta: ¿cuándo puede tolerarse la coerción aunque siga siendo ilegítima? Esa posibilidad aparece solo cuando se establecen conjuntamente la no exclusión efectiva, la no rivalidad relevante y el colapso persistente de la provisión voluntaria para una función específica",
+      "No. Que la coerción provenga del Estado no la vuelve moralmente legítima",
+      "La teoría distingue legitimidad de tolerancia: una función puede superar el examen de necesidad coercitiva sin que la coerción deje de ser ilegítima",
     ],
   },
   {
-    id: "bienes-publicos-justifican-estado",
+    id: "democracia-legitima-coercion",
     number: "04",
-    title: "¿Los bienes públicos justifican la intervención del Estado?",
+    title: "¿La democracia legitima la coerción estatal?",
     answer: [
-      "La no exclusión y la no rivalidad pueden crear incentivos para actuar como free rider, pero las características de un bien público no prueban que la provisión estatal o el financiamiento obligatorio sean necesarios. Las instituciones voluntarias todavía pueden sostener la función",
-      "La Tolerancia Mínima exige por eso una tercera condición: el colapso persistente de la provisión voluntaria. La estructura de bien público forma parte del examen; no constituye por sí sola un caso suficiente para la coerción",
+      "No. Una mayoría puede autorizar políticamente una decisión, pero no convertirla en voluntaria",
+      "Elecciones, apoyo popular y buenas intenciones no eliminan la carga de justificar la coerción",
     ],
   },
   {
-    id: "samuelson-bienes-publicos-estado",
+    id: "utilidad-necesidad-coercion",
     number: "05",
-    title: "¿La teoría de bienes públicos de Samuelson exige provisión estatal?",
+    title: "¿La utilidad o necesidad de una función justifica la coerción?",
     answer: [
-      "En The Pure Theory of Public Expenditure, Paul Samuelson formalizó los bienes de consumo colectivo cuyo uso por un individuo no reduce lo que otros pueden consumir. El análisis contemporáneo de bienes públicos también destaca la no exclusión, que puede intensificar los incentivos del free rider",
-      "La Tolerancia Mínima acepta la no rivalidad y la no exclusión como condiciones estructurales relevantes, pero rechaza el salto desde la clasificación del bien hacia la provisión coercitiva. También debe establecerse el colapso persistente de la provisión voluntaria",
+      "No. Que una función sea útil, necesaria, valiosa o socialmente beneficiosa no basta",
+      "Debe cumplir simultáneamente las tres condiciones del teorema. La importancia del fin no sustituye esa prueba",
     ],
   },
   {
-    id: "free-rider-impuestos",
+    id: "bienes-publicos-intervencion-estatal",
     number: "06",
-    title: "¿El problema del free rider justifica los impuestos?",
+    title: "¿Los bienes públicos justifican la intervención estatal?",
     answer: [
-      "No. Un free rider puede recibir un beneficio sin pagar, pero ese incentivo no demuestra que la provisión voluntaria vaya a fracasar. El free riding señala un posible déficit de financiamiento; no prueba que la tributación obligatoria sea necesaria",
-      "El examen relevante es si esos incentivos socavan persistentemente el financiamiento, la coordinación o la participación necesarios para sostener la función bajo arreglos voluntarios materialmente distintos",
+      "No. La no exclusión y la no rivalidad pueden permitir que algunos se beneficien sin contribuir, pero eso no demuestra que la provisión voluntaria vaya a fracasar",
+      "La intervención coercitiva solo entra en consideración si también existe un colapso persistente de la provisión voluntaria",
     ],
   },
   {
@@ -63,125 +63,125 @@ const questions = [
     number: "07",
     title: "¿Los bienes públicos pueden proveerse voluntariamente?",
     answer: [
-      "Sí, en algunos casos. Las características de los bienes públicos crean incentivos, no un resultado institucional predeterminado. La provisión puede surgir mediante contratos, asociaciones, clubes, servicios agrupados, filantropía, reputación, subsidios cruzados, exclusión tecnológica u otros arreglos voluntarios",
-      "La pregunta decisiva es si esos arreglos pueden sostener la función en el tiempo. Si pueden hacerlo, la excepción coercitiva no queda establecida",
+      "Sí. La existencia de incentivos para no contribuir no determina cómo debe organizarse la provisión",
+      "Contratos, asociaciones, clubes, filantropía u otros arreglos pueden sostener la provisión. Si lo hacen, no hay excepción coercitiva",
     ],
   },
   {
-    id: "colapso-provision-voluntaria",
+    id: "samuelson-bienes-publicos",
     number: "08",
-    title: "¿Cuándo fracasa realmente la provisión voluntaria?",
+    title: "¿La teoría de bienes públicos de Samuelson exige provisión estatal?",
     answer: [
-      "El fracaso de un proveedor, una provisión insuficiente temporal o la ausencia de un arreglo actual no bastan. El resultado puede responder a un mal diseño, costos de coordinación, tecnología o circunstancias capaces de cambiar",
-      "El colapso persistente de la provisión voluntaria (CV) exige fracaso bajo arreglos voluntarios materialmente distintos y a lo largo del tiempo. Esta es la carga empírica central del Criterio de Tolerancia Mínima",
+      "No. En La teoría pura del gasto público, Paul Samuelson formaliza la estructura de los bienes de consumo colectivo, en especial la no rivalidad",
+      "Esa estructura ayuda a identificar el problema, pero no demuestra necesidad coercitiva. El fracaso persistente de la provisión voluntaria debe probarse por separado",
     ],
   },
   {
-    id: "schmidtz-free-rider-estado",
+    id: "free-rider-coercion-estatal",
     number: "09",
-    title: "¿Qué agrega la Tolerancia Mínima a la crítica de David Schmidtz al free rider como justificación del Estado?",
+    title: "¿El problema del free rider justifica la coerción estatal?",
     answer: [
-      "En The Limits of Government, David Schmidtz rechaza la inferencia de que los bienes públicos o los free riders establezcan por sí mismos autoridad estatal y muestra que ciertos arreglos voluntarios pueden sostener la provisión",
-      "La Tolerancia Mínima incorpora el paso siguiente al propio criterio. El colapso persistente de la provisión voluntaria deja de ser solo evidencia contra una solución voluntaria propuesta y se vuelve una condición necesaria antes de considerar necesidad coercitiva. La carga pasa de identificar free riders a demostrar un fracaso duradero bajo arreglos voluntarios materialmente distintos",
+      "No. Identificar personas que se benefician sin contribuir no prueba que la función no pueda sostenerse voluntariamente",
+      "El free rider importa solo si ese incentivo provoca un fracaso persistente bajo arreglos voluntarios materialmente distintos",
+    ],
+  },
+  {
+    id: "fracaso-provision-voluntaria",
+    number: "10",
+    title: "¿Cuándo fracasa la provisión voluntaria?",
+    answer: [
+      "Cuando arreglos voluntarios materialmente distintos fracasan de forma persistente porque la misma estructura de incentivos impide sostener la función",
+      "El fracaso de un proveedor, una provisión insuficiente o una ausencia temporal no alcanzan",
+    ],
+  },
+  {
+    id: "schmidtz-free-rider",
+    number: "11",
+    title: "¿Qué agrega Schmidtz a la crítica del free rider?",
+    answer: [
+      "En Los límites del gobierno, David Schmidtz ya rechaza que los bienes públicos o los free riders basten para justificar autoridad estatal y muestra que la provisión voluntaria puede funcionar",
+      "El paso adicional de este teorema es convertir el colapso persistente de la provisión voluntaria en una condición necesaria antes de considerar coerción",
     ],
   },
   {
     id: "fallas-mercado-intervencion-estatal",
-    number: "10",
+    number: "12",
     title: "¿Las fallas de mercado justifican la intervención estatal?",
     answer: [
-      "No por sí solas. El monopolio natural, la información imperfecta, la concentración, las fallas de coordinación o la provisión insuficiente pueden mostrar un resultado de mercado imperfecto sin demostrar que la provisión coercitiva sea necesaria. Falla de mercado y necesidad estatal son afirmaciones distintas",
-      "La Tolerancia Mínima pregunta si la función propuesta satisface las condiciones de una excepción. La evidencia de un mercado imperfecto no puede sustituir la evidencia de un colapso persistente de la provisión voluntaria",
+      "No. Monopolio natural, información imperfecta, concentración, problemas de coordinación o provisión insuficiente no demuestran necesidad coercitiva",
+      "Una falla de mercado describe una imperfección; no prueba que el Estado deba asumir la función",
     ],
   },
   {
-    id: "tolerancia-minima-minarquismo",
-    number: "11",
-    title: "¿La Tolerancia Mínima es una forma de minarquismo?",
-    answer: [
-      "No. El minarquismo suele partir de un Estado mínimo —el llamado night-watchman state— centrado en defensa, policía y tribunales. La Tolerancia Mínima no concede a esas funciones una excepción automática",
-      "Cada función enfrenta el mismo criterio. El límite resultante podría ser más estrecho que un Estado mínimo convencional, coincidir parcialmente con él o incluir un conjunto diferente de funciones. El criterio determina el límite; la etiqueta no",
-    ],
-  },
-  {
-    id: "nozick-estado-minimo",
-    number: "12",
-    title: "¿La Tolerancia Mínima es el Estado mínimo de Robert Nozick?",
-    answer: [
-      "En Anarchy, State, and Utopia, Robert Nozick defiende un Estado mínimo moralmente legítimo y limitado en gran medida a funciones de protección. La Tolerancia Mínima no parte de esa conclusión institucional ni considera moralmente legítima la coerción estatal",
-      "La defensa, la seguridad y la adjudicación deben satisfacer las mismas condiciones que cualquier otra función propuesta. El resultado puede coincidir parcialmente con el Estado mínimo de Nozick, pero la lógica es distinta: Nozick justifica un Estado mínimo; la Tolerancia Mínima examina qué funciones coercitivas, si alguna, pueden tolerarse sin volverse legítimas",
-    ],
-  },
-  {
-    id: "tolerancia-minima-anarcocapitalismo",
+    id: "externalidades-positivas-intervencion-estatal",
     number: "13",
-    title: "¿La Tolerancia Mínima conduce al anarcocapitalismo?",
+    title: "¿Las externalidades positivas justifican la intervención estatal?",
     answer: [
-      "No necesariamente. El anarcocapitalismo propone sustituir monopolios estatales coercitivos por instituciones voluntarias, incluida la provisión privada de protección y adjudicación. La Tolerancia Mínima no elige de antemano ese resultado institucional",
-      "Aplica el mismo examen a cada función. Donde la provisión voluntaria se sostiene, la provisión coercitiva no supera el criterio; donde se establecen las tres condiciones, puede tolerarse una excepción coercitiva estrecha. La teoría puede coincidir con conclusiones anarcocapitalistas en algunas funciones sin convertirse en un sistema anarcocapitalista",
+      "No. Que una actividad beneficie a terceros no la convierte en una función estatal",
+      "Las externalidades positivas no prueban no exclusión, no rivalidad ni colapso persistente de la provisión voluntaria",
     ],
   },
   {
-    id: "rothbard-anarcocapitalismo",
+    id: "teoria-libertaria",
     number: "14",
-    title: "¿En qué se diferencia la Tolerancia Mínima del anarcocapitalismo de Murray Rothbard?",
+    title: "¿Es una teoría libertaria?",
     answer: [
-      "Murray Rothbard rechaza la tributación y el monopolio coercitivo del Estado sobre la protección y la adjudicación, y sostiene que la defensa, la policía y los tribunales pueden proveerse mediante instituciones voluntarias",
-      "La Tolerancia Mínima comparte el rechazo de una legitimidad estatal intrínseca, pero llega a una conclusión condicional distinta. Permite que una función coercitiva siga siendo moralmente ilegítima y, aun así, sea tolerada si supera las tres condiciones. Rothbard rechaza al Estado como institución coercitiva; la Tolerancia Mínima pregunta si alguna excepción específica puede superar una carga de prueba excepcional",
+      "Sí. Parte de la libertad como regla y niega legitimidad moral intrínseca al poder estatal",
+      "Se diferencia de otras teorías libertarias porque admite una tolerancia coercitiva excepcional cuando se cumplen las tres condiciones",
     ],
   },
   {
-    id: "tolerancia-minima-libertarismo",
+    id: "hayek-gobierno-limitado",
     number: "15",
-    title: "¿La Tolerancia Mínima es una teoría libertaria?",
+    title: "¿En qué se diferencia del gobierno limitado de Hayek?",
     answer: [
-      "Comparte con el libertarismo y el liberalismo clásico una fuerte presunción a favor de la libertad y una carga elevada sobre el poder político. No deriva, sin embargo, de una doctrina libertaria completa de derechos ni de una lista fija de funciones estatales legítimas",
-      "El criterio opera función por función sin elegir de antemano un destino minarquista, anarcocapitalista u otro. La Tolerancia Mínima es un examen de necesidad coercitiva, no una etiqueta para un sistema político predeterminado",
-    ],
-  },
-  {
-    id: "hayek-estado-limitado",
-    number: "16",
-    title: "¿En qué se diferencia la Tolerancia Mínima del gobierno limitado de Friedrich Hayek?",
-    answer: [
-      "Friedrich Hayek destaca el conocimiento disperso, el orden espontáneo, las reglas generales y el Estado de derecho como límites frente a la dirección arbitraria. Esos elementos explican las restricciones estructurales del poder centralizado y cómo debería operar un orden jurídico",
-      "La Tolerancia Mínima plantea una pregunta anterior: ¿qué funciones pueden colocarse bajo autoridad coercitiva? Un gobierno puede actuar mediante reglas generales y ejercer, aun así, una función que no haya superado la carga de necesidad coercitiva. Ambos enfoques pueden complementarse, pero responden preguntas distintas",
+      "Hayek estudia los límites del conocimiento, el orden espontáneo, las reglas generales y el Estado de derecho",
+      "Aquí la pregunta es anterior: qué funciones pueden quedar bajo autoridad coercitiva. Un gobierno limitado por reglas todavía puede ejercer funciones que no superen ese examen",
     ],
   },
   {
     id: "buchanan-limites-constitucionales",
+    number: "16",
+    title: "¿En qué se diferencia de los límites constitucionales de Buchanan?",
+    answer: [
+      "Buchanan estudia las reglas constitucionales dentro de las cuales se toman decisiones colectivas y el papel del acuerdo",
+      "Este teorema agrega un filtro previo: antes de diseñar reglas, la función debe demostrar que puede entrar en el ámbito de la coerción tolerable",
+    ],
+  },
+  {
+    id: "anarcocapitalismo",
     number: "17",
-    title: "¿En qué se diferencia la Tolerancia Mínima de los límites constitucionales de James Buchanan?",
+    title: "¿Conduce al anarcocapitalismo?",
     answer: [
-      "La elección pública y la economía política constitucional de James Buchanan se concentran en las reglas dentro de las cuales se adoptan decisiones colectivas y en el acuerdo como base para evaluar arreglos políticos",
-      "La Tolerancia Mínima coloca un filtro sobre la función antes del diseño institucional. Pregunta si una función propuesta puede cumplir primero las condiciones de necesidad coercitiva. El acuerdo o la restricción constitucional no sustituyen esa carga",
+      "No. Comparte con el anarcocapitalismo el rechazo de la legitimidad estatal intrínseca y la prioridad de la cooperación voluntaria",
+      "Pero admite que una función coercitiva siga siendo ilegítima y, aun así, sea tolerada si supera las tres condiciones",
     ],
   },
   {
-    id: "defensa-policia-tribunales-estado",
+    id: "rothbard-anarcocapitalismo",
     number: "18",
-    title: "¿La defensa, la policía y los tribunales deben ser provistos por el Estado?",
+    title: "¿En qué se diferencia del anarcocapitalismo de Rothbard?",
     answer: [
-      "Ninguna función pertenece al Estado porque la teoría política o la práctica histórica suelan asignársela. La defensa, la seguridad interna y la adjudicación son candidatos fuertes para el examen, pero no reciben una excepción automática frente a la provisión voluntaria",
-      "Cada función debe definirse con precisión y evaluarse según su propia estructura. La defensa territorial puede presentar fuerte no exclusión, no rivalidad e incentivos de free rider, mientras la policía y la adjudicación plantean cuestiones distintas. Solo las funciones que cumplen las tres condiciones pueden entrar en el estrecho ámbito de la tolerancia coercitiva",
+      "Rothbard rechaza la tributación y el monopolio estatal sobre protección, justicia y seguridad, y defiende su provisión voluntaria",
+      "Aquí no se descarta toda excepción coercitiva de antemano: puede tolerarse una función específica si supera una carga de prueba excepcional, sin volverse legítima",
     ],
   },
   {
-    id: "externalidades-intervencion-estatal",
+    id: "minarquismo",
     number: "19",
-    title: "¿Las externalidades justifican la intervención estatal?",
+    title: "¿Supera al minarquismo?",
     answer: [
-      "No por sí solas. La contaminación, el ruido, el bloqueo de luz, la alteración de cursos de agua u otros efectos sobre terceros pueden plantear cuestiones de derechos, responsabilidad, reparación o cumplimiento sin establecer que una función estatal más amplia requiera provisión coercitiva",
-      "La Tolerancia Mínima separa esas cuestiones. Una externalidad puede exigir definir y hacer valer derechos frente al daño, pero no satisface automáticamente la no exclusión efectiva, la no rivalidad relevante y el colapso persistente de la provisión voluntaria. Externalidad y necesidad coercitiva son afirmaciones distintas",
+      "Sí. El minarquismo suele limitar al Estado a defensa, policía y tribunales",
+      "El teorema no fija esa lista. Puede tolerar otras funciones si cumplen las tres condiciones, por lo que su frontera puede extenderse más allá del Estado mínimo sin otorgar legitimidad al Estado",
     ],
   },
   {
-    id: "tolerancia-minima-legitima-estado",
+    id: "nozick-estado-minimo",
     number: "20",
-    title: "¿La Tolerancia Mínima legitima al Estado?",
+    title: "¿En qué se diferencia del Estado mínimo de Nozick?",
     answer: [
-      "No. Superar el Criterio de Tolerancia Mínima no vuelve moralmente legítima la coerción, no valida al Estado como institución ni crea autoridad política general. Solo establece que una función específica puede cumplir las condiciones de necesidad coercitiva",
-      "Cualquier impuesto, agencia, mandato, monopolio, presupuesto o regla de cumplimiento requiere un examen separado. Tolerancia no es legitimidad, y una función tolerada no crea presunción alguna a favor de otra",
+      "Nozick defiende en Anarquía, Estado y utopía un Estado mínimo moralmente legítimo, concentrado en funciones de protección",
+      "Aquí el Estado nunca adquiere legitimidad moral y el ámbito tolerable puede superar ese núcleo si otras funciones cumplen las tres condiciones",
     ],
   },
 ];
@@ -211,8 +211,8 @@ const faqSchema = {
     />
 
     <SEO
-      title="Límites del Estado, bienes públicos y coerción | Tolerancia Mínima"
-      description="Preguntas sobre límites del Estado, coerción, bienes públicos, free riders, impuestos, fallas de mercado, externalidades, minarquismo, anarcocapitalismo, Nozick, Rothbard, Hayek, Buchanan, Samuelson y Schmidtz"
+      title="Límites del Estado, coerción y bienes públicos | Tolerancia Mínima"
+      description="Preguntas sobre coerción estatal, bienes públicos, free riders, fallas de mercado, externalidades, libertarismo, anarcocapitalismo, minarquismo y límites del Estado"
       lang="es"
     />
 
@@ -258,12 +258,7 @@ const faqSchema = {
           </p>
 
           <p class="questions-intro reveal">
-            Estas preguntas examinan las funciones y los límites del Estado
-            desde la coerción estatal, la autoridad política, los bienes públicos,
-            los free riders, los impuestos, las fallas de mercado, las externalidades,
-            la provisión voluntaria, el Estado mínimo, el minarquismo, el
-            anarcocapitalismo y la elección pública. También sitúan la Tolerancia
-            Mínima frente a Nozick, Rothbard, Hayek, Buchanan, Samuelson y Schmidtz.
+            Preguntas sobre qué puede justificar la coerción y dónde termina el poder del Estado
           </p>
 
           <nav
@@ -335,8 +330,8 @@ const faqSchema = {
             </h2>
 
             <p>
-              Explora el criterio para determinar cuándo una función específica
-              puede cumplir las condiciones de necesidad coercitiva sin convertir
+              Explora el criterio que determina cuándo una función puede
+              superar el examen de necesidad coercitiva sin convertir
               tolerancia en legitimidad
             </p>
           </div>
@@ -375,10 +370,10 @@ const faqSchema = {
       }
 
       .questions-intro {
-        max-width: 820px;
-        margin: 0 0 2.25rem;
+        max-width: 760px;
+        margin: 0 0 2rem;
         font-size: 1rem;
-        line-height: 1.65;
+        line-height: 1.55;
         opacity: 0.82;
       }
 
@@ -408,7 +403,7 @@ const faqSchema = {
 
       @media (max-width: 900px) {
         .questions-intro {
-          margin-bottom: 1.8rem;
+          margin-bottom: 1.6rem;
           font-size: 0.98rem;
         }
 
@@ -474,3 +469,4 @@ const faqSchema = {
     </script>
   </body>
 </html>
+
