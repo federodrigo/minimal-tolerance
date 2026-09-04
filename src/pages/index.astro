@@ -40,7 +40,7 @@ import SEO from "../components/SEO.astro";
           </h1>
 
           <div
-            class="animated-text"
+            class="animated-text animated-text-four"
             aria-label="Power is tolerated. Not legitimized. Only under exceptional conditions. A theory of coercion and its limits"
           >
             <span>Power is tolerated</span>
@@ -241,7 +241,7 @@ import SEO from "../components/SEO.astro";
         </div>
       </section>
 
-      <!-- PAPERS -->
+      <!-- RESEARCH -->
 
       <section id="papers" class="ssrn">
         <div class="container">
@@ -304,3 +304,89 @@ import SEO from "../components/SEO.astro";
     </script>
   </body>
 </html>
+
+<style>
+  /*
+    HERO ANIMATION — 4 PHRASES
+
+    This deliberately uses a new class and animation name so it overrides
+    the previous 3-item animation without affecting the rest of the site.
+  */
+
+  .hero .animated-text-four {
+    position: relative;
+    min-height: 1.6em;
+  }
+
+  .hero .animated-text-four > span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+    opacity: 0;
+
+    animation-name: minimalToleranceHeroFour;
+    animation-duration: 12s;
+    animation-timing-function: ease;
+    animation-iteration-count: infinite;
+    animation-fill-mode: both;
+  }
+
+  .hero .animated-text-four > span:nth-child(1) {
+    animation-delay: 0s;
+  }
+
+  .hero .animated-text-four > span:nth-child(2) {
+    animation-delay: 3s;
+  }
+
+  .hero .animated-text-four > span:nth-child(3) {
+    animation-delay: 6s;
+  }
+
+  .hero .animated-text-four > span:nth-child(4) {
+    animation-delay: 9s;
+  }
+
+  @keyframes minimalToleranceHeroFour {
+    0% {
+      opacity: 0;
+      transform: translateY(6px);
+    }
+
+    5% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    20% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    25% {
+      opacity: 0;
+      transform: translateY(-6px);
+    }
+
+    100% {
+      opacity: 0;
+      transform: translateY(-6px);
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .hero .animated-text-four > span {
+      display: none;
+      animation: none;
+    }
+
+    .hero .animated-text-four > span:first-child {
+      display: block;
+      position: static;
+      opacity: 1;
+      transform: none;
+    }
+  }
+</style>
