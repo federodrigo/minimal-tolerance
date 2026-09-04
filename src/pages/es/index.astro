@@ -39,17 +39,13 @@ import SEO from "../../components/SEO.astro";
             la coerción?
           </h1>
 
-          <!--
-            Se mantienen exactamente 3 spans para conservar
-            la animación original del sitio.
-
-            JavaScript hace rotar las 4 frases utilizando
-            esos mismos 3 espacios de animación.
-          -->
+          <p class="lead">
+            Una teoría del poder y sus límites
+          </p>
 
           <div
             class="animated-text"
-            aria-label="El poder se tolera. No se legitima. Solo bajo condiciones excepcionales. Una teoría de la coerción y sus límites"
+            aria-label="El poder se tolera. No se legitima. Solo bajo condiciones excepcionales"
           >
             <span>El poder se tolera</span>
             <span>No se legitima</span>
@@ -81,11 +77,9 @@ import SEO from "../../components/SEO.astro";
       <section id="book" class="book">
         <div class="container">
           <div class="book-grid">
-
             <div class="reveal reveal-left">
               <a
                 href="/es/book"
-                class="book-cover-link"
                 aria-label="Explorar el libro Una Teoría de la Tolerancia Mínima"
               >
                 <img
@@ -114,7 +108,6 @@ import SEO from "../../components/SEO.astro";
                 Explorar el Libro
               </a>
             </div>
-
           </div>
         </div>
       </section>
@@ -123,7 +116,6 @@ import SEO from "../../components/SEO.astro";
 
       <section id="questions" class="content-section">
         <div class="container">
-
           <p class="eyebrow reveal">
             LAS PREGUNTAS CENTRALES
           </p>
@@ -142,7 +134,6 @@ import SEO from "../../components/SEO.astro";
           <a href="/es/questions" class="secondary reveal">
             Leer las Preguntas
           </a>
-
         </div>
       </section>
 
@@ -150,7 +141,6 @@ import SEO from "../../components/SEO.astro";
 
       <section id="theory" class="content-section">
         <div class="container">
-
           <p class="eyebrow reveal">
             LA TEORÍA
           </p>
@@ -160,7 +150,6 @@ import SEO from "../../components/SEO.astro";
           </h2>
 
           <div class="foundation-principles stagger">
-
             <article class="foundation-principle reveal">
               <span class="foundation-number">
                 01
@@ -213,13 +202,11 @@ import SEO from "../../components/SEO.astro";
                 </p>
               </div>
             </article>
-
           </div>
 
           <a href="/es/theory" class="secondary reveal">
             Continuar leyendo
           </a>
-
         </div>
       </section>
 
@@ -227,7 +214,6 @@ import SEO from "../../components/SEO.astro";
 
       <section id="theorem" class="theorem">
         <div class="container">
-
           <p class="eyebrow reveal">
             EL CRITERIO
           </p>
@@ -237,7 +223,6 @@ import SEO from "../../components/SEO.astro";
           </h2>
 
           <div class="theorem-summary stagger">
-
             <article class="theorem-summary-card reveal reveal-scale">
               <h3>
                 No exclusión efectiva
@@ -255,7 +240,6 @@ import SEO from "../../components/SEO.astro";
                 Colapso persistente de la provisión voluntaria
               </h3>
             </article>
-
           </div>
 
           <div class="buttons reveal">
@@ -263,7 +247,6 @@ import SEO from "../../components/SEO.astro";
               Examinar el Teorema
             </a>
           </div>
-
         </div>
       </section>
 
@@ -271,7 +254,6 @@ import SEO from "../../components/SEO.astro";
 
       <section id="papers" class="ssrn">
         <div class="container">
-
           <p class="eyebrow reveal">
             INVESTIGACIÓN
           </p>
@@ -290,7 +272,6 @@ import SEO from "../../components/SEO.astro";
           >
             Ver los Papers
           </a>
-
         </div>
       </section>
     </main>
@@ -301,10 +282,6 @@ import SEO from "../../components/SEO.astro";
       const reduceMotion = window.matchMedia(
         "(prefers-reduced-motion: reduce)"
       ).matches;
-
-      /*
-        ANIMACIONES REVEAL
-      */
 
       const revealElements =
         document.querySelectorAll(".reveal");
@@ -333,80 +310,6 @@ import SEO from "../../components/SEO.astro";
           revealObserver.observe(element);
         });
       }
-
-      /*
-        TEXTO ANIMADO DEL HERO
-
-        La animación original utiliza 3 spans.
-
-        Se mantienen esos 3 spans para no alterar
-        el movimiento, los tiempos ni las transiciones
-        definidos en el CSS original.
-
-        La cuarta frase entra en la rotación mediante
-        JavaScript.
-      */
-
-      if (!reduceMotion) {
-        const heroPhrases = [
-          "El poder se tolera",
-          "No se legitima",
-          "Solo bajo condiciones excepcionales",
-          "Una teoría de la coerción y sus límites",
-        ];
-
-        const heroSpans =
-          document.querySelectorAll(".animated-text > span");
-
-        heroSpans.forEach((span, index) => {
-          let phraseIndex = index;
-
-          span.addEventListener("animationiteration", () => {
-            phraseIndex =
-              (phraseIndex + heroSpans.length) %
-              heroPhrases.length;
-
-            span.textContent = heroPhrases[phraseIndex];
-          });
-        });
-      }
     </script>
   </body>
 </html>
-
-<style>
-  /*
-    PORTADA DEL LIBRO
-
-    Solo se agrega la interacción de la portada.
-    No se modifica ningún estilo de .animated-text.
-  */
-
-  .book-cover-link {
-    display: inline-block;
-  }
-
-  .book-cover-link img {
-    display: block;
-    transition: transform 0.25s ease;
-  }
-
-  .book-cover-link:hover img {
-    transform: scale(1.02);
-  }
-
-  .book-cover-link:focus-visible {
-    outline: 2px solid currentColor;
-    outline-offset: 6px;
-  }
-
-  @media (prefers-reduced-motion: reduce) {
-    .book-cover-link img {
-      transition: none;
-    }
-
-    .book-cover-link:hover img {
-      transform: none;
-    }
-  }
-</style>
