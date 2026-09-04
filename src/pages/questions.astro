@@ -142,8 +142,8 @@ const questions = [
     number: "16",
     title: "Does It Lead to Minarchism?",
     answer: [
-      "No. Minarchism usually begins with a fixed set of state functions such as defense, police, and courts",
-      "This theory does not start from a predefined list. Every function must pass the same criterion",
+      "No. Minarchism usually limits the State to defense, police, and courts",
+      "The criterion may admit other functions if they satisfy its conditions, so the tolerable domain can extend beyond the minimal state",
     ],
   },
   {
@@ -151,8 +151,8 @@ const questions = [
     number: "17",
     title: "How Does It Differ from Nozick's Minimal State?",
     answer: [
-      "In Anarchy, State, and Utopia, Nozick defends a morally legitimate minimal state grounded in a theory of rights",
-      "Here, state coercion never becomes morally legitimate. It can only be tolerated exceptionally on grounds of necessity",
+      "In Anarchy, State, and Utopia, Nozick defends a morally legitimate minimal state centered on protective functions",
+      "Here the State never acquires moral legitimacy, and the tolerable domain can extend beyond that core",
     ],
   },
   {
@@ -341,6 +341,10 @@ const faqSchema = {
 
     <style>
       .question-index-card {
+        display: grid !important;
+        grid-template-columns: 3.1rem minmax(0, 1fr) !important;
+        align-items: start !important;
+        column-gap: 1rem !important;
         padding-block: 1.15rem !important;
         min-height: 0 !important;
         height: auto !important;
@@ -348,6 +352,16 @@ const faqSchema = {
           color 220ms ease,
           background 220ms ease,
           transform 220ms ease;
+      }
+
+      .question-index-number,
+      .question-index-title {
+        align-self: start !important;
+      }
+
+      .question-index-title {
+        display: block !important;
+        margin: 0 !important;
       }
 
       .question-index-number {
@@ -393,6 +407,8 @@ const faqSchema = {
         }
 
         .question-index-card {
+          grid-template-columns: 2.75rem minmax(0, 1fr) !important;
+          column-gap: 0.85rem !important;
           padding-block: 1rem !important;
         }
 
