@@ -226,7 +226,11 @@ p {
   left: 0;
   width: 100%;
   opacity: 0;
-  animation: rotateText 9s infinite;
+  animation: rotateText 12s infinite;
+}
+
+.animated-text span:nth-child(1) {
+  animation-delay: 0s;
 }
 
 .animated-text span:nth-child(2) {
@@ -237,19 +241,23 @@ p {
   animation-delay: 6s;
 }
 
+.animated-text span:nth-child(4) {
+  animation-delay: 9s;
+}
+
 @keyframes rotateText {
   0% {
     opacity: 0;
     transform: translateY(8px);
   }
 
-  10%,
-  30% {
+  7%,
+  20% {
     opacity: 1;
     transform: translateY(0);
   }
 
-  40%,
+  25%,
   100% {
     opacity: 0;
     transform: translateY(-8px);
