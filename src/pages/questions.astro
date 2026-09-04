@@ -341,6 +341,9 @@ const faqSchema = {
 
     <style>
       .question-index-card {
+        padding-block: 1.15rem !important;
+        min-height: 0 !important;
+        height: auto !important;
         transition:
           color 220ms ease,
           background 220ms ease,
@@ -353,7 +356,7 @@ const faqSchema = {
 
       .questions-intro {
         max-width: 760px;
-        margin: 0 0 2rem;
+        margin: 0 0 1.25rem;
         font-size: 1rem;
         line-height: 1.55;
         opacity: 0.82;
@@ -385,8 +388,12 @@ const faqSchema = {
 
       @media (max-width: 900px) {
         .questions-intro {
-          margin-bottom: 1.6rem;
+          margin-bottom: 1.1rem;
           font-size: 0.98rem;
+        }
+
+        .question-index-card {
+          padding-block: 1rem !important;
         }
 
         .question-index-title {
@@ -451,4 +458,3 @@ const faqSchema = {
     </script>
   </body>
 </html>
-
