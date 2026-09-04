@@ -25,8 +25,8 @@ const questions = [
     number: "03",
     title: "¿Puede ser legítima la coerción estatal?",
     answer: [
-      "No. Que provenga del Estado no la vuelve moralmente legítima",
-      "Puede ser tolerable sin dejar de ser ilegítima",
+      "No. Que la coerción provenga del Estado no la vuelve moralmente legítima",
+      "Puede ser tolerable sin volverse legítima",
     ],
   },
   {
@@ -34,8 +34,8 @@ const questions = [
     number: "04",
     title: "¿La democracia legitima la coerción estatal?",
     answer: [
-      "No. Votar o elegir un gobernante no le transfiere autoridad moral para decidir por otros en cualquier materia",
-      "La aprobación de una mayoría tampoco convierte una decisión impuesta en voluntaria",
+      "No. Votar o elegir un gobierno no transfiere autoridad moral para decidir por otros en cualquier materia",
+      "La aprobación de una mayoría no convierte una decisión impuesta en voluntaria",
     ],
   },
   {
@@ -43,7 +43,7 @@ const questions = [
     number: "05",
     title: "¿La utilidad o necesidad de una función justifica la coerción?",
     answer: [
-      "No. Que una función sea útil, necesaria, valiosa o socialmente beneficiosa no basta",
+      "No. Una función puede ser útil, necesaria, valiosa o socialmente beneficiosa y aun así no justificar coerción",
       "La importancia del fin no sustituye el criterio",
     ],
   },
@@ -53,7 +53,7 @@ const questions = [
     title: "¿Los bienes públicos requieren provisión estatal?",
     answer: [
       "No. La no exclusión y la no rivalidad describen una estructura del bien, no una conclusión institucional",
-      "La provisión puede sostenerse mediante arreglos voluntarios. Samuelson formalizó la estructura de los bienes de consumo colectivo en Teoría Pura del Gasto Público; de allí no se sigue que el Estado deba proveerlos",
+      "La provisión puede sostenerse mediante arreglos voluntarios. Samuelson formalizó la estructura de los bienes de consumo colectivo en <em>Teoría Pura del Gasto Público</em>; de allí no se sigue que el Estado deba proveerlos",
     ],
   },
   {
@@ -62,7 +62,7 @@ const questions = [
     title: "¿El problema del free rider justifica la coerción estatal?",
     answer: [
       "No. Que alguien pueda beneficiarse sin contribuir no demuestra que la función no pueda sostenerse",
-      "El free rider importa cuando ese incentivo provoca un fracaso persistente bajo arreglos materialmente distintos",
+      "El free riding importa cuando ese incentivo provoca un fracaso persistente bajo arreglos materialmente distintos",
     ],
   },
   {
@@ -75,12 +75,12 @@ const questions = [
     ],
   },
   {
-    id: "schmidtz-diferencia",
+    id: "schmidtz-bienes-publicos-free-rider",
     number: "09",
-    title: "¿En qué se diferencia esta teoría de Schmidtz?",
+    title: "¿Qué sostiene David Schmidtz sobre los bienes públicos y los free riders?",
     answer: [
-      "En Los Límites del Gobierno, David Schmidtz muestra que los bienes públicos y los free riders no bastan para justificar autoridad estatal y que ciertos arreglos voluntarios pueden funcionar",
-      "Esta teoría convierte el colapso persistente de la provisión voluntaria en una condición necesaria antes de considerar coerción",
+      "En <em>Los Límites del Gobierno</em>, Schmidtz muestra que los bienes públicos y los free riders no justifican por sí solos autoridad estatal y que ciertos arreglos voluntarios pueden funcionar",
+      "Esta teoría agrega una exigencia más estricta: debe establecerse el colapso persistente de la provisión voluntaria antes de considerar coerción",
     ],
   },
   {
@@ -98,61 +98,61 @@ const questions = [
     title: "¿Las externalidades positivas justifican la intervención estatal?",
     answer: [
       "No. Que una actividad beneficie a terceros no la convierte en una función estatal",
-      "Ese beneficio tampoco prueba no exclusión, no rivalidad ni colapso persistente de la provisión voluntaria",
+      "Ese beneficio no demuestra no exclusión, no rivalidad ni colapso persistente de la provisión voluntaria",
     ],
   },
   {
-    id: "teoria-libertaria",
+    id: "libertarismo-coercion-estatal",
     number: "12",
-    title: "¿Es una teoría libertaria?",
+    title: "¿Es compatible el libertarismo con la coerción estatal?",
     answer: [
-      "Sí. Parte de la libertad como regla y niega legitimidad moral intrínseca a la coerción, provenga del Estado o de cualquier otro",
-      "Admite una tolerancia excepcional por necesidad, pero nunca transforma coerción en legitimidad",
+      "No como legitimidad moral. Esta teoría es libertaria porque la libertad es el punto de partida y la coerción nunca es intrínsecamente legítima, provenga del Estado o de cualquier otro",
+      "Aun así, admite que una función coercitiva estrictamente delimitada sea tolerada por necesidad sin volverse legítima",
     ],
   },
   {
-    id: "hayek-gobierno-limitado",
+    id: "hayek-limites-poder-estatal",
     number: "13",
-    title: "¿En qué se diferencia del gobierno limitado de Hayek?",
+    title: "¿Qué limita el poder del Estado en la teoría política de Hayek?",
     answer: [
-      "Hayek estudia los límites del conocimiento, el orden espontáneo, las reglas generales y el Estado de derecho",
-      "Aquí la cuestión es previa: qué funciones pueden quedar bajo autoridad coercitiva",
+      "Hayek destaca los límites del conocimiento, el orden espontáneo, las reglas generales y el Estado de derecho",
+      "Aquí la pregunta es anterior: qué funciones pueden quedar bajo autoridad coercitiva",
     ],
   },
   {
-    id: "buchanan-limites-constitucionales",
+    id: "buchanan-economia-politica-constitucional",
     number: "14",
-    title: "¿En qué se diferencia de Buchanan?",
+    title: "¿Qué limita al Estado en la economía política constitucional de Buchanan?",
     answer: [
       "Buchanan estudia las reglas constitucionales dentro de las cuales se toman decisiones colectivas y el papel del acuerdo",
-      "Aquí la función debe superar un filtro previo antes de discutir cómo organizarla institucionalmente",
+      "Aquí la función debe superar un filtro previo antes de considerar su diseño institucional",
     ],
   },
   {
-    id: "rothbard-anarcocapitalismo",
+    id: "rothbard-anarcocapitalismo-coercion-estatal",
     number: "15",
-    title: "¿En qué se diferencia del anarcocapitalismo de Rothbard?",
+    title: "¿El anarcocapitalismo de Rothbard rechaza toda coerción estatal?",
     answer: [
-      "Comparte con Rothbard que la coerción es moralmente ilegítima, provenga del Estado o de cualquier otro",
-      "Se diferencia en que admite tolerar una función coercitiva por necesidad cuando supera el criterio, sin volverla legítima",
+      "Sí. Rothbard considera moralmente ilegítima la coerción, provenga del Estado o de cualquier otro, y rechaza la provisión estatal obligatoria",
+      "Esta teoría comparte ese rechazo filosófico de la legitimidad, pero admite tolerar una función coercitiva específica por necesidad cuando supera el criterio",
     ],
   },
   {
-    id: "minarquismo",
+    id: "minarquismo-estado-minimo-funciones",
     number: "16",
-    title: "¿Conduce al minarquismo?",
+    title: "¿Qué es el minarquismo y qué funciones cumple un Estado mínimo?",
     answer: [
-      "No. El minarquismo suele limitar al Estado a defensa, policía y tribunales",
-      "El criterio puede admitir otras funciones si cumplen sus condiciones, por lo que el ámbito tolerable puede ir más allá del Estado mínimo",
+      "El minarquismo suele partir de un conjunto fijo de funciones estatales, como defensa, policía y tribunales",
+      "Esta teoría no parte de una lista predeterminada. Cada función debe superar el mismo criterio",
     ],
   },
   {
-    id: "nozick-estado-minimo",
+    id: "nozick-estado-minimo-legitimidad",
     number: "17",
-    title: "¿En qué se diferencia del Estado mínimo de Nozick?",
+    title: "¿Es moralmente legítimo el Estado mínimo de Nozick?",
     answer: [
-      "En Anarquía, Estado y Utopía, Nozick defiende un Estado mínimo moralmente legítimo, concentrado en funciones de protección",
-      "Aquí el Estado nunca adquiere legitimidad moral y el ámbito tolerable puede superar ese núcleo",
+      "Sí, dentro de la teoría de Nozick. En <em>Anarquía, Estado y Utopía</em>, defiende un Estado mínimo moralmente legítimo fundado en una teoría de derechos",
+      "Aquí la coerción estatal nunca se vuelve moralmente legítima. Solo puede tolerarse excepcionalmente por razones de necesidad",
     ],
   },
   {
@@ -160,29 +160,32 @@ const questions = [
     number: "18",
     title: "¿Puede el Estado limitarse a sí mismo?",
     answer: [
-      "Solo de forma imperfecta. Quien ejerce el poder también participa en la definición, interpretación y modificación de sus propios límites",
-      "Por eso la restricción no puede descansar únicamente en la voluntad de quien gobierna",
+      "Solo de forma imperfecta. Quien ejerce el poder también participa en la definición, interpretación y modificación de sus límites",
+      "La restricción, por tanto, no puede descansar únicamente en la voluntad de quienes gobiernan",
     ],
   },
   {
-    id: "ausencia-alternativas-estado-necesario",
+    id: "ausencia-alternativas-voluntarias-estado-necesario",
     number: "19",
     title: "¿La ausencia de alternativas voluntarias prueba que el Estado es necesario?",
     answer: [
       "No. Un monopolio legal o una provisión estatal prolongada puede impedir que aparezcan proveedores, capacidades e instituciones alternativas",
-      "Que hoy no exista una alternativa no demuestra un fracaso persistente de la provisión voluntaria",
+      "Que hoy no exista una alternativa no demuestra un colapso persistente de la provisión voluntaria",
     ],
   },
   {
-    id: "funcion-justifica-cualquier-intervencion",
+    id: "funcion-estatal-necesaria-alcance-intervencion",
     number: "20",
-    title: "¿Que una función supere el criterio autoriza cualquier intervención estatal?",
+    title: "Si una función estatal es necesaria, ¿hasta dónde puede llegar la intervención?",
     answer: [
-      "No. Que una función supere el criterio no autoriza cualquier impuesto, agencia, monopolio, mandato, presupuesto o forma de ejecución",
+      "Solo hasta donde exista justificación separada. La necesidad de la función no autoriza cualquier impuesto, agencia, monopolio, mandato, presupuesto o forma de ejecución",
       "Cada instrumento coercitivo enfrenta una segunda carga de prueba",
     ],
   },
 ];
+
+const stripHtml = (value) =>
+  value.replace(/<[^>]*>/g, "");
 
 const faqSchema = {
   "@context": "https://schema.org",
@@ -192,7 +195,7 @@ const faqSchema = {
     name: question.title,
     acceptedAnswer: {
       "@type": "Answer",
-      text: question.answer.join(" "),
+      text: question.answer.map(stripHtml).join(" "),
     },
   })),
 };
@@ -210,7 +213,7 @@ const faqSchema = {
 
     <SEO
       title="Límites del Estado, coerción y bienes públicos | Tolerancia Mínima"
-      description="Preguntas sobre coerción estatal, bienes públicos, free riders, fallas de mercado, externalidades, libertarismo, anarcocapitalismo, minarquismo y límites del Estado"
+      description="Preguntas sobre poder estatal, coerción, bienes públicos, free riders, fallas de mercado, libertarismo, Hayek, Buchanan, Rothbard, minarquismo y Nozick"
       lang="es"
     />
 
@@ -224,6 +227,8 @@ const faqSchema = {
     <Header />
 
     <main>
+      <!-- HERO -->
+
       <section class="hero questions-page-hero">
         <div class="hero-content hero-sequence">
           <p class="eyebrow">
@@ -237,11 +242,15 @@ const faqSchema = {
         </div>
       </section>
 
+      <!-- FRASE CENTRAL -->
+
       <section class="statement">
         <blockquote class="reveal reveal-scale">
           Una excepción no es una licencia para el poder
         </blockquote>
       </section>
+
+      <!-- EXPLORAR -->
 
       <section class="questions-index">
         <div class="questions-container">
@@ -277,6 +286,8 @@ const faqSchema = {
         </div>
       </section>
 
+      <!-- PREGUNTAS -->
+
       <section class="questions-content">
         <div class="questions-container">
           {
@@ -297,7 +308,7 @@ const faqSchema = {
 
                 <div class="question-copy reveal reveal-right">
                   {question.answer.map((paragraph) => (
-                    <p>{paragraph}</p>
+                    <p set:html={paragraph}></p>
                   ))}
                 </div>
               </article>
@@ -305,6 +316,8 @@ const faqSchema = {
           }
         </div>
       </section>
+
+      <!-- CTA FINAL -->
 
       <section class="questions-cta">
         <div class="questions-container questions-cta-content">
@@ -340,32 +353,69 @@ const faqSchema = {
     <Footer />
 
     <style>
+      .questions-index-grid {
+        display: grid !important;
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        grid-auto-flow: row !important;
+        gap: 0 !important;
+        align-items: stretch !important;
+      }
+
       .question-index-card {
+        box-sizing: border-box !important;
+        display: grid !important;
+        grid-template-columns: 3.1rem minmax(0, 1fr) !important;
+        align-items: start !important;
+        align-content: start !important;
+        column-gap: 1rem !important;
+        width: 100% !important;
+        height: 100% !important;
+        min-height: 0 !important;
+        margin: 0 !important;
+        padding: 1rem 1.15rem 1rem 0 !important;
         transition:
           color 220ms ease,
           background 220ms ease,
           transform 220ms ease;
       }
 
+      .question-index-card:nth-child(odd) {
+        border-right: 1px solid var(--line, rgba(20, 30, 40, 0.14)) !important;
+        padding-right: 1.4rem !important;
+      }
+
+      .question-index-card:nth-child(even) {
+        padding-left: 2rem !important;
+      }
+
+      .question-index-number,
+      .question-index-title {
+        align-self: start !important;
+        margin: 0 !important;
+        padding: 0 !important;
+      }
+
       .question-index-number {
+        line-height: 1.28 !important;
         transition: transform 220ms ease;
+      }
+
+      .question-index-title {
+        display: block !important;
+        line-height: 1.28;
+        font-size: clamp(0.95rem, 1vw, 1.08rem);
       }
 
       .questions-intro {
         max-width: 760px;
-        margin: 0 0 2rem;
+        margin: 0 0 1.25rem;
         font-size: 1rem;
         line-height: 1.55;
         opacity: 0.82;
       }
 
-      .question-index-title {
-        font-size: clamp(0.95rem, 1vw, 1.08rem);
-        line-height: 1.28;
-      }
-
       .question-heading h2 {
-        font-size: clamp(1.2rem, 1.8vw, 1.8rem);
+        font-size: clamp(1.08rem, 1.62vw, 1.62rem);
         line-height: 1.12;
       }
 
@@ -384,8 +434,21 @@ const faqSchema = {
       }
 
       @media (max-width: 900px) {
+        .questions-index-grid {
+          grid-template-columns: 1fr !important;
+        }
+
+        .question-index-card,
+        .question-index-card:nth-child(odd),
+        .question-index-card:nth-child(even) {
+          grid-template-columns: 2.75rem minmax(0, 1fr) !important;
+          column-gap: 0.85rem !important;
+          padding: 0.9rem 0 !important;
+          border-right: 0 !important;
+        }
+
         .questions-intro {
-          margin-bottom: 1.6rem;
+          margin-bottom: 1.1rem;
           font-size: 0.98rem;
         }
 
@@ -394,7 +457,7 @@ const faqSchema = {
         }
 
         .question-heading h2 {
-          font-size: clamp(1.1rem, 3.7vw, 1.4rem);
+          font-size: clamp(0.99rem, 3.33vw, 1.26rem);
         }
 
         .question-heading.reveal-left,
@@ -451,4 +514,5 @@ const faqSchema = {
     </script>
   </body>
 </html>
+
 
