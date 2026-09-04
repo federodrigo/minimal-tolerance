@@ -75,11 +75,17 @@ import SEO from "../components/SEO.astro";
         <div class="container">
           <div class="book-grid">
             <div class="reveal reveal-left">
-              <img
-                src="/images/book-cover.jpg"
-                alt="Cover of A Theory of Minimal Tolerance by Fede Rodrigo"
-                loading="lazy"
-              />
+              <a
+                href="/book"
+                class="book-cover-link"
+                aria-label="Explore the book A Theory of Minimal Tolerance"
+              >
+                <img
+                  src="/images/book-cover.jpg"
+                  alt="Cover of A Theory of Minimal Tolerance by Fede Rodrigo"
+                  loading="lazy"
+                />
+              </a>
             </div>
 
             <div class="reveal reveal-right">
@@ -308,9 +314,6 @@ import SEO from "../components/SEO.astro";
 <style>
   /*
     HERO ANIMATION — 4 PHRASES
-
-    This deliberately uses a new class and animation name so it overrides
-    the previous 3-item animation without affecting the rest of the site.
   */
 
   .hero .animated-text-four {
@@ -376,6 +379,34 @@ import SEO from "../components/SEO.astro";
     }
   }
 
+  /*
+    BOOK COVER LINK
+  */
+
+  .book-cover-link {
+    display: inline-block;
+  }
+
+  .book-cover-link img {
+    display: block;
+    transition:
+      transform 0.25s ease,
+      opacity 0.25s ease;
+  }
+
+  .book-cover-link:hover img {
+    transform: scale(1.02);
+  }
+
+  .book-cover-link:focus-visible {
+    outline: 2px solid currentColor;
+    outline-offset: 6px;
+  }
+
+  /*
+    REDUCED MOTION
+  */
+
   @media (prefers-reduced-motion: reduce) {
     .hero .animated-text-four > span {
       display: none;
@@ -386,6 +417,14 @@ import SEO from "../components/SEO.astro";
       display: block;
       position: static;
       opacity: 1;
+      transform: none;
+    }
+
+    .book-cover-link img {
+      transition: none;
+    }
+
+    .book-cover-link:hover img {
       transform: none;
     }
   }
