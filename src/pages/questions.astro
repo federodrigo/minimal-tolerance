@@ -142,8 +142,8 @@ const questions = [
     number: "16",
     title: "Does It Lead to Minarchism?",
     answer: [
-      "No. Minarchism usually limits the State to defense, police, and courts",
-      "The criterion may admit other functions if they satisfy its conditions, so the tolerable domain can extend beyond the minimal state",
+      "No. Minarchism usually begins with a fixed set of state functions such as defense, police, and courts",
+      "This theory does not start from a predefined list. Every function must pass the same criterion",
     ],
   },
   {
@@ -151,8 +151,8 @@ const questions = [
     number: "17",
     title: "How Does It Differ from Nozick's Minimal State?",
     answer: [
-      "In Anarchy, State, and Utopia, Nozick defends a morally legitimate minimal state centered on protective functions",
-      "Here the State never acquires moral legitimacy, and the tolerable domain can extend beyond that core",
+      "In Anarchy, State, and Utopia, Nozick defends a morally legitimate minimal state grounded in a theory of rights",
+      "Here, state coercion never becomes morally legitimate. It can only be tolerated exceptionally on grounds of necessity",
     ],
   },
   {
@@ -176,7 +176,7 @@ const questions = [
   {
     id: "function-justifies-any-intervention",
     number: "20",
-    title: "If a Function Passes the Criterion, Does That Authorize Any Government Intervention?",
+    title: "Does Passing the Criterion Authorize Any Government Intervention?",
     answer: [
       "No. Passing the criterion does not authorize any tax, agency, monopoly, mandate, budget, or form of enforcement",
       "Each coercive instrument faces a second burden of proof",
@@ -341,27 +341,34 @@ const faqSchema = {
 
     <style>
       .question-index-card {
-        display: grid !important;
-        grid-template-columns: 3.1rem minmax(0, 1fr) !important;
-        align-items: start !important;
-        column-gap: 1rem !important;
-        padding-block: 1.15rem !important;
+        position: relative !important;
+        display: block !important;
+        padding: 1rem 1rem 1rem 5.1rem !important;
         min-height: 0 !important;
         height: auto !important;
+        align-items: initial !important;
+        justify-content: initial !important;
+        align-content: initial !important;
         transition:
           color 220ms ease,
           background 220ms ease,
           transform 220ms ease;
       }
 
-      .question-index-number,
-      .question-index-title {
-        align-self: start !important;
+      .question-index-number {
+        position: absolute !important;
+        top: 1rem !important;
+        left: 0 !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        line-height: 1.28 !important;
       }
 
       .question-index-title {
         display: block !important;
         margin: 0 !important;
+        padding: 0 !important;
+        align-self: initial !important;
       }
 
       .question-index-number {
@@ -382,7 +389,7 @@ const faqSchema = {
       }
 
       .question-heading h2 {
-        font-size: clamp(1.2rem, 1.8vw, 1.8rem);
+        font-size: clamp(1.08rem, 1.62vw, 1.62rem);
         line-height: 1.12;
       }
 
@@ -407,9 +414,11 @@ const faqSchema = {
         }
 
         .question-index-card {
-          grid-template-columns: 2.75rem minmax(0, 1fr) !important;
-          column-gap: 0.85rem !important;
-          padding-block: 1rem !important;
+          padding: 0.9rem 0.8rem 0.9rem 4.5rem !important;
+        }
+
+        .question-index-number {
+          top: 0.9rem !important;
         }
 
         .question-index-title {
@@ -417,7 +426,7 @@ const faqSchema = {
         }
 
         .question-heading h2 {
-          font-size: clamp(1.1rem, 3.7vw, 1.4rem);
+          font-size: clamp(0.99rem, 3.33vw, 1.26rem);
         }
 
         .question-heading.reveal-left,
