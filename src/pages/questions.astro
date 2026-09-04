@@ -5,48 +5,48 @@ import SEO from "../components/SEO.astro";
 
 const questions = [
   {
-    id: "proper-functions-of-government",
+    id: "proper-role-of-government",
     number: "01",
-    title: "What Are the Proper Functions of Government?",
+    title: "What Is the Proper Role of Government?",
     answer: [
-      "Political theories draw the boundary of government in different places. Some retain defense, police, and courts; others add education, healthcare, pensions, infrastructure, monetary policy, research, or welfare. The harder issue is the standard used to decide why any activity belongs under coercive authority",
-      "Minimal Tolerance starts there. No function is accepted because it is familiar, valuable, strategic, or important. Each must establish why voluntary provision is insufficient and why coercion can be considered at all",
-    ],
-  },
-  {
-    id: "why-these-functions",
-    number: "02",
-    title: "Why These Government Functions and Not Others?",
-    answer: [
-      "A short list of state functions is not yet a principle. Why police but not healthcare, defense but not pensions, courts but not scientific research? Importance cannot draw that line because many activities outside government are also essential",
-      "A consistent boundary requires the same test for every proposed function. The issue is not how many activities the State performs, but which ones can meet the burden required to depart from voluntary cooperation",
+      "Political theories assign government very different roles. Some retain defense, police, and courts; others add education, healthcare, pensions, infrastructure, monetary policy, research, or welfare. The prior question is what principle separates functions that may be placed under coercive authority from those left to voluntary cooperation",
+      "Minimal Tolerance applies one standard to every proposed function. Importance, popularity, strategic value, or historical precedent do not qualify a function by themselves",
     ],
   },
   {
     id: "limits-government-power",
-    number: "03",
-    title: "What Limits Government Power?",
+    number: "02",
+    title: "What Are the Limits of Government Power?",
     answer: [
-      "Tradition, elections, good intentions, and attractive outcomes do not create a stable limit on political power. A durable limit must apply regardless of who governs or which objective is pursued",
-      "Minimal Tolerance places liberty at the baseline and the burden of proof on coercion. Every exception is function-specific and must establish its own conditions",
+      "A limit that depends on who governs, which policy is popular, or which outcome is promised is not a stable limit. Political power needs a standard that survives changes in parties, objectives, technologies, and circumstances",
+      "Minimal Tolerance places liberty at the baseline and the burden of proof on power. Each proposed exception must be established function by function",
     ],
   },
   {
-    id: "when-state-coercion-tolerated",
-    number: "04",
-    title: "When Can State Coercion Be Tolerated?",
+    id: "state-coercion-justified",
+    number: "03",
+    title: "Can State Coercion Ever Be Justified?",
     answer: [
-      "Laws, taxes, and compulsory rules remain binding on people who reject them. Democratic approval can affect political acceptance, but it does not make an imposed act voluntary or morally legitimate",
-      "Minimal Tolerance asks whether coercion can nevertheless be tolerated for a specific function. That possibility arises only when effective non-excludability, relevant non-rivalry, and persistent collapse of voluntary provision are jointly established",
+      "If justified means rendered morally legitimate, no. Elections, majority approval, beneficial outcomes, and good intentions do not make an imposed act voluntary or give coercion intrinsic moral legitimacy",
+      "Minimal Tolerance asks a different question: when may coercion be tolerated despite remaining illegitimate? That possibility arises only when effective non-excludability, relevant non-rivalry, and persistent collapse of voluntary provision are jointly established for a specific function",
     ],
   },
   {
     id: "public-goods-justify-government",
-    number: "05",
+    number: "04",
     title: "Do Public Goods Justify Government Intervention?",
     answer: [
-      "Non-excludability and non-rivalry can create free-rider incentives, but public-good characteristics do not prove that government provision or compulsory financing is necessary. Voluntary institutions may still sustain the function",
-      "Minimal Tolerance requires a third condition: persistent collapse of voluntary provision. The structure of a public good matters, but coercive necessity appears only when materially different voluntary arrangements repeatedly fail",
+      "Non-excludability and non-rivalry can create incentives to free ride, but public-good characteristics do not prove that government provision or compulsory financing is necessary. Voluntary institutions may still sustain the relevant function",
+      "Minimal Tolerance therefore requires a third condition: persistent collapse of voluntary provision. Public-good structure is part of the test, not a sufficient case for coercion",
+    ],
+  },
+  {
+    id: "samuelson-public-goods-government",
+    number: "05",
+    title: "Does Samuelson's Theory of Public Goods Require Government Provision?",
+    answer: [
+      "In The Pure Theory of Public Expenditure, Paul Samuelson formalized collective consumption goods whose use by one individual does not subtract from what others can consume. Contemporary public-goods analysis also emphasizes non-excludability, which can intensify free-rider incentives",
+      "Minimal Tolerance accepts non-rivalry and non-excludability as relevant structural conditions but rejects the move from classification to coercive provision. Persistent collapse of voluntary provision must also be established",
     ],
   },
   {
@@ -54,8 +54,8 @@ const questions = [
     number: "06",
     title: "Does the Free-Rider Problem Justify Taxation?",
     answer: [
-      "No. A free rider can benefit without paying, but the existence of that incentive does not establish that voluntary provision will collapse. Free riding is evidence of a potential financing problem, not proof of coercive necessity",
-      "The stronger test is whether free-rider incentives persistently undermine the financing, coordination, or participation required to sustain the function across materially different voluntary arrangements",
+      "No. A free rider can receive a benefit without paying, but that incentive does not establish that voluntary provision will fail. Free riding signals a possible financing shortfall, not proof that compulsory taxation is necessary",
+      "The relevant test is whether those incentives persistently undermine the financing, coordination, or participation required to sustain the function across materially different voluntary arrangements",
     ],
   },
   {
@@ -63,8 +63,8 @@ const questions = [
     number: "07",
     title: "Can Public Goods Be Provided Voluntarily?",
     answer: [
-      "Yes, in some cases. Public-good characteristics create an incentive problem, not a predetermined institutional outcome. Voluntary provision can use contracts, associations, clubs, bundled services, philanthropy, reputation, cross-subsidies, technological exclusion, or other arrangements",
-      "What matters is whether those arrangements can sustain the relevant function over time. If voluntary provision works, the coercive exception is not established",
+      "Yes, in some cases. Public-good characteristics create incentives, not a predetermined institutional outcome. Provision can emerge through contracts, associations, clubs, bundled services, philanthropy, reputation, cross-subsidies, technological exclusion, or other voluntary arrangements",
+      "The decisive question is whether those arrangements can sustain the function over time. If they can, the coercive exception is not established",
     ],
   },
   {
@@ -72,58 +72,94 @@ const questions = [
     number: "08",
     title: "When Does Voluntary Provision Actually Fail?",
     answer: [
-      "One failed arrangement, temporary underprovision, or the absence of a current provider is not enough. Failure may reflect poor design, coordination costs, technology, or conditions that can change",
+      "One failed provider, temporary underprovision, or the absence of a current arrangement is not enough. Failure may reflect poor design, coordination costs, technology, or circumstances that can change",
       "Persistent collapse of voluntary provision (CV) requires failure across materially different voluntary arrangements over time. This is the central evidentiary burden of the Minimal Tolerance Criterion",
     ],
   },
   {
-    id: "market-failure-government-intervention",
+    id: "schmidtz-public-goods-free-riding",
     number: "09",
+    title: "How Does Minimal Tolerance Differ from David Schmidtz on Public Goods?",
+    answer: [
+      "In The Limits of Government, David Schmidtz argues that public goods and free riders do not by themselves establish state authority, and he examines voluntary arrangements that can sustain provision despite those incentives",
+      "Minimal Tolerance adds a stricter requirement. Persistent failure of voluntary provision is not simply a response to a case for coercion; it becomes a necessary condition before coercive necessity can be considered. Free riding alone never passes the test",
+    ],
+  },
+  {
+    id: "market-failure-government-intervention",
+    number: "10",
     title: "Does Market Failure Justify Government Intervention?",
     answer: [
-      "Not by itself. Inefficiency, imperfect information, externalities, concentration, or underprovision may identify a problem without showing that coercive provision is necessary. A market failure and a case for state coercion are different propositions",
-      "Minimal Tolerance asks a narrower question. For a function to enter the theorem, the required conditions must be established rather than inferred from the existence of an imperfect outcome",
+      "Not by itself. Externalities, natural monopoly, imperfect information, concentration, or underprovision can identify a market failure without showing that coercive provision is necessary. Market failure and state necessity are different claims",
+      "Minimal Tolerance asks whether the proposed function satisfies the conditions for an exception. An imperfect market outcome cannot substitute for that test",
     ],
   },
   {
     id: "minimal-tolerance-minarchism",
-    number: "10",
+    number: "11",
     title: "Is Minimal Tolerance a Form of Minarchism?",
     answer: [
-      "No. Minarchism usually starts from a minimal or night-watchman state centered on functions such as defense, police, and courts. Minimal Tolerance grants none of those functions an automatic exemption",
-      "Every function faces the same test. The resulting boundary could be narrower than a conventional minimal state, overlap with it, or include a different set of functions. The criterion determines the boundary; the label does not",
+      "No. Minarchism usually begins with a minimal or night-watchman state centered on defense, police, and courts. Minimal Tolerance grants none of those functions an automatic exemption",
+      "Every function faces the same criterion. The resulting boundary could be narrower than a conventional minimal state, overlap with it, or contain a different set of functions. The test determines the boundary; the label does not",
     ],
   },
   {
     id: "nozick-minimal-state",
-    number: "11",
+    number: "12",
     title: "Is Minimal Tolerance Robert Nozick's Minimal State?",
     answer: [
-      "No. Nozick defends a morally legitimate minimal state limited largely to protective functions. Minimal Tolerance neither begins with that institutional conclusion nor treats state coercion as morally legitimate",
-      "Defense, security, and adjudication must pass the same three conditions as any other proposed function. The result may overlap with Nozick's minimal state, but the logic is different: Nozick justifies a minimal State; Minimal Tolerance tests which specific coercive functions, if any, can be tolerated without becoming legitimate",
+      "In Anarchy, State, and Utopia, Robert Nozick defends a morally legitimate minimal state limited largely to protective functions. Minimal Tolerance neither begins with that institutional conclusion nor treats state coercion as morally legitimate",
+      "Defense, security, and adjudication must satisfy the same conditions as any other proposed function. The result may overlap with Nozick's minimal state, but the logic differs: Nozick justifies a minimal State; Minimal Tolerance tests which coercive functions, if any, may be tolerated without becoming legitimate",
     ],
   },
   {
     id: "minimal-tolerance-anarcho-capitalism",
-    number: "12",
-    title: "How Does Minimal Tolerance Differ from Anarcho-Capitalism?",
+    number: "13",
+    title: "Does Minimal Tolerance Lead to Anarcho-Capitalism?",
     answer: [
-      "Minimal Tolerance shares a fundamental philosophical premise with anarcho-capitalism: state coercion does not acquire moral legitimacy because the State exercises it. Voluntary cooperation remains the baseline",
-      "The divergence lies in what follows. Minimal Tolerance allows a narrow possibility that coercion can remain illegitimate yet be tolerated when all three conditions are established for a specific function. The distinction is between legitimacy and tolerance",
+      "Not necessarily. Anarcho-capitalism proposes replacing compulsory state monopolies with voluntary institutions, including private provision of protection and adjudication. Minimal Tolerance does not choose that institutional endpoint in advance",
+      "It applies the same test to each function. Where voluntary provision survives, coercive provision fails the criterion; where all three conditions are established, a narrow coercive exception may be tolerated. The theory can therefore converge with anarcho-capitalist conclusions in some functions without becoming an anarcho-capitalist system",
+    ],
+  },
+  {
+    id: "rothbard-anarcho-capitalism",
+    number: "14",
+    title: "How Does Minimal Tolerance Differ from Murray Rothbard's Anarcho-Capitalism?",
+    answer: [
+      "Murray Rothbard rejects taxation and the State's compulsory monopoly of protection and adjudication, arguing that defense, police, and courts can be supplied through voluntary institutions",
+      "Minimal Tolerance shares the rejection of intrinsic state legitimacy but reaches a different conditional conclusion. It allows a coercive function to remain morally illegitimate yet be tolerated if it survives the three-part test. Rothbard rejects the State as a coercive institution; Minimal Tolerance asks whether any specific exception can meet an exceptional burden of proof",
     ],
   },
   {
     id: "minimal-tolerance-libertarianism",
-    number: "13",
+    number: "15",
     title: "Is Minimal Tolerance a Libertarian Theory?",
     answer: [
-      "It shares with libertarianism and classical liberalism a strong presumption in favor of liberty and a high burden on political power. It is not, however, built from a predefined libertarian list of legitimate state functions",
-      "The criterion operates function by function and can be applied without adopting a minarchist, anarcho-capitalist, or other ideological destination in advance. Minimal Tolerance is a test of coercive necessity, not a label for a predetermined political system",
+      "It shares with libertarianism and classical liberalism a strong presumption in favor of liberty and a high burden on political power. It is not derived from a complete libertarian doctrine of rights or from a fixed list of legitimate state functions",
+      "The criterion operates function by function without choosing a minarchist, anarcho-capitalist, or other ideological destination in advance. Minimal Tolerance is a test of coercive necessity, not a label for a predetermined political system",
+    ],
+  },
+  {
+    id: "hayek-limited-government",
+    number: "16",
+    title: "How Does Minimal Tolerance Differ from Friedrich Hayek's Limited Government?",
+    answer: [
+      "Friedrich Hayek emphasizes dispersed knowledge, spontaneous order, general rules, and the rule of law as limits on arbitrary direction. Those concerns explain why centralized power faces structural constraints and how a legal order should operate",
+      "Minimal Tolerance addresses a prior question: which functions may be placed under coercive authority at all? A government can follow general rules and still exercise a function that has not met the burden for coercive necessity. The approaches can complement each other, but they answer different questions",
+    ],
+  },
+  {
+    id: "buchanan-constitutional-limits",
+    number: "17",
+    title: "How Does Minimal Tolerance Differ from James Buchanan's Constitutional Limits on Government?",
+    answer: [
+      "James Buchanan's public choice and constitutional political economy focus on the rules within which collective decisions are made and on agreement as a basis for evaluating political arrangements",
+      "Minimal Tolerance places a function-level filter before institutional design. It asks whether a proposed function can meet the conditions for coercive necessity in the first place. Constitutional agreement or constraint cannot replace that burden",
     ],
   },
   {
     id: "defense-police-courts-government-functions",
-    number: "14",
+    number: "18",
     title: "Are Defense, Police, and Courts Necessarily Government Functions?",
     answer: [
       "No function qualifies because history or political theory usually assigns it to the State. Defense, internal security, and adjudication are strong candidates for examination, not automatic exceptions",
@@ -131,20 +167,20 @@ const questions = [
     ],
   },
   {
-    id: "national-defense-voluntary",
-    number: "15",
-    title: "Can National Defense Be Provided Voluntarily?",
+    id: "national-defense-private-voluntary",
+    number: "19",
+    title: "Can National Defense Be Provided Privately or Voluntarily?",
     answer: [
-      "Territorial defense is one of the strongest cases for the theorem because exclusion can be difficult and protection may be largely non-rival. Those features can create a severe free-rider problem",
-      "They still do not settle the result. The decisive issue is whether materially different voluntary arrangements can sustain the required defense over time. Only persistent collapse can move the function toward the coercive exception",
+      "Territorial defense is one of the strongest cases for the theorem because exclusion can be difficult and protection may be largely non-rival. Those features can create powerful incentives to free ride",
+      "They still do not settle the result. The decisive question is whether materially different private or voluntary arrangements can sustain the required defense over time. Only persistent collapse can move the function toward the coercive exception",
     ],
   },
   {
-    id: "does-minimal-tolerance-legitimize-coercion",
-    number: "16",
-    title: "Does Minimal Tolerance Ever Legitimize State Coercion?",
+    id: "minimal-tolerance-legitimize-state",
+    number: "20",
+    title: "Does Minimal Tolerance Legitimize the State?",
     answer: [
-      "No. Passing the Minimal Tolerance Criterion does not make coercion morally legitimate, validate the State, or create political authority. It establishes only that a specific function can meet the conditions for coercive necessity",
+      "No. Passing the Minimal Tolerance Criterion does not make coercion morally legitimate, validate the State as an institution, or create general political authority. It establishes only that a specific function can meet the conditions for coercive necessity",
       "Any tax, agency, mandate, monopoly, budget, or enforcement rule still requires separate examination. Tolerance is not legitimacy, and one tolerated function creates no presumption in favor of another",
     ],
   },
@@ -158,7 +194,7 @@ const faqSchema = {
     name: question.title,
     acceptedAnswer: {
       "@type": "Answer",
-      text: question.answer.join(" "),
+      text: `${question.answer.join(". ")}.`,
     },
   })),
 };
@@ -175,8 +211,8 @@ const faqSchema = {
     />
 
     <SEO
-      title="Limits of Government, Public Goods & State Coercion | Minimal Tolerance"
-      description="Questions on government power, state coercion, public goods, free riders, taxation, market failure, voluntary provision, minarchism, Nozick, anarcho-capitalism, libertarianism, defense, police, and courts"
+      title="Limits of Government: Public Goods, Coercion & the Minimal State | Minimal Tolerance"
+      description="Questions on limits of government, state coercion, public goods, free riders, market failure, the minimal state, Nozick, Rothbard, Hayek, Buchanan and Samuelson"
       lang="en"
     />
 
@@ -221,9 +257,18 @@ const faqSchema = {
             EXPLORE
           </p>
 
+          <p class="questions-intro reveal">
+            These questions examine the proper role and limits of government
+            through state coercion, political authority, public goods, free
+            riding, taxation, market failure, voluntary provision, the minimal
+            state, minarchism, anarcho-capitalism, and public choice. They also place
+            Minimal Tolerance alongside Nozick, Rothbard, Hayek, Buchanan,
+            Samuelson, and Schmidtz.
+          </p>
+
           <nav
             class="questions-index-grid stagger"
-            aria-label="Questions about government, coercion, and political power"
+            aria-label="Questions about government, coercion, public goods, and political power"
           >
             {
               questions.map((question) => (
@@ -290,9 +335,9 @@ const faqSchema = {
             </h2>
 
             <p>
-              Explore the test for determining when a specific function
-              can meet the conditions for coercive necessity without
-              turning tolerance into legitimacy
+              Explore the criterion for determining when a specific function
+              can meet the conditions for coercive necessity without turning
+              tolerance into legitimacy
             </p>
           </div>
 
@@ -329,6 +374,24 @@ const faqSchema = {
         transition: transform 220ms ease;
       }
 
+      .questions-intro {
+        max-width: 820px;
+        margin: 0 0 2.25rem;
+        font-size: 1rem;
+        line-height: 1.65;
+        opacity: 0.82;
+      }
+
+      .question-index-title {
+        font-size: clamp(0.95rem, 1vw, 1.08rem);
+        line-height: 1.28;
+      }
+
+      .question-heading h2 {
+        font-size: clamp(1.7rem, 2.55vw, 2.55rem);
+        line-height: 1.1;
+      }
+
       .question-section {
         overflow: hidden;
       }
@@ -344,6 +407,19 @@ const faqSchema = {
       }
 
       @media (max-width: 900px) {
+        .questions-intro {
+          margin-bottom: 1.8rem;
+          font-size: 0.98rem;
+        }
+
+        .question-index-title {
+          font-size: 0.95rem;
+        }
+
+        .question-heading h2 {
+          font-size: clamp(1.55rem, 5.3vw, 2rem);
+        }
+
         .question-heading.reveal-left,
         .question-copy.reveal-right {
           transform: translateY(24px);
@@ -398,3 +474,4 @@ const faqSchema = {
     </script>
   </body>
 </html>
+
