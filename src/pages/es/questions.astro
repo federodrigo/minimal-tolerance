@@ -9,17 +9,15 @@ const questions = [
     number: "01",
     title: "¿Qué funciones debe cumplir el Estado?",
     answer: [
-      "No existe una lista válida por tradición. Defensa, justicia, salud, educación o cualquier otra función deben pasar el mismo examen",
-      "La pregunta no es qué función parece importante, sino cuál puede justificar una excepción a la cooperación voluntaria",
+      "Ninguna función debe darse por sentada por el solo hecho de atribuírsela al Estado. Cada una debe superar el mismo criterio",
     ],
   },
   {
-    id: "limites-del-poder-del-estado",
+    id: "carga-prueba-coercion",
     number: "02",
-    title: "¿Qué limita el poder del Estado?",
+    title: "¿Quién debe probar que la coerción es necesaria?",
     answer: [
-      "Un límite no puede depender de quién gobierna, qué política es popular o qué fin se persigue",
-      "El criterio debe valer para cualquier gobierno y colocar la carga de la prueba sobre la coerción",
+      "Quien pretende imponerla. La libertad es el punto de partida y la carga de la prueba recae sobre el poder",
     ],
   },
   {
@@ -27,8 +25,8 @@ const questions = [
     number: "03",
     title: "¿Puede ser legítima la coerción estatal?",
     answer: [
-      "No. Que la coerción provenga del Estado no la vuelve moralmente legítima",
-      "La teoría distingue legitimidad de tolerancia: una función puede superar el examen de necesidad coercitiva sin que la coerción deje de ser ilegítima",
+      "No. Que provenga del Estado no la vuelve moralmente legítima",
+      "Puede ser tolerable sin dejar de ser ilegítima",
     ],
   },
   {
@@ -36,8 +34,8 @@ const questions = [
     number: "04",
     title: "¿La democracia legitima la coerción estatal?",
     answer: [
-      "No. Una mayoría puede autorizar políticamente una decisión, pero no convertirla en voluntaria",
-      "Elecciones, apoyo popular y buenas intenciones no eliminan la carga de justificar la coerción",
+      "No. Votar o elegir un gobernante no le transfiere autoridad moral para decidir por otros en cualquier materia",
+      "La aprobación de una mayoría tampoco convierte una decisión impuesta en voluntaria",
     ],
   },
   {
@@ -46,142 +44,142 @@ const questions = [
     title: "¿La utilidad o necesidad de una función justifica la coerción?",
     answer: [
       "No. Que una función sea útil, necesaria, valiosa o socialmente beneficiosa no basta",
-      "Debe cumplir simultáneamente las tres condiciones del teorema. La importancia del fin no sustituye esa prueba",
+      "La importancia del fin no sustituye el criterio",
     ],
   },
   {
-    id: "bienes-publicos-intervencion-estatal",
+    id: "bienes-publicos-provision-estatal",
     number: "06",
-    title: "¿Los bienes públicos justifican la intervención estatal?",
+    title: "¿Los bienes públicos requieren provisión estatal?",
     answer: [
-      "No. La no exclusión y la no rivalidad pueden permitir que algunos se beneficien sin contribuir, pero eso no demuestra que la provisión voluntaria vaya a fracasar",
-      "La intervención coercitiva solo entra en consideración si también existe un colapso persistente de la provisión voluntaria",
-    ],
-  },
-  {
-    id: "bienes-publicos-provision-voluntaria",
-    number: "07",
-    title: "¿Los bienes públicos pueden proveerse voluntariamente?",
-    answer: [
-      "Sí. La existencia de incentivos para no contribuir no determina cómo debe organizarse la provisión",
-      "Contratos, asociaciones, clubes, filantropía u otros arreglos pueden sostener la provisión. Si lo hacen, no hay excepción coercitiva",
-    ],
-  },
-  {
-    id: "samuelson-bienes-publicos",
-    number: "08",
-    title: "¿La teoría de bienes públicos de Samuelson exige provisión estatal?",
-    answer: [
-      "No. En La teoría pura del gasto público, Paul Samuelson formaliza la estructura de los bienes de consumo colectivo, en especial la no rivalidad",
-      "Esa estructura ayuda a identificar el problema, pero no demuestra necesidad coercitiva. El fracaso persistente de la provisión voluntaria debe probarse por separado",
+      "No. La no exclusión y la no rivalidad describen una estructura del bien, no una conclusión institucional",
+      "La provisión puede sostenerse mediante arreglos voluntarios. Samuelson formalizó la estructura de los bienes de consumo colectivo en Teoría Pura del Gasto Público; de allí no se sigue que el Estado deba proveerlos",
     ],
   },
   {
     id: "free-rider-coercion-estatal",
-    number: "09",
+    number: "07",
     title: "¿El problema del free rider justifica la coerción estatal?",
     answer: [
-      "No. Identificar personas que se benefician sin contribuir no prueba que la función no pueda sostenerse voluntariamente",
-      "El free rider importa solo si ese incentivo provoca un fracaso persistente bajo arreglos voluntarios materialmente distintos",
+      "No. Que alguien pueda beneficiarse sin contribuir no demuestra que la función no pueda sostenerse",
+      "El free rider importa cuando ese incentivo provoca un fracaso persistente bajo arreglos materialmente distintos",
     ],
   },
   {
     id: "fracaso-provision-voluntaria",
-    number: "10",
-    title: "¿Cuándo fracasa la provisión voluntaria?",
+    number: "08",
+    title: "¿Cuándo fracasa realmente la provisión voluntaria?",
     answer: [
-      "Cuando arreglos voluntarios materialmente distintos fracasan de forma persistente porque la misma estructura de incentivos impide sostener la función",
-      "El fracaso de un proveedor, una provisión insuficiente o una ausencia temporal no alcanzan",
+      "Cuando arreglos materialmente distintos fallan de forma persistente porque la misma estructura de incentivos impide sostener la función",
+      "Un proveedor fallido, una provisión insuficiente o una ausencia temporal no alcanzan",
     ],
   },
   {
-    id: "schmidtz-free-rider",
-    number: "11",
-    title: "¿Qué agrega Schmidtz a la crítica del free rider?",
+    id: "schmidtz-diferencia",
+    number: "09",
+    title: "¿En qué se diferencia esta teoría de Schmidtz?",
     answer: [
-      "En Los límites del gobierno, David Schmidtz ya rechaza que los bienes públicos o los free riders basten para justificar autoridad estatal y muestra que la provisión voluntaria puede funcionar",
-      "El paso adicional de este teorema es convertir el colapso persistente de la provisión voluntaria en una condición necesaria antes de considerar coerción",
+      "En Los Límites del Gobierno, David Schmidtz muestra que los bienes públicos y los free riders no bastan para justificar autoridad estatal y que ciertos arreglos voluntarios pueden funcionar",
+      "Esta teoría convierte el colapso persistente de la provisión voluntaria en una condición necesaria antes de considerar coerción",
     ],
   },
   {
     id: "fallas-mercado-intervencion-estatal",
-    number: "12",
+    number: "10",
     title: "¿Las fallas de mercado justifican la intervención estatal?",
     answer: [
       "No. Monopolio natural, información imperfecta, concentración, problemas de coordinación o provisión insuficiente no demuestran necesidad coercitiva",
-      "Una falla de mercado describe una imperfección; no prueba que el Estado deba asumir la función",
+      "Esas categorías describen ciertas condiciones del mercado; no prueban que el Estado deba asumir la función",
     ],
   },
   {
     id: "externalidades-positivas-intervencion-estatal",
-    number: "13",
+    number: "11",
     title: "¿Las externalidades positivas justifican la intervención estatal?",
     answer: [
       "No. Que una actividad beneficie a terceros no la convierte en una función estatal",
-      "Las externalidades positivas no prueban no exclusión, no rivalidad ni colapso persistente de la provisión voluntaria",
+      "Ese beneficio tampoco prueba no exclusión, no rivalidad ni colapso persistente de la provisión voluntaria",
     ],
   },
   {
     id: "teoria-libertaria",
-    number: "14",
+    number: "12",
     title: "¿Es una teoría libertaria?",
     answer: [
-      "Sí. Parte de la libertad como regla y niega legitimidad moral intrínseca al poder estatal",
-      "Se diferencia de otras teorías libertarias porque admite una tolerancia coercitiva excepcional cuando se cumplen las tres condiciones",
+      "Sí. Parte de la libertad como regla y niega legitimidad moral intrínseca a la coerción, provenga del Estado o de cualquier otro",
+      "Admite una tolerancia excepcional por necesidad, pero nunca transforma coerción en legitimidad",
     ],
   },
   {
     id: "hayek-gobierno-limitado",
-    number: "15",
+    number: "13",
     title: "¿En qué se diferencia del gobierno limitado de Hayek?",
     answer: [
       "Hayek estudia los límites del conocimiento, el orden espontáneo, las reglas generales y el Estado de derecho",
-      "Aquí la pregunta es anterior: qué funciones pueden quedar bajo autoridad coercitiva. Un gobierno limitado por reglas todavía puede ejercer funciones que no superen ese examen",
+      "Aquí la cuestión es previa: qué funciones pueden quedar bajo autoridad coercitiva",
     ],
   },
   {
     id: "buchanan-limites-constitucionales",
-    number: "16",
-    title: "¿En qué se diferencia de los límites constitucionales de Buchanan?",
+    number: "14",
+    title: "¿En qué se diferencia de Buchanan?",
     answer: [
       "Buchanan estudia las reglas constitucionales dentro de las cuales se toman decisiones colectivas y el papel del acuerdo",
-      "Este teorema agrega un filtro previo: antes de diseñar reglas, la función debe demostrar que puede entrar en el ámbito de la coerción tolerable",
-    ],
-  },
-  {
-    id: "anarcocapitalismo",
-    number: "17",
-    title: "¿Conduce al anarcocapitalismo?",
-    answer: [
-      "No. Comparte con el anarcocapitalismo el rechazo de la legitimidad estatal intrínseca y la prioridad de la cooperación voluntaria",
-      "Pero admite que una función coercitiva siga siendo ilegítima y, aun así, sea tolerada si supera las tres condiciones",
+      "Aquí la función debe superar un filtro previo antes de discutir cómo organizarla institucionalmente",
     ],
   },
   {
     id: "rothbard-anarcocapitalismo",
-    number: "18",
+    number: "15",
     title: "¿En qué se diferencia del anarcocapitalismo de Rothbard?",
     answer: [
-      "Rothbard rechaza la tributación y el monopolio estatal sobre protección, justicia y seguridad, y defiende su provisión voluntaria",
-      "Aquí no se descarta toda excepción coercitiva de antemano: puede tolerarse una función específica si supera una carga de prueba excepcional, sin volverse legítima",
+      "Comparte con Rothbard que la coerción es moralmente ilegítima, provenga del Estado o de cualquier otro",
+      "Se diferencia en que admite tolerar una función coercitiva por necesidad cuando supera el criterio, sin volverla legítima",
     ],
   },
   {
     id: "minarquismo",
-    number: "19",
-    title: "¿Supera al minarquismo?",
+    number: "16",
+    title: "¿Conduce al minarquismo?",
     answer: [
-      "Sí. El minarquismo suele limitar al Estado a defensa, policía y tribunales",
-      "El teorema no fija esa lista. Puede tolerar otras funciones si cumplen las tres condiciones, por lo que su frontera puede extenderse más allá del Estado mínimo sin otorgar legitimidad al Estado",
+      "No. El minarquismo suele limitar al Estado a defensa, policía y tribunales",
+      "El criterio puede admitir otras funciones si cumplen sus condiciones, por lo que el ámbito tolerable puede ir más allá del Estado mínimo",
     ],
   },
   {
     id: "nozick-estado-minimo",
-    number: "20",
+    number: "17",
     title: "¿En qué se diferencia del Estado mínimo de Nozick?",
     answer: [
-      "Nozick defiende en Anarquía, Estado y utopía un Estado mínimo moralmente legítimo, concentrado en funciones de protección",
-      "Aquí el Estado nunca adquiere legitimidad moral y el ámbito tolerable puede superar ese núcleo si otras funciones cumplen las tres condiciones",
+      "En Anarquía, Estado y Utopía, Nozick defiende un Estado mínimo moralmente legítimo, concentrado en funciones de protección",
+      "Aquí el Estado nunca adquiere legitimidad moral y el ámbito tolerable puede superar ese núcleo",
+    ],
+  },
+  {
+    id: "estado-autolimitacion",
+    number: "18",
+    title: "¿Puede el Estado limitarse a sí mismo?",
+    answer: [
+      "Solo de forma imperfecta. Quien ejerce el poder también participa en la definición, interpretación y modificación de sus propios límites",
+      "Por eso la restricción no puede descansar únicamente en la voluntad de quien gobierna",
+    ],
+  },
+  {
+    id: "ausencia-alternativas-estado-necesario",
+    number: "19",
+    title: "¿La ausencia de alternativas voluntarias prueba que el Estado es necesario?",
+    answer: [
+      "No. Un monopolio legal o una provisión estatal prolongada puede impedir que aparezcan proveedores, capacidades e instituciones alternativas",
+      "Que hoy no exista una alternativa no demuestra un fracaso persistente de la provisión voluntaria",
+    ],
+  },
+  {
+    id: "funcion-justifica-cualquier-intervencion",
+    number: "20",
+    title: "¿Que una función justifique coerción justifica cualquier intervención estatal?",
+    answer: [
+      "No. Que una función supere el criterio no autoriza cualquier impuesto, agencia, monopolio, mandato, presupuesto o forma de ejecución",
+      "Cada instrumento coercitivo enfrenta una segunda carga de prueba",
     ],
   },
 ];
@@ -194,7 +192,7 @@ const faqSchema = {
     name: question.title,
     acceptedAnswer: {
       "@type": "Answer",
-      text: `${question.answer.join(". ")}.`,
+      text: question.answer.join(" "),
     },
   })),
 };
@@ -226,8 +224,6 @@ const faqSchema = {
     <Header />
 
     <main>
-      <!-- HERO -->
-
       <section class="hero questions-page-hero">
         <div class="hero-content hero-sequence">
           <p class="eyebrow">
@@ -241,15 +237,11 @@ const faqSchema = {
         </div>
       </section>
 
-      <!-- FRASE CENTRAL -->
-
       <section class="statement">
         <blockquote class="reveal reveal-scale">
           Una excepción no es una licencia para el poder
         </blockquote>
       </section>
-
-      <!-- EXPLORAR -->
 
       <section class="questions-index">
         <div class="questions-container">
@@ -285,8 +277,6 @@ const faqSchema = {
         </div>
       </section>
 
-      <!-- PREGUNTAS -->
-
       <section class="questions-content">
         <div class="questions-container">
           {
@@ -316,8 +306,6 @@ const faqSchema = {
         </div>
       </section>
 
-      <!-- CTA FINAL -->
-
       <section class="questions-cta">
         <div class="questions-container questions-cta-content">
           <div class="reveal reveal-left">
@@ -337,17 +325,11 @@ const faqSchema = {
           </div>
 
           <div class="questions-cta-buttons reveal reveal-right">
-            <a
-              href="/es/theory"
-              class="primary"
-            >
+            <a href="/es/theory" class="primary">
               Explorar la Teoría
             </a>
 
-            <a
-              href="/es/theorem"
-              class="secondary"
-            >
+            <a href="/es/theorem" class="secondary">
               Examinar el Teorema
             </a>
           </div>
