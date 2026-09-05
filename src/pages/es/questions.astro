@@ -9,8 +9,8 @@ const questions = [
     number: "01",
     title: "¿Es moralmente legítimo el Estado?",
     answer: [
-      "No. Incluso el Estado más benévolo sigue siendo coercitivo porque reclama autoridad sobre quienes se encuentran dentro de su territorio, hayan consentido o no",
-      "Si cada individuo fuera libre de asociarse o retirarse, sería una asociación voluntaria, no un Estado. La coerción es, por tanto, inherente a la institución estatal",
+      "No. Incluso el Estado más benévolo sigue siendo coercitivo porque reclama autoridad sobre todos dentro de un territorio, hayan consentido o no",
+      "Si cada individuo fuera libre de asociarse o retirarse, sería una asociación voluntaria y no un Estado. El poder estatal no es opcional; la coerción es inherente a la institución",
     ],
   },
   {
@@ -19,7 +19,7 @@ const questions = [
     title: "¿Puede el Estado ser eficiente?",
     answer: [
       "No. Incluso el Estado mejor diseñado y mejor administrado enfrenta límites inevitables de información, cálculo económico, incentivos y corrección del error",
-      "MUn mejor diseño y una mejor administración pueden reducir algunos de estos problemas, pero no eliminar los límites estructurales de la acción estatal",
+      "Un mejor diseño y una mejor administración pueden reducir algunos de estos problemas, pero no eliminar los límites estructurales de la acción estatal",
     ],
   },
   {
@@ -27,7 +27,8 @@ const questions = [
     number: "03",
     title: "¿Qué funciones debe cumplir el Estado?",
     answer: [
-      "Ninguna función debe darse por sentada por el solo hecho de atribuírsela al Estado. Cada una debe superar el mismo criterio",
+      "No existe una lista predeterminada. Las funciones deben examinarse individualmente en lugar de heredarse de la costumbre, las constituciones o la tradición política",
+      "La cuestión relevante es si puede establecerse la necesidad coercitiva de la función misma",
     ],
   },
   {
@@ -43,8 +44,8 @@ const questions = [
     number: "05",
     title: "¿La democracia legitima la coerción estatal?",
     answer: [
-      "No. Votar o elegir un gobierno no transfiere autoridad moral para decidir por otros en cualquier materia",
-      "La aprobación de una mayoría no convierte una decisión impuesta en voluntaria",
+      "No. Los procedimientos democráticos pueden determinar quién ejerce el poder y bajo qué reglas, pero no convierten decisiones obligatorias en consentimiento",
+      "La aprobación de una mayoría es un método de decisión colectiva, no una excepción moral a la exigencia de justificar la coerción",
     ],
   },
   {
@@ -52,8 +53,8 @@ const questions = [
     number: "06",
     title: "¿La utilidad o necesidad de una función justifica la coerción?",
     answer: [
-      "No. Una función puede ser útil, necesaria, valiosa o socialmente beneficiosa y aun así no justificar coerción",
-      "La importancia del fin no sustituye el criterio",
+      "No. Una función puede ser útil, necesaria, valiosa o socialmente beneficiosa sin volver necesaria su provisión obligatoria",
+      "El valor de un fin y la justificación de los medios coercitivos son cuestiones distintas",
     ],
   },
   {
@@ -62,7 +63,7 @@ const questions = [
     title: "¿Los bienes públicos requieren provisión estatal?",
     answer: [
       "No. La no exclusión y la no rivalidad describen una estructura del bien, no una conclusión institucional",
-      "La provisión puede sostenerse mediante arreglos voluntarios. Samuelson formalizó la estructura de los bienes de consumo colectivo en <em>Teoría Pura del Gasto Público</em>; de allí no se sigue que el Estado deba proveerlos",
+      "La provisión voluntaria puede seguir siendo posible. Samuelson formalizó la estructura de los bienes de consumo colectivo en <em>Teoría Pura del Gasto Público</em>; de allí no se sigue que el Estado deba proveerlos",
     ],
   },
   {
@@ -70,8 +71,8 @@ const questions = [
     number: "08",
     title: "¿El problema del free rider justifica la coerción estatal?",
     answer: [
-      "No. Que alguien pueda beneficiarse sin contribuir no demuestra que la función no pueda sostenerse",
-      "El free riding importa cuando ese incentivo provoca un fracaso persistente bajo arreglos materialmente distintos",
+      "No. Que alguien pueda beneficiarse sin contribuir no demuestra que una función no pueda sostenerse voluntariamente",
+      "El free riding se vuelve relevante cuando el mismo problema de incentivos produce un fracaso persistente bajo arreglos materialmente distintos",
     ],
   },
   {
@@ -84,12 +85,12 @@ const questions = [
     ],
   },
   {
-    id: "schmidtz-bienes-publicos-free-rider",
+    id: "schmidtz-bienes-publicos-free-riders",
     number: "10",
     title: "¿Qué sostiene David Schmidtz sobre los bienes públicos y los free riders?",
     answer: [
       "En <em>Los Límites del Gobierno</em>, Schmidtz muestra que los bienes públicos y los free riders no justifican por sí solos autoridad estatal y que ciertos arreglos voluntarios pueden funcionar",
-      "Esta teoría agrega una exigencia más estricta: debe establecerse el colapso persistente de la provisión voluntaria antes de considerar coerción",
+      "Tolerancia Mínima agrega una exigencia más estricta: debe establecerse el colapso persistente de la provisión voluntaria antes de considerar coerción",
     ],
   },
   {
@@ -97,8 +98,8 @@ const questions = [
     number: "11",
     title: "¿Las fallas de mercado justifican la intervención estatal?",
     answer: [
-      "No. Monopolio natural, información imperfecta, concentración, problemas de coordinación o provisión insuficiente no demuestran necesidad coercitiva",
-      "Esas categorías describen ciertas condiciones del mercado; no prueban que el Estado deba asumir la función",
+      "No. Monopolio natural, información imperfecta, concentración, problemas de coordinación o provisión insuficiente describen posibles fallas de mercado",
+      "Por sí solas no demuestran que la provisión coercitiva estatal sea necesaria ni superior a las alternativas disponibles",
     ],
   },
   {
@@ -107,7 +108,7 @@ const questions = [
     title: "¿Las externalidades positivas justifican la intervención estatal?",
     answer: [
       "No. Que una actividad beneficie a terceros no la convierte en una función estatal",
-      "Ese beneficio no demuestra no exclusión, no rivalidad ni colapso persistente de la provisión voluntaria",
+      "Los beneficios para otros son compatibles con la provisión voluntaria y no establecen una necesidad de coerción",
     ],
   },
   {
@@ -115,8 +116,8 @@ const questions = [
     number: "13",
     title: "¿Es compatible el libertarismo con la coerción estatal?",
     answer: [
-      "No como legitimidad moral. Esta teoría es libertaria porque la libertad es el punto de partida y la coerción nunca es intrínsecamente legítima, provenga del Estado o de cualquier otro",
-      "Aun así, admite que una función coercitiva estrictamente delimitada sea tolerada por necesidad sin volverse legítima",
+      "No como legitimidad moral. Tolerancia Mínima es libertaria porque la libertad es el punto de partida y la coerción carga con la exigencia de justificación",
+      "Se aparta de posiciones libertarias más estrictas al admitir que una función coercitiva estrictamente delimitada pueda tolerarse excepcionalmente por necesidad sin volverse legítima",
     ],
   },
   {
@@ -125,7 +126,7 @@ const questions = [
     title: "¿Qué limita el poder del Estado en la teoría política de Hayek?",
     answer: [
       "Hayek destaca los límites del conocimiento, el orden espontáneo, las reglas generales y el Estado de derecho",
-      "Aquí la pregunta es anterior: qué funciones pueden quedar bajo autoridad coercitiva",
+      "Tolerancia Mínima formula una pregunta previa: qué funciones pueden quedar bajo autoridad coercitiva",
     ],
   },
   {
@@ -134,7 +135,7 @@ const questions = [
     title: "¿Qué limita al Estado en la economía política constitucional de Buchanan?",
     answer: [
       "Buchanan estudia las reglas constitucionales dentro de las cuales se toman decisiones colectivas y el papel del acuerdo",
-      "Aquí la función debe superar un filtro previo antes de considerar su diseño institucional",
+      "Tolerancia Mínima retrocede un paso y pregunta si una función puede asignarse coercitivamente antes de elegir su diseño institucional",
     ],
   },
   {
@@ -143,21 +144,30 @@ const questions = [
     title: "¿El anarcocapitalismo de Rothbard rechaza toda coerción estatal?",
     answer: [
       "Sí. Rothbard considera moralmente ilegítima la coerción, provenga del Estado o de cualquier otro, y rechaza la provisión estatal obligatoria",
-      "Esta teoría comparte ese rechazo filosófico de la legitimidad, pero admite tolerar una función coercitiva específica por necesidad cuando supera el criterio",
+      "Tolerancia Mínima comparte ese rechazo de legitimidad moral, pero se aparta de Rothbard al admitir la tolerancia excepcional de una función coercitiva cuando se establece su necesidad",
     ],
   },
   {
-    id: "nozick-estado-minimo-minarquismo",
+    id: "minarquismo-defensa-policia-tribunales",
     number: "17",
-    title: "¿Es el Estado mínimo de Nozick una forma de minarquismo?",
+    title: "¿El minarquismo justifica un Estado limitado a defensa, policía y tribunales?",
     answer: [
-      "En <em>Anarquía, Estado y Utopía</em>, Nozick defiende un Estado mínimo moralmente legítimo, limitado en gran medida a funciones de protección, una posición estrechamente asociada al minarquismo",
-      "Esta teoría ni concede legitimidad moral al Estado ni parte de una lista predeterminada de funciones admisibles. Cada función debe superar el mismo criterio",
+      "El minarquismo clásico trata defensa, policía y tribunales como las funciones legítimas centrales del Estado",
+      "Tolerancia Mínima rechaza otorgarles un estatus privilegiado por defecto. Un Estado más pequeño no queda moralmente exento del problema de la coerción",
+    ],
+  },
+  {
+    id: "nozick-estado-minimo-legitimidad",
+    number: "18",
+    title: "¿Es moralmente legítimo el Estado mínimo de Nozick?",
+    answer: [
+      "En <em>Anarquía, Estado y Utopía</em>, Nozick defiende un Estado mínimo como moralmente legítimo",
+      "Tolerancia Mínima rechaza esa conclusión: reducir el alcance del Estado no cambia el estatus moral de su coerción",
     ],
   },
   {
     id: "estado-autolimitacion",
-    number: "18",
+    number: "19",
     title: "¿Puede el Estado limitarse a sí mismo?",
     answer: [
       "Solo de forma imperfecta. Quien ejerce el poder también participa en la definición, interpretación y modificación de sus límites",
@@ -166,20 +176,11 @@ const questions = [
   },
   {
     id: "ausencia-alternativas-voluntarias-estado-necesario",
-    number: "19",
+    number: "20",
     title: "¿La ausencia de alternativas voluntarias prueba que el Estado es necesario?",
     answer: [
       "No. Un monopolio legal o una provisión estatal prolongada puede impedir que aparezcan proveedores, capacidades e instituciones alternativas",
-      "Que hoy no exista una alternativa no demuestra un colapso persistente de la provisión voluntaria",
-    ],
-  },
-  {
-    id: "funcion-estatal-necesaria-alcance-intervencion",
-    number: "20",
-    title: "Si una función estatal es necesaria, ¿hasta dónde puede llegar la intervención?",
-    answer: [
-      "Solo hasta donde exista una justificación separada. La necesidad de la función no autoriza cualquier impuesto, agencia, monopolio, mandato, presupuesto o forma de ejecución",
-      "Cada instrumento coercitivo enfrenta una segunda carga de prueba",
+      "La ausencia actual de una alternativa no puede tratarse como prueba de que la provisión voluntaria sea estructuralmente imposible",
     ],
   }
 ];
@@ -213,7 +214,7 @@ const faqSchema = {
 
     <SEO
       title="Límites del Estado, coerción y bienes públicos | Tolerancia Mínima"
-      description="Preguntas sobre poder estatal, coerción, bienes públicos, free riders, fallas de mercado, libertarismo, Hayek, Buchanan, Rothbard, minarquismo y Nozick"
+      description="Preguntas sobre legitimidad moral y eficiencia del Estado, coerción, bienes públicos, free riders, fallas de mercado, libertarismo, Hayek, Buchanan, Rothbard, minarquismo y Nozick"
       lang="es"
     />
 
@@ -242,24 +243,20 @@ const faqSchema = {
         </div>
       </section>
 
-      <!-- FRASE CENTRAL -->
+      <!-- CENTRAL STATEMENT -->
 
       <section class="statement">
         <blockquote class="reveal reveal-scale">
-          Una excepción no es una licencia para el poder
+         Nadie tiene un derecho inherente a gobernar a otro
         </blockquote>
       </section>
 
-      <!-- EXPLORAR -->
+      <!-- PREGUNTAS CLAVE -->
 
       <section class="questions-index">
         <div class="questions-container">
-          <p class="eyebrow reveal">
-            EXPLORAR
-          </p>
-
-          <p class="questions-intro reveal">
-            Preguntas sobre qué puede justificar la coerción y dónde termina el poder del Estado
+          <p class="eyebrow reveal key-questions-label">
+            PREGUNTAS CLAVE
           </p>
 
           <nav
@@ -353,6 +350,15 @@ const faqSchema = {
     <Footer />
 
     <style>
+      /*
+       * Force a true two-column grid here so each pair of questions
+       * shares the exact same row height.
+       */
+      .key-questions-label {
+        color: #0a1322 !important;
+        margin-bottom: 1.25rem;
+      }
+
       .questions-index-grid {
         display: grid !important;
         grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
@@ -403,17 +409,19 @@ const faqSchema = {
       .question-index-title {
         display: block !important;
         line-height: 1.28;
+      }
+
+      /*
+       * Keep the index type exactly at the approved size.
+       */
+      .question-index-title {
         font-size: clamp(0.95rem, 1vw, 1.08rem);
       }
 
-      .questions-intro {
-        max-width: 760px;
-        margin: 0 0 1.25rem;
-        font-size: 1rem;
-        line-height: 1.55;
-        opacity: 0.82;
-      }
-
+      /*
+       * Developed-question title: 10% smaller than the previous version.
+       * Right-side answer size is untouched.
+       */
       .question-number {
         display: inline-block;
         transform: scale(1.2);
@@ -453,22 +461,11 @@ const faqSchema = {
           border-right: 0 !important;
         }
 
-        .questions-intro {
-          margin-bottom: 1.1rem;
-          font-size: 0.98rem;
-        }
-
         .question-index-title {
           font-size: 0.95rem;
         }
 
-        .question-number {
-        display: inline-block;
-        transform: scale(1.2);
-        transform-origin: left top;
-      }
-
-      .question-heading h2 {
+        .question-heading h2 {
           font-size: clamp(0.99rem, 3.33vw, 1.26rem);
         }
 
