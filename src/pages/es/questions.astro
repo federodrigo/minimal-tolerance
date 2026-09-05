@@ -5,8 +5,26 @@ import SEO from "../../components/SEO.astro";
 
 const questions = [
   {
-    id: "funciones-del-estado",
+    id: "legitimidad-moral-estado",
     number: "01",
+    title: "¿Es moralmente legítimo el Estado?",
+    answer: [
+      "No. Incluso el Estado más benévolo sigue siendo coercitivo porque la autoridad estatal exige una jurisdicción obligatoria. Quienes están dentro de su territorio no pueden simplemente excluirse de esa jurisdicción",
+      "Si la jurisdicción fuera plenamente voluntaria, la institución dejaría de ejercer autoridad estatal sobre quienes la rechazaran",
+    ],
+  },
+  {
+    id: "eficiencia-estado",
+    number: "02",
+    title: "¿Puede el Estado ser eficiente?",
+    answer: [
+      "No. Incluso el Estado mejor diseñado y más benévolo enfrenta límites inevitables de información, cálculo económico, incentivos y corrección del error",
+      "Mejores gobernantes o mejores intenciones pueden reducir algunas fallas, pero no eliminar esos límites estructurales",
+    ],
+  },
+  {
+    id: "funciones-del-estado",
+    number: "03",
     title: "¿Qué funciones debe cumplir el Estado?",
     answer: [
       "Ninguna función debe darse por sentada por el solo hecho de atribuírsela al Estado. Cada una debe superar el mismo criterio",
@@ -14,24 +32,15 @@ const questions = [
   },
   {
     id: "carga-prueba-coercion",
-    number: "02",
+    number: "04",
     title: "¿Quién debe probar que la coerción es necesaria?",
     answer: [
       "Quien pretende imponerla. La libertad es el punto de partida y la carga de la prueba recae sobre el poder",
     ],
   },
   {
-    id: "legitimidad-coercion-estatal",
-    number: "03",
-    title: "¿Puede ser legítima la coerción estatal?",
-    answer: [
-      "No. Que la coerción provenga del Estado no la vuelve moralmente legítima",
-      "Puede ser tolerable sin volverse legítima",
-    ],
-  },
-  {
     id: "democracia-legitima-coercion",
-    number: "04",
+    number: "05",
     title: "¿La democracia legitima la coerción estatal?",
     answer: [
       "No. Votar o elegir un gobierno no transfiere autoridad moral para decidir por otros en cualquier materia",
@@ -40,7 +49,7 @@ const questions = [
   },
   {
     id: "utilidad-necesidad-coercion",
-    number: "05",
+    number: "06",
     title: "¿La utilidad o necesidad de una función justifica la coerción?",
     answer: [
       "No. Una función puede ser útil, necesaria, valiosa o socialmente beneficiosa y aun así no justificar coerción",
@@ -49,7 +58,7 @@ const questions = [
   },
   {
     id: "bienes-publicos-provision-estatal",
-    number: "06",
+    number: "07",
     title: "¿Los bienes públicos requieren provisión estatal?",
     answer: [
       "No. La no exclusión y la no rivalidad describen una estructura del bien, no una conclusión institucional",
@@ -58,7 +67,7 @@ const questions = [
   },
   {
     id: "free-rider-coercion-estatal",
-    number: "07",
+    number: "08",
     title: "¿El problema del free rider justifica la coerción estatal?",
     answer: [
       "No. Que alguien pueda beneficiarse sin contribuir no demuestra que la función no pueda sostenerse",
@@ -67,7 +76,7 @@ const questions = [
   },
   {
     id: "fracaso-provision-voluntaria",
-    number: "08",
+    number: "09",
     title: "¿Cuándo fracasa realmente la provisión voluntaria?",
     answer: [
       "Cuando arreglos materialmente distintos fallan de forma persistente porque la misma estructura de incentivos impide sostener la función",
@@ -76,7 +85,7 @@ const questions = [
   },
   {
     id: "schmidtz-bienes-publicos-free-rider",
-    number: "09",
+    number: "10",
     title: "¿Qué sostiene David Schmidtz sobre los bienes públicos y los free riders?",
     answer: [
       "En <em>Los Límites del Gobierno</em>, Schmidtz muestra que los bienes públicos y los free riders no justifican por sí solos autoridad estatal y que ciertos arreglos voluntarios pueden funcionar",
@@ -85,7 +94,7 @@ const questions = [
   },
   {
     id: "fallas-mercado-intervencion-estatal",
-    number: "10",
+    number: "11",
     title: "¿Las fallas de mercado justifican la intervención estatal?",
     answer: [
       "No. Monopolio natural, información imperfecta, concentración, problemas de coordinación o provisión insuficiente no demuestran necesidad coercitiva",
@@ -94,7 +103,7 @@ const questions = [
   },
   {
     id: "externalidades-positivas-intervencion-estatal",
-    number: "11",
+    number: "12",
     title: "¿Las externalidades positivas justifican la intervención estatal?",
     answer: [
       "No. Que una actividad beneficie a terceros no la convierte en una función estatal",
@@ -103,7 +112,7 @@ const questions = [
   },
   {
     id: "libertarismo-coercion-estatal",
-    number: "12",
+    number: "13",
     title: "¿Es compatible el libertarismo con la coerción estatal?",
     answer: [
       "No como legitimidad moral. Esta teoría es libertaria porque la libertad es el punto de partida y la coerción nunca es intrínsecamente legítima, provenga del Estado o de cualquier otro",
@@ -112,7 +121,7 @@ const questions = [
   },
   {
     id: "hayek-limites-poder-estatal",
-    number: "13",
+    number: "14",
     title: "¿Qué limita el poder del Estado en la teoría política de Hayek?",
     answer: [
       "Hayek destaca los límites del conocimiento, el orden espontáneo, las reglas generales y el Estado de derecho",
@@ -121,7 +130,7 @@ const questions = [
   },
   {
     id: "buchanan-economia-politica-constitucional",
-    number: "14",
+    number: "15",
     title: "¿Qué limita al Estado en la economía política constitucional de Buchanan?",
     answer: [
       "Buchanan estudia las reglas constitucionales dentro de las cuales se toman decisiones colectivas y el papel del acuerdo",
@@ -130,7 +139,7 @@ const questions = [
   },
   {
     id: "rothbard-anarcocapitalismo-coercion-estatal",
-    number: "15",
+    number: "16",
     title: "¿El anarcocapitalismo de Rothbard rechaza toda coerción estatal?",
     answer: [
       "Sí. Rothbard considera moralmente ilegítima la coerción, provenga del Estado o de cualquier otro, y rechaza la provisión estatal obligatoria",
@@ -138,21 +147,12 @@ const questions = [
     ],
   },
   {
-    id: "minarquismo-estado-minimo-funciones",
-    number: "16",
-    title: "¿Qué es el minarquismo y qué funciones cumple un Estado mínimo?",
-    answer: [
-      "El minarquismo suele partir de un conjunto fijo de funciones estatales, como defensa, policía y tribunales",
-      "Esta teoría no parte de una lista predeterminada. Cada función debe superar el mismo criterio",
-    ],
-  },
-  {
-    id: "nozick-estado-minimo-legitimidad",
+    id: "nozick-estado-minimo-minarquismo",
     number: "17",
-    title: "¿Es moralmente legítimo el Estado mínimo de Nozick?",
+    title: "¿Es el Estado mínimo de Nozick una forma de minarquismo?",
     answer: [
-      "Sí, dentro de la teoría de Nozick. En <em>Anarquía, Estado y Utopía</em>, defiende un Estado mínimo moralmente legítimo fundado en una teoría de derechos",
-      "Aquí la coerción estatal nunca se vuelve moralmente legítima. Solo puede tolerarse excepcionalmente por razones de necesidad",
+      "En <em>Anarquía, Estado y Utopía</em>, Nozick defiende un Estado mínimo moralmente legítimo, limitado en gran medida a funciones de protección, una posición estrechamente asociada al minarquismo",
+      "Esta teoría ni concede legitimidad moral al Estado ni parte de una lista predeterminada de funciones admisibles. Cada función debe superar el mismo criterio",
     ],
   },
   {
@@ -178,10 +178,10 @@ const questions = [
     number: "20",
     title: "Si una función estatal es necesaria, ¿hasta dónde puede llegar la intervención?",
     answer: [
-      "Solo hasta donde exista justificación separada. La necesidad de la función no autoriza cualquier impuesto, agencia, monopolio, mandato, presupuesto o forma de ejecución",
+      "Solo hasta donde exista una justificación separada. La necesidad de la función no autoriza cualquier impuesto, agencia, monopolio, mandato, presupuesto o forma de ejecución",
       "Cada instrumento coercitivo enfrenta una segunda carga de prueba",
     ],
-  },
+  }
 ];
 
 const stripHtml = (value) =>
@@ -414,6 +414,12 @@ const faqSchema = {
         opacity: 0.82;
       }
 
+      .question-number {
+        display: inline-block;
+        transform: scale(1.2);
+        transform-origin: left top;
+      }
+
       .question-heading h2 {
         font-size: clamp(1.08rem, 1.62vw, 1.62rem);
         line-height: 1.12;
@@ -456,7 +462,13 @@ const faqSchema = {
           font-size: 0.95rem;
         }
 
-        .question-heading h2 {
+        .question-number {
+        display: inline-block;
+        transform: scale(1.2);
+        transform-origin: left top;
+      }
+
+      .question-heading h2 {
           font-size: clamp(0.99rem, 3.33vw, 1.26rem);
         }
 
@@ -514,5 +526,6 @@ const faqSchema = {
     </script>
   </body>
 </html>
+
 
 
