@@ -40,6 +40,15 @@ const alternateLanguageUrl = isSpanish
   </a>
 
   <nav aria-label={isSpanish ? "Navegación principal" : "Main navigation"}>
+
+    <a
+      href={isSpanish ? "/es/questions/" : "/questions/"}
+      class:list={{ active: isActive("/questions") }}
+      aria-current={isActive("/questions") ? "page" : undefined}
+    >
+      {isSpanish ? "Preguntas" : "Questions"}
+    </a>
+
     <a
       href={isSpanish ? "/es/theory/" : "/theory/"}
       class:list={{ active: isActive("/theory") }}
@@ -71,6 +80,7 @@ const alternateLanguageUrl = isSpanish
     >
       {isSpanish ? "Libro" : "Book"}
     </a>
+
     <a
       href={isSpanish ? "/es/papers/" : "/papers/"}
       class:list={{ active: isActive("/papers") }}
@@ -78,7 +88,6 @@ const alternateLanguageUrl = isSpanish
     >
       Papers
     </a>
-
 
     <a
       href={isSpanish ? "/es/author/" : "/author/"}
