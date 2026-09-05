@@ -14,8 +14,17 @@ const questions = [
     ],
   },
   {
-    id: "government-efficiency",
+    id: "state-criminal-organization",
     number: "02",
+    title: "Is the State a Criminal Organization?",
+    answer: [
+      "Yes, in a normative sense. The State claims powers—compulsory jurisdiction, taxation, and enforcement—that would be considered coercive if exercised by a voluntary association",
+      "Legality does not by itself confer moral legitimacy on those acts",
+    ],
+  },
+  {
+    id: "government-efficiency",
+    number: "03",
     title: "Can Government Ever Be Efficient?",
     answer: [
       "No. Even the best-designed and best-run State faces unavoidable limits of information, economic calculation, incentives, and error correction",
@@ -24,7 +33,7 @@ const questions = [
   },
   {
     id: "functions-of-government",
-    number: "03",
+    number: "04",
     title: "What Functions Should Government Perform?",
     answer: [
       "There is no predefined list. Functions must be examined individually rather than inherited from convention, constitutions, or political tradition",
@@ -33,7 +42,7 @@ const questions = [
   },
   {
     id: "burden-of-proof-coercion",
-    number: "04",
+    number: "05",
     title: "Who Must Prove That Coercion Is Necessary?",
     answer: [
       "Whoever seeks to impose it. Liberty is the baseline, and the burden of proof falls on power",
@@ -41,7 +50,7 @@ const questions = [
   },
   {
     id: "democracy-legitimizes-coercion",
-    number: "05",
+    number: "06",
     title: "Does Democracy Legitimize State Coercion?",
     answer: [
       "No. Democratic procedures can determine who exercises power and under what rules, but they do not turn compulsory decisions into consent",
@@ -49,17 +58,17 @@ const questions = [
     ],
   },
   {
-    id: "usefulness-necessity-coercion",
-    number: "06",
+    id: "essential-services-state-coercion",
+    number: "07",
     title: "Do Essential Services Justify State Coercion?",
     answer: [
-      "No. A function can be useful, necessary, valuable, or socially beneficial without making compulsory provision necessary",
+      "No. A service can be essential, valuable, or socially beneficial without making compulsory provision necessary",
       "The value of an end and the justification for coercive means are separate questions",
     ],
   },
   {
     id: "public-goods-government-provision",
-    number: "07",
+    number: "08",
     title: "Do Public Goods Require Government Provision?",
     answer: [
       "No. Non-excludability and non-rivalry describe a structure of the good, not an institutional conclusion",
@@ -68,7 +77,7 @@ const questions = [
   },
   {
     id: "free-rider-state-coercion",
-    number: "08",
+    number: "09",
     title: "Does the Free-Rider Problem Justify State Coercion?",
     answer: [
       "No. The fact that someone can benefit without contributing does not show that a function cannot be sustained voluntarily",
@@ -77,7 +86,7 @@ const questions = [
   },
   {
     id: "failure-voluntary-provision",
-    number: "09",
+    number: "10",
     title: "When Does Voluntary Provision Actually Fail?",
     answer: [
       "When materially different arrangements fail persistently because the same incentive structure prevents the function from being sustained",
@@ -86,7 +95,7 @@ const questions = [
   },
   {
     id: "schmidtz-public-goods-free-riders",
-    number: "10",
+    number: "11",
     title: "What Does David Schmidtz Argue About Public Goods and Free Riders?",
     answer: [
       "In <em>The Limits of Government</em>, Schmidtz shows that public goods and free riders do not by themselves justify state authority and that some voluntary arrangements can work",
@@ -95,7 +104,7 @@ const questions = [
   },
   {
     id: "market-failure-government-intervention",
-    number: "11",
+    number: "12",
     title: "Do Market Failures Justify Government Intervention?",
     answer: [
       "No. Natural monopoly, imperfect information, concentration, coordination problems, or underprovision describe possible market failures",
@@ -104,7 +113,7 @@ const questions = [
   },
   {
     id: "positive-externalities-government-intervention",
-    number: "12",
+    number: "13",
     title: "Do Positive Externalities Justify Government Intervention?",
     answer: [
       "No. The fact that an activity benefits third parties does not make it a state function",
@@ -113,7 +122,7 @@ const questions = [
   },
   {
     id: "libertarianism-state-coercion",
-    number: "13",
+    number: "14",
     title: "Can a Libertarian Theory Tolerate State Coercion?",
     answer: [
       "Yes, exceptionally. Minimal Tolerance begins from liberty and rejects the moral legitimacy of coercion",
@@ -122,7 +131,7 @@ const questions = [
   },
   {
     id: "hayek-government-power",
-    number: "14",
+    number: "15",
     title: "What Limits Government Power in Hayek's Political Theory?",
     answer: [
       "Hayek emphasizes the limits of knowledge, spontaneous order, general rules, and the rule of law",
@@ -131,7 +140,7 @@ const questions = [
   },
   {
     id: "buchanan-constitutional-political-economy",
-    number: "15",
+    number: "16",
     title: "What Limits Government in Buchanan's Constitutional Political Economy?",
     answer: [
       "Buchanan examines the constitutional rules within which collective decisions are made and the role of agreement",
@@ -140,7 +149,7 @@ const questions = [
   },
   {
     id: "rothbard-anarcho-capitalism-state-coercion",
-    number: "16",
+    number: "17",
     title: "Does Rothbard's Anarcho-Capitalism Reject All State Coercion?",
     answer: [
       "Yes. Rothbard treats coercion as morally illegitimate whether it comes from the State or anyone else and rejects compulsory state provision",
@@ -149,7 +158,7 @@ const questions = [
   },
   {
     id: "minarchism-defense-police-courts",
-    number: "17",
+    number: "18",
     title: "Does Minarchism Justify a State Limited to Defense, Police, and Courts?",
     answer: [
       "Classical minarchism treats defense, police, and courts as the legitimate core functions of the State",
@@ -158,20 +167,11 @@ const questions = [
   },
   {
     id: "nozick-minimal-state-legitimacy",
-    number: "18",
+    number: "19",
     title: "Is Nozick's Minimal State Morally Legitimate?",
     answer: [
       "In <em>Anarchy, State, and Utopia</em>, Nozick defends a minimal state as morally legitimate",
       "Minimal Tolerance rejects that conclusion: reducing the scope of the State does not change the moral status of its coercion",
-    ],
-  },
-  {
-    id: "state-self-limitation",
-    number: "19",
-    title: "Can the State Limit Itself?",
-    answer: [
-      "Only imperfectly. Whoever exercises power also participates in defining, interpreting, and changing its limits",
-      "Constraint therefore cannot rest solely on the willingness of those who govern",
     ],
   },
   {
@@ -214,7 +214,7 @@ const faqSchema = {
 
     <SEO
       title="Limits of Government, State Coercion & Public Goods | Minimal Tolerance"
-      description="Questions on the moral legitimacy and efficiency of the State, coercion, public goods, free riders, market failure, libertarianism, Hayek, Buchanan, Rothbard, minarchism, and Nozick"
+      description="Questions on the moral legitimacy, coercive nature, and efficiency of the State, public goods, free riders, market failure, libertarianism, Hayek, Buchanan, Rothbard, minarchism, and Nozick"
       lang="en"
     />
 
