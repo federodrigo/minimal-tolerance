@@ -5,8 +5,26 @@ import SEO from "../components/SEO.astro";
 
 const questions = [
   {
-    id: "functions-of-government",
+    id: "state-moral-legitimacy",
     number: "01",
+    title: "Is the State Morally Legitimate?",
+    answer: [
+      "No. Even the most benevolent State remains coercive because state authority requires compulsory jurisdiction. Individuals cannot simply opt out of that jurisdiction while remaining within the territory",
+      "If jurisdiction were fully voluntary, the institution would no longer exercise state authority over those who refused it",
+    ],
+  },
+  {
+    id: "government-efficiency",
+    number: "02",
+    title: "Can Government Ever Be Efficient?",
+    answer: [
+      "No. Even the best-designed and most benevolent State faces unavoidable limits of information, economic calculation, incentives, and error correction",
+      "Better officials or better intentions can reduce some failures, but they cannot eliminate those structural limits",
+    ],
+  },
+  {
+    id: "functions-of-government",
+    number: "03",
     title: "What Functions Should Government Perform?",
     answer: [
       "No function should be taken for granted simply because it is assigned to the State. Each must pass the same criterion",
@@ -14,24 +32,15 @@ const questions = [
   },
   {
     id: "burden-of-proof-coercion",
-    number: "02",
+    number: "04",
     title: "Who Must Prove That Coercion Is Necessary?",
     answer: [
       "Whoever seeks to impose it. Liberty is the baseline, and the burden of proof falls on power",
     ],
   },
   {
-    id: "legitimacy-state-coercion",
-    number: "03",
-    title: "Can State Coercion Ever Be Legitimate?",
-    answer: [
-      "No. The fact that coercion comes from the State does not make it morally legitimate",
-      "It can be tolerable without becoming legitimate",
-    ],
-  },
-  {
     id: "democracy-legitimizes-coercion",
-    number: "04",
+    number: "05",
     title: "Does Democracy Legitimize State Coercion?",
     answer: [
       "No. Voting or electing a government does not transfer moral authority to decide for others in every matter",
@@ -40,7 +49,7 @@ const questions = [
   },
   {
     id: "usefulness-necessity-coercion",
-    number: "05",
+    number: "06",
     title: "Does the Usefulness or Necessity of a Function Justify Coercion?",
     answer: [
       "No. A function can be useful, necessary, valuable, or socially beneficial and still fail to justify coercion",
@@ -49,7 +58,7 @@ const questions = [
   },
   {
     id: "public-goods-government-provision",
-    number: "06",
+    number: "07",
     title: "Do Public Goods Require Government Provision?",
     answer: [
       "No. Non-excludability and non-rivalry describe a structure of the good, not an institutional conclusion",
@@ -58,7 +67,7 @@ const questions = [
   },
   {
     id: "free-rider-state-coercion",
-    number: "07",
+    number: "08",
     title: "Does the Free-Rider Problem Justify State Coercion?",
     answer: [
       "No. The fact that someone can benefit without contributing does not show that the function cannot be sustained",
@@ -67,7 +76,7 @@ const questions = [
   },
   {
     id: "failure-voluntary-provision",
-    number: "08",
+    number: "09",
     title: "When Does Voluntary Provision Actually Fail?",
     answer: [
       "When materially different arrangements fail persistently because the same incentive structure prevents the function from being sustained",
@@ -76,7 +85,7 @@ const questions = [
   },
   {
     id: "schmidtz-public-goods-free-riders",
-    number: "09",
+    number: "10",
     title: "What Does David Schmidtz Argue About Public Goods and Free Riders?",
     answer: [
       "In <em>The Limits of Government</em>, Schmidtz shows that public goods and free riders do not by themselves justify state authority and that some voluntary arrangements can work",
@@ -85,7 +94,7 @@ const questions = [
   },
   {
     id: "market-failure-government-intervention",
-    number: "10",
+    number: "11",
     title: "Do Market Failures Justify Government Intervention?",
     answer: [
       "No. Natural monopoly, imperfect information, concentration, coordination problems, or underprovision do not demonstrate coercive necessity",
@@ -94,7 +103,7 @@ const questions = [
   },
   {
     id: "positive-externalities-government-intervention",
-    number: "11",
+    number: "12",
     title: "Do Positive Externalities Justify Government Intervention?",
     answer: [
       "No. The fact that an activity benefits third parties does not make it a state function",
@@ -103,7 +112,7 @@ const questions = [
   },
   {
     id: "libertarianism-state-coercion",
-    number: "12",
+    number: "13",
     title: "Is Libertarianism Compatible with State Coercion?",
     answer: [
       "Not as moral legitimacy. This theory is libertarian because liberty is the baseline and coercion is never intrinsically legitimate, whether exercised by the State or anyone else",
@@ -112,7 +121,7 @@ const questions = [
   },
   {
     id: "hayek-government-power",
-    number: "13",
+    number: "14",
     title: "What Limits Government Power in Hayek's Political Theory?",
     answer: [
       "Hayek emphasizes the limits of knowledge, spontaneous order, general rules, and the rule of law",
@@ -121,7 +130,7 @@ const questions = [
   },
   {
     id: "buchanan-constitutional-political-economy",
-    number: "14",
+    number: "15",
     title: "What Limits Government in Buchanan's Constitutional Political Economy?",
     answer: [
       "Buchanan examines the constitutional rules within which collective decisions are made and the role of agreement",
@@ -130,7 +139,7 @@ const questions = [
   },
   {
     id: "rothbard-anarcho-capitalism-state-coercion",
-    number: "15",
+    number: "16",
     title: "Does Rothbard's Anarcho-Capitalism Reject All State Coercion?",
     answer: [
       "Yes. Rothbard treats coercion as morally illegitimate whether it comes from the State or anyone else and rejects compulsory state provision",
@@ -138,21 +147,12 @@ const questions = [
     ],
   },
   {
-    id: "minarchism-minimal-state-functions",
-    number: "16",
-    title: "What Is Minarchism, and What Functions Does a Minimal State Perform?",
-    answer: [
-      "Minarchism usually begins with a fixed set of state functions such as defense, police, and courts",
-      "This theory does not start from a predefined list. Every function must pass the same criterion",
-    ],
-  },
-  {
-    id: "nozick-minimal-state-legitimacy",
+    id: "nozick-minimal-state-minarchism",
     number: "17",
-    title: "Is Nozick's Minimal State Morally Legitimate?",
+    title: "Is Nozick's Minimal State a Form of Minarchism?",
     answer: [
-      "Yes, in Nozick's theory. In <em>Anarchy, State, and Utopia</em>, he defends a morally legitimate minimal state grounded in a theory of rights",
-      "Here, state coercion never becomes morally legitimate. It can only be tolerated exceptionally on grounds of necessity",
+      "In <em>Anarchy, State, and Utopia</em>, Nozick defends a morally legitimate minimal state largely confined to protective functions, a position closely associated with minarchism",
+      "This theory neither grants the State moral legitimacy nor begins from a predefined list of permissible functions. Every function must pass the same criterion",
     ],
   },
   {
@@ -181,7 +181,7 @@ const questions = [
       "Only as far as separately justified. Necessity of the function does not authorize any tax, agency, monopoly, mandate, budget, or form of enforcement",
       "Each coercive instrument faces a second burden of proof",
     ],
-  },
+  }
 ];
 
 const stripHtml = (value) =>
@@ -428,6 +428,12 @@ const faqSchema = {
        * Developed-question title: 10% smaller than the previous version.
        * Right-side answer size is untouched.
        */
+      .question-number {
+        display: inline-block;
+        transform: scale(1.2);
+        transform-origin: left top;
+      }
+
       .question-heading h2 {
         font-size: clamp(1.08rem, 1.62vw, 1.62rem);
         line-height: 1.12;
@@ -470,7 +476,13 @@ const faqSchema = {
           font-size: 0.95rem;
         }
 
-        .question-heading h2 {
+        .question-number {
+        display: inline-block;
+        transform: scale(1.2);
+        transform-origin: left top;
+      }
+
+      .question-heading h2 {
           font-size: clamp(0.99rem, 3.33vw, 1.26rem);
         }
 
@@ -528,4 +540,3 @@ const faqSchema = {
     </script>
   </body>
 </html>
-
