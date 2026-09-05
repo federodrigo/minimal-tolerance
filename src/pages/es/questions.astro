@@ -14,8 +14,17 @@ const questions = [
     ],
   },
   {
-    id: "eficiencia-estado",
+    id: "estado-organizacion-criminal",
     number: "02",
+    title: "¿Es el Estado una organización criminal?",
+    answer: [
+      "Sí, en un sentido normativo. El Estado reclama poderes —jurisdicción obligatoria, tributación y ejecución— que serían considerados coercitivos si los ejerciera una asociación voluntaria",
+      "La legalidad no confiere por sí sola legitimidad moral a esos actos",
+    ],
+  },
+  {
+    id: "eficiencia-estado",
+    number: "03",
     title: "¿Puede el Estado ser eficiente?",
     answer: [
       "No. Incluso el Estado mejor diseñado y mejor administrado enfrenta límites inevitables de información, cálculo económico, incentivos y corrección del error",
@@ -24,7 +33,7 @@ const questions = [
   },
   {
     id: "funciones-del-estado",
-    number: "03",
+    number: "04",
     title: "¿Qué funciones debe cumplir el Estado?",
     answer: [
       "No existe una lista predeterminada. Las funciones deben examinarse individualmente en lugar de heredarse de la costumbre, las constituciones o la tradición política",
@@ -33,7 +42,7 @@ const questions = [
   },
   {
     id: "carga-prueba-coercion",
-    number: "04",
+    number: "05",
     title: "¿Quién debe probar que la coerción es necesaria?",
     answer: [
       "Quien pretende imponerla. La libertad es el punto de partida y la carga de la prueba recae sobre el poder",
@@ -41,7 +50,7 @@ const questions = [
   },
   {
     id: "democracia-legitima-coercion",
-    number: "05",
+    number: "06",
     title: "¿La democracia legitima la coerción estatal?",
     answer: [
       "No. Los procedimientos democráticos pueden determinar quién ejerce el poder y bajo qué reglas, pero no convierten decisiones obligatorias en consentimiento",
@@ -49,17 +58,17 @@ const questions = [
     ],
   },
   {
-    id: "utilidad-necesidad-coercion",
-    number: "06",
+    id: "servicios-esenciales-coercion-estatal",
+    number: "07",
     title: "¿Los servicios esenciales justifican la coerción estatal?",
     answer: [
-      "No. Una función puede ser útil, necesaria, valiosa o socialmente beneficiosa sin volver necesaria su provisión obligatoria",
+      "No. Un servicio puede ser esencial, valioso o socialmente beneficioso sin volver necesaria su provisión obligatoria",
       "El valor de un fin y la justificación de los medios coercitivos son cuestiones distintas",
     ],
   },
   {
     id: "bienes-publicos-provision-estatal",
-    number: "07",
+    number: "08",
     title: "¿Los bienes públicos requieren provisión estatal?",
     answer: [
       "No. La no exclusión y la no rivalidad describen una estructura del bien, no una conclusión institucional",
@@ -68,7 +77,7 @@ const questions = [
   },
   {
     id: "free-rider-coercion-estatal",
-    number: "08",
+    number: "09",
     title: "¿El problema del free rider justifica la coerción estatal?",
     answer: [
       "No. Que alguien pueda beneficiarse sin contribuir no demuestra que una función no pueda sostenerse voluntariamente",
@@ -77,7 +86,7 @@ const questions = [
   },
   {
     id: "fracaso-provision-voluntaria",
-    number: "09",
+    number: "10",
     title: "¿Cuándo fracasa realmente la provisión voluntaria?",
     answer: [
       "Cuando arreglos materialmente distintos fallan de forma persistente porque la misma estructura de incentivos impide sostener la función",
@@ -86,7 +95,7 @@ const questions = [
   },
   {
     id: "schmidtz-bienes-publicos-free-riders",
-    number: "10",
+    number: "11",
     title: "¿Qué sostiene David Schmidtz sobre los bienes públicos y los free riders?",
     answer: [
       "En <em>Los Límites del Gobierno</em>, Schmidtz muestra que los bienes públicos y los free riders no justifican por sí solos autoridad estatal y que ciertos arreglos voluntarios pueden funcionar",
@@ -95,7 +104,7 @@ const questions = [
   },
   {
     id: "fallas-mercado-intervencion-estatal",
-    number: "11",
+    number: "12",
     title: "¿Las fallas de mercado justifican la intervención estatal?",
     answer: [
       "No. Monopolio natural, información imperfecta, concentración, problemas de coordinación o provisión insuficiente describen posibles fallas de mercado",
@@ -104,7 +113,7 @@ const questions = [
   },
   {
     id: "externalidades-positivas-intervencion-estatal",
-    number: "12",
+    number: "13",
     title: "¿Las externalidades positivas justifican la intervención estatal?",
     answer: [
       "No. Que una actividad beneficie a terceros no la convierte en una función estatal",
@@ -113,7 +122,7 @@ const questions = [
   },
   {
     id: "libertarismo-coercion-estatal",
-    number: "13",
+    number: "14",
     title: "¿Puede una teoría libertaria tolerar la coerción estatal?",
     answer: [
       "Sí, excepcionalmente. Tolerancia Mínima parte de la libertad y rechaza la legitimidad moral de la coerción",
@@ -122,7 +131,7 @@ const questions = [
   },
   {
     id: "hayek-limites-poder-estatal",
-    number: "14",
+    number: "15",
     title: "¿Qué limita el poder del Estado en la teoría política de Hayek?",
     answer: [
       "Hayek destaca los límites del conocimiento, el orden espontáneo, las reglas generales y el Estado de derecho",
@@ -131,7 +140,7 @@ const questions = [
   },
   {
     id: "buchanan-economia-politica-constitucional",
-    number: "15",
+    number: "16",
     title: "¿Qué limita al Estado en la economía política constitucional de Buchanan?",
     answer: [
       "Buchanan estudia las reglas constitucionales dentro de las cuales se toman decisiones colectivas y el papel del acuerdo",
@@ -140,7 +149,7 @@ const questions = [
   },
   {
     id: "rothbard-anarcocapitalismo-coercion-estatal",
-    number: "16",
+    number: "17",
     title: "¿El anarcocapitalismo de Rothbard rechaza toda coerción estatal?",
     answer: [
       "Sí. Rothbard considera moralmente ilegítima la coerción, provenga del Estado o de cualquier otro, y rechaza la provisión estatal obligatoria",
@@ -149,7 +158,7 @@ const questions = [
   },
   {
     id: "minarquismo-defensa-policia-tribunales",
-    number: "17",
+    number: "18",
     title: "¿El minarquismo justifica un Estado limitado a defensa, policía y tribunales?",
     answer: [
       "El minarquismo clásico trata defensa, policía y tribunales como las funciones legítimas centrales del Estado",
@@ -158,7 +167,7 @@ const questions = [
   },
   {
     id: "nozick-estado-minimo-legitimidad",
-    number: "18",
+    number: "19",
     title: "¿Es moralmente legítimo el Estado mínimo de Nozick?",
     answer: [
       "En <em>Anarquía, Estado y Utopía</em>, Nozick defiende un Estado mínimo como moralmente legítimo",
@@ -166,20 +175,11 @@ const questions = [
     ],
   },
   {
-    id: "estado-autolimitacion",
-    number: "19",
-    title: "¿Puede el Estado limitarse a sí mismo?",
-    answer: [
-      "Solo de forma imperfecta. Quien ejerce el poder también participa en la definición, interpretación y modificación de sus límites",
-      "La restricción, por tanto, no puede descansar únicamente en la voluntad de quienes gobiernan",
-    ],
-  },
-  {
     id: "ausencia-alternativas-voluntarias-estado-necesario",
     number: "20",
     title: "¿La ausencia de alternativas voluntarias prueba que el Estado es necesario?",
     answer: [
-      "No. Que una función no esté siendo provista voluntariamente no crea, por sí solo, un derecho del Estado a proveerla coercitivamente. La ausencia de oferta no convierte una preferencia, una necesidad o un deseo en una función estatal",
+      "No. Que una función no esté siendo provista voluntariamente no crea, por sí solo, un derecho del Estado a proveerla coercitivamente",
       "Además, un monopolio legal, la provisión estatal o una regulación restrictiva pueden haber impedido que surgieran alternativas",
     ],
   }
@@ -214,7 +214,7 @@ const faqSchema = {
 
     <SEO
       title="Límites del Estado, coerción y bienes públicos | Tolerancia Mínima"
-      description="Preguntas sobre legitimidad moral y eficiencia del Estado, coerción, bienes públicos, free riders, fallas de mercado, libertarismo, Hayek, Buchanan, Rothbard, minarquismo y Nozick"
+      description="Preguntas sobre legitimidad moral, coerción y eficiencia del Estado, bienes públicos, free riders, fallas de mercado, libertarismo, Hayek, Buchanan, Rothbard, minarquismo y Nozick"
       lang="es"
     />
 
@@ -354,7 +354,7 @@ const faqSchema = {
        * Force a true two-column grid here so each pair of questions
        * shares the exact same row height.
        */
-   .key-questions-label {
+      .key-questions-label {
   color: #a07d37 !important;
   font-size: 1.15rem;
   letter-spacing: 0.14em;
@@ -525,6 +525,3 @@ const faqSchema = {
     </script>
   </body>
 </html>
-
-
-
