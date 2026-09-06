@@ -2,6 +2,71 @@
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import SEO from "../components/SEO.astro";
+
+const passCases = [
+  "Territorial defense",
+  "Internal security",
+  "Judicial system / rule enforcement",
+  "Emergencies and disasters",
+  "Truly devastating epidemics",
+  "Existential threats",
+  "International monetary infrastructure",
+  "Financial system stability",
+  "Global environment",
+  "Preservation of strategic capacity",
+  "Common rule for ownerless land",
+];
+
+const failCases = [
+  "Education",
+  "Health as a general system",
+  "Housing",
+  "Pensions",
+  "Food",
+  "Transport, internet, and commercial infrastructure",
+  "Urban services",
+  "Property records and cadastres",
+  "Labor regulation",
+  "Political party financing",
+  "Aircraft production with state support",
+  "Scarce goods after a hurricane",
+  "Monopolies, cartels, and dumping",
+  "Natural monopolies / strategic activity",
+  "National monetary monopolies",
+  "Drug verification",
+  "Lighthouse",
+  "Cultural heritage",
+  "Semiconductor production",
+  "Discrimination and repugnant agreements",
+  "State appropriation or distribution of ownerless land",
+];
+
+const grayCases = [
+  "Open roads and highways",
+  "Basic scientific research",
+  "Immediate medical emergency",
+];
+
+const resultGroups = [
+  {
+    label: "PASS",
+    title: "Pass",
+    className: "result-pass",
+    items: passCases,
+  },
+  {
+    label: "DO NOT PASS",
+    title: "Do not pass",
+    className: "result-fail",
+    items: failCases,
+  },
+  {
+    label: "GRAY AREA",
+    title: "Gray area / debatable",
+    className: "result-gray",
+    items: grayCases,
+  },
+];
 ---
 
 <!doctype html>
@@ -17,7 +82,7 @@ import SEO from "../components/SEO.astro";
 
     <SEO
       title="Cases of the Theorem of Minimal Tolerance | Minimal Tolerance"
-      description="Stress testing the Theorem of Minimal Tolerance across defense, public services, basic needs, financial stability, scientific research, and other contested areas."
+      description="Stress testing the Theorem of Minimal Tolerance across defense, public services, financial stability, scientific research, ownerless land, and other contested functions."
       lang="en"
     />
   </head>
@@ -26,7 +91,7 @@ import SEO from "../components/SEO.astro";
     <Header />
 
     <main>
-      <!-- PAGE TITLE -->
+      <!-- HERO -->
 
       <section class="page-hero">
         <div class="container hero-sequence">
@@ -40,7 +105,7 @@ import SEO from "../components/SEO.astro";
         </div>
       </section>
 
-      <!-- MAIN STATEMENT -->
+      <!-- STATEMENT -->
 
       <section class="statement">
         <blockquote class="reveal reveal-scale">
@@ -48,7 +113,7 @@ import SEO from "../components/SEO.astro";
         </blockquote>
       </section>
 
-      <!-- CRITERION -->
+      <!-- THEOREM -->
 
       <section class="content-section method-section">
         <div class="container">
@@ -57,22 +122,15 @@ import SEO from "../components/SEO.astro";
           </p>
 
           <div class="criterion-panel reveal reveal-scale">
-
-            <!-- FORMULA -->
-
             <div class="criterion-formal">
               <div class="formula-expression">
                 T → (NE ∧ NR ∧ CV)
               </div>
             </div>
 
-            <!-- DEFINITIONS -->
-
             <div class="criterion-terms">
               <div class="criterion-term">
-                <span class="criterion-code">
-                  T
-                </span>
+                <span class="criterion-code">T</span>
 
                 <span class="criterion-name">
                   Tolerability on coercive-necessity grounds
@@ -80,9 +138,7 @@ import SEO from "../components/SEO.astro";
               </div>
 
               <div class="criterion-term">
-                <span class="criterion-code">
-                  NE
-                </span>
+                <span class="criterion-code">NE</span>
 
                 <span class="criterion-name">
                   Effective non-excludability
@@ -90,9 +146,7 @@ import SEO from "../components/SEO.astro";
               </div>
 
               <div class="criterion-term">
-                <span class="criterion-code">
-                  NR
-                </span>
+                <span class="criterion-code">NR</span>
 
                 <span class="criterion-name">
                   Relevant non-rivalry
@@ -100,242 +154,360 @@ import SEO from "../components/SEO.astro";
               </div>
 
               <div class="criterion-term">
-                <span class="criterion-code">
-                  CV
-                </span>
+                <span class="criterion-code">CV</span>
 
                 <span class="criterion-name">
                   Persistent collapse of voluntary provision
                 </span>
               </div>
             </div>
-
           </div>
         </div>
       </section>
 
-      <!-- FUNCTIONS THAT CAN PASS -->
+      <!-- COMPLETE RESULT -->
 
-      <section class="application-section application-section-pass">
-        <div class="container">
-          <p class="eyebrow reveal">
-            THE STRONGEST CANDIDATES
-          </p>
-
-          <h2 class="reveal">
-            Functions that can pass the test
-          </h2>
-
-          <div class="application-grid stagger">
-            <article class="application-card reveal reveal-scale">
-              <h3>
-                Territorial defense
-              </h3>
-
-              <p>
-                Territorial defense can satisfy non-excludability and
-                non-rivalry. It passes the test only if free-rider
-                incentives persistently undermine the financing,
-                coordination, or participation needed to sustain the
-                collective function
-              </p>
-            </article>
-
-            <article class="application-card reveal reveal-scale">
-              <h3>
-                Internal security and legal order
-              </h3>
-
-              <p>
-                Some functions of collective security and legal order can
-                satisfy the first two conditions. The remaining burden is
-                to establish that voluntary provision persistently fails
-                to sustain the relevant function
-              </p>
-            </article>
-
-            <article class="application-card reveal reveal-scale">
-              <h3>
-                Major emergencies and epidemics
-              </h3>
-
-              <p>
-                Exceptional emergencies can create functions whose benefits
-                are difficult to exclude and broadly shared. They pass only
-                where persistent voluntary collapse is also established for
-                the specific function under examination
-              </p>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <!-- FUNCTIONS THAT FAIL -->
-
-      <section class="application-section application-section-fail">
-        <div class="container">
-          <p class="eyebrow reveal">
-            OUTSIDE THE EXCEPTION
-          </p>
-
-          <h2 class="reveal">
-            Functions that fail the test
-          </h2>
-
-          <div class="application-grid stagger">
-            <article class="application-card reveal reveal-scale">
-              <h3>
-                Health, education, and pensions
-              </h3>
-
-              <p>
-                These goods may be essential and socially valuable, but
-                their importance does not remove rivalry or make exclusion
-                ineffective. They therefore fail before persistent voluntary
-                collapse becomes relevant
-              </p>
-            </article>
-
-            <article class="application-card reveal reveal-scale">
-              <h3>
-                Labor regulation and paternalism
-              </h3>
-
-              <p>
-                Restrictions on wages, contracts, benefits, and working
-                conditions may pursue distributive or paternalistic
-                goals, but those grounds do not establish the three
-                conditions required by the theorem
-              </p>
-            </article>
-
-            <article class="application-card reveal reveal-scale">
-              <h3>
-                Political parties and ordinary regulation
-              </h3>
-
-              <p>
-                Political influence, unequal bargaining power,
-                concentration, and undesirable conduct may raise serious
-                concerns. They do not by themselves establish effective
-                non-excludability, relevant non-rivalry, and persistent
-                collapse of voluntary provision
-              </p>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <!-- BORDERLINE CASES -->
-
-      <section
-        class="application-section application-section-borderline"
-      >
-        <div class="container">
-          <p class="eyebrow reveal">
-            BORDERLINE CASES
-          </p>
-
-          <h2 class="reveal">
-            Not every function has a clear answer
-          </h2>
-
-          <div class="application-grid stagger">
-            <article class="application-card reveal reveal-scale">
-              <h3>
-                Roads and urban networks
-              </h3>
-
-              <p>
-                Toll roads and private streets can permit effective
-                exclusion, while some open networks may not. Congestion,
-                technology, ownership, scale, and alternative financing
-                arrangements can change the result
-              </p>
-            </article>
-
-            <article class="application-card reveal reveal-scale">
-              <h3>
-                Basic scientific research
-              </h3>
-
-              <p>
-                Knowledge can be difficult to exclude and can often be
-                used without diminishing what remains for others. The
-                remaining question is whether free-rider incentives
-                prevent voluntary institutions from sustaining the
-                relevant research function over time
-              </p>
-            </article>
-
-            <article class="application-card reveal reveal-scale">
-              <h3>
-                Strategic infrastructure
-              </h3>
-
-              <p>
-                Semiconductors, currencies, and financial services are
-                ordinarily excludable and rival at the product level.
-                The analysis may change when the function under review
-                is a broader form of systemic resilience, which must
-                then satisfy all three conditions independently
-              </p>
-            </article>
-
-            <article class="application-card reveal reveal-scale">
-              <h3>
-                Systemic financial stability
-              </h3>
-
-              <p>
-                The relevant function may be the continued operation of
-                a financial infrastructure rather than the survival of
-                any particular institution. Whether it passes the test
-                depends on the structure of the system and the available
-                voluntary alternatives
-              </p>
-            </article>
-
-            <article class="application-card reveal reveal-scale">
-              <h3>
-                Environmental protection
-              </h3>
-
-              <p>
-                Some environmental benefits extend across borders and
-                generations and may satisfy non-excludability and
-                non-rivalry. The remaining question is whether free-rider
-                incentives persistently undermine the protective function
-              </p>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <!-- FINAL PRINCIPLE -->
-
-      <section class="content-section content-section-alt">
+      <section class="results-section">
         <div class="container">
           <p class="eyebrow reveal">
             THE RESULT
           </p>
 
           <h2 class="reveal">
-            Each function stands on its own
+            Which functions pass — and which do not
+          </h2>
+
+          <p class="results-intro reveal">
+            The theorem evaluates the function itself, not its importance,
+            popularity, moral appeal, or current association with government.
+            All three conditions must be satisfied at the same time.
+          </p>
+
+          <div class="results-grid">
+            {
+              resultGroups.map((group) => (
+                <article
+                  class={`result-column ${group.className} reveal reveal-scale`}
+                >
+                  <div class="result-header">
+                    <span class="result-label">
+                      {group.label}
+                    </span>
+
+                    <h3>
+                      {group.title}
+                    </h3>
+                  </div>
+
+                  <ul class="result-list">
+                    {
+                      group.items.map((item) => (
+                        <li>
+                          <span class="result-marker" aria-hidden="true"></span>
+                          <span>{item}</span>
+                        </li>
+                      ))
+                    }
+                  </ul>
+                </article>
+              ))
+            }
+          </div>
+        </div>
+      </section>
+
+      <!-- PART I -->
+
+      <section class="application-section application-section-pass">
+        <div class="container">
+          <p class="eyebrow reveal">
+            TEST I
+          </p>
+
+          <h2 class="reveal">
+            The first filter is structural
+          </h2>
+
+          <div class="application-grid stagger">
+            <article class="application-card reveal reveal-scale">
+              <span class="card-kicker">
+                STRONGEST CASES
+              </span>
+
+              <h3>
+                Defense, security, and legal order
+              </h3>
+
+              <p>
+                Territorial defense, internal security, and the judicial
+                system are among the strongest candidates. Their benefits
+                can be effectively non-excludable and relevantly
+                non-rival, while free-rider incentives can undermine the
+                financing or participation required to sustain them.
+              </p>
+            </article>
+
+            <article class="application-card reveal reveal-scale">
+              <span class="card-kicker">
+                BASIC NEEDS
+              </span>
+
+              <h3>
+                Importance does not remove rivalry
+              </h3>
+
+              <p>
+                Education, health, housing, food, and pensions may be
+                essential. That does not change the economic structure of
+                the underlying goods. Rivalry alone is sufficient to place
+                them outside the theorem.
+              </p>
+            </article>
+
+            <article class="application-card reveal reveal-scale">
+              <span class="card-kicker">
+                EMERGENCIES
+              </span>
+
+              <h3>
+                Scarcity does not change the test
+              </h3>
+
+              <p>
+                A hurricane can destroy supply and make water, food, or
+                fuel extremely scarce. It does not make those goods
+                non-excludable or non-rival. Physical disruption is not
+                the same thing as persistent voluntary collapse.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- PART II -->
+
+      <section class="application-section application-section-second">
+        <div class="container">
+          <p class="eyebrow reveal">
+            TEST II
+          </p>
+
+          <h2 class="reveal">
+            The function must be defined precisely
+          </h2>
+
+          <div class="application-grid stagger">
+            <article class="application-card reveal reveal-scale">
+              <span class="card-kicker">
+                MONETARY INFRASTRUCTURE
+              </span>
+
+              <h3>
+                A currency is not the same as a monetary infrastructure
+              </h3>
+
+              <p>
+                A national monetary monopoly does not pass simply because
+                it exists. The analysis changes when the relevant function
+                is an international monetary infrastructure whose benefits
+                extend across a much wider system.
+              </p>
+            </article>
+
+            <article class="application-card reveal reveal-scale">
+              <span class="card-kicker">
+                FINANCIAL SYSTEM
+              </span>
+
+              <h3>
+                Stability is not the survival of a firm
+              </h3>
+
+              <p>
+                The relevant function is the continued operation of the
+                financial system, not the preservation of a particular
+                bank, insurer, or institution. The distinction is essential
+                to the result.
+              </p>
+            </article>
+
+            <article class="application-card reveal reveal-scale">
+              <span class="card-kicker">
+                STRATEGIC CAPACITY
+              </span>
+
+              <h3>
+                The product and the capacity are different functions
+              </h3>
+
+              <p>
+                Semiconductor production is excludable, rival, and already
+                supplied voluntarily. Preserving a strategic productive
+                capacity against a future military threat is a different
+                function and must be evaluated separately.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- OWNERLESS LAND -->
+
+      <section class="distinction-section">
+        <div class="container">
+          <p class="eyebrow reveal">
+            A CRITICAL DISTINCTION
+          </p>
+
+          <h2 class="reveal">
+            Ownerless land produces two opposite results
+          </h2>
+
+          <div class="distinction-grid">
+            <article class="distinction-card distinction-no reveal reveal-scale">
+              <span class="distinction-status">
+                DOES NOT PASS
+              </span>
+
+              <h3>
+                State appropriation or distribution
+              </h3>
+
+              <p>
+                The land itself remains rival and excludable. The State
+                does not acquire ownership merely by controlling the
+                territory, and distributing the land does not alter the
+                nature of the resource.
+              </p>
+            </article>
+
+            <div class="distinction-divider" aria-hidden="true">
+              ≠
+            </div>
+
+            <article class="distinction-card distinction-yes reveal reveal-scale">
+              <span class="distinction-status">
+                PASSES
+              </span>
+
+              <h3>
+                A common rule for acquiring title
+              </h3>
+
+              <p>
+                The relevant function is no longer the land itself. It is
+                the common rule that determines when title arises over
+                previously ownerless land. That rule can satisfy all three
+                conditions.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- GRAY AREA -->
+
+      <section class="application-section application-section-borderline">
+        <div class="container">
+          <p class="eyebrow reveal">
+            GRAY AREA
+          </p>
+
+          <h2 class="reveal">
+            Three cases remain genuinely debatable
+          </h2>
+
+          <div class="application-grid gray-grid stagger">
+            <article class="application-card reveal reveal-scale">
+              <span class="card-kicker">
+                OPEN NETWORKS
+              </span>
+
+              <h3>
+                Open roads and highways
+              </h3>
+
+              <p>
+                Toll roads and private streets permit exclusion. Some open
+                roads do not. Congestion, technology, financing, and the
+                precise function under examination can change the result.
+              </p>
+            </article>
+
+            <article class="application-card reveal reveal-scale">
+              <span class="card-kicker">
+                KNOWLEDGE
+              </span>
+
+              <h3>
+                Basic scientific research
+              </h3>
+
+              <p>
+                Basic knowledge is difficult to exclude and can be used by
+                many without being depleted. The unresolved question is
+                whether voluntary institutions can sustain its production
+                persistently at the relevant scale.
+              </p>
+            </article>
+
+            <article class="application-card reveal reveal-scale">
+              <span class="card-kicker">
+                IMMEDIATE AID
+              </span>
+
+              <h3>
+                Immediate medical emergency
+              </h3>
+
+              <p>
+                An unconscious patient may require immediate assistance
+                without prior agreement. The emergency creates a difficult
+                exceptional case, but it does not transform healthcare as
+                a whole into a non-rival and non-excludable good.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- WHAT DOES NOT FOLLOW -->
+
+      <section class="content-section content-section-alt">
+        <div class="container narrow-result">
+          <p class="eyebrow reveal">
+            WHAT PASSING DOES NOT MEAN
+          </p>
+
+          <h2 class="reveal">
+            An exception remains an exception
           </h2>
 
           <p class="reveal">
-            The theorem does not accept or reject the State as a
-            whole. Each function is evaluated independently, and
-            passing one creates no presumption in favor of another
+            Passing the theorem does not grant moral legitimacy to the
+            State, nor does it authorize every policy, institution, or
+            method used in the name of the admitted function.
           </p>
 
           <p class="reveal">
-            Any tolerance remains contingent on the conditions that
-            supported it. Changes in technology, institutions, or
-            voluntary provision can therefore require the exception
-            to be examined again
+            The exception extends only to the function that satisfies the
+            three conditions. Its scope must remain limited to the reason
+            for which coercion was tolerated.
           </p>
+        </div>
+      </section>
+
+      <!-- FINAL PRINCIPLE -->
+
+      <section class="final-principle">
+        <div class="container">
+          <p class="eyebrow reveal">
+            THE PRINCIPLE
+          </p>
+
+          <blockquote class="final-quote reveal reveal-scale">
+            The burden of proof belongs to power
+          </blockquote>
         </div>
       </section>
 
@@ -352,11 +524,9 @@ import SEO from "../components/SEO.astro";
           </h2>
 
           <p class="reveal">
-            The book applies the theorem to defense, emergencies,
-            basic needs, roads, monetary systems, financial crises,
-            scientific research, environmental threats, labor
-            regulation, and agreements commonly considered
-            unacceptable
+            The book develops each case in full, including the distinction
+            between products and functions, the treatment of voluntary
+            provision, and the cases that remain genuinely uncertain.
           </p>
 
           <div class="buttons reveal">
@@ -371,7 +541,9 @@ import SEO from "../components/SEO.astro";
     <Footer />
 
     <style>
-      /* CRITERION */
+      /* -------------------------------------------------------
+         CRITERION
+      ------------------------------------------------------- */
 
       .criterion-panel {
         max-width: 760px;
@@ -386,8 +558,6 @@ import SEO from "../components/SEO.astro";
           box-shadow 240ms ease;
       }
 
-      /* FORMULA */
-
       .criterion-formal {
         padding: 25px 0 23px;
         border-bottom: 1px solid var(--line);
@@ -400,8 +570,6 @@ import SEO from "../components/SEO.astro";
         line-height: 1.08;
         letter-spacing: 0.01em;
       }
-
-      /* DEFINITIONS */
 
       .criterion-terms {
         padding-top: 14px;
@@ -429,7 +597,137 @@ import SEO from "../components/SEO.astro";
         line-height: 1.35;
       }
 
-      /* APPLICATION SECTIONS */
+      /* -------------------------------------------------------
+         COMPLETE RESULTS
+      ------------------------------------------------------- */
+
+      .results-section {
+        padding: var(--section-space) 0;
+        background: var(--paper);
+        border-top: 1px solid var(--line);
+        border-bottom: 1px solid var(--line);
+      }
+
+      .results-section > .container > .eyebrow,
+      .results-section > .container > h2,
+      .results-intro {
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+      }
+
+      .results-intro {
+        max-width: 760px;
+        margin-top: 18px;
+        margin-bottom: 0;
+      }
+
+      .results-grid {
+        display: grid;
+        grid-template-columns: 0.95fr 1.35fr 0.8fr;
+        gap: 20px;
+        margin-top: 42px;
+        align-items: stretch;
+      }
+
+      .result-column {
+        overflow: hidden;
+        background: var(--paper-light);
+        border: 1px solid var(--line);
+        border-radius: 16px;
+        transition:
+          transform 240ms ease,
+          border-color 240ms ease,
+          box-shadow 240ms ease;
+      }
+
+      .result-header {
+        padding: 20px 24px 19px;
+        background:
+          linear-gradient(
+            180deg,
+            rgba(13, 27, 42, 0.055),
+            rgba(13, 27, 42, 0.018)
+          );
+        border-bottom: 1px solid var(--line);
+      }
+
+      .result-label {
+        display: block;
+        margin-bottom: 5px;
+        color: var(--gold);
+        font-size: 0.72rem;
+        font-weight: 700;
+        letter-spacing: 0.14em;
+      }
+
+      .result-header h3 {
+        margin: 0;
+        color: var(--navy);
+        font-size: 1.65rem;
+        line-height: 1.1;
+      }
+
+      .result-list {
+        margin: 0;
+        padding: 10px 22px 16px;
+        list-style: none;
+      }
+
+      .result-list li {
+        display: grid;
+        grid-template-columns: 9px 1fr;
+        gap: 12px;
+        align-items: baseline;
+        padding: 12px 0;
+        color: var(--navy);
+        font-size: 0.98rem;
+        line-height: 1.35;
+        border-bottom: 1px solid rgba(13, 27, 42, 0.09);
+      }
+
+      .result-list li:last-child {
+        border-bottom: 0;
+      }
+
+      .result-marker {
+        width: 5px;
+        height: 5px;
+        margin-top: 0.45em;
+        background: rgba(13, 27, 42, 0.52);
+        border-radius: 50%;
+      }
+
+      .result-pass .result-header {
+        background:
+          linear-gradient(
+            180deg,
+            rgba(13, 27, 42, 0.035),
+            rgba(13, 27, 42, 0.012)
+          );
+      }
+
+      .result-fail .result-header {
+        background:
+          linear-gradient(
+            180deg,
+            rgba(13, 27, 42, 0.075),
+            rgba(13, 27, 42, 0.022)
+          );
+      }
+
+      .result-gray .result-header {
+        background:
+          linear-gradient(
+            180deg,
+            rgba(169, 131, 58, 0.09),
+            rgba(169, 131, 58, 0.02)
+          );
+      }
+
+      /* -------------------------------------------------------
+         APPLICATION SECTIONS
+      ------------------------------------------------------- */
 
       .application-section {
         padding: var(--section-space) 0;
@@ -440,7 +738,7 @@ import SEO from "../components/SEO.astro";
         background: var(--cream);
       }
 
-      .application-section-fail {
+      .application-section-second {
         background: var(--paper);
       }
 
@@ -459,11 +757,11 @@ import SEO from "../components/SEO.astro";
         display: grid;
         grid-template-columns: repeat(3, minmax(0, 1fr));
         gap: 22px;
-        margin-top: 34px;
+        margin-top: 36px;
       }
 
       .application-card {
-        min-height: 290px;
+        min-height: 300px;
         padding: 28px;
         background: var(--paper-light);
         border: 1px solid var(--line);
@@ -474,8 +772,17 @@ import SEO from "../components/SEO.astro";
           box-shadow 240ms ease;
       }
 
-      .application-section-fail .application-card {
+      .application-section-second .application-card {
         background: var(--cream);
+      }
+
+      .card-kicker {
+        display: block;
+        margin-bottom: 14px;
+        color: var(--gold);
+        font-size: 0.72rem;
+        font-weight: 700;
+        letter-spacing: 0.11em;
       }
 
       .application-card h3 {
@@ -493,23 +800,140 @@ import SEO from "../components/SEO.astro";
         hyphens: none;
       }
 
-      /* HOVER — MOUSE ONLY */
+      /* -------------------------------------------------------
+         OWNERLESS LAND DISTINCTION
+      ------------------------------------------------------- */
+
+      .distinction-section {
+        padding: var(--section-space) 0;
+        background: var(--cream);
+        border-top: 1px solid var(--line);
+      }
+
+      .distinction-section > .container > .eyebrow,
+      .distinction-section > .container > h2 {
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+      }
+
+      .distinction-grid {
+        display: grid;
+        grid-template-columns: 1fr 70px 1fr;
+        gap: 18px;
+        align-items: stretch;
+        max-width: 1000px;
+        margin: 40px auto 0;
+      }
+
+      .distinction-card {
+        padding: 32px;
+        background: var(--paper-light);
+        border: 1px solid var(--line);
+        border-radius: 16px;
+        transition:
+          transform 240ms ease,
+          border-color 240ms ease,
+          box-shadow 240ms ease;
+      }
+
+      .distinction-status {
+        display: block;
+        margin-bottom: 14px;
+        color: var(--gold);
+        font-size: 0.72rem;
+        font-weight: 700;
+        letter-spacing: 0.12em;
+      }
+
+      .distinction-card h3 {
+        margin-bottom: 15px;
+        color: var(--navy);
+        font-size: 1.5rem;
+        line-height: 1.2;
+      }
+
+      .distinction-card p {
+        margin: 0;
+        font-size: 1rem;
+        line-height: 1.62;
+      }
+
+      .distinction-divider {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: rgba(13, 27, 42, 0.35);
+        font-size: 2.2rem;
+        font-weight: 600;
+      }
+
+      /* -------------------------------------------------------
+         FINAL RESULT
+      ------------------------------------------------------- */
+
+      .narrow-result {
+        max-width: 830px;
+      }
+
+      .narrow-result p {
+        max-width: 760px;
+      }
+
+      .final-principle {
+        padding: calc(var(--section-space) * 0.9) 0;
+        background: var(--navy);
+        text-align: center;
+      }
+
+      .final-principle .eyebrow {
+        color: var(--gold);
+      }
+
+      .final-quote {
+        max-width: 900px;
+        margin: 22px auto 0;
+        color: var(--paper-light);
+        font-size: clamp(2.2rem, 5vw, 4.4rem);
+        font-weight: 600;
+        line-height: 1.08;
+        letter-spacing: -0.025em;
+      }
+
+      /* -------------------------------------------------------
+         HOVER
+      ------------------------------------------------------- */
 
       @media (hover: hover) and (pointer: fine) {
-        .criterion-panel:hover {
-          transform: translateY(-3px);
-          border-color: rgba(169, 131, 58, 0.35);
-          box-shadow: 0 14px 32px rgba(13, 27, 42, 0.06);
-        }
-
-        .application-card:hover {
-          transform: translateY(-5px);
-          border-color: rgba(169, 131, 58, 0.4);
-          box-shadow: 0 18px 42px rgba(13, 27, 42, 0.09);
+        .criterion-panel:hover,
+        .result-column:hover,
+        .application-card:hover,
+        .distinction-card:hover {
+          transform: translateY(-4px);
+          border-color: rgba(169, 131, 58, 0.38);
+          box-shadow: 0 16px 38px rgba(13, 27, 42, 0.075);
         }
       }
 
-      /* RESPONSIVE */
+      /* -------------------------------------------------------
+         RESPONSIVE
+      ------------------------------------------------------- */
+
+      @media (max-width: 1050px) {
+        .results-grid {
+          grid-template-columns: 1fr 1fr;
+        }
+
+        .result-gray {
+          grid-column: 1 / -1;
+        }
+
+        .result-gray .result-list {
+          display: grid;
+          grid-template-columns: repeat(3, minmax(0, 1fr));
+          gap: 0 20px;
+        }
+      }
 
       @media (max-width: 900px) {
         .application-grid {
@@ -519,6 +943,16 @@ import SEO from "../components/SEO.astro";
 
         .application-card {
           min-height: auto;
+        }
+
+        .distinction-grid {
+          grid-template-columns: 1fr;
+          gap: 14px;
+        }
+
+        .distinction-divider {
+          min-height: 50px;
+          transform: rotate(90deg);
         }
       }
 
@@ -548,19 +982,49 @@ import SEO from "../components/SEO.astro";
         .criterion-name {
           font-size: 0.98rem;
         }
-      }
 
-      @media (max-width: 600px) {
-        .application-card {
-          padding: 24px;
+        .results-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .result-gray {
+          grid-column: auto;
+        }
+
+        .result-gray .result-list {
+          display: block;
         }
       }
 
-      /* REDUCED MOTION */
+      @media (max-width: 600px) {
+        .application-card,
+        .distinction-card {
+          padding: 24px;
+        }
+
+        .result-header {
+          padding: 18px 20px;
+        }
+
+        .result-list {
+          padding-left: 20px;
+          padding-right: 20px;
+        }
+
+        .final-quote {
+          font-size: clamp(2rem, 10vw, 3.1rem);
+        }
+      }
+
+      /* -------------------------------------------------------
+         REDUCED MOTION
+      ------------------------------------------------------- */
 
       @media (prefers-reduced-motion: reduce) {
         .criterion-panel,
-        .application-card {
+        .result-column,
+        .application-card,
+        .distinction-card {
           transition: none;
         }
       }
