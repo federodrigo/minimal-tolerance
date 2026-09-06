@@ -27,8 +27,8 @@ const questions = [
     number: "03",
     title: "Can government ever be efficient?",
     answer: [
-      "Government can perform particular tasks effectively and can sometimes improve measured outcomes. But even the best-designed State faces unavoidable limits of information, economic calculation, incentives, and error correction",
-      "Those limits can be reduced, but not eliminated, so observed effectiveness does not by itself establish a general case for coercive authority",
+      "No. Even the best-designed and best-run State faces unavoidable limits of information, economic calculation, incentives, and error correction",
+      "Those limits can be reduced, but not eliminated",
     ],
   },
   {
@@ -62,7 +62,7 @@ const questions = [
     number: "07",
     title: "Do essential services justify State coercion?",
     answer: [
-      "Not by themselves. A service can be essential, valuable, or socially beneficial without making compulsory provision necessary",
+      "No. A service can be essential, valuable, or socially beneficial without making compulsory provision necessary",
       "The value of an end and the justification for coercive means are separate questions",
     ],
   },
@@ -107,8 +107,8 @@ const questions = [
     number: "12",
     title: "Do market failures justify government intervention?",
     answer: [
-      "Not by themselves. Natural monopoly, imperfect information, concentration, coordination problems, or underprovision can identify conditions in which markets perform poorly",
-      "They do not by themselves show that government intervention is necessary, that coercion is justified, or that available alternatives fail persistently",
+      "No. Categories such as natural monopoly, imperfect information, concentration, coordination problems, or underprovision describe certain market conditions",
+      "By themselves, they do not show that government intervention is necessary or superior to available alternatives",
     ],
   },
   {
@@ -335,17 +335,6 @@ const stripHtml = (value) =>
 const faqSchema = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
-  "@id": "https://minimaltolerance.com/questions/#faq",
-  url: "https://minimaltolerance.com/questions/",
-  name: "What Should Government Be Allowed to Do?",
-  description:
-    "Questions about government intervention, state coercion, public goods, market failure, Keynesian policy, redistribution, externalities, and voluntary provision",
-  inLanguage: "en",
-  isPartOf: {
-    "@type": "WebSite",
-    name: "Minimal Tolerance",
-    url: "https://minimaltolerance.com/",
-  },
   mainEntity: questions.map((question) => ({
     "@type": "Question",
     name: question.title,
@@ -370,7 +359,7 @@ const faqSchema = {
 
     <SEO
       title="What Should Government Be Allowed to Do? | Minimal Tolerance"
-      description="When is government intervention justified? Explore state coercion, public goods, market failure, Keynes, redistribution, externalities, and voluntary provision."
+      description="When is government intervention justified? Questions on State coercion, public goods, market failure, Keynesian policy, redistribution, externalities, and voluntary provision"
       lang="en"
     />
 
@@ -407,35 +396,6 @@ const faqSchema = {
         </blockquote>
       </section>
 
-      <!-- SEARCH / TOPIC INTRO -->
-
-      <section class="questions-intro" aria-labelledby="questions-intro-title">
-        <div class="questions-container">
-          <h2 id="questions-intro-title" class="questions-intro-title reveal">
-            Government intervention, State power, and the limits of coercion
-          </h2>
-
-          <p class="questions-intro-lead reveal">
-            When is government intervention justified? This page examines the
-            main cases for and against State power: democracy, public goods,
-            free riders, market failure, externalities, macroeconomic
-            stabilization, fiscal stimulus, redistribution, social insurance,
-            merit goods, social rights, central banking, industrial policy,
-            and voluntary provision
-          </p>
-
-          <p class="questions-intro-links reveal">
-            Minimal Tolerance separates the value of an end from the
-            justification of coercive means. Read the
-            <a href="/theory">theory of State power and its limits</a>,
-            examine the
-            <a href="/theorem">three conditions for coercive necessity</a>,
-            or see how the framework performs across
-            <a href="/cases">concrete cases</a>
-          </p>
-        </div>
-      </section>
-
       <!-- KEY QUESTIONS -->
 
       <section class="questions-index">
@@ -446,7 +406,7 @@ const faqSchema = {
 
           <nav
             class="questions-index-grid stagger"
-            aria-label="Questions about government intervention, state coercion, public goods, market failure, redistribution, Keynesian policy, and political power"
+            aria-label="Questions about government, coercion, public goods, and political power"
           >
             {
               questions.map((question) => (
@@ -539,37 +499,6 @@ const faqSchema = {
        * Force a true two-column grid here so each pair of questions
        * shares the exact same row height.
        */
-      .questions-intro {
-        padding: 0 0 3.5rem;
-      }
-
-      .questions-intro-title {
-        font-size: clamp(1.25rem, 1.8vw, 1.75rem);
-        line-height: 1.2;
-        margin: 0 0 1.25rem;
-      }
-
-      .questions-intro-lead,
-      .questions-intro-links {
-        max-width: 62rem;
-      }
-
-      .questions-intro-lead {
-        font-size: clamp(1rem, 1.15vw, 1.16rem);
-        line-height: 1.72;
-        margin: 0 0 1rem;
-      }
-
-      .questions-intro-links {
-        line-height: 1.7;
-        margin: 0;
-      }
-
-      .questions-intro a {
-        text-decoration-thickness: 1px;
-        text-underline-offset: 0.18em;
-      }
-
       .key-questions-label {
         color: #a07d37 !important;
         font-size: 1.15rem;
