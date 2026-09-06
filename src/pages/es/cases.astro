@@ -50,25 +50,26 @@ import SEO from "../../components/SEO.astro";
 
       <!-- CRITERIO -->
 
-      <section class="content-section method-section">
+      <section class="application-section method-section">
         <div class="container">
+
           <p class="eyebrow reveal">
             EL TEOREMA DE LA TOLERANCIA MÍNIMA
           </p>
 
-          <div class="criterion-panel reveal reveal-scale">
+          <h2 class="reveal">
+            T → (NE ∧ NR ∧ CV)
+          </h2>
 
-            <!-- FÓRMULA -->
-
-            <div class="criterion-formal">
-              <div class="formula-expression">
-                T → (NE ∧ NR ∧ CV)
-              </div>
-            </div>
+          <div
+            class="criterion-panel reveal reveal-scale"
+            style="margin: 20px auto 0;"
+          >
 
             <!-- DEFINICIONES -->
 
             <div class="criterion-terms">
+
               <div class="criterion-term">
                 <span class="criterion-code">
                   T
@@ -108,6 +109,7 @@ import SEO from "../../components/SEO.astro";
                   Colapso persistente de la provisión voluntaria
                 </span>
               </div>
+
             </div>
 
           </div>
@@ -350,7 +352,7 @@ import SEO from "../../components/SEO.astro";
       /* CRITERIO */
 
       .criterion-panel {
-        max-width: 760px;
+        max-width: 480px;
         margin-top: 20px;
         padding: 0 30px 20px;
         background: var(--paper-light);
@@ -380,12 +382,14 @@ import SEO from "../../components/SEO.astro";
       /* DEFINICIONES */
 
       .criterion-terms {
+        width: fit-content;
+        margin: 0 auto;
         padding-top: 14px;
       }
 
       .criterion-term {
         display: grid;
-        grid-template-columns: 48px 1fr;
+        grid-template-columns: 48px auto;
         align-items: baseline;
         gap: 12px;
         padding: 5px 0;
@@ -512,7 +516,7 @@ import SEO from "../../components/SEO.astro";
         }
 
         .criterion-term {
-          grid-template-columns: 42px 1fr;
+          grid-template-columns: 42px auto;
           gap: 10px;
           padding: 5px 0;
         }
