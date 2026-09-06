@@ -9,8 +9,8 @@ const questions = [
     number: "01",
     title: "Is the State morally legitimate?",
     answer: [
-      "No. Even the most benevolent State remains coercive because it claims authority over everyone within a territory, whether they consent or not",
-      "If individuals were free to join or leave, it would be a voluntary association rather than a State. State rule is not optional; coercion is therefore inherent in the institution",
+      "No. The State claims compulsory authority over everyone in a territory, whether they consent or not",
+      "Legality, democratic approval, or benevolent aims do not turn compulsion into consent",
     ],
   },
   {
@@ -18,8 +18,8 @@ const questions = [
     number: "02",
     title: "Is the State a criminal organization?",
     answer: [
-      "Yes, in a normative sense. The State claims powers—compulsory jurisdiction, taxation, and enforcement—that would be considered coercive if exercised by a voluntary association",
-      "Legality does not by itself confer moral legitimacy on those acts",
+      "Yes, in a normative sense. Taxation, compulsory jurisdiction, and enforcement would be coercive if exercised without consent by a private association",
+      "Legality does not, by itself, confer moral legitimacy",
     ],
   },
   {
@@ -27,8 +27,8 @@ const questions = [
     number: "03",
     title: "Can government ever be efficient?",
     answer: [
-      "No—not in the institutional sense relevant here. A public agency may perform a particular task well, but that is not the same as government being an efficient institution",
-      "State provision faces structural limits of information, economic calculation, incentives, competition, exit, and error correction. Those limits can be reduced, but not eliminated",
+      "No—not institutionally. A public agency may perform a particular task well, but government still faces structural limits of information, economic calculation, incentives, competition, exit, and error correction",
+      "Those limits can be reduced, not eliminated",
     ],
   },
   {
@@ -36,8 +36,8 @@ const questions = [
     number: "04",
     title: "What functions should government perform?",
     answer: [
-      "There is no predefined list. Functions must be examined individually rather than inherited from convention, constitutions, or political tradition",
-      "The relevant question is whether coercive necessity can be established for the function itself",
+      "There is no predefined list. Defense, courts, education, health, or any other function must be examined rather than accepted by convention",
+      "The question is whether coercion is necessary for that specific function",
     ],
   },
   {
@@ -45,7 +45,7 @@ const questions = [
     number: "05",
     title: "Who must prove that coercion is necessary?",
     answer: [
-      "Whoever seeks to impose it. Liberty is the baseline, and the burden of proof falls on power",
+      "Whoever seeks to impose it. Liberty is the baseline, so the burden of proof belongs to power",
     ],
   },
   {
@@ -53,8 +53,8 @@ const questions = [
     number: "06",
     title: "Does democracy legitimize State coercion?",
     answer: [
-      "No. Democratic procedures can determine who exercises power and under what rules, but they do not turn compulsory decisions into consent",
-      "Majority approval is a method of collective decision-making, not a moral exemption from the need to justify coercion",
+      "No. Elections can decide who governs and under what rules, but they do not convert compulsory decisions into individual consent",
+      "Majority approval is a procedure for choosing political action, not a moral exemption from justifying it",
     ],
   },
   {
@@ -62,8 +62,8 @@ const questions = [
     number: "07",
     title: "Do essential services justify State coercion?",
     answer: [
-      "No. A service can be essential, valuable, or socially beneficial without making compulsory provision necessary",
-      "The value of an end and the justification for coercive means are separate questions",
+      "No. A service can be essential, valuable, or even life-saving without making compulsory provision necessary",
+      "The importance of the goal and the justification for coercive means are separate questions",
     ],
   },
   {
@@ -71,8 +71,8 @@ const questions = [
     number: "08",
     title: "Do public goods require government provision?",
     answer: [
-      "No. Non-excludability and non-rivalry describe a structure of the good, not an institutional conclusion",
-      "Voluntary provision can still be possible. Samuelson formalized the structure of collective consumption goods in <em>The Pure Theory of Public Expenditure</em>; it does not follow that the State must provide them",
+      "No. Non-excludability and non-rivalry describe characteristics of a good, not who must provide it",
+      "Samuelson formalized collective consumption, but public-good status alone does not establish that State provision is necessary",
     ],
   },
   {
@@ -80,8 +80,8 @@ const questions = [
     number: "09",
     title: "Does the free-rider problem justify State coercion?",
     answer: [
-      "No. The fact that someone can benefit without contributing does not show that a function cannot be sustained voluntarily",
-      "Free riding becomes relevant when the same incentive problem produces persistent failure across materially different arrangements",
+      "No. Benefiting without paying does not show that a function cannot be sustained voluntarily",
+      "Free riding matters when the same incentive problem repeatedly defeats materially different voluntary arrangements",
     ],
   },
   {
@@ -89,8 +89,8 @@ const questions = [
     number: "10",
     title: "When does voluntary provision actually fail?",
     answer: [
-      "When materially different arrangements fail persistently because the same incentive structure prevents the function from being sustained",
-      "One failed provider, underprovision, or a temporary absence is not enough",
+      "When materially different arrangements repeatedly collapse because the same incentive structure prevents the function from being sustained",
+      "One failed provider, temporary underprovision, or the absence of a current alternative is not enough",
     ],
   },
   {
@@ -98,8 +98,8 @@ const questions = [
     number: "11",
     title: "What does David Schmidtz argue about public goods and free riders?",
     answer: [
-      "In <em>The Limits of Government</em>, Schmidtz shows that public goods and free riders do not by themselves justify state authority and that some voluntary arrangements can work",
-      "Minimal Tolerance adds a stricter requirement: persistent collapse of voluntary provision must be established before coercion can be considered",
+      "In <em>The Limits of Government</em>, Schmidtz shows that public goods and free riders do not automatically justify State authority and that voluntary arrangements can work",
+      "Minimal Tolerance goes further: coercion enters only after persistent collapse of voluntary provision has been established",
     ],
   },
   {
@@ -107,18 +107,21 @@ const questions = [
     number: "12",
     title: "Do market failures justify government intervention?",
     answer: [
-      "No. Categories such as natural monopoly, imperfect information, concentration, coordination problems, or underprovision describe certain market conditions",
-      "By themselves, they do not show that government intervention is necessary or superior to available alternatives",
+      "No. Natural monopoly, imperfect information, concentration, coordination problems, or underprovision can identify shortcomings in markets",
+      "None of them proves that State intervention is necessary or superior to available alternatives",
     ],
   },
   {
     id: "externalities-government-intervention",
-    aliases: ["positive-externalities-government-intervention"],
+    aliases: [
+      "positive-externalities-government-intervention",
+      "negative-externalities-government-intervention",
+    ],
     number: "13",
     title: "Do externalities justify government intervention?",
     answer: [
-      "Not by themselves. Positive externalities show that others benefit, but that does not prove government intervention is necessary. Pigouvian taxes or subsidies are proposed remedies, yet identifying a spillover is not the same as justifying coercion",
-      "Negative externalities can involve harm to others, making the case stronger. But then the first questions are rights, liability, and compensation; an external cost alone does not create a general right of government intervention",
+      "Not by themselves. Positive externalities do not create a right to compel payment or State provision",
+      "Negative externalities can involve harm, but then the central issues are rights, liability, and compensation—not a general license for government intervention",
     ],
   },
   {
@@ -126,8 +129,8 @@ const questions = [
     number: "14",
     title: "Can a libertarian theory tolerate State coercion?",
     answer: [
-      "Yes, exceptionally. Minimal Tolerance begins from liberty and rejects the moral legitimacy of coercion",
-      "It differs from stricter libertarian positions only in allowing coercion to be tolerated when necessity leaves no viable voluntary alternative",
+      "Yes, exceptionally. Minimal Tolerance begins from liberty and rejects coercion as morally legitimate in itself",
+      "It allows a coercive function to be tolerated only when necessity is established and no viable voluntary alternative remains",
     ],
   },
   {
@@ -135,8 +138,8 @@ const questions = [
     number: "15",
     title: "What limits government power in Hayek's political theory?",
     answer: [
-      "Hayek emphasizes the limits of knowledge, spontaneous order, general rules, and the rule of law",
-      "Minimal Tolerance asks a prior question: which functions may be placed under coercive authority at all",
+      "Hayek emphasizes dispersed knowledge, spontaneous order, general rules, and the rule of law as limits on political power",
+      "Minimal Tolerance asks an earlier question: which functions, if any, may be placed under coercive authority at all",
     ],
   },
   {
@@ -144,8 +147,8 @@ const questions = [
     number: "16",
     title: "What limits government in Buchanan's constitutional political economy?",
     answer: [
-      "Buchanan examines the constitutional rules within which collective decisions are made and the role of agreement",
-      "Minimal Tolerance moves one step earlier by asking whether a function may be coercively assigned before its institutional design is chosen",
+      "Buchanan focuses on constitutional rules for collective decisions and on the role of agreement",
+      "Minimal Tolerance asks whether a function may be assigned to coercive authority before its institutional design is chosen",
     ],
   },
   {
@@ -153,8 +156,8 @@ const questions = [
     number: "17",
     title: "Does Rothbard's anarcho-capitalism reject all State coercion?",
     answer: [
-      "Yes. Rothbard treats coercion as morally illegitimate whether it comes from the State or anyone else and rejects compulsory state provision",
-      "Minimal Tolerance shares that rejection of moral legitimacy but departs from Rothbard by allowing exceptional tolerance of a coercive function when necessity is established",
+      "Yes. Rothbard rejects compulsory State provision and treats coercion as morally illegitimate regardless of who exercises it",
+      "Minimal Tolerance shares that starting point but allows exceptional tolerance when coercive necessity is established",
     ],
   },
   {
@@ -162,8 +165,8 @@ const questions = [
     number: "18",
     title: "Does minarchism justify a State limited to defense, police, and courts?",
     answer: [
-      "Classical minarchism treats defense, police, and courts as the legitimate core functions of the State",
-      "Minimal Tolerance rejects granting those functions privileged status by default. A smaller State is not morally exempt from the problem of coercion",
+      "Minarchism usually treats defense, police, and courts as the legitimate core of a minimal State",
+      "Minimal Tolerance grants no function automatic exemption. Each must independently satisfy the same burden of proof",
     ],
   },
   {
@@ -171,8 +174,8 @@ const questions = [
     number: "19",
     title: "Is Nozick's minimal State morally legitimate?",
     answer: [
-      "In <em>Anarchy, State, and Utopia</em>, Nozick defends a minimal state as morally legitimate",
-      "Minimal Tolerance rejects that conclusion: reducing the scope of the State does not change the moral status of its coercion",
+      "In <em>Anarchy, State, and Utopia</em>, Nozick argues that a minimal State can arise without violating rights and can therefore be legitimate",
+      "Minimal Tolerance rejects that conclusion: limiting its scope does not change the moral status of compulsory authority",
     ],
   },
   {
@@ -180,8 +183,8 @@ const questions = [
     number: "20",
     title: "Does the absence of voluntary alternatives prove the State is necessary?",
     answer: [
-      "No. The fact that a function is not being provided voluntarily does not, by itself, give the State a right to provide it coercively",
-      "A legal monopoly, state provision, or restrictive regulation may also have prevented alternatives from emerging",
+      "No. The absence of a voluntary option today does not prove that coercive provision is necessary",
+      "Legal monopoly, regulation, subsidies, or prior State provision may have blocked entry and experimentation",
     ],
   },
   {
@@ -189,8 +192,8 @@ const questions = [
     number: "21",
     title: "Does economic inequality justify State coercion?",
     answer: [
-      "No. Inequality is a difference in outcomes; by itself, it is neither a moral wrong nor a moral good",
-      "People can become unequal through work, choices, luck, inheritance, privilege, fraud, or aggression. Where there is wrongdoing, the wrong is the violation—not inequality itself",
+      "No. Economic differences are not inherently unjust",
+      "They can result from work, choices, luck, inheritance—or from privilege, fraud, or aggression. Where rights are violated, the issue is the violation, not the unequal outcome",
     ],
   },
   {
@@ -199,7 +202,7 @@ const questions = [
     title: "Does poverty justify State coercion?",
     answer: [
       "No. Poverty can create powerful moral reasons to help, but need alone does not establish a right to compel others to provide or finance assistance",
-      "The importance of relieving poverty and the justification of State coercion are separate questions",
+      "Urgency strengthens the case for helping; it does not automatically justify coercive means",
     ],
   },
   {
@@ -207,8 +210,8 @@ const questions = [
     number: "23",
     title: "Do collective-action problems require government intervention?",
     answer: [
-      "No. Collective-action problems can often be addressed through contracts, associations, firms, clubs, insurance, charities, norms, and other voluntary arrangements",
-      "Difficulty, underprovision, or imperfect coordination does not prove that coercion is necessary",
+      "No. Contracts, firms, clubs, associations, insurance, charities, and social norms can organize many collective tasks without compulsory authority",
+      "Imperfect coordination or underprovision is not enough; coercion requires a separate showing of necessity",
     ],
   },
   {
@@ -216,8 +219,8 @@ const questions = [
     number: "24",
     title: "Does Keynesian economics justify government intervention?",
     answer: [
-      "Keynesian economics argues that government spending or other stabilization policies can improve outcomes during recessions or weak aggregate demand",
-      "That may support a case for effectiveness, but effectiveness is not the same as justification. Taxation, compulsory financing, and other coercive means must still be justified separately",
+      "Not by itself. Keynesian economics argues that fiscal or monetary policy can stabilize demand during recessions",
+      "Even if a policy is effective, that does not settle whether taxation, compulsory financing, or other coercive means are justified",
     ],
   },
   {
@@ -225,8 +228,8 @@ const questions = [
     number: "25",
     title: "Does Rawls's theory of justice justify redistribution?",
     answer: [
-      "Rawls provides a moral case for institutions that regulate social and economic inequalities",
-      "Even if that ideal is accepted, it does not by itself settle whether redistribution may be imposed coercively. The end and the coercive means require separate justification",
+      "Not by itself. Rawls offers a moral case for arranging social and economic inequalities to benefit the least advantaged",
+      "Even if that principle is accepted, coercive redistribution still requires its own justification",
     ],
   },
   {
@@ -234,8 +237,8 @@ const questions = [
     number: "26",
     title: "Do Musgrave's functions of government justify State intervention?",
     answer: [
-      "Musgrave's allocation, distribution, and stabilization branches classify major functions of public finance, but classification is not justification",
-      "Each function must still show why State coercion is necessary. Economic usefulness or social desirability alone is not enough",
+      "No. Musgrave's allocation, distribution, and stabilization branches classify three major roles of public finance; they do not establish coercive authority",
+      "Each function must still show why compulsory provision or financing is necessary rather than merely useful or desirable",
     ],
   },
 ];
@@ -270,7 +273,7 @@ const faqSchema = {
 
     <SEO
       title="What Should Government Be Allowed to Do? | Minimal Tolerance"
-      description="When is government intervention justified? Explore State coercion, public goods, market failure, inequality, externalities, Keynes, Rawls, and more"
+      description="When is government intervention justified? Questions on State coercion, public goods, market failure, externalities, inequality, Keynes, Rawls, and the limits of government power"
       lang="en"
     />
 
