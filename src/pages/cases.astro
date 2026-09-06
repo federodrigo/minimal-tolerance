@@ -52,7 +52,10 @@ import SEO from "../components/SEO.astro";
 
       <section class="content-section method-section">
         <div class="container">
-          <p class="eyebrow reveal">
+          <p
+            class="eyebrow reveal"
+            style="text-align: center;"
+          >
             THE MINIMAL TOLERANCE THEOREM
           </p>
 
@@ -61,7 +64,10 @@ import SEO from "../components/SEO.astro";
             <!-- FORMULA -->
 
             <div class="criterion-formal">
-              <div class="formula-expression">
+              <div
+                class="formula-expression"
+                style="text-align: center;"
+              >
                 T → (NE ∧ NR ∧ CV)
               </div>
             </div>
@@ -346,15 +352,9 @@ import SEO from "../components/SEO.astro";
     <style>
       /* CRITERION */
 
-      .method-section > .container > .eyebrow {
-        margin-left: auto;
-        margin-right: auto;
-        text-align: center;
-      }
-
       .criterion-panel {
         max-width: 760px;
-        margin: 20px auto 0;
+        margin-top: 20px;
         padding: 0 30px 20px;
         background: var(--paper-light);
         border: 1px solid var(--line);
@@ -370,7 +370,6 @@ import SEO from "../components/SEO.astro";
       .criterion-formal {
         padding: 25px 0 23px;
         border-bottom: 1px solid var(--line);
-        text-align: center;
       }
 
       .formula-expression {
@@ -379,14 +378,12 @@ import SEO from "../components/SEO.astro";
         font-weight: 700;
         line-height: 1.08;
         letter-spacing: 0.01em;
-        text-align: center;
       }
 
       /* DEFINITIONS */
 
       .criterion-terms {
         padding-top: 14px;
-        text-align: left;
       }
 
       .criterion-term {
@@ -395,7 +392,6 @@ import SEO from "../components/SEO.astro";
         align-items: baseline;
         gap: 12px;
         padding: 5px 0;
-        text-align: left;
       }
 
       .criterion-code {
@@ -403,7 +399,6 @@ import SEO from "../components/SEO.astro";
         font-size: 1.15rem;
         font-weight: 700;
         line-height: 1.2;
-        text-align: left;
       }
 
       .criterion-name {
@@ -411,7 +406,6 @@ import SEO from "../components/SEO.astro";
         font-size: 1.03rem;
         font-weight: 500;
         line-height: 1.35;
-        text-align: left;
       }
 
       /* APPLICATION SECTIONS */
