@@ -5,184 +5,257 @@ import SEO from "../../components/SEO.astro";
 
 const questions = [
   {
-    id: "legitimidad-moral-estado",
+    id: "libertad-punto-partida-moral",
     number: "01",
-    title: "¿Es el Estado moralmente legítimo?",
+    title: "¿Por qué la libertad debe ser el punto de partida moral?",
     answer: [
-      "No. Incluso el Estado más benévolo sigue siendo coercitivo porque reclama autoridad sobre todos dentro de un territorio, hayan consentido o no",
-      "Si cada individuo fuera libre de asociarse o retirarse, sería una asociación voluntaria y no un Estado. El poder estatal no es opcional; la coerción es inherente a la institución",
-    ],
-  },
-  {
-    id: "estado-organizacion-criminal",
-    number: "02",
-    title: "¿Es el Estado una organización criminal?",
-    answer: [
-      "Sí, en un sentido normativo. El Estado reclama poderes —jurisdicción obligatoria, tributación y ejecución— que serían considerados coercitivos si los ejerciera una asociación voluntaria",
-      "La legalidad no confiere por sí sola legitimidad moral a esos actos",
-    ],
-  },
-  {
-    id: "eficiencia-estado",
-    number: "03",
-    title: "¿Puede el Estado ser eficiente?",
-    answer: [
-      "No. Incluso el Estado mejor diseñado y administrado enfrenta límites estructurales de información, cálculo económico, incentivos y corrección del error",
-      "Esos límites pueden atenuarse, pero no eliminarse",
-    ],
-  },
-  {
-    id: "funciones-del-estado",
-    number: "04",
-    title: "¿Qué funciones debe cumplir el Estado?",
-    answer: [
-      "No existe una lista predeterminada. Las funciones deben examinarse individualmente en lugar de heredarse de la costumbre, las constituciones o la tradición política",
-      "La cuestión relevante es si puede establecerse la necesidad coercitiva de la función misma",
+      "Porque la coerción obliga a quien no consintió. Los beneficios, la equidad o los buenos resultados pueden importar, pero restringir la libertad exige justificación",
     ],
   },
   {
     id: "carga-prueba-coercion",
-    number: "05",
+    number: "02",
     title: "¿Quién debe probar que la coerción es necesaria?",
     answer: [
-      "Quien pretende imponerla. La libertad es el punto de partida y la carga de la prueba recae sobre el poder",
+      "Quien pretende imponerla. La libertad es el punto de partida; la carga de la prueba pertenece al poder",
+    ],
+  },
+  {
+    id: "legitimidad-moral-estado",
+    number: "03",
+    title: "¿Es el Estado moralmente legítimo?",
+    answer: [
+      "No. El Estado reclama autoridad coercitiva sobre quienes no la han consentido",
+      "Las leyes y las elecciones pueden regular ese poder; no convierten la coerción en consentimiento",
+    ],
+  },
+  {
+    id: "mejores-resultados-coercion-estatal",
+    number: "04",
+    title: "¿Mejores resultados justifican la coerción estatal?",
+    answer: [
+      "No. Los buenos resultados importan, pero los beneficios sociales esperados no crean por sí solos un derecho a obligar a otros",
+      "De lo contrario, casi cualquier intromisión podría defenderse prometiendo beneficios suficientes",
     ],
   },
   {
     id: "democracia-legitima-coercion",
-    number: "06",
+    number: "05",
     title: "¿La democracia legitima la coerción estatal?",
     answer: [
-      "No. Los procedimientos democráticos pueden determinar quién ejerce el poder y bajo qué reglas, pero no convierten decisiones obligatorias en consentimiento",
-      "La aprobación de una mayoría es un método de decisión colectiva, no una excepción moral a la exigencia de justificar la coerción",
+      "No. Las elecciones determinan quién ejerce el poder y bajo qué reglas; no convierten decisiones obligatorias en consentimiento individual",
+      "El apoyo mayoritario otorga autorización política, no legitimidad moral",
+    ],
+  },
+  {
+    id: "estado-organizacion-criminal",
+    number: "06",
+    title: "¿Es el Estado una organización criminal?",
+    answer: [
+      "Sí, en un sentido normativo. La tributación, la jurisdicción obligatoria y la imposición de decisiones serían coercitivas si una asociación privada las ejerciera sin consentimiento",
+      "La autorización legal no resuelve su estatus moral",
+    ],
+  },
+  {
+    id: "funciones-del-estado",
+    number: "07",
+    title: "¿Qué funciones debe cumplir el Estado?",
+    answer: [
+      "Ninguna función queda exenta de antemano. Defensa, justicia, educación, salud y las demás deben evaluarse por separado",
+      "La pregunta es si la coerción resulta necesaria para esa función",
+    ],
+  },
+  {
+    id: "eficiencia-estado",
+    number: "08",
+    title: "¿Puede el Estado ser eficiente?",
+    answer: [
+      "No, no como institución. Un organismo público puede ejecutar bien una tarea concreta",
+      "El Estado sigue sujeto a límites estructurales de información, cálculo, incentivos, competencia, posibilidad de salida y corrección de errores que la gestión no puede eliminar",
     ],
   },
   {
     id: "servicios-esenciales-coercion-estatal",
-    number: "07",
+    number: "09",
     title: "¿Los servicios esenciales justifican la coerción estatal?",
     answer: [
-      "No. Un servicio puede ser esencial, valioso o socialmente beneficioso sin volver necesaria su provisión obligatoria",
-      "El valor de un fin y la justificación de los medios coercitivos son cuestiones distintas",
+      "No. Ni la importancia ni la urgencia demuestran que la provisión obligatoria sea necesaria",
+      "El valor del fin y los medios usados para alcanzarlo son cuestiones distintas",
+    ],
+  },
+  {
+    id: "desigualdad-economica-coercion-estatal",
+    number: "10",
+    title: "¿La desigualdad económica justifica la coerción estatal?",
+    answer: [
+      "No. Las diferencias económicas no son injustas por sí mismas",
+      "Pueden surgir del trabajo, las decisiones, la suerte, la herencia, los privilegios, el fraude o la agresión. Cuando hay una violación de derechos, ese es el problema, no el resultado desigual",
+    ],
+  },
+  {
+    id: "pobreza-coercion-estatal",
+    number: "11",
+    title: "¿La pobreza justifica la coerción estatal?",
+    answer: [
+      "No. La pobreza puede exigir ayuda urgente, pero la necesidad por sí sola no otorga autoridad para obligar a terceros a prestar o financiar asistencia",
     ],
   },
   {
     id: "bienes-publicos-provision-estatal",
-    number: "08",
+    number: "12",
     title: "¿Los bienes públicos requieren provisión estatal?",
     answer: [
-      "No. La no exclusión y la no rivalidad describen una estructura del bien, no una conclusión institucional",
-      "La provisión voluntaria puede seguir siendo posible. Samuelson formalizó la estructura de los bienes de consumo colectivo en <em>Teoría Pura del Gasto Público</em>; de allí no se sigue que el Estado deba proveerlos",
+      "No. La no exclusión y la no rivalidad describen un bien, no quién debe proveerlo",
+      "Samuelson formalizó el consumo colectivo; esa clasificación no establece por sí sola una función estatal",
     ],
   },
   {
     id: "free-rider-coercion-estatal",
-    number: "09",
+    number: "13",
     title: "¿El problema del free rider justifica la coerción estatal?",
     answer: [
-      "No. Que alguien pueda beneficiarse sin contribuir no demuestra que una función no pueda sostenerse voluntariamente",
-      "El free riding se vuelve relevante cuando el mismo problema de incentivos produce un fracaso persistente bajo arreglos materialmente distintos",
+      "No. Beneficiarse sin pagar no demuestra que la provisión voluntaria vaya a colapsar",
+      "El free riding importa cuando el mismo problema de incentivos hace fracasar de forma persistente arreglos materialmente distintos",
     ],
   },
   {
     id: "fracaso-provision-voluntaria",
-    number: "10",
+    number: "14",
     title: "¿Cuándo fracasa realmente la provisión voluntaria?",
     answer: [
-      "Cuando arreglos materialmente distintos fallan de forma persistente porque la misma estructura de incentivos impide sostener la función",
-      "Un proveedor fallido, una provisión insuficiente o una ausencia temporal no alcanzan",
-    ],
-  },
-  {
-    id: "schmidtz-bienes-publicos-free-riders",
-    number: "11",
-    title: "¿Qué sostiene David Schmidtz sobre los bienes públicos y los free riders?",
-    answer: [
-      "En <em>Los Límites del Gobierno</em>, Schmidtz muestra que los bienes públicos y los free riders no justifican por sí solos autoridad estatal y que ciertos arreglos voluntarios pueden funcionar",
-      "Tolerancia Mínima agrega una exigencia más estricta: debe establecerse el colapso persistente de la provisión voluntaria antes de considerar coerción",
-    ],
-  },
-  {
-    id: "fallas-mercado-intervencion-estatal",
-    number: "12",
-    title: "¿Las fallas de mercado justifican la intervención estatal?",
-    answer: [
-      "No. Categorías como monopolio natural, información imperfecta, concentración, problemas de coordinación o provisión insuficiente describen ciertas condiciones del mercado",
-      "Por sí solas no demuestran que la intervención estatal sea necesaria ni superior a las alternativas disponibles",
-    ],
-  },
-  {
-    id: "externalidades-positivas-intervencion-estatal",
-    number: "13",
-    title: "¿Las externalidades positivas justifican la intervención estatal?",
-    answer: [
-      "No. Que una actividad beneficie a terceros no la convierte en una función estatal",
-      "Los beneficios para otros son compatibles con la provisión voluntaria y no establecen una necesidad de coerción",
-    ],
-  },
-  {
-    id: "libertarismo-coercion-estatal",
-    number: "14",
-    title: "¿Puede una teoría libertaria tolerar la coerción estatal?",
-    answer: [
-      "Sí, excepcionalmente. Tolerancia Mínima parte de la libertad y rechaza la legitimidad moral de la coerción",
-      "Se diferencia de posiciones libertarias más estrictas únicamente en admitir que la coerción puede tolerarse cuando la necesidad no deja una alternativa voluntaria viable",
-    ],
-  },
-  {
-    id: "hayek-limites-poder-estatal",
-    number: "15",
-    title: "¿Qué limita el poder del Estado en la teoría política de Hayek?",
-    answer: [
-      "Hayek destaca los límites del conocimiento, el orden espontáneo, las reglas generales y el Estado de derecho",
-      "Tolerancia Mínima formula una pregunta previa: qué funciones pueden quedar bajo autoridad coercitiva",
-    ],
-  },
-  {
-    id: "buchanan-economia-politica-constitucional",
-    number: "16",
-    title: "¿Qué limita al Estado en la economía política constitucional de Buchanan?",
-    answer: [
-      "Buchanan estudia las reglas constitucionales dentro de las cuales se toman decisiones colectivas y el papel del acuerdo",
-      "Tolerancia Mínima retrocede un paso y pregunta si una función puede asignarse coercitivamente antes de elegir su diseño institucional",
-    ],
-  },
-  {
-    id: "rothbard-anarcocapitalismo-coercion-estatal",
-    number: "17",
-    title: "¿El anarcocapitalismo de Rothbard rechaza toda coerción estatal?",
-    answer: [
-      "Sí. Rothbard considera moralmente ilegítima la coerción, provenga del Estado o de cualquier otro, y rechaza la provisión estatal obligatoria",
-      "Tolerancia Mínima comparte ese rechazo de legitimidad moral, pero se aparta de Rothbard al admitir la tolerancia excepcional de una función coercitiva cuando se establece su necesidad",
-    ],
-  },
-  {
-    id: "minarquismo-defensa-policia-tribunales",
-    number: "18",
-    title: "¿El minarquismo justifica un Estado limitado a defensa, policía y tribunales?",
-    answer: [
-      "El minarquismo clásico trata defensa, policía y tribunales como las funciones legítimas centrales del Estado",
-      "Tolerancia Mínima rechaza otorgarles un estatus privilegiado por defecto. Un Estado más pequeño no queda moralmente exento del problema de la coerción",
-    ],
-  },
-  {
-    id: "nozick-estado-minimo-legitimidad",
-    number: "19",
-    title: "¿Es moralmente legítimo el Estado mínimo de Nozick?",
-    answer: [
-      "En <em>Anarquía, Estado y Utopía</em>, Nozick defiende un Estado mínimo como moralmente legítimo",
-      "Tolerancia Mínima rechaza esa conclusión: reducir el alcance del Estado no cambia el estatus moral de su coerción",
+      "Cuando arreglos materialmente distintos colapsan repetidamente porque la misma estructura de incentivos impide una provisión estable",
+      "Un proveedor fallido, una insuficiencia temporal o la ausencia actual de alternativas no bastan",
     ],
   },
   {
     id: "ausencia-alternativas-voluntarias-estado-necesario",
-    number: "20",
+    number: "15",
     title: "¿La ausencia de alternativas voluntarias prueba que el Estado es necesario?",
     answer: [
-      "No. Que una función no esté siendo provista voluntariamente no crea, por sí solo, un derecho del Estado a proveerla coercitivamente",
-      "Además, un monopolio legal, la provisión estatal o una regulación restrictiva pueden haber impedido que surgieran alternativas",
+      "No. Que hoy no exista una opción voluntaria no demuestra que la provisión coercitiva sea necesaria",
+      "El monopolio, la regulación, los subsidios o la provisión estatal previa pueden haber impedido su aparición",
     ],
-  }
+  },
+  {
+    id: "fallas-mercado-intervencion-estatal",
+    number: "16",
+    title: "¿Las fallas de mercado justifican la intervención estatal?",
+    answer: [
+      "No. El monopolio, la información imperfecta, la concentración, los problemas de coordinación o la provisión insuficiente pueden revelar fallas del mercado",
+      "No demuestran que la intervención estatal sea necesaria ni superior",
+    ],
+  },
+  {
+    id: "externalidades-intervencion-estatal",
+    aliases: [
+      "externalidades-positivas-intervencion-estatal",
+      "externalidades-negativas-intervencion-estatal",
+    ],
+    number: "17",
+    title: "¿Las externalidades justifican la intervención estatal?",
+    answer: [
+      "No automáticamente. Las externalidades positivas no crean un derecho a obligar a otros a pagar",
+      "Las negativas pueden implicar daño; entonces importan los derechos, la responsabilidad y la compensación, no una licencia general para intervenir",
+    ],
+  },
+  {
+    id: "accion-colectiva-intervencion-estatal",
+    number: "18",
+    title: "¿Los problemas de acción colectiva requieren intervención estatal?",
+    answer: [
+      "No. Contratos, empresas, clubes, asociaciones, seguros, organizaciones benéficas y normas pueden coordinar muchas tareas colectivas sin autoridad coercitiva",
+      "El fracaso de un arreglo o cierta provisión insuficiente no prueban necesidad coercitiva",
+    ],
+  },
+  {
+    id: "schmidtz-bienes-publicos-free-riders",
+    number: "19",
+    title: "¿Qué sostiene David Schmidtz sobre los bienes públicos y los free riders?",
+    answer: [
+      "En <em>The Limits of Government</em>, Schmidtz sostiene que los bienes públicos y los free riders no establecen automáticamente autoridad estatal y muestra que pueden funcionar arreglos voluntarios",
+      "Tolerancia Mínima agrega una condición más estricta: solo puede considerarse coerción tras un colapso persistente en arreglos voluntarios materialmente distintos",
+    ],
+  },
+  {
+    id: "economia-keynesiana-intervencion-estatal",
+    number: "20",
+    title: "¿La economía keynesiana justifica la intervención estatal?",
+    answer: [
+      "No por sí sola. El keynesianismo ofrece razones para la estabilización fiscal o monetaria durante las recesiones",
+      "Aunque esas políticas mejoren resultados, su eficacia no resuelve si se justifican el financiamiento o el control obligatorios",
+    ],
+  },
+  {
+    id: "rawls-redistribucion",
+    number: "21",
+    title: "¿Rawls justifica la redistribución?",
+    answer: [
+      "Sí, bajo ciertas condiciones. Sus principios pueden respaldarla cuando las instituciones respetan libertades iguales, oportunidades justas y mejoran la posición de los menos aventajados",
+      "Tolerancia Mínima pregunta si esos fines también justifican la coerción",
+    ],
+  },
+  {
+    id: "musgrave-funciones-estado",
+    number: "22",
+    title: "¿Cuáles son las tres funciones del Estado según Musgrave?",
+    answer: [
+      "Asignación, distribución y estabilización",
+      "Musgrave clasifica grandes funciones de las finanzas públicas; esa clasificación no demuestra que alguna requiera provisión o financiamiento obligatorios",
+    ],
+  },
+  {
+    id: "libertarismo-coercion-estatal",
+    number: "23",
+    title: "¿Puede una teoría libertaria tolerar la coerción estatal?",
+    answer: [
+      "Sí, excepcionalmente. Tolerancia Mínima rechaza que la coerción sea moralmente legítima, pero tolera una función cuando su necesidad está establecida y no queda una alternativa voluntaria viable",
+    ],
+  },
+  {
+    id: "hayek-limites-poder-estatal",
+    number: "24",
+    title: "¿Qué limita el poder del Estado en la teoría política de Hayek?",
+    answer: [
+      "Hayek destaca el conocimiento disperso, el orden espontáneo, las reglas generales y el Estado de derecho",
+      "Tolerancia Mínima plantea una pregunta anterior: qué funciones, si alguna, pueden quedar bajo autoridad coercitiva",
+    ],
+  },
+  {
+    id: "buchanan-economia-politica-constitucional",
+    number: "25",
+    title: "¿Qué limita al Estado en la economía política constitucional de Buchanan?",
+    answer: [
+      "Buchanan se centra en las reglas constitucionales de la decisión colectiva y el papel del acuerdo",
+      "Tolerancia Mínima pregunta si una función puede asignarse coercitivamente antes de elegir su diseño institucional",
+    ],
+  },
+  {
+    id: "rothbard-anarcocapitalismo-coercion-estatal",
+    number: "26",
+    title: "¿El anarcocapitalismo de Rothbard rechaza toda coerción estatal?",
+    answer: [
+      "Sí. Rothbard rechaza la provisión estatal obligatoria y considera ilegítima la coerción sin importar quién la ejerza",
+      "Tolerancia Mínima comparte ese punto de partida, pero admite una tolerancia excepcional cuando se establece la necesidad",
+    ],
+  },
+  {
+    id: "minarquismo-defensa-policia-tribunales",
+    number: "27",
+    title: "¿El minarquismo justifica un Estado limitado a defensa, policía y tribunales?",
+    answer: [
+      "El minarquismo trata defensa, policía y tribunales como el núcleo legítimo de un Estado mínimo",
+      "Tolerancia Mínima no les concede una excepción automática; cada función debe superar el mismo examen",
+    ],
+  },
+  {
+    id: "nozick-estado-minimo-legitimidad",
+    number: "28",
+    title: "¿Es moralmente legítimo el Estado mínimo de Nozick?",
+    answer: [
+      "En <em>Anarquía, Estado y Utopía</em>, Nozick sostiene que un Estado mínimo puede surgir sin violar derechos y ser, por tanto, legítimo",
+      "Tolerancia Mínima rechaza esa conclusión: un menor alcance no cambia el estatus moral de la autoridad coercitiva",
+    ],
+  },
 ];
 
 const stripHtml = (value) =>
@@ -213,8 +286,8 @@ const faqSchema = {
     />
 
     <SEO
-      title="Límites del Estado, coerción y bienes públicos | Tolerancia Mínima"
-      description="Preguntas sobre legitimidad moral, coerción y eficiencia del Estado, bienes públicos, free riders, fallas de mercado, libertarismo, Hayek, Buchanan, Rothbard, minarquismo y Nozick"
+      title="¿Qué debería permitirse al Estado? | Tolerancia Mínima"
+      description="¿Cuándo se justifica la intervención estatal? 28 preguntas concisas sobre legitimidad, coerción, bienes públicos, fallas de mercado, externalidades, desigualdad, Keynes, Rawls y poder estatal"
       lang="es"
     />
 
@@ -293,6 +366,9 @@ const faqSchema = {
                 id={question.id}
                 class="question-section"
               >
+                {question.aliases?.map((alias) => (
+                  <span id={alias} class="anchor-alias" aria-hidden="true"></span>
+                ))}
                 <div class="question-heading reveal reveal-left">
                   <span class="question-number">
                     {question.number}
@@ -436,7 +512,16 @@ const faqSchema = {
       }
 
       .question-section {
+        position: relative;
         overflow: hidden;
+      }
+
+      .anchor-alias {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 0;
+        height: 0;
       }
 
       @media (hover: hover) and (pointer: fine) {
