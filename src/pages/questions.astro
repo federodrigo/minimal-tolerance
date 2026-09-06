@@ -23,12 +23,12 @@ const questions = [
     ],
   },
   {
-    id: "government-efficiency",
+    id: "government-structural-efficiency-limits",
     number: "03",
-    title: "Can government ever be efficient?",
+    title: "Can government overcome its structural limits to efficiency?",
     answer: [
-      "No. Even the best-designed and best-run State faces unavoidable limits of information, economic calculation, incentives, and error correction",
-      "Those limits can be reduced, but not eliminated",
+      "No. Government can perform particular tasks effectively, and individual public organizations may sometimes use resources well. But State provision faces structural limits of information, economic calculation, incentives, competition, and error correction that better management cannot eliminate",
+      "The issue is not whether a government agency can ever do something well. It is whether coercive institutions can reproduce the feedback and correction mechanisms available when providers must persuade rather than compel those who finance and use them",
     ],
   },
   {
@@ -112,12 +112,12 @@ const questions = [
     ],
   },
   {
-    id: "positive-externalities-government-intervention",
+    id: "externalities-government-intervention",
     number: "13",
-    title: "Do positive externalities justify government intervention?",
+    title: "Do externalities justify government intervention?",
     answer: [
-      "No. The fact that an activity benefits third parties does not make it a state function",
-      "Benefits to others are compatible with voluntary provision and do not establish a need for coercion",
+      "Not by themselves. Positive externalities mean that an activity benefits third parties, but those benefits do not establish that coercive provision is necessary. Pigouvian taxes or subsidies may offer a way to alter incentives, but identifying a spillover is not the same as justifying State coercion",
+      "Negative externalities present a stronger case because they may involve harm to third parties. But that first raises questions of rights, responsibility, property, liability, and compensation. The existence of an external cost does not automatically establish a general right of government intervention",
     ],
   },
   {
@@ -184,147 +184,66 @@ const questions = [
     ],
   },
   {
-    id: "macroeconomic-instability-government-intervention",
+    id: "economic-crisis-state-coercion",
     number: "21",
-    title: "Does macroeconomic instability justify government intervention?",
+    title: "Can an economic crisis justify State coercion?",
     answer: [
-      "Not by itself. Recession, mass unemployment, inflation, or financial disruption can make a problem severe without establishing that coercive government action is necessary",
-      "Minimal Tolerance separates the empirical question of whether intervention can improve an outcome from the prior question of whether the function can be sustained without coercion",
+      "Not by itself. A severe recession, mass unemployment, financial panic, or collapse in output can create urgent reasons to act, but urgency does not turn a useful policy into a justified coercive function",
+      "A crisis can strengthen the case for examining necessity; it does not lower the burden of proof. The question remains whether the specific function actually requires coercion because non-coercive alternatives cannot sustain it",
     ],
   },
   {
-    id: "aggregate-demand-fiscal-stimulus",
+    id: "economic-inequality-state-coercion",
     number: "22",
-    title: "Does a collapse in aggregate demand justify fiscal stimulus?",
+    title: "Does economic inequality justify State coercion?",
     answer: [
-      "Keynesian economics provides a case for countercyclical fiscal policy when private demand is insufficient and idle resources persist",
-      "Minimal Tolerance does not deny that fiscal stimulus can affect output or employment. It asks a different question: whether the coercive financing and authority required for that policy are necessary rather than merely useful",
+      "No. Inequality is a description of differences in outcomes; it is not a moral wrong in itself",
+      "Differences can result from work, choices, preferences, luck, inheritance, institutional privilege, fraud, or aggression. If an inequality results from a rights violation, the relevant wrong is the violation. Mere inequality does not establish a right to coercively redistribute",
     ],
   },
   {
-    id: "inequality-coercive-redistribution",
+    id: "poverty-state-coercion",
     number: "23",
-    title: "Does inequality justify coercive redistribution?",
+    title: "Does poverty justify State coercion?",
     answer: [
-      "No. Inequality can be morally or politically important without establishing that redistribution must be compulsory",
-      "A distributive objective and a demonstration of coercive necessity are different claims. The existence of unequal outcomes does not by itself show persistent collapse of voluntary provision",
+      "Poverty can create powerful moral reasons to help, especially when deprivation is severe. But the existence of need does not by itself establish an enforceable claim against others or justify compulsory financing",
+      "Minimal Tolerance separates the importance of relieving poverty from the separate question of whether coercive provision is necessary. The first does not prove the second",
     ],
   },
   {
-    id: "social-justice-state-coercion",
+    id: "collective-action-state-coercion",
     number: "24",
-    title: "Does social justice justify State coercion?",
+    title: "Does collective action require State coercion?",
     answer: [
-      "Not by itself. A theory of social justice can specify how institutions or resources ought to be arranged, but that conclusion does not automatically authorize coercive means",
-      "Minimal Tolerance requires the justification of coercion to be established separately from the desirability of the social end",
+      "No. People can solve collective-action problems through contracts, associations, firms, clubs, insurance, charities, norms, and other voluntary institutions. Coordination difficulty is not the same as impossibility",
+      "State coercion becomes a candidate only when the function cannot be sustained without it, not merely because cooperation is costly, incomplete, or imperfect",
     ],
   },
   {
-    id: "social-insurance-compulsory-government",
+    id: "keynesian-stabilization-state-coercion",
     number: "25",
-    title: "Does social insurance require compulsory government provision?",
+    title: "Can Keynesian stabilization justify State coercion?",
     answer: [
-      "Not necessarily. Adverse selection, moral hazard, incomplete coverage, and risk pooling can create serious problems for insurance markets",
-      "Those problems can support a case for institutional intervention, but compulsory state provision still requires showing that materially different voluntary arrangements cannot sustain the relevant function",
-    ],
-  },
-  {
-    id: "negative-externalities-state-coercion",
-    number: "26",
-    title: "Do negative externalities justify State coercion?",
-    answer: [
-      "Not automatically. Pollution, noise, physical interference, or other harms may involve violations of rights or responsibilities toward third parties",
-      "When coercion is used to stop aggression, enforce liability, or define enforceable rights, the issue can fall outside the theorem's scope. Where no such violation is established, the existence of a negative externality alone does not prove a need for state provision",
-    ],
-  },
-  {
-    id: "financial-instability-central-banking",
-    number: "27",
-    title: "Does financial instability justify central banking and a lender of last resort?",
-    answer: [
-      "Systemic risk, bank runs, and financial contagion can create unusually strong coordination problems and may place monetary or financial stability among the harder cases",
-      "That still does not settle the institutional question. The relevant test is whether the stabilizing function is non-excludable, relevantly non-rival, and persistently unable to be sustained through materially different voluntary arrangements",
-    ],
-  },
-  {
-    id: "industrial-policy-state-intervention",
-    number: "28",
-    title: "Can industrial policy justify State intervention?",
-    answer: [
-      "Strategic importance, infant-industry claims, scale economies, supply-chain dependence, or coordination failures can explain why governments support particular sectors",
-      "They do not by themselves establish coercive necessity. A function does not become exempt from the burden of proof because it is economically strategic or politically important",
-    ],
-  },
-  {
-    id: "poverty-coercive-redistribution",
-    number: "29",
-    title: "Does poverty justify coercive redistribution?",
-    answer: [
-      "Poverty can create urgent moral reasons to help, but urgency does not by itself establish a right to compel others to finance a particular response",
-      "Minimal Tolerance therefore separates the moral importance of poverty relief from the institutional question of whether coercive provision is necessary",
-    ],
-  },
-  {
-    id: "collective-action-political-authority",
-    number: "30",
-    title: "Does collective action require political authority?",
-    answer: [
-      "No. Collective-action problems can make coordination costly and can generate incentives to free ride, but they do not always prevent voluntary cooperation",
-      "Political authority becomes relevant only if the function itself meets the required conditions and materially different voluntary arrangements collapse persistently for the same structural reason",
-    ],
-  },
-  {
-    id: "paternalism-merit-goods-government-intervention",
-    number: "31",
-    title: "Does paternalism or the idea of merit goods justify government intervention?",
-    answer: [
-      "Merit-good theories hold that some goods may be consumed below a socially desired level, or that access to them should not depend entirely on individual willingness or ability to pay",
-      "That can support subsidies, mandates, or public provision as policy proposals, but it does not by itself establish coercive necessity. Education, health, retirement saving, and similar goods remain subject to the same burden of proof as any other function",
-    ],
-  },
-  {
-    id: "social-rights-compulsory-state-provision",
-    number: "32",
-    title: "Do rights to healthcare, education, housing, or income justify compulsory State provision?",
-    answer: [
-      "Calling a good a social right states a normative claim about what people should be guaranteed. It does not by itself identify who must provide it or establish that provision requires coercion",
-      "Minimal Tolerance distinguishes the moral claim to access from the institutional claim that compulsory State provision is necessary",
-    ],
-  },
-  {
-    id: "keynes-role-of-government",
-    number: "33",
-    title: "What does Keynes argue about the role of government in the economy?",
-    answer: [
-      "In <em>The General Theory of Employment, Interest and Money</em>, John Maynard Keynes argues that an economy can settle below full employment and that public policy can support aggregate demand when private spending is insufficient",
-      "Minimal Tolerance accepts that this is an empirical case for possible effectiveness, not a complete moral case for coercive authority. The necessity of the coercive function must still be established",
+      "Keynesian theory can support stabilization policy when private demand is insufficient and an economy remains below full employment. That is an argument that government intervention may improve economic outcomes",
+      "It does not by itself establish a moral right to tax, impose obligations, or compel compliance. Minimal Tolerance asks whether the stabilizing function requires coercion, not merely whether a coercive policy can be effective",
     ],
   },
   {
     id: "rawls-justice-coercive-redistribution",
-    number: "34",
+    number: "26",
     title: "Does Rawls's theory of justice justify coercive redistribution?",
     answer: [
-      "In <em>A Theory of Justice</em>, Rawls defends principles for the basic structure of society, including institutions that protect equal basic liberties and regulate social and economic inequalities",
-      "Minimal Tolerance asks a prior institutional question: even if a distributive principle is accepted, what establishes the necessity of coercive means for implementing it",
+      "Rawls argues that the basic structure of society should be governed by principles chosen under fair conditions, including principles that regulate social and economic inequalities",
+      "Even if those principles are accepted, a further question remains: why must they be implemented through coercion? Minimal Tolerance requires the coercive means to be justified separately from the distributive ideal",
     ],
   },
   {
-    id: "musgrave-functions-of-government",
-    number: "35",
-    title: "What does Musgrave's theory of public finance say about the role of government?",
+    id: "musgrave-functions-state-coercion",
+    number: "27",
+    title: "Do Musgrave's functions of government justify State coercion?",
     answer: [
-      "Richard Musgrave famously organizes public finance around allocation, distribution, and stabilization functions",
-      "Minimal Tolerance subjects each function to a separate burden of proof. A recognized function of public finance is not, by itself, evidence that coercive state provision is necessary",
-    ],
-  },
-  {
-    id: "pigou-welfare-economics-government-intervention",
-    number: "36",
-    title: "What does Pigou's welfare economics imply about government intervention?",
-    answer: [
-      "Pigouvian welfare economics identifies cases in which private costs and benefits diverge from social costs and benefits, creating a rationale for corrective taxes, subsidies, or regulation",
-      "Minimal Tolerance separates that welfare-improvement claim from coercive authorization. Showing that a policy could correct an externality does not by itself show that the State must coercively provide or enforce the function",
+      "Musgrave's allocation, distribution, and stabilization branches classify major functions of public finance. The classification is analytically useful, but it is not itself a theory of legitimate coercion",
+      "Each function must still be justified on its own. A function can be economically recognizable or socially desirable without showing that coercive State provision is necessary",
     ],
   },
 ];
@@ -359,7 +278,7 @@ const faqSchema = {
 
     <SEO
       title="What Should Government Be Allowed to Do? | Minimal Tolerance"
-      description="When is government intervention justified? Questions on State coercion, public goods, market failure, Keynesian policy, redistribution, externalities, and voluntary provision"
+      description="When is government intervention justified? Questions on State coercion, public goods, market failure, externalities, inequality, poverty, collective action, Keynes, Rawls, and Musgrave"
       lang="en"
     />
 
