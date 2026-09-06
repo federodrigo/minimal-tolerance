@@ -379,12 +379,14 @@ import SEO from "../components/SEO.astro";
       /* DEFINITIONS */
 
       .criterion-terms {
+        width: fit-content;
+        margin: 0 auto;
         padding-top: 14px;
       }
 
       .criterion-term {
         display: grid;
-        grid-template-columns: 48px 1fr;
+        grid-template-columns: 48px auto;
         align-items: baseline;
         gap: 12px;
         padding: 5px 0;
@@ -511,7 +513,7 @@ import SEO from "../components/SEO.astro";
         }
 
         .criterion-term {
-          grid-template-columns: 42px 1fr;
+          grid-template-columns: 42px auto;
           gap: 10px;
           padding: 5px 0;
         }
