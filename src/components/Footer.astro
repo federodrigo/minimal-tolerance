@@ -4,6 +4,19 @@ const today = new Date();
 const currentPath = Astro.url.pathname;
 const isSpanish = currentPath === "/es" || currentPath.startsWith("/es/");
 
+// Mantiene la página actual al cambiar de idioma.
+// /theory  -> /es/theory
+// /es/theory -> /theory
+const englishPath = isSpanish
+  ? currentPath.replace(/^\/es(?=\/|$)/, "") || "/"
+  : currentPath;
+
+const spanishPath = isSpanish
+  ? currentPath
+  : currentPath === "/"
+    ? "/es"
+    : `/es${currentPath}`;
+
 const links = isSpanish
   ? [
       { label: "Preguntas", href: "/es/questions/" },
@@ -34,9 +47,36 @@ const links = isSpanish
     </p>
 
     <div class="footer-navigation">
-      <p class="footer-label">
-        {isSpanish ? "NAVEGAR" : "NAVIGATE"}
-      </p>
+      <div class="footer-top">
+        <p class="footer-label">
+          {isSpanish ? "NAVEGAR" : "NAVIGATE"}
+        </p>
+
+        <div
+          class="language-switcher"
+          aria-label={isSpanish ? "Cambiar idioma" : "Change language"}
+        >
+          <a
+            href={englishPath}
+            class:list={["language-link", { active: !isSpanish }]}
+            lang="en"
+            aria-current={!isSpanish ? "page" : undefined}
+          >
+            EN
+          </a>
+
+          <span aria-hidden="true">|</span>
+
+          <a
+            href={spanishPath}
+            class:list={["language-link", { active: isSpanish }]}
+            lang="es"
+            aria-current={isSpanish ? "page" : undefined}
+          >
+            ES
+          </a>
+        </div>
+      </div>
 
       <nav aria-label={isSpanish ? "Navegación del sitio" : "Site navigation"}>
         {links.map((link) => (
@@ -68,11 +108,44 @@ const links = isSpanish
     text-align: right;
   }
 
+  .footer-top {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 1.5rem;
+    margin-bottom: 1.25rem;
+  }
+
   .footer-label {
-    margin: 0 0 1.25rem;
+    margin: 0;
     font-size: 0.78rem;
     font-weight: 600;
     letter-spacing: 0.12em;
+  }
+
+  .language-switcher {
+    display: flex;
+    align-items: center;
+    gap: 0.45rem;
+    font-size: 0.78rem;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+  }
+
+  .language-switcher span {
+    opacity: 0.35;
+  }
+
+  .language-link {
+    position: relative;
+    color: inherit;
+    text-decoration: none;
+    opacity: 0.45;
+    transition: opacity 180ms ease;
+  }
+
+  .language-link.active {
+    opacity: 1;
   }
 
   nav {
@@ -115,6 +188,10 @@ const links = isSpanish
       transform: scaleX(1);
       transform-origin: left;
     }
+
+    .language-link:hover {
+      opacity: 1;
+    }
   }
 
   @media (max-width: 700px) {
@@ -135,6 +212,10 @@ const links = isSpanish
       text-align: left;
     }
 
+    .footer-top {
+      justify-content: flex-start;
+    }
+
     .footer-copyright {
       order: 2;
       white-space: normal;
@@ -147,7 +228,8 @@ const links = isSpanish
   }
 
   @media (prefers-reduced-motion: reduce) {
-    nav a::after {
+    nav a::after,
+    .language-link {
       transition: none;
     }
   }
