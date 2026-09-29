@@ -1,5 +1,4 @@
 import { defineConfig } from "astro/config";
-import mdx from "@astrojs/mdx";
 import sitemap from "@astrojs/sitemap";
 import cloudflare from "@astrojs/cloudflare";
 
@@ -7,7 +6,7 @@ export default defineConfig({
   site: "https://minimaltolerance.com",
   trailingSlash: "always",
 
-  integrations: [mdx(), sitemap()],
+  integrations: [sitemap()],
 
   adapter: cloudflare({
     platformProxy: {
