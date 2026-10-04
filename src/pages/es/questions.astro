@@ -256,6 +256,24 @@ const questions = [
       "Tolerancia Mínima rechaza esa conclusión: un menor alcance no cambia el estatus moral de la autoridad coercitiva",
     ],
   },
+  {
+    id: "quien-determina-condiciones-teorema",
+    number: "29",
+    title: "¿Quién determina si se cumplen las condiciones del teorema?",
+    answer: [
+      "El criterio no presupone un examinador neutral. Establece qué debe demostrarse, pero su aplicación depende de instituciones y personas sujetas a errores, incentivos e intereses propios",
+      "El teorema fija el estándar de justificación; no garantiza la neutralidad de quienes deben aplicarlo",
+    ],
+  },
+  {
+    id: "funcion-responsabilidad-estatal-permanente",
+    number: "30",
+    title: "¿Una función que supera el teorema queda permanentemente bajo responsabilidad estatal?",
+    answer: [
+      "No. Una excepción permanece tolerable solo mientras continúen presentes las condiciones que permitieron admitirla",
+      "Nuevas tecnologías, instituciones o formas de cooperación voluntaria pueden modificar el resultado. La carga de la prueba no se invierte con el paso del tiempo; permanece del lado del poder",
+    ],
+  },
 ];
 
 const stripHtml = (value) =>
@@ -274,6 +292,7 @@ const faqSchema = {
   })),
 };
 ---
+
 <!doctype html>
 
 <html lang="es">
@@ -287,7 +306,7 @@ const faqSchema = {
 
     <SEO
       title="¿Qué debería permitirse al Estado? | Tolerancia Mínima"
-      description="¿Cuándo se justifica la intervención estatal? 28 preguntas concisas sobre legitimidad, coerción, bienes públicos, fallas de mercado, externalidades, desigualdad, Keynes, Rawls y poder estatal"
+      description="¿Cuándo se justifica la intervención estatal? 30 preguntas concisas sobre legitimidad, coerción, bienes públicos, fallas de mercado, externalidades, desigualdad, Keynes, Rawls y poder estatal"
       lang="es"
     />
 
@@ -320,7 +339,7 @@ const faqSchema = {
 
       <section class="statement">
         <blockquote class="reveal reveal-scale">
-         Nadie tiene un derecho inherente a gobernar a otro
+          Nadie tiene un derecho inherente a gobernar a otro
         </blockquote>
       </section>
 
@@ -367,8 +386,13 @@ const faqSchema = {
                 class="question-section"
               >
                 {question.aliases?.map((alias) => (
-                  <span id={alias} class="anchor-alias" aria-hidden="true"></span>
+                  <span
+                    id={alias}
+                    class="anchor-alias"
+                    aria-hidden="true"
+                  ></span>
                 ))}
+
                 <div class="question-heading reveal reveal-left">
                   <span class="question-number">
                     {question.number}
@@ -431,11 +455,11 @@ const faqSchema = {
        * shares the exact same row height.
        */
       .key-questions-label {
-  color: #a07d37 !important;
-  font-size: 1.15rem;
-  letter-spacing: 0.14em;
-  margin-bottom: 1.25rem;
-}
+        color: #a07d37 !important;
+        font-size: 1.15rem;
+        letter-spacing: 0.14em;
+        margin-bottom: 1.25rem;
+      }
 
       .questions-index-grid {
         display: grid !important;
