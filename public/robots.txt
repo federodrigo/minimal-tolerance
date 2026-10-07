@@ -2,4 +2,4 @@ User-agent: *
 
 Allow: /
 
-Sitemap: https://minimaltolerance.com/sitemap.xml
+Sitemap: https://minimaltolerance.com/sitemap-index.xml
