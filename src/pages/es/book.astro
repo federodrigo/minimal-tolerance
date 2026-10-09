@@ -297,8 +297,8 @@ const conceptSchema = {
           </p>
 
           <h2 class="reveal">
-            ¿Cuándo puede<br />
-            tolerarse la coerción?
+            <span class="abstract-title-line">¿Cuándo puede tolerarse</span>
+            <span class="abstract-title-line">la coerción?</span>
           </h2>
 
           <div class="abstract-copy reveal">
@@ -633,9 +633,14 @@ const conceptSchema = {
         margin-bottom: 1.25rem;
       }
 
+      .abstract-inner h2 .abstract-title-line {
+        display: block;
+        white-space: nowrap;
+      }
+
       @media (max-width: 560px) {
         .abstract-inner h2 {
-          font-size: clamp(1.65rem, 6.8vw, 2rem);
+          font-size: clamp(1.22rem, 5.6vw, 2rem);
         }
       }
 
