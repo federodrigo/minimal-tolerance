@@ -272,9 +272,13 @@ const conceptSchema = {
                 >
                   Descargar libro completo (PDF gratuito)
                 </a>
-                <p class="book-access-note">
-                  Edición en español · Acceso libre, sin registro
-                </p>
+                <button
+                  type="button"
+                  class="secondary book-amazon-soon"
+                  disabled
+                >
+                  Amazon · Próximamente
+                </button>
               </div>
             </div>
           </div>
@@ -518,14 +522,17 @@ const conceptSchema = {
 
     <style>
       .book-access {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 12px;
         margin-top: 28px;
       }
 
-      .book-access .book-access-note {
-        margin: 12px 0 0;
-        font-size: 0.88rem;
-        line-height: 1.5;
-        opacity: 0.8;
+      .book-amazon-soon {
+        font-family: inherit;
+        cursor: not-allowed;
+        opacity: 0.65;
       }
 
       .book-page-section .book-grid {
