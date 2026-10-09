@@ -137,16 +137,25 @@ const pageUrl = new URL(
   "https://minimaltolerance.com"
 ).href;
 
+const bookPdfUrl = "https://minimaltolerance.com/books/una-teoria-de-tolerancia-minima.pdf";
+
 const bookSchema = {
   "@context": "https://schema.org",
   "@type": "Book",
-  name: "Una Teoría de la Tolerancia Mínima",
+  name: "Una Teoría de Tolerancia Mínima",
   author: {
     "@type": "Person",
     name: "Fede Rodrigo",
   },
   url: pageUrl,
   inLanguage: "es",
+  isAccessibleForFree: true,
+  encoding: {
+    "@type": "MediaObject",
+    contentUrl: bookPdfUrl,
+    encodingFormat: "application/pdf",
+    inLanguage: "es",
+  },
   description:
     "Una teoría sobre coerción, autoridad política, provisión voluntaria, límites institucionales, producción estatal, State Free Riding y las condiciones bajo las cuales el poder político puede ser tolerado como excepción",
   about: todosLosConceptos.map((concepto) => concepto.name),
@@ -155,7 +164,7 @@ const bookSchema = {
 const conceptSchema = {
   "@context": "https://schema.org",
   "@type": "DefinedTermSet",
-  name: "Conceptos Clave de Una Teoría de la Tolerancia Mínima",
+  name: "Conceptos Clave de Una Teoría de Tolerancia Mínima",
   url: `${pageUrl}#conceptos-clave`,
   hasDefinedTerm: todosLosConceptos.map((concepto) => ({
     "@type": "DefinedTerm",
@@ -178,8 +187,8 @@ const conceptSchema = {
     />
 
     <SEO
-      title="Una Teoría de la Tolerancia Mínima | Tolerancia Mínima"
-      description="Una Teoría de la Tolerancia Mínima de Fede Rodrigo desarrolla el Teorema de la Tolerancia Mínima como criterio para las excepciones coercitivas, el colapso persistente de la provisión voluntaria, el Principio de Separabilidad, State Free Riding y los límites institucionales del poder"
+      title="Una Teoría de Tolerancia Mínima | Tolerancia Mínima"
+      description="Una Teoría de Tolerancia Mínima de Fede Rodrigo desarrolla el Teorema de la Tolerancia Mínima como criterio para las excepciones coercitivas, el colapso persistente de la provisión voluntaria, el Principio de Separabilidad, State Free Riding y los límites institucionales del poder"
       lang="es"
     />
 
@@ -207,7 +216,7 @@ const conceptSchema = {
           </p>
 
           <h1>
-            Una Teoría de la Tolerancia Mínima
+            Una Teoría de Tolerancia Mínima
           </h1>
         </div>
       </section>
@@ -228,17 +237,17 @@ const conceptSchema = {
             <div class="book-cover-wrapper reveal reveal-left">
               <img
                 src="/images/book-cover-esp.jpg"
-                alt="Portada de Una Teoría de la Tolerancia Mínima de Fede Rodrigo"
+                alt="Portada de Una Teoría de Tolerancia Mínima de Fede Rodrigo"
               />
             </div>
 
             <div class="book-copy reveal reveal-right">
               <p class="eyebrow">
-                DISPONIBLE A MEDIADOS DE OCTUBRE DE 2026
+                PRIMERA EDICIÓN · OCTUBRE DE 2026
               </p>
 
               <h2>
-                Una Teoría de la Tolerancia Mínima
+                Una Teoría de Tolerancia Mínima
               </h2>
 
               <p>
@@ -254,6 +263,19 @@ const conceptSchema = {
                 las fuerzas institucionales que permiten al poder expandirse,
                 persistir y transformar la sociedad sobre la que actúa
               </p>
+
+              <div class="book-access">
+                <a
+                  href="/books/una-teoria-de-tolerancia-minima.pdf"
+                  class="primary"
+                  download
+                >
+                  Descargar libro completo (PDF gratuito)
+                </a>
+                <p class="book-access-note">
+                  Edición en español · Acceso libre, sin registro
+                </p>
+              </div>
             </div>
           </div>
         </div>
@@ -273,7 +295,7 @@ const conceptSchema = {
 
           <div class="abstract-copy reveal">
             <p>
-              <em>Una Teoría de la Tolerancia Mínima</em> parte de una
+              <em>Una Teoría de Tolerancia Mínima</em> parte de una
               distinción entre legitimidad y tolerancia. El poder político no
               adquiere una naturaleza moral diferente por el simple hecho de
               ser ejercido por el Estado. Si la coerción ha de ser admitida, la
@@ -495,6 +517,17 @@ const conceptSchema = {
     <Footer />
 
     <style>
+      .book-access {
+        margin-top: 28px;
+      }
+
+      .book-access .book-access-note {
+        margin: 12px 0 0;
+        font-size: 0.88rem;
+        line-height: 1.5;
+        opacity: 0.8;
+      }
+
       .book-page-section .book-grid {
         align-items: center;
       }
