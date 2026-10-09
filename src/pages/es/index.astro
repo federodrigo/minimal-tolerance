@@ -34,9 +34,9 @@ import SEO from "../../components/SEO.astro";
             LA TEORÍA DE LA TOLERANCIA MÍNIMA
           </p>
 
-          <h1>
-            ¿Cuándo puede tolerarse<br />
-            la coerción?
+          <h1 class="landing-question-title">
+            <span>¿Cuándo puede tolerarse</span>
+            <span>la coerción?</span>
           </h1>  
 
           <div
@@ -273,6 +273,30 @@ import SEO from "../../components/SEO.astro";
     </main>
 
     <Footer />
+
+    <style>
+      /* Keep the Spanish landing question on precisely two readable lines. */
+      .hero h1.landing-question-title {
+        max-width: 100%;
+      }
+
+      .landing-question-title span {
+        display: block;
+        white-space: nowrap;
+      }
+
+      @media (max-width: 900px) {
+        .hero h1.landing-question-title {
+          font-size: clamp(1.35rem, 6vw, 3.8rem);
+        }
+      }
+
+      @media (max-width: 560px) {
+        .hero h1.landing-question-title {
+          font-size: clamp(1.15rem, 5.8vw, 2.3rem);
+        }
+      }
+    </style>
 
     <script is:inline>
       const reduceMotion = window.matchMedia(
