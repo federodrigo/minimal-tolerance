@@ -599,6 +599,13 @@ const conceptSchema = {
         align-items: start;
       }
 
+      /* Match the English page's optical offset between cover and title. */
+      @media (min-width: 901px) {
+        .book-page-section .book-copy {
+          padding-top: 22px;
+        }
+      }
+
       .book-cover-wrapper {
         perspective: 1000px;
       }
