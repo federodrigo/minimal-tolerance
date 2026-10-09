@@ -131,6 +131,39 @@ nav a.active,
   color: var(--gold);
 }
 
+/* Larger, more legible header navigation in both languages. */
+.site-header .logo {
+  font-size: 1.85rem;
+}
+
+.site-header nav {
+  gap: 18px;
+}
+
+.site-header nav > a,
+.site-header .language-switch a {
+  font-size: 1.05rem;
+}
+
+.site-header .language-switch {
+  margin-left: 1rem;
+}
+
+/* Let the larger navigation breathe before it gets crowded. */
+@media (min-width: 901px) and (max-width: 1180px) {
+  .site-header {
+    padding-top: 14px;
+    padding-bottom: 14px;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .site-header nav {
+    flex-wrap: wrap;
+  }
+}
+
 /* TYPOGRAPHY */
 
 h1,
