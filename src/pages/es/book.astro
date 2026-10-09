@@ -267,15 +267,16 @@ const conceptSchema = {
               <div class="book-access">
                 <button
                   type="button"
-                  class="secondary book-amazon-soon"
+                  class="book-action"
+                  aria-disabled="true"
+                  aria-label="Comprar en Amazon (próximamente)"
                   title="Próximamente"
-                  disabled
                 >
                   Comprar en Amazon
                 </button>
                 <a
                   href="/books/una-teoria-de-tolerancia-minima.pdf"
-                  class="primary"
+                  class="book-action"
                   download
                 >
                   Descargar libro (PDF gratuito)
@@ -522,18 +523,75 @@ const conceptSchema = {
     <Footer />
 
     <style>
+      /* Both book actions share one size, palette and hover treatment. */
       .book-access {
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
         gap: 12px;
+        width: 100%;
         margin-top: 28px;
       }
 
-      .book-amazon-soon {
+      .book-access .book-action {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        min-height: 64px;
+        padding: 14px 18px;
+        border: 1px solid rgba(203, 211, 219, 0.42);
+        border-radius: 999px;
+        background: var(--navy);
+        color: #cbd3db;
         font-family: inherit;
+        font-size: 0.92rem;
+        font-weight: 700;
+        line-height: 1.3;
+        text-align: center;
+        text-decoration: none;
+        cursor: pointer;
+        appearance: none;
+        transition:
+          background-color 260ms var(--motion-ease),
+          border-color 260ms var(--motion-ease),
+          color 260ms var(--motion-ease),
+          box-shadow 260ms var(--motion-ease),
+          transform 260ms var(--motion-ease);
+      }
+
+      .book-access .book-action:hover,
+      .book-access .book-action:focus-visible {
+        background: var(--navy-soft);
+        border-color: rgba(203, 211, 219, 0.9);
+        color: #e1e6eb;
+        box-shadow: 0 12px 24px rgba(13, 27, 42, 0.18);
+        transform: translateY(-3px);
+      }
+
+      .book-access .book-action:focus-visible {
+        outline: 2px solid var(--gold);
+        outline-offset: 3px;
+      }
+
+      .book-access .book-action[aria-disabled="true"] {
         cursor: not-allowed;
-        opacity: 0.65;
+      }
+
+      @media (max-width: 560px) {
+        .book-access {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        .book-access .book-action {
+          transition: none;
+        }
+
+        .book-access .book-action:hover,
+        .book-access .book-action:focus-visible {
+          transform: none;
+        }
       }
 
       .book-page-section .book-grid {
