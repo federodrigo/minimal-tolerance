@@ -594,8 +594,15 @@ const conceptSchema = {
         }
       }
 
+      /* Anchor the cover to the text heading, independent of copy length. */
       .book-page-section .book-grid {
-        align-items: center;
+        align-items: start;
+      }
+
+      @media (min-width: 901px) {
+        .book-page-section .book-cover-wrapper {
+          margin-top: 14px;
+        }
       }
 
       .book-cover-wrapper {
