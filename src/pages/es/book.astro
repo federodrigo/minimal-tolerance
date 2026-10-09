@@ -216,7 +216,8 @@ const conceptSchema = {
           </p>
 
           <h1>
-            Una Teoría de Tolerancia Mínima
+            Una Teoría de<br />
+            Tolerancia Mínima
           </h1>
         </div>
       </section>
@@ -296,7 +297,8 @@ const conceptSchema = {
           </p>
 
           <h2 class="reveal">
-            ¿Cuándo puede tolerarse la coerción?
+            ¿Cuándo puede<br />
+            tolerarse la coerción?
           </h2>
 
           <div class="abstract-copy reveal">
@@ -629,6 +631,12 @@ const conceptSchema = {
       .abstract-inner h2 {
         max-width: 760px;
         margin-bottom: 1.25rem;
+      }
+
+      @media (max-width: 560px) {
+        .abstract-inner h2 {
+          font-size: clamp(1.65rem, 6.8vw, 2rem);
+        }
       }
 
       .abstract-copy {
