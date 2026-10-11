@@ -90,7 +90,7 @@ import SEO from "../../components/SEO.astro";
             Formulación formal
           </h2>
 
-          <blockquote class="formal-statement reveal reveal-scale">
+          <blockquote class="formal-statement theorem-definition-statement reveal reveal-scale">
             Una función satisface el Criterio de Tolerancia Mínima solo
             cuando se establecen conjuntamente la no exclusión efectiva,
             la no rivalidad relevante y el colapso persistente de la
@@ -303,6 +303,17 @@ import SEO from "../../components/SEO.astro";
         .theorem-conditions article > span,
         .formal-statement {
           transition: none;
+        }
+      }
+    
+      /* Give the formal definition slightly more typographic weight. */
+      .formal-statement.theorem-definition-statement {
+        font-size: clamp(1.2rem, 1.65vw, 1.32rem);
+        line-height: 1.68;
+      }
+      @media (max-width: 600px) {
+        .formal-statement.theorem-definition-statement {
+          font-size: 1.1rem;
         }
       }
     </style>

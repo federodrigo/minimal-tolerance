@@ -90,7 +90,7 @@ import SEO from "../components/SEO.astro";
             Formal statement
           </h2>
 
-          <blockquote class="formal-statement reveal reveal-scale">
+          <blockquote class="formal-statement theorem-definition-statement reveal reveal-scale">
             A function satisfies the Minimal Tolerance Criterion only
             when effective non-excludability, relevant non-rivalry,
             and persistent collapse of voluntary provision are jointly
@@ -311,6 +311,17 @@ import SEO from "../components/SEO.astro";
           font-size: clamp(1.75rem, 2.7vw, 2.35rem);
           letter-spacing: -0.035em;
           white-space: nowrap;
+        }
+      }
+    
+      /* Give the formal definition slightly more typographic weight. */
+      .formal-statement.theorem-definition-statement {
+        font-size: clamp(1.2rem, 1.65vw, 1.32rem);
+        line-height: 1.68;
+      }
+      @media (max-width: 600px) {
+        .formal-statement.theorem-definition-statement {
+          font-size: 1.1rem;
         }
       }
     </style>
