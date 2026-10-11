@@ -187,7 +187,7 @@ import SEO from "../components/SEO.astro";
             LIMITS OF THE CRITERION
           </p>
 
-          <h2 class="reveal">
+          <h2 class="reveal theorem-limits-heading">
             Application and continued justification
           </h2>
 
@@ -301,6 +301,16 @@ import SEO from "../components/SEO.astro";
         .theorem-conditions article > span,
         .formal-statement {
           transition: none;
+        }
+      }
+    
+      /* Keep this heading on a single line on desktop only. */
+      @media (min-width: 861px) {
+        .theorem-limits-heading {
+          max-width: none;
+          font-size: clamp(1.75rem, 2.7vw, 2.35rem);
+          letter-spacing: -0.035em;
+          white-space: nowrap;
         }
       }
     </style>
