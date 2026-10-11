@@ -1503,7 +1503,17 @@ main .section-action{margin-top:22px;display:flex;justify-content:flex-start}
   gap: 32px;
   align-items: center;
 }
-.questions-boundary-layout h2 { max-width: none; margin-bottom: 0; font-size: clamp(1.8rem, 3.1vw, 2.55rem); }
+.questions-boundary-layout h2 { max-width: none; margin-bottom: 12px; font-size: clamp(1.8rem, 3.1vw, 2.55rem); }
+.questions-boundary-copy { min-width: 0; }
+.questions-boundary-copy .eyebrow { margin-bottom: 12px; }
+.questions-boundary-copy .questions-boundary-description {
+  max-width: 640px;
+  margin: 0;
+  font-size: 1.02rem;
+  line-height: 1.6;
+  text-align: left;
+  hyphens: none;
+}
 .questions-boundary-illustration { width: 100%; max-width: 248px; justify-self: end; }
 .questions-cta-content { grid-template-columns: minmax(0,1fr); gap: 12px; }
 .questions-cta-buttons { min-width: 0; align-items: flex-start; }
