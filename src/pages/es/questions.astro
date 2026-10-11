@@ -601,6 +601,17 @@ const faqSchema = {
           transition: none;
         }
       }
+    
+      /* The closing invitation must span the full width on desktop,
+         so the burden-of-proof headline reads as one line. */
+      .questions-cta .questions-cta-content {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 12px;
+      }
+      .questions-cta .questions-cta-buttons {
+        min-width: 0;
+        align-items: flex-start;
+      }
     </style>
 
     <script is:inline>
