@@ -1462,7 +1462,7 @@ main .section-action{margin-top:22px;display:flex;justify-content:flex-start}
 .manuscript-copy{min-width:0}
 .manuscript-copy>p:not(.eyebrow){max-width:750px;text-align:left!important;hyphens:none!important}
 .manuscript-scene{margin:0;min-width:0;max-width:310px;width:100%;align-self:center;justify-self:center;background:none;border:0;box-shadow:none;overflow:visible}
-.manuscript-scene .scene-picture{display:block;width:100%;aspect-ratio:265/225;background-image:url('/images/manuscript-scenes.webp');background-size:400% 200%;background-repeat:no-repeat;mix-blend-mode:multiply}
+.manuscript-scene .scene-picture{display:block;width:100%;aspect-ratio:265/225;background-image:url('/images/manuscript-scenes.webp');background-size:400% 200%;background-repeat:no-repeat;mix-blend-mode:normal}
 .manuscript-scene .scene-home{background-position:0% 0%}
 .manuscript-scene .scene-questions{background-position:33.333333% 0%}
 .manuscript-scene .scene-theory{background-position:66.666667% 0%}
