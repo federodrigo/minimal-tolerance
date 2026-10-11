@@ -1455,3 +1455,32 @@ main .section-action{margin-top:22px;display:flex;justify-content:flex-start}
 @media(max-width:900px){.author-layout{grid-template-columns:minmax(0,1fr) 230px;gap:26px}#theorem .theorem-summary{gap:9px}#theorem .theorem-summary-card{padding:17px}}
 @media(max-width:650px){.author-layout{grid-template-columns:1fr;gap:24px}.author-art{max-width:250px;margin:0 auto}.story-trail{font-size:.76rem;gap:6px}#theorem .theorem-summary{grid-template-columns:1fr;max-width:400px}#theorem .theorem-summary-card{min-height:84px;padding:14px 20px;gap:7px}.hero h1{font-size:clamp(2.45rem,8vw,3.5rem)}}
 @media(prefers-reduced-motion:reduce){.theorem-conditions.stagger>article,.theorem-summary.stagger>*{opacity:1!important;transform:none!important;transition:none!important}.author-art{transition:none!important;transform:none!important}}
+
+
+/* Manuscript illustrations — genuine book artwork, original Georgia and palette */
+.manuscript-split{display:grid!important;grid-template-columns:minmax(0,1fr) 285px;gap:38px;align-items:center}
+.manuscript-copy{min-width:0}
+.manuscript-copy>p:not(.eyebrow){max-width:750px;text-align:left!important;hyphens:none!important}
+.manuscript-scene{margin:0;min-width:0;max-width:310px;width:100%;align-self:center;justify-self:center;background:none;border:0;box-shadow:none;overflow:visible}
+.manuscript-scene .scene-picture{display:block;width:100%;aspect-ratio:265/225;background-image:url('/images/manuscript-scenes.webp');background-size:400% 200%;background-repeat:no-repeat;mix-blend-mode:multiply}
+.manuscript-scene .scene-home{background-position:0% 0%}
+.manuscript-scene .scene-questions{background-position:33.333333% 0%}
+.manuscript-scene .scene-theory{background-position:66.666667% 0%}
+.manuscript-scene .scene-theorem{background-position:100% 0%}
+.manuscript-scene .scene-cases{background-position:0% 100%}
+.manuscript-scene .scene-book{background-position:33.333333% 100%}
+.manuscript-scene .scene-papers{background-position:66.666667% 100%}
+.manuscript-hero .container,.questions-page-hero.manuscript-hero .hero-content{position:relative}
+.manuscript-hero .manuscript-scene{position:absolute;right:0;top:-32px;width:min(270px,29%);max-width:270px}
+.manuscript-hero h1,.manuscript-hero .story-trail{max-width:70%}
+.questions-page-hero.manuscript-hero .manuscript-scene{right:0;top:-20px}
+.book-intro-split{grid-template-columns:minmax(0,1fr) 285px!important;gap:35px}
+.book-intro-split .manuscript-copy{max-width:780px}
+.book-intro-split .manuscript-scene{max-width:285px}
+.author-art img{width:100%;max-height:355px;object-fit:contain;mix-blend-mode:normal;filter:none!important;-webkit-mask-image:none!important;mask-image:none!important;border-radius:0;box-shadow:none!important}
+.author-art.reveal-right{transform:translateX(18px) rotate(-1deg)}
+.author-art.reveal-right.is-visible{transform:translateX(0) rotate(-1deg)}
+@media (hover:hover) and (pointer:fine){.author-art.reveal-right.is-visible:hover{transform:translateY(-2px) rotate(-.5deg)}}
+@media(max-width:900px){.manuscript-split,.book-intro-split{grid-template-columns:minmax(0,1fr) 215px!important;gap:24px}.manuscript-hero .manuscript-scene{width:210px;top:0}.manuscript-hero h1,.manuscript-hero .story-trail{max-width:70%}}
+@media(max-width:650px){.manuscript-split,.book-intro-split{grid-template-columns:1fr!important;gap:17px}.manuscript-scene{max-width:260px!important;margin:0 auto}.manuscript-hero .container,.questions-page-hero.manuscript-hero .hero-content{padding-bottom:0}.manuscript-hero .manuscript-scene{position:relative;top:auto;right:auto;width:210px;max-width:210px!important;margin:8px auto 0}.manuscript-hero h1,.manuscript-hero .story-trail{max-width:none}.author-art img{max-height:350px}.book-intro-split .manuscript-scene{max-width:220px!important}}
+@media(prefers-reduced-motion:reduce){.manuscript-scene,.manuscript-scene *{animation:none!important;transition:none!important;opacity:1!important;transform:none!important}}
