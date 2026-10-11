@@ -1424,6 +1424,7 @@ footer nav a {
 .hero h1.landing-question-title{max-width:100%;line-height:1.045}
 .hero .buttons{margin-top:2px}
 main .section-action{margin-top:22px;display:flex;justify-content:flex-start}
+main .section-action.section-action-centered{justify-content:center}
 .theorem .section-action{justify-content:center}
 .story-link{display:inline-flex;align-items:center;gap:18px;min-height:44px;color:var(--navy);text-decoration:none!important;border-bottom:0!important;font-weight:700;font-size:1rem;transition:color 220ms ease,border-color 220ms ease}
 .story-link span{display:inline-grid;place-items:center;width:27px;height:27px;flex:0 0 27px;border:1px solid rgba(169,131,58,.5);border-radius:50%;color:var(--gold);font-family:Georgia,"Times New Roman",serif;font-weight:normal;transition:transform 220ms ease}
