@@ -1416,3 +1416,42 @@ footer nav a {
   }
 }
 
+
+
+/* 2026 editorial refinement — original Georgia, navy, gold and cream */
+.hero h1{max-width:900px;font-size:clamp(2.75rem,4.1vw,4.15rem);line-height:1.045;letter-spacing:-.036em;margin-bottom:26px}
+.hero h1 em{font-weight:400;color:var(--gold);font-style:italic}
+.hero h1.landing-question-title{max-width:100%;line-height:1.045}
+.hero .buttons{margin-top:2px}
+main .section-action{margin-top:22px;display:flex;justify-content:flex-start}
+.theorem .section-action{justify-content:center}
+.story-link{display:inline-flex;align-items:center;gap:18px;min-height:44px;color:var(--navy);text-decoration:none!important;border-bottom:1px solid rgba(169,131,58,.35);font-weight:700;font-size:1rem;transition:color 220ms ease,border-color 220ms ease}
+.story-link span{display:inline-grid;place-items:center;width:27px;height:27px;flex:0 0 27px;border:1px solid rgba(169,131,58,.5);border-radius:50%;color:var(--gold);font-family:Georgia,"Times New Roman",serif;font-weight:normal;transition:transform 220ms ease}
+.story-link:hover{color:var(--gold);border-bottom-color:var(--gold)}
+.story-link:hover span{transform:translateX(3px)}
+#theorem .theorem-summary{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;max-width:930px;margin:28px auto}
+#theorem .theorem-summary-card{width:auto;min-height:146px;padding:21px 24px;display:flex;flex-direction:column;align-items:flex-start;justify-content:center;gap:12px;border:1px solid rgba(169,131,58,.26);border-radius:4px;background:var(--paper-light);box-shadow:0 6px 18px rgba(13,27,42,.035)}
+#theorem .criterion-mark{font-size:1.55rem;font-weight:400;color:var(--gold);letter-spacing:.045em;line-height:1}
+#theorem .theorem-summary-card h3{font-size:1.08rem;line-height:1.4;text-align:left;color:var(--navy);font-weight:700}
+#theorem .theorem-summary-card:hover{border-color:var(--gold);box-shadow:0 10px 22px rgba(13,27,42,.06)}
+/* Reuse original stagger animation; the observer reveals the parent */
+.theorem-conditions.stagger.reveal{opacity:1;transform:none}
+.theorem-conditions.stagger>article{opacity:0;transform:translateY(22px)}
+.theorem-conditions.stagger.is-visible>article{opacity:1;transform:translateY(0)}
+.theorem-conditions article{background:var(--paper-light);border-radius:5px;border:1px solid rgba(169,131,58,.24);border-top:3px solid var(--gold);min-height:220px;padding:25px}
+.theorem-conditions article>span{letter-spacing:.055em}
+.theorem-conditions article h3{font-size:1.2rem;line-height:1.3}
+.theorem-conditions article p{text-align:left;line-height:1.57}
+.story-trail{display:flex;align-items:center;gap:9px;flex-wrap:wrap;margin:13px 0 0!important;font-size:.85rem;letter-spacing:0;color:var(--navy);opacity:.65}
+.story-trail .is-current{color:var(--gold);font-weight:700}
+.story-trail .story-arrow{color:var(--gold)}
+.questions-cta-buttons .story-link{margin-top:10px}
+.author-layout{display:grid;grid-template-columns:minmax(0,1fr) 295px;align-items:center;column-gap:55px}
+.author-art{margin:0;display:flex;align-items:center;justify-content:center;transition:transform 520ms var(--motion-ease),opacity var(--motion-medium) var(--motion-ease)}
+.author-art img{display:block;width:100%;max-height:344px;object-fit:contain;mix-blend-mode:multiply;filter:drop-shadow(4px 8px 8px rgba(13,27,42,.07));-webkit-mask-image:radial-gradient(ellipse 82% 88% at 50% 50%,#000 68%,transparent 100%);mask-image:radial-gradient(ellipse 82% 88% at 50% 50%,#000 68%,transparent 100%)}
+.author-art.reveal-right{transform:translateX(28px) rotate(-2deg)}
+.author-art.reveal-right.is-visible{transform:translateX(0) rotate(-2deg)}
+@media(hover:hover) and (pointer:fine){.author-art.reveal-right.is-visible:hover{transform:translateY(-3px) rotate(-1deg)}}
+@media(max-width:900px){.author-layout{grid-template-columns:minmax(0,1fr) 230px;gap:26px}#theorem .theorem-summary{gap:9px}#theorem .theorem-summary-card{padding:17px}}
+@media(max-width:650px){.author-layout{grid-template-columns:1fr;gap:24px}.author-art{max-width:250px;margin:0 auto}.story-trail{font-size:.76rem;gap:6px}#theorem .theorem-summary{grid-template-columns:1fr;max-width:400px}#theorem .theorem-summary-card{min-height:84px;padding:14px 20px;gap:7px}.hero h1{font-size:clamp(2.45rem,8vw,3.5rem)}}
+@media(prefers-reduced-motion:reduce){.theorem-conditions.stagger>article,.theorem-summary.stagger>*{opacity:1!important;transform:none!important;transition:none!important}.author-art{transition:none!important;transform:none!important}}

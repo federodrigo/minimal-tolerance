@@ -38,6 +38,7 @@ import SEO from "../components/SEO.astro";
             The Minimal Tolerance<br />
             Theorem
           </h1>
+<p class="story-trail" aria-label="Reading path"><span class="story-step">Questions</span><span class="story-arrow" aria-hidden="true">→</span><span class="story-step">Theory</span><span class="story-arrow" aria-hidden="true">→</span><span class="story-step is-current">Theorem</span><span class="story-arrow" aria-hidden="true">→</span><span class="story-step">Cases</span></p>
         </div>
       </section>
 
@@ -111,9 +112,9 @@ import SEO from "../components/SEO.astro";
             One institutional test
           </h2>
 
-          <div class="theorem-conditions stagger">
+          <div class="theorem-conditions stagger reveal">
 
-            <article class="reveal reveal-scale">
+            <article>
               <span>NE</span>
 
               <h3>
@@ -126,7 +127,7 @@ import SEO from "../components/SEO.astro";
               </p>
             </article>
 
-            <article class="reveal reveal-scale">
+            <article>
               <span>NR</span>
 
               <h3>
@@ -139,7 +140,7 @@ import SEO from "../components/SEO.astro";
               </p>
             </article>
 
-            <article class="reveal reveal-scale">
+            <article>
               <span>CV</span>
 
               <h3>
@@ -227,11 +228,7 @@ import SEO from "../components/SEO.astro";
             paternalism, and dissatisfaction with voluntary outcomes
           </p>
 
-          <div class="buttons reveal">
-            <a href="/cases" class="primary">
-              Explore the Cases
-            </a>
-          </div>
+          <div class="section-action reveal"><a href="/cases/" class="story-link">Continue to the cases <span aria-hidden="true">→</span></a></div>
         </div>
       </section>
     </main>

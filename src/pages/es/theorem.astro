@@ -38,6 +38,7 @@ import SEO from "../../components/SEO.astro";
             El Teorema de la<br />
             Tolerancia Mínima
           </h1>
+<p class="story-trail" aria-label="Recorrido de lectura"><span class="story-step">Preguntas</span><span class="story-arrow" aria-hidden="true">→</span><span class="story-step">Teoría</span><span class="story-arrow" aria-hidden="true">→</span><span class="story-step is-current">Teorema</span><span class="story-arrow" aria-hidden="true">→</span><span class="story-step">Casos</span></p>
         </div>
       </section>
 
@@ -111,9 +112,9 @@ import SEO from "../../components/SEO.astro";
             Un examen institucional
           </h2>
 
-          <div class="theorem-conditions stagger">
+          <div class="theorem-conditions stagger reveal">
 
-            <article class="reveal reveal-scale">
+            <article>
               <span>NE</span>
 
               <h3>
@@ -127,7 +128,7 @@ import SEO from "../../components/SEO.astro";
               </p>
             </article>
 
-            <article class="reveal reveal-scale">
+            <article>
               <span>NR</span>
 
               <h3>
@@ -140,7 +141,7 @@ import SEO from "../../components/SEO.astro";
               </p>
             </article>
 
-            <article class="reveal reveal-scale">
+            <article>
               <span>CV</span>
 
               <h3>
@@ -229,11 +230,7 @@ import SEO from "../../components/SEO.astro";
             voluntarios
           </p>
 
-          <div class="buttons reveal">
-            <a href="/es/cases" class="primary">
-              Explorar los Casos
-            </a>
-          </div>
+          <div class="section-action reveal"><a href="/es/cases/" class="story-link">Continuar a los casos <span aria-hidden="true">→</span></a></div>
         </div>
       </section>
     </main>
