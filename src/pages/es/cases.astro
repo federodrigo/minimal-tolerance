@@ -28,7 +28,7 @@ import SEO from "../../components/SEO.astro";
     <main>
       <!-- TÍTULO DE PÁGINA -->
 
-      <section class="page-hero manuscript-hero">
+      <section class="page-hero">
         <div class="container hero-sequence">
           <p class="eyebrow">
             CASOS
@@ -38,7 +38,7 @@ import SEO from "../../components/SEO.astro";
             Puesta a prueba
           </h1>
 <p class="story-trail" aria-label="Recorrido de lectura"><span class="story-step">Preguntas</span><span class="story-arrow" aria-hidden="true">→</span><span class="story-step">Teoría</span><span class="story-arrow" aria-hidden="true">→</span><span class="story-step">Teorema</span><span class="story-arrow" aria-hidden="true">→</span><span class="story-step is-current">Casos</span></p>
-        <figure class="manuscript-scene reveal reveal-right" role="img" aria-label="Prueba de resistencia de un puente"><span class="scene-picture scene-cases" aria-hidden="true"></span></figure></div>
+        </div>
       </section>
 
       <!-- FRASE CENTRAL -->
@@ -53,6 +53,9 @@ import SEO from "../../components/SEO.astro";
 
       <section class="application-section method-section">
         <div class="container">
+          <div class="cases-criterion-layout">
+            <figure class="manuscript-scene cases-criterion-illustration reveal reveal-left" role="img" aria-label="Prueba de resistencia de un puente"><span class="scene-picture scene-cases" aria-hidden="true"></span></figure>
+            <div class="cases-criterion-copy">
 
           <p class="eyebrow reveal">
             EL TEOREMA DE LA TOLERANCIA MÍNIMA
@@ -113,6 +116,8 @@ import SEO from "../../components/SEO.astro";
 
             </div>
 
+          </div>
+        </div>
           </div>
         </div>
       </section>
@@ -300,7 +305,7 @@ import SEO from "../../components/SEO.astro";
             EL RESULTADO
           </p>
 
-          <h2 class="reveal">
+          <h2 class="reveal cases-result-title">
             Cada función se evalúa por separado
           </h2>
 
@@ -538,6 +543,42 @@ import SEO from "../../components/SEO.astro";
           transition: none;
         }
       }
+    
+      /* Bridge illustration belongs with the theorem, not the page heading */
+      .cases-criterion-layout {
+        display: grid;
+        grid-template-columns: minmax(210px, 275px) minmax(0, 1fr);
+        align-items: center;
+        gap: 38px;
+      }
+      .cases-criterion-illustration {
+        width: 100%;
+        max-width: 275px;
+        justify-self: center;
+      }
+      .cases-criterion-copy { min-width: 0; }
+      .cases-criterion-copy > .eyebrow,
+      .cases-criterion-copy > h2 {
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+      }
+      @media (min-width: 861px) {
+        .cases-result-title {
+          max-width: none;
+          font-size: clamp(1.95rem, 3.05vw, 2.45rem);
+          white-space: nowrap;
+          letter-spacing: -0.035em;
+        }
+      }
+      @media (max-width: 700px) {
+        .cases-criterion-layout {
+          grid-template-columns: 1fr;
+          gap: 8px;
+        }
+        .cases-criterion-illustration { max-width: 205px !important; }
+      }
+
     </style>
 
     <script is:inline>
