@@ -1545,3 +1545,102 @@ main .section-action{margin-top:22px;display:flex;justify-content:flex-start}
   .book-question-heading { font-size: clamp(1.3rem, 5.2vw, 2rem); }
   .landing-book-title { font-size: clamp(1.6rem, 6vw, 2.2rem); }
 }
+
+
+/* Restore the cleaner, three-column Foundations layout from the V4 prototype.
+   Scoped to the home in EN and ES: content, fonts, palette and motion stay intact. */
+@media (min-width: 901px) {
+  #theory > .container > .eyebrow,
+  #theory > .container > h2 {
+    margin-left: 0;
+    margin-right: 0;
+    text-align: left;
+  }
+
+  #theory .foundation-principles {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    align-items: start;
+    max-width: none;
+    margin: 28px 0 0;
+    gap: 22px;
+  }
+
+  #theory .foundation-principle {
+    display: flex;
+    align-items: flex-start;
+    gap: 13px;
+    min-width: 0;
+    padding: 17px 0 10px;
+    border: 0;
+    border-top: 1px solid var(--line);
+  }
+
+  #theory .foundation-principle:last-child {
+    border-bottom: 0;
+  }
+
+  #theory .foundation-number {
+    flex: 0 0 auto;
+    color: var(--gold);
+    opacity: 0.85;
+    font-size: 1.55rem;
+    line-height: 1.2;
+    letter-spacing: -0.025em;
+  }
+
+  #theory .foundation-principle h3 {
+    margin: 0 0 8px;
+    color: var(--navy);
+    font-size: clamp(1.06rem, 1.4vw, 1.2rem);
+    font-weight: 700;
+    line-height: 1.3;
+  }
+
+  #theory .foundation-principle p {
+    max-width: none;
+    margin: 0;
+    font-size: 0.95rem;
+    line-height: 1.55;
+    text-align: left;
+    hyphens: none;
+  }
+
+  #theory .section-action {
+    margin-top: 16px;
+  }
+}
+
+@media (max-width: 900px) {
+  #theory .foundation-principles {
+    margin-top: 24px;
+  }
+
+  #theory .foundation-principle {
+    grid-template-columns: 64px minmax(0, 1fr);
+    gap: 20px;
+    padding: 19px 0;
+  }
+
+  #theory .foundation-number {
+    color: var(--gold);
+    opacity: 0.85;
+    font-size: 1.95rem;
+  }
+
+  #theory .foundation-principle h3 {
+    font-size: 1.15rem;
+  }
+
+  #theory .foundation-principle p {
+    font-size: 1rem;
+    line-height: 1.55;
+  }
+}
+
+@media (max-width: 560px) {
+  #theory .foundation-principle {
+    grid-template-columns: 46px minmax(0, 1fr);
+    gap: 12px;
+  }
+}
