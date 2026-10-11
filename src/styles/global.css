@@ -1484,3 +1484,64 @@ main .section-action{margin-top:22px;display:flex;justify-content:flex-start}
 @media(max-width:900px){.manuscript-split,.book-intro-split{grid-template-columns:minmax(0,1fr) 215px!important;gap:24px}.manuscript-hero .manuscript-scene{width:210px;top:0}.manuscript-hero h1,.manuscript-hero .story-trail{max-width:70%}}
 @media(max-width:650px){.manuscript-split,.book-intro-split{grid-template-columns:1fr!important;gap:17px}.manuscript-scene{max-width:260px!important;margin:0 auto}.manuscript-hero .container,.questions-page-hero.manuscript-hero .hero-content{padding-bottom:0}.manuscript-hero .manuscript-scene{position:relative;top:auto;right:auto;width:210px;max-width:210px!important;margin:8px auto 0}.manuscript-hero h1,.manuscript-hero .story-trail{max-width:none}.author-art img{max-height:350px}.book-intro-split .manuscript-scene{max-width:220px!important}}
 @media(prefers-reduced-motion:reduce){.manuscript-scene,.manuscript-scene *{animation:none!important;transition:none!important;opacity:1!important;transform:none!important}}
+
+
+/* Editorial line lengths and the questions interlude, October 2026.
+   All type remains Georgia; no new palette or animations. */
+.landing-book-title .landing-title-line,
+.landing-research-title .landing-title-line {
+  display: block;
+}
+.landing-book-title { line-height: 1.14; }
+.landing-research-title { max-width: none; }
+
+/* The Questions illustration belongs to the transition into the questions, not the hero. */
+.questions-boundary-section { padding: 16px 0 18px; background: var(--paper); }
+.questions-boundary-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 248px;
+  gap: 32px;
+  align-items: center;
+}
+.questions-boundary-layout h2 { max-width: none; margin-bottom: 0; font-size: clamp(1.8rem, 3.1vw, 2.55rem); }
+.questions-boundary-illustration { width: 100%; max-width: 248px; justify-self: end; }
+.questions-cta-content { grid-template-columns: minmax(0,1fr); gap: 12px; }
+.questions-cta-buttons { min-width: 0; align-items: flex-start; }
+
+/* Breaks explicitly chosen in the book abstract, both languages. */
+.book-question-heading { max-width: none !important; }
+.book-question-line { display: block; }
+
+@media (min-width: 1000px) {
+  .questions-cta h2.questions-proof-heading {
+    max-width: none;
+    font-size: clamp(1.95rem, 2.7vw, 2.42rem);
+    white-space: nowrap;
+    letter-spacing: -0.038em;
+  }
+  .theory-proof-heading,
+  .theorem-corollary-heading {
+    max-width: none;
+    font-size: clamp(1.95rem, 2.7vw, 2.42rem);
+    white-space: nowrap;
+    letter-spacing: -0.038em;
+  }
+}
+.theory-efficiency-heading { font-size: clamp(1.85rem, 3vw, 2.65rem); }
+.theory-efficiency-heading .heading-line { display: block; }
+@media (min-width: 850px) {
+  .theory-efficiency-heading .heading-line { white-space: nowrap; }
+  .theorem-exception-heading { max-width: none; font-size: clamp(1.85rem, 2.85vw, 2.5rem); white-space: nowrap; }
+}
+@media (max-width: 800px) {
+  .questions-boundary-layout { grid-template-columns: minmax(0,1fr) 195px; gap: 16px; }
+  .questions-boundary-illustration { max-width: 195px !important; }
+}
+@media (max-width: 600px) {
+  .questions-boundary-layout { grid-template-columns: 1fr; gap: 6px; }
+  .questions-boundary-layout h2 { font-size: clamp(1.7rem, 6vw, 2.1rem); }
+  .questions-boundary-illustration { max-width: 210px !important; justify-self: center; }
+  .theory-efficiency-heading .heading-line { white-space: normal; }
+  .book-question-heading { font-size: clamp(1.3rem, 5.2vw, 2rem); }
+  .landing-book-title { font-size: clamp(1.6rem, 6vw, 2.2rem); }
+}
