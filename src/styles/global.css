@@ -1657,26 +1657,30 @@ main .section-action.section-action-centered{justify-content:center}
 }
 
 
-/* Theory: comparison of three approaches. No changes to the site's palette or typography. */
+/* Theory: spacious, restrained comparison, aligned with the site's other sections. */
 .approaches-section {
-  padding: clamp(56px, 7vw, 88px) 0;
+  padding: var(--section-space) 0;
   background: var(--paper);
 }
-.approaches-intro {
-  max-width: 840px;
-  margin: 0 0 30px;
-  font-size: 1.08rem;
-  line-height: 1.68;
-  text-align: left;
-  hyphens: none;
+.approaches-section > .container {
+  max-width: 1320px;
+  padding-right: clamp(22px, 3.8vw, 48px);
+  padding-left: clamp(22px, 3.8vw, 48px);
 }
-.approaches-intro strong { font-weight: 700; }
+.approaches-section .eyebrow { margin-bottom: 12px; }
+.approaches-section h2 {
+  max-width: none;
+  margin-bottom: 24px;
+  font-size: clamp(1.7rem, 2.65vw, 2.45rem);
+  line-height: 1.12;
+  letter-spacing: -0.038em;
+}
 .approaches-frame {
   overflow: hidden;
   border: 1px solid rgba(13, 27, 42, 0.12);
   border-radius: 10px;
   background: var(--paper-light);
-  box-shadow: 0 16px 42px rgba(13, 27, 42, 0.045);
+  box-shadow: 0 12px 32px rgba(13, 27, 42, 0.04);
 }
 .approaches-table {
   width: 100%;
@@ -1685,34 +1689,35 @@ main .section-action.section-action-centered{justify-content:center}
   border-spacing: 0;
   table-layout: fixed;
 }
-.approaches-table col:first-child { width: 16%; }
-.approaches-table col:nth-child(2) { width: 27%; }
-.approaches-table col:nth-child(3) { width: 26%; }
+.approaches-table col:first-child { width: 18%; }
+.approaches-table col:nth-child(2) { width: 26%; }
+.approaches-table col:nth-child(3) { width: 25%; }
 .approaches-table col:nth-child(4) { width: 31%; }
 .approaches-table th,
 .approaches-table td {
-  padding: 23px 18px;
+  padding: 18px 16px;
   border-bottom: 1px solid rgba(13, 27, 42, 0.11);
   color: var(--navy);
-  font-size: 0.94rem;
-  line-height: 1.55;
+  font-size: 0.95rem;
+  line-height: 1.5;
   text-align: left;
   vertical-align: top;
-  overflow-wrap: break-word;
+  overflow-wrap: normal;
+  word-break: normal;
   hyphens: none;
 }
 .approaches-table thead th {
-  padding-top: 22px;
-  padding-bottom: 19px;
+  padding-top: 20px;
+  padding-bottom: 18px;
   background: var(--paper-light);
-  font-size: 0.98rem;
-  line-height: 1.34;
+  font-size: 0.99rem;
+  line-height: 1.3;
   font-weight: 700;
   vertical-align: bottom;
 }
 .approaches-table tbody th {
   font-weight: 700;
-  font-size: 0.96rem;
+  font-size: 0.97rem;
 }
 .approaches-table tbody tr:last-child > * { border-bottom: 0; }
 .approaches-table thead th:last-child,
@@ -1725,20 +1730,11 @@ main .section-action.section-action-centered{justify-content:center}
   box-shadow: inset 0 4px 0 var(--gold);
 }
 .approaches-table tbody td:last-child { font-weight: 600; }
-.approaches-closing {
-  max-width: 850px;
-  margin: 28px auto 0;
-  padding-top: 16px;
-  border-top: 1px solid rgba(169, 131, 58, 0.35);
-  color: var(--navy);
-  font-size: clamp(1.06rem, 1.8vw, 1.25rem);
-  line-height: 1.5;
-  font-weight: 700;
-  text-align: center;
+@media (min-width: 851px) {
+  .approaches-section h2 { white-space: nowrap; }
 }
 @media (max-width: 850px) {
-  .approaches-section { padding: 48px 0; }
-  .approaches-intro { margin-bottom: 24px; font-size: 1rem; }
+  .approaches-section h2 { font-size: clamp(1.55rem, 3.7vw, 2.05rem); }
   .approaches-frame { border: 0; border-radius: 0; background: none; box-shadow: none; overflow: visible; }
   .approaches-table,
   .approaches-table tbody,
@@ -1757,21 +1753,22 @@ main .section-action.section-action-centered{justify-content:center}
     white-space: nowrap;
   }
   .approaches-table tbody tr {
-    margin-bottom: 16px;
-    padding: 20px 22px 16px;
+    margin-bottom: 14px;
+    padding: 18px 20px 14px;
     border: 1px solid var(--line);
     border-radius: 9px;
     background: var(--paper-light);
     box-shadow: 0 8px 24px rgba(13, 27, 42, 0.035);
   }
+  .approaches-table tbody tr:last-child { margin-bottom: 0; }
   .approaches-table tbody th {
-    padding: 0 0 13px;
+    padding: 0 0 11px;
     border: 0;
-    font-size: 1.22rem;
+    font-size: 1.18rem;
     line-height: 1.3;
   }
   .approaches-table tbody td {
-    padding: 13px 0;
+    padding: 12px 0;
     border: 0;
     border-top: 1px solid var(--line);
     font-size: 0.96rem;
@@ -1787,16 +1784,16 @@ main .section-action.section-action-centered{justify-content:center}
     letter-spacing: 0.025em;
   }
   .approaches-table tbody td:last-child {
-    margin: 5px -10px -4px;
-    padding: 15px 10px 12px;
+    margin: 4px -9px -4px;
+    padding: 13px 9px 10px;
     background: rgba(169, 131, 58, 0.09);
     border: 0;
     border-radius: 5px;
   }
   .approaches-table tbody td:last-child::before { color: #866527; }
-  .approaches-closing { margin-top: 24px; }
 }
 @media (max-width: 420px) {
+  .approaches-section h2 { font-size: clamp(1.35rem, 5.8vw, 1.65rem); }
   .approaches-table tbody tr { padding: 17px 16px 13px; }
   .approaches-table tbody th { font-size: 1.13rem; }
 }
