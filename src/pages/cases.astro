@@ -54,7 +54,6 @@ import SEO from "../components/SEO.astro";
       <section class="application-section method-section">
         <div class="container">
           <div class="cases-criterion-layout">
-            <figure class="manuscript-scene cases-criterion-illustration reveal reveal-left" role="img" aria-label="Bridge undergoing a stress test"><span class="scene-picture scene-cases" aria-hidden="true"></span></figure>
             <div class="cases-criterion-copy">
 
           <p class="eyebrow reveal">
@@ -118,6 +117,7 @@ import SEO from "../components/SEO.astro";
 
           </div>
         </div>
+            <figure class="manuscript-scene cases-criterion-illustration reveal reveal-right" role="img" aria-label="Bridge undergoing a stress test"><span class="scene-picture scene-cases" aria-hidden="true"></span></figure>
           </div>
         </div>
       </section>
@@ -141,11 +141,7 @@ import SEO from "../components/SEO.astro";
               </h3>
 
               <p>
-                Territorial defense can satisfy non-excludability and
-                non-rivalry. It passes the test only if free-rider
-                incentives persistently undermine the financing,
-                coordination, or participation needed to sustain the
-                collective function
+                Territorial defense may meet non-excludability and non-rivalry. It passes only if free riding also causes persistent failure of voluntary financing, coordination, or participation
               </p>
             </article>
 
@@ -155,10 +151,7 @@ import SEO from "../components/SEO.astro";
               </h3>
 
               <p>
-                Some functions of collective security and legal order can
-                satisfy the first two conditions. The remaining burden is
-                to establish that voluntary provision persistently fails
-                to sustain the relevant function
+                Some collective security and legal-order functions may meet the first two conditions. They still require proof that voluntary provision persistently fails
               </p>
             </article>
 
@@ -168,10 +161,7 @@ import SEO from "../components/SEO.astro";
               </h3>
 
               <p>
-                Exceptional emergencies can create functions whose benefits
-                are difficult to exclude and broadly shared. They pass only
-                where persistent voluntary collapse is also established for
-                the specific function under examination
+                Major emergencies may involve non-excludable, non-rival benefits. Each function still requires proof of persistent voluntary collapse before coercion can be tolerated
               </p>
             </article>
           </div>
@@ -197,10 +187,7 @@ import SEO from "../components/SEO.astro";
               </h3>
 
               <p>
-                These goods may be essential and socially valuable, but
-                their importance does not remove rivalry or make exclusion
-                ineffective. They therefore fail before persistent voluntary
-                collapse becomes relevant
+                These services can be essential, but their importance does not establish non-excludability or non-rivalry. As general categories, they fail the first test
               </p>
             </article>
 
@@ -210,10 +197,7 @@ import SEO from "../components/SEO.astro";
               </h3>
 
               <p>
-                Restrictions on wages, contracts, benefits, and working
-                conditions may pursue distributive or paternalistic
-                goals, but those grounds do not establish the three
-                conditions required by the theorem
+                Wage and contract rules may pursue fairness or protection, but those goals do not establish the theorem's three conditions
               </p>
             </article>
 
@@ -223,11 +207,7 @@ import SEO from "../components/SEO.astro";
               </h3>
 
               <p>
-                Political influence, unequal bargaining power,
-                concentration, and undesirable conduct may raise serious
-                concerns. They do not by themselves establish effective
-                non-excludability, relevant non-rivalry, and persistent
-                collapse of voluntary provision
+                Unequal bargaining power, concentration, and misconduct can raise serious concerns. None alone proves non-excludability, non-rivalry, and persistent voluntary collapse
               </p>
             </article>
           </div>
@@ -255,10 +235,7 @@ import SEO from "../components/SEO.astro";
               </h3>
 
               <p>
-                Toll roads and private streets can permit effective
-                exclusion, while some open networks may not. Congestion,
-                technology, ownership, scale, and alternative financing
-                arrangements can change the result
+                Tolls and private streets can exclude non-contributors; some open roads cannot. Congestion, ownership, technology, and financing can change the answer
               </p>
             </article>
 
@@ -268,11 +245,7 @@ import SEO from "../components/SEO.astro";
               </h3>
 
               <p>
-                Knowledge can be difficult to exclude and can often be
-                used without diminishing what remains for others. The
-                remaining question is whether free-rider incentives
-                prevent voluntary institutions from sustaining the
-                relevant research function over time
+                Research knowledge may be hard to exclude and non-rival. The question is whether free riding persistently prevents voluntary institutions from sustaining the research
               </p>
             </article>
 
@@ -282,11 +255,7 @@ import SEO from "../components/SEO.astro";
               </h3>
 
               <p>
-                Some urban services, such as open street lighting or
-                other broadly shared local networks, may satisfy the
-                first two conditions where exclusion is impracticable.
-                The remaining question is whether voluntary provision
-                can sustain the relevant function in a stable way
+                Open street lighting may satisfy the first two conditions. The remaining question is whether voluntary provision can sustain the service
               </p>
             </article>
           </div>
@@ -306,16 +275,11 @@ import SEO from "../components/SEO.astro";
           </h2>
 
           <p class="reveal">
-            The theorem does not accept or reject the State as a
-            whole. Each function is evaluated independently, and
-            passing one creates no presumption in favor of another
+            The theorem judges each function, not the State as a whole. Passing one test creates no presumption for another
           </p>
 
           <p class="reveal">
-            Any tolerance remains contingent on the conditions that
-            supported it. Changes in technology, institutions, or
-            voluntary provision can therefore require the exception
-            to be examined again
+            Any exception must be reconsidered if technology, institutions, or voluntary alternatives change
           </p>
         </div>
       </section>
@@ -333,7 +297,7 @@ import SEO from "../components/SEO.astro";
           </h2>
 
           <p class="reveal">
-            The book puts the theorem to the test across many more cases, including those where the exception seems most plausible and its limits hardest to draw
+            The book applies the test to more cases, particularly those where the boundary is hardest to draw
           </p>
 
           <div class="section-action reveal"><a href="/book/" class="story-link">Explore the book <span aria-hidden="true">→</span></a></div>
@@ -438,7 +402,7 @@ import SEO from "../components/SEO.astro";
       }
 
       .application-card {
-        min-height: 290px;
+        min-height: 245px;
         padding: 28px;
         background: var(--paper-light);
         border: 1px solid var(--line);
@@ -543,14 +507,14 @@ import SEO from "../components/SEO.astro";
       /* Bridge illustration belongs with the theorem, not the page heading */
       .cases-criterion-layout {
         display: grid;
-        grid-template-columns: minmax(210px, 275px) minmax(0, 1fr);
+        grid-template-columns: minmax(0, 1fr) minmax(210px, 275px);
         align-items: center;
         gap: 38px;
       }
       .cases-criterion-illustration {
         width: 100%;
         max-width: 275px;
-        justify-self: center;
+        justify-self: end;
       }
       .cases-criterion-copy { min-width: 0; }
       .cases-criterion-copy > .eyebrow,
@@ -567,7 +531,7 @@ import SEO from "../components/SEO.astro";
           letter-spacing: -0.035em;
         }
       }
-      @media (max-width: 700px) {
+      @media (max-width: 840px) {
         .cases-criterion-layout {
           grid-template-columns: 1fr;
           gap: 8px;
