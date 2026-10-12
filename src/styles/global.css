@@ -1701,8 +1701,10 @@ main .section-action.section-action-centered{justify-content:center}
   padding-right: clamp(20px, 3vw, 28px);
   padding-left: clamp(20px, 3vw, 28px);
 }
-.approaches-section .eyebrow {
-  margin-bottom: 18px;
+.approaches-section > .container > p.eyebrow {
+  width: 100%;
+  max-width: none;
+  margin: 0 auto 18px;
   text-align: center;
 }
 .approaches-section h2 {
