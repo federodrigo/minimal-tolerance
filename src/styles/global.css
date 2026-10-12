@@ -1766,6 +1766,14 @@ main .section-action.section-action-centered{justify-content:center}
   box-shadow: inset 0 4px 0 var(--gold);
 }
 @media (min-width: 1101px) {
+  /* Center the heading in the page; center the compact table independently. */
+  .approaches-section > .container {
+    max-width: none;
+  }
+  .approaches-frame {
+    max-width: 727px;
+  }
+
   /* Reuse the site's cream palette for the feature labels; gold remains the focal column. */
   .approaches-table thead th:first-child,
   .approaches-table tbody th {
