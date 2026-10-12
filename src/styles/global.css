@@ -1663,9 +1663,9 @@ main .section-action.section-action-centered{justify-content:center}
   background: var(--paper);
 }
 .approaches-section > .container {
-  max-width: 1250px;
-  padding-right: clamp(22px, 3.2vw, 40px);
-  padding-left: clamp(22px, 3.2vw, 40px);
+  max-width: 1110px;
+  padding-right: clamp(22px, 3vw, 30px);
+  padding-left: clamp(22px, 3vw, 30px);
 }
 .approaches-section .eyebrow { margin-bottom: 12px; }
 .approaches-section h2 {
@@ -1689,13 +1689,13 @@ main .section-action.section-action-centered{justify-content:center}
   border-spacing: 0;
   table-layout: fixed;
 }
-.approaches-table col:first-child { width: 15%; }
-.approaches-table col:nth-child(2) { width: 27%; }
-.approaches-table col:nth-child(3) { width: 26%; }
-.approaches-table col:nth-child(4) { width: 32%; }
+.approaches-table col:first-child { width: 14%; }
+.approaches-table col:nth-child(2) { width: 28%; }
+.approaches-table col:nth-child(3) { width: 27%; }
+.approaches-table col:nth-child(4) { width: 31%; }
 .approaches-table th,
 .approaches-table td {
-  padding: 16px 13px;
+  padding: 14px 12px;
   border-bottom: 1px solid rgba(13, 27, 42, 0.11);
   color: var(--navy);
   font-size: 0.95rem;
@@ -1707,8 +1707,8 @@ main .section-action.section-action-centered{justify-content:center}
   hyphens: none;
 }
 .approaches-table thead th {
-  padding-top: 20px;
-  padding-bottom: 18px;
+  padding-top: 18px;
+  padding-bottom: 15px;
   background: var(--paper-light);
   font-size: 0.99rem;
   line-height: 1.3;
@@ -1730,10 +1730,10 @@ main .section-action.section-action-centered{justify-content:center}
   box-shadow: inset 0 4px 0 var(--gold);
 }
 .approaches-table tbody td:last-child { font-weight: 600; }
-@media (min-width: 981px) {
+@media (min-width: 1101px) {
   .approaches-section h2 { white-space: nowrap; }
 }
-@media (max-width: 980px) {
+@media (max-width: 1100px) {
   .approaches-section h2 { font-size: clamp(1.55rem, 3.7vw, 2.05rem); }
   .approaches-frame { border: 0; border-radius: 0; background: none; box-shadow: none; overflow: visible; }
   .approaches-table,
