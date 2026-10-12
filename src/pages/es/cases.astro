@@ -505,7 +505,7 @@ import SEO from "../../components/SEO.astro";
         display: grid;
         grid-template-columns: minmax(0, 1fr) minmax(210px, 275px);
         align-items: center;
-        gap: 38px;
+        gap: var(--illustration-gap);
       }
       .cases-criterion-illustration {
         width: 100%;
@@ -519,10 +519,15 @@ import SEO from "../../components/SEO.astro";
         margin-right: auto;
         text-align: center;
       }
+      @media (max-width: 900px) {
+        .cases-criterion-layout {
+          gap: var(--illustration-tablet-gap);
+        }
+      }
       @media (max-width: 840px) {
         .cases-criterion-layout {
           grid-template-columns: 1fr;
-          gap: 8px;
+          gap: var(--illustration-stack-gap);
         }
         .cases-criterion-illustration { max-width: 205px !important; }
       }

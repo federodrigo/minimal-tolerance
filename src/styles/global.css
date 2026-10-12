@@ -13,6 +13,11 @@
   --text-width: 940px;
   --section-space: 42px;
   --page-padding: 7vw;
+
+  /* Consistent text-to-illustration spacing throughout EN and ES. */
+  --illustration-gap: 36px;
+  --illustration-tablet-gap: 24px;
+  --illustration-stack-gap: 17px;
 }
 
 /* RESET */
@@ -1460,7 +1465,7 @@ main .section-action.section-action-centered{justify-content:center}
 
 
 /* Manuscript illustrations — genuine book artwork, original Georgia and palette */
-.manuscript-split{display:grid!important;grid-template-columns:minmax(0,1fr) 285px;gap:38px;align-items:center}
+.manuscript-split{display:grid!important;grid-template-columns:minmax(0,1fr) 285px;gap:var(--illustration-gap);align-items:center}
 .manuscript-copy{min-width:0}
 .manuscript-copy>p:not(.eyebrow){max-width:750px;text-align:left!important;hyphens:none!important}
 .manuscript-scene{margin:0;min-width:0;max-width:310px;width:100%;align-self:center;justify-self:center;background:none;border:0;box-shadow:none;overflow:visible}
@@ -1476,15 +1481,15 @@ main .section-action.section-action-centered{justify-content:center}
 .manuscript-hero .manuscript-scene{position:absolute;right:0;top:-32px;width:min(270px,29%);max-width:270px}
 .manuscript-hero h1,.manuscript-hero .story-trail{max-width:70%}
 .questions-page-hero.manuscript-hero .manuscript-scene{right:0;top:-20px}
-.book-intro-split{grid-template-columns:minmax(0,1fr) 285px!important;gap:35px}
+.book-intro-split{grid-template-columns:minmax(0,1fr) 285px!important;gap:var(--illustration-gap)}
 .book-intro-split .manuscript-copy{max-width:780px}
 .book-intro-split .manuscript-scene{max-width:285px}
 .author-art img{width:100%;max-height:355px;object-fit:contain;mix-blend-mode:normal;filter:none!important;-webkit-mask-image:none!important;mask-image:none!important;border-radius:0;box-shadow:none!important}
 .author-art.reveal-right{transform:translateX(18px) rotate(-1deg)}
 .author-art.reveal-right.is-visible{transform:translateX(0) rotate(-1deg)}
 @media (hover:hover) and (pointer:fine){.author-art.reveal-right.is-visible:hover{transform:translateY(-2px) rotate(-.5deg)}}
-@media(max-width:900px){.manuscript-split,.book-intro-split{grid-template-columns:minmax(0,1fr) 215px!important;gap:24px}.manuscript-hero .manuscript-scene{width:210px;top:0}.manuscript-hero h1,.manuscript-hero .story-trail{max-width:70%}}
-@media(max-width:650px){.manuscript-split,.book-intro-split{grid-template-columns:1fr!important;gap:17px}.manuscript-scene{max-width:260px!important;margin:0 auto}.manuscript-hero .container,.questions-page-hero.manuscript-hero .hero-content{padding-bottom:0}.manuscript-hero .manuscript-scene{position:relative;top:auto;right:auto;width:210px;max-width:210px!important;margin:8px auto 0}.manuscript-hero h1,.manuscript-hero .story-trail{max-width:none}.author-art img{max-height:350px}.book-intro-split .manuscript-scene{max-width:220px!important}}
+@media(max-width:900px){.manuscript-split,.book-intro-split{grid-template-columns:minmax(0,1fr) 215px!important;gap:var(--illustration-tablet-gap)}.manuscript-hero .manuscript-scene{width:210px;top:0}.manuscript-hero h1,.manuscript-hero .story-trail{max-width:70%}}
+@media(max-width:650px){.manuscript-split,.book-intro-split{grid-template-columns:1fr!important;gap:var(--illustration-stack-gap)}.manuscript-scene{max-width:260px!important;margin:0 auto}.manuscript-hero .container,.questions-page-hero.manuscript-hero .hero-content{padding-bottom:0}.manuscript-hero .manuscript-scene{position:relative;top:auto;right:auto;width:210px;max-width:210px!important;margin:8px auto 0}.manuscript-hero h1,.manuscript-hero .story-trail{max-width:none}.author-art img{max-height:350px}.book-intro-split .manuscript-scene{max-width:220px!important}}
 @media(prefers-reduced-motion:reduce){.manuscript-scene,.manuscript-scene *{animation:none!important;transition:none!important;opacity:1!important;transform:none!important}}
 
 
@@ -1502,7 +1507,7 @@ main .section-action.section-action-centered{justify-content:center}
 .questions-boundary-layout {
   display: grid;
   grid-template-columns: minmax(0, 1fr) 248px;
-  gap: 32px;
+  gap: var(--illustration-gap);
   align-items: center;
 }
 .questions-boundary-layout h2 { max-width: none; margin-bottom: 12px; font-size: clamp(1.8rem, 3.1vw, 2.55rem); }
@@ -1545,12 +1550,15 @@ main .section-action.section-action-centered{justify-content:center}
   .theory-efficiency-heading .heading-line { white-space: nowrap; }
   .theorem-exception-heading { max-width: none; font-size: clamp(1.85rem, 2.85vw, 2.5rem); white-space: nowrap; }
 }
+@media (max-width: 900px) {
+  .questions-boundary-layout { gap: var(--illustration-tablet-gap); }
+}
 @media (max-width: 800px) {
-  .questions-boundary-layout { grid-template-columns: minmax(0,1fr) 195px; gap: 16px; }
+  .questions-boundary-layout { grid-template-columns: minmax(0,1fr) 195px; gap: var(--illustration-tablet-gap); }
   .questions-boundary-illustration { max-width: 195px !important; }
 }
 @media (max-width: 600px) {
-  .questions-boundary-layout { grid-template-columns: 1fr; gap: 6px; }
+  .questions-boundary-layout { grid-template-columns: 1fr; gap: var(--illustration-stack-gap); }
   .questions-boundary-layout h2 { font-size: clamp(1.7rem, 6vw, 2.1rem); }
   .questions-boundary-illustration { max-width: 210px !important; justify-self: center; }
   .theory-efficiency-heading .heading-line { white-space: normal; }
