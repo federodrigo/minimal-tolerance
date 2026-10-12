@@ -2,6 +2,12 @@
 const today = new Date();
 
 const currentPath = Astro.url.pathname;
+const normalizePath = (path: string) => path === "/" ? "/" : path.replace(/\/+$/, "");
+const isActive = (href: string) => {
+  const current = normalizePath(currentPath);
+  const target = normalizePath(href);
+  return current === target || current.startsWith(`${target}/`);
+};
 const isSpanish = currentPath === "/es" || currentPath.startsWith("/es/");
 
 // Mantiene la página actual al cambiar de idioma.
@@ -80,7 +86,11 @@ const links = isSpanish
 
       <nav aria-label={isSpanish ? "Navegación del sitio" : "Site navigation"}>
         {links.map((link) => (
-          <a href={link.href}>
+          <a
+            href={link.href}
+            class:list={{ active: isActive(link.href) }}
+            aria-current={isActive(link.href) ? "page" : undefined}
+          >
             {link.label}
           </a>
         ))}
@@ -160,6 +170,10 @@ const links = isSpanish
     color: inherit;
     font-weight: 400;
     text-decoration: none;
+  }
+
+  nav a.active {
+    color: var(--gold);
   }
 
   nav a::after {
