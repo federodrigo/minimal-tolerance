@@ -1681,13 +1681,15 @@ main .section-action.section-action-centered{justify-content:center}
   }
 }
 
-/* Cases: restrained, bilingual three-approach comparison. */
+/* Book: restrained, bilingual three-approach comparison. */
 .approaches-section {
   padding: var(--section-space) 0;
   background: var(--paper);
 }
 .approaches-section > .container {
+  width: 100%;
   max-width: 783px;
+  margin-inline: auto;
   padding-right: clamp(20px, 3vw, 28px);
   padding-left: clamp(20px, 3vw, 28px);
 }
@@ -1704,6 +1706,8 @@ main .section-action.section-action-centered{justify-content:center}
   letter-spacing: -0.038em;
 }
 .approaches-frame {
+  width: 100%;
+  margin-inline: auto;
   overflow: hidden;
   border: 1px solid rgba(13, 27, 42, 0.12);
   border-radius: 10px;
