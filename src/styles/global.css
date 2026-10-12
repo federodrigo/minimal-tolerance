@@ -1658,6 +1658,29 @@ main .section-action.section-action-centered{justify-content:center}
 }
 
 
+
+/* Questions is also an internal reading page: match the other page heroes. */
+.hero.questions-page-hero {
+  padding-top: 34px;
+  padding-bottom: 38px;
+}
+.hero.questions-page-hero h1 {
+  margin-bottom: 16px;
+  font-size: clamp(2.6rem, 4.4vw, 4.2rem);
+  line-height: 1.05;
+}
+@media (max-width: 900px) {
+  .hero.questions-page-hero { padding-top: 32px; padding-bottom: 34px; }
+  .hero.questions-page-hero h1 { font-size: clamp(2.5rem, 7vw, 3.8rem); }
+}
+@media (max-width: 560px) {
+  .hero.questions-page-hero { padding-top: 28px; padding-bottom: 30px; }
+  .hero.questions-page-hero h1 {
+    font-size: clamp(2.2rem, 10vw, 3rem);
+    line-height: 1.07;
+  }
+}
+
 /* Cases: restrained, bilingual three-approach comparison. */
 .approaches-section {
   padding: var(--section-space) 0;
@@ -1668,7 +1691,7 @@ main .section-action.section-action-centered{justify-content:center}
   padding-right: clamp(20px, 3vw, 28px);
   padding-left: clamp(20px, 3vw, 28px);
 }
-.approaches-section .eyebrow { margin-bottom: 12px; }
+.approaches-section .eyebrow { margin-bottom: 18px; }
 .approaches-section h2 {
   max-width: none;
   margin-bottom: 24px;
