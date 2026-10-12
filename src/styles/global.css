@@ -1690,9 +1690,9 @@ main .section-action.section-action-centered{justify-content:center}
   table-layout: fixed;
 }
 .approaches-table col:first-child { width: 14%; }
-.approaches-table col:nth-child(2) { width: 24%; }
-.approaches-table col:nth-child(3) { width: 23%; }
-.approaches-table col:nth-child(4) { width: 39%; }
+.approaches-table col:nth-child(2) { width: 28.6667%; }
+.approaches-table col:nth-child(3) { width: 28.6667%; }
+.approaches-table col:nth-child(4) { width: 28.6666%; }
 .approaches-table th,
 .approaches-table td {
   padding: 14px 12px;
