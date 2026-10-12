@@ -1663,9 +1663,9 @@ main .section-action.section-action-centered{justify-content:center}
   background: var(--paper);
 }
 .approaches-section > .container {
-  max-width: 1110px;
-  padding-right: clamp(22px, 3vw, 30px);
-  padding-left: clamp(22px, 3vw, 30px);
+  max-width: 1020px;
+  padding-right: clamp(20px, 3vw, 28px);
+  padding-left: clamp(20px, 3vw, 28px);
 }
 .approaches-section .eyebrow { margin-bottom: 12px; }
 .approaches-section h2 {
@@ -1689,10 +1689,10 @@ main .section-action.section-action-centered{justify-content:center}
   border-spacing: 0;
   table-layout: fixed;
 }
-.approaches-table col:first-child { width: 14%; }
-.approaches-table col:nth-child(2) { width: 28.6667%; }
-.approaches-table col:nth-child(3) { width: 28.6667%; }
-.approaches-table col:nth-child(4) { width: 28.6666%; }
+.approaches-table col:first-child { width: 16%; }
+.approaches-table col:nth-child(2) { width: 28%; }
+.approaches-table col:nth-child(3) { width: 28%; }
+.approaches-table col:nth-child(4) { width: 28%; }
 .approaches-table th,
 .approaches-table td {
   padding: 14px 12px;
@@ -1731,6 +1731,26 @@ main .section-action.section-action-centered{justify-content:center}
 }
 .approaches-table tbody td:last-child { font-weight: 600; }
 @media (min-width: 1101px) {
+  /* Three clear column dividers without adding lines to mobile cards. */
+  .approaches-table tr > :not(:first-child) {
+    border-left: 1px solid rgba(13, 27, 42, 0.13);
+  }
+  .approaches-table thead th:last-child,
+  .approaches-table tbody td:last-child {
+    border-left-color: rgba(169, 131, 58, 0.27);
+  }
+
+  /* A slightly wider gutter after Feature, tighter text columns elsewhere. */
+  .approaches-table th,
+  .approaches-table td {
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+  .approaches-table thead th:first-child,
+  .approaches-table tbody th:first-child { padding-right: 18px; }
+  .approaches-table thead th:nth-child(2),
+  .approaches-table tbody td:nth-child(2) { padding-left: 18px; }
+
   .approaches-section h2 { white-space: nowrap; }
 }
 @media (max-width: 1100px) {
