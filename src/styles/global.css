@@ -1664,7 +1664,7 @@ main .section-action.section-action-centered{justify-content:center}
   background: var(--paper);
 }
 .approaches-section > .container {
-  max-width: 1020px;
+  max-width: 870px;
   padding-right: clamp(20px, 3vw, 28px);
   padding-left: clamp(20px, 3vw, 28px);
 }
