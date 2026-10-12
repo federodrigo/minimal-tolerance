@@ -954,7 +954,7 @@ footer nav a {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 0;
-  border-top: 1px solid var(--line);
+  border-top: 0;
 }
 
 .question-index-card {
@@ -979,6 +979,18 @@ footer nav a {
 
 .question-index-card:nth-child(even) {
   padding-left: 32px;
+}
+
+/* No decorative rules above or below the question index.
+   Preserve the divider between questions 29 and 30 on mobile. */
+.questions-index-grid .question-index-card:last-child {
+  border-bottom: 0;
+}
+
+@media (min-width: 561px) {
+  .questions-index-grid .question-index-card:nth-last-child(2) {
+    border-bottom: 0;
+  }
 }
 
 .question-index-card:hover {
