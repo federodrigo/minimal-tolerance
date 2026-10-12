@@ -529,6 +529,17 @@ const conceptSchema = {
     <Footer />
 
     <style>
+      /* Book typographic hierarchy (EN/ES): display headings rely on size,
+         gold section markers on color, and concepts/central statement on bold. */
+      .page-hero h1,
+      main h2 {
+        font-weight: 400;
+      }
+
+      main p.eyebrow {
+        font-weight: 400;
+      }
+
       /* Compact, matching book actions using the site's light and gold palette. */
       .book-access {
         display: grid;
@@ -697,7 +708,7 @@ const conceptSchema = {
         margin-top: -0.05rem;
         color: var(--gold, #b49355);
         font-size: clamp(3rem, 5vw, 4.6rem);
-        font-weight: 800;
+        font-weight: 400;
         line-height: 0.82;
         letter-spacing: -0.065em;
       }
@@ -736,6 +747,7 @@ const conceptSchema = {
       .concept-card h4 {
         margin: 0 0 0.5rem;
         font-size: clamp(1.1rem, 1.5vw, 1.32rem);
+        font-weight: 700;
         line-height: 1.2;
       }
 
