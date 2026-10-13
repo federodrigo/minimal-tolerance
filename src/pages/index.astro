@@ -80,11 +80,11 @@ import SEO from "../components/SEO.astro";
               </h2>
 
               <p>
-                Political debates often revolve around the use of power. Some call for more intervention, others for less. Rarely is there a clear criterion for determining when the exercise of that power can be tolerated.
+                Political debates often revolve around the use of power. Some call for more intervention, others for less. Rarely is there a clear criterion for determining when the exercise of that power can be tolerated
               </p>
 
               <p>
-                <strong>The Theory of Minimal Tolerance</strong> reverses the burden of proof.
+                <strong>The Theory of Minimal Tolerance</strong> reverses the burden of proof
               </p>
 
               <p>
@@ -250,6 +250,17 @@ import SEO from "../components/SEO.astro";
         flex-direction: column;
         align-items: flex-start;
         gap: 0.85rem;
+      }
+
+      /* Place the landing cover beside the book title, not centered against all the copy. */
+      @media (min-width: 901px) {
+        #book .book-grid {
+          align-items: start;
+        }
+
+        #book .book-grid > div:first-child {
+          margin-top: 42px;
+        }
       }
     </style>
 
