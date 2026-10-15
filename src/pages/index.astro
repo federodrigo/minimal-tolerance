@@ -8,6 +8,41 @@ import SEO from "../components/SEO.astro";
 
 <html lang="en">
   <head>
+    <script is:inline>
+      // Choose a language once when the visitor opens the main homepage.
+      (function () {
+        const storageKey = 'minimal-tolerance-language';
+        let preference = null;
+
+        try {
+          preference = window.localStorage.getItem(storageKey);
+        } catch (_) {
+          // Storage can be restricted or unavailable.
+        }
+
+        if (preference !== 'es' && preference !== 'en') {
+          const browserLanguage =
+            (navigator.languages && navigator.languages.length
+              ? navigator.languages[0]
+              : navigator.language) || '';
+
+          preference = /^es(?:[-_]|$)/i.test(browserLanguage) ? 'es' : 'en';
+
+          try {
+            window.localStorage.setItem(storageKey, preference);
+          } catch (_) {
+            // Detection still works for this visit.
+          }
+        }
+
+        if (preference === 'es') {
+          window.location.replace(
+            '/es/' + window.location.search + window.location.hash
+          );
+        }
+      })();
+    </script>
+
     <meta charset="UTF-8" />
 
     <meta
