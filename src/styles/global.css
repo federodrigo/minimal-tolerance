@@ -125,15 +125,30 @@ nav a.active,
 }
 
 .language-switch a {
-  opacity: 0.7;
+  position: relative;
+  color: var(--navy);
+  opacity: 0.88;
   font-size: 0.95rem;
-  font-weight: 500;
+  font-weight: 700;
 }
 
 .language-switch a.active {
   opacity: 1;
-  font-weight: 500;
-  color: var(--gold);
+  color: #80601f;
+}
+
+.language-switch a.active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -5px;
+  height: 2px;
+  background: var(--gold);
+}
+
+.language-switch a:hover {
+  opacity: 1;
 }
 
 /* Larger, more legible header navigation in both languages. */
@@ -145,9 +160,12 @@ nav a.active,
   gap: 18px;
 }
 
-.site-header nav > a,
-.site-header .language-switch a {
+.site-header nav > a {
   font-size: 1.05rem;
+}
+
+.site-header .language-switch a {
+  font-size: 1.1rem;
 }
 
 .site-header .language-switch {
