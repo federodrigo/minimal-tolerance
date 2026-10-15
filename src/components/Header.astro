@@ -102,6 +102,7 @@ const alternateLanguageUrl = isSpanish
         href={isSpanish ? alternateLanguageUrl : currentPath}
         class:list={{ active: !isSpanish }}
         aria-label="English"
+        lang="en"
       >
         EN
       </a>
@@ -112,9 +113,30 @@ const alternateLanguageUrl = isSpanish
         href={isSpanish ? currentPath : alternateLanguageUrl}
         class:list={{ active: isSpanish }}
         aria-label="Español"
+        lang="es"
       >
         ES
       </a>
     </span>
   </nav>
 </header>
+
+<script is:inline>
+  // An explicit EN/ES selection overrides the original browser preference.
+  (function () {
+    const links = document.querySelectorAll('.language-switch a[lang]');
+
+    links.forEach(function (link) {
+      link.addEventListener('click', function () {
+        const language = link.getAttribute('lang');
+        if (language !== 'es' && language !== 'en') return;
+
+        try {
+          window.localStorage.setItem('minimal-tolerance-language', language);
+        } catch (_) {
+          // Language links still work if storage is unavailable.
+        }
+      });
+    });
+  })();
+</script>
