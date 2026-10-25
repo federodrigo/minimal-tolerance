@@ -20,31 +20,35 @@ const {
 const site = Astro.site ?? new URL('https://minimaltolerance.com');
 
 const currentPath = Astro.url.pathname;
+const normalizedPath = currentPath === '/'
+	? '/'
+	: currentPath.endsWith('/')
+		? currentPath
+		: `${currentPath}/`;
 
 let englishPath: string;
 let spanishPath: string;
 
-if (currentPath === '/es' || currentPath === '/es/') {
+if (normalizedPath === '/es/') {
 	englishPath = '/';
 	spanishPath = '/es/';
-} else if (currentPath.startsWith('/es/')) {
-	englishPath = currentPath.replace(/^\/es/, '');
-	spanishPath = currentPath;
+} else if (normalizedPath.startsWith('/es/')) {
+	englishPath = normalizedPath.replace(/^\/es/, '');
+	spanishPath = normalizedPath;
 } else {
-	englishPath = currentPath;
+	englishPath = normalizedPath;
 	spanishPath =
-		currentPath === '/'
+		normalizedPath === '/'
 			? '/es/'
-			: `/es${currentPath}`;
+			: `/es${normalizedPath}`;
 }
 
-const canonicalUrl = new URL(currentPath, site);
+const canonicalUrl = new URL(lang === 'es' ? spanishPath : englishPath, site);
 const englishUrl = new URL(englishPath, site);
 const spanishUrl = new URL(spanishPath, site);
-const socialImage = image ?? (lang === 'es' ? '/images/mt-logo-social-es.png' : '/images/mt-logo-social.png');
+const socialImage = image ?? '/images/mt-logo-social.png';
 const imageUrl = new URL(socialImage, site);
-// Version the existing image URL so social crawlers re-fetch the corrected asset.
-imageUrl.searchParams.set('v', '3');
+const isSiteLogo = !image;
 const imageAlt = socialImage.includes('book-cover')
 	? (lang === 'es'
 		? 'Portada de Una Teoría de Tolerancia Mínima'
@@ -139,6 +143,11 @@ const imageAlt = socialImage.includes('book-cover')
 	property="og:image"
 	content={imageUrl}
 />
+<meta property="og:image:secure_url" content={imageUrl} />
+<meta property="og:image:type" content={isSiteLogo ? 'image/png' : 'image/jpeg'} />
+{isSiteLogo && <meta property="og:image:width" content="300" />}
+{isSiteLogo && <meta property="og:image:height" content="300" />}
+<link rel="image_src" href={imageUrl} />
 
 <meta
 	property="og:site_name"
