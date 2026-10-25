@@ -41,13 +41,17 @@ if (currentPath === '/es' || currentPath === '/es/') {
 const canonicalUrl = new URL(currentPath, site);
 const englishUrl = new URL(englishPath, site);
 const spanishUrl = new URL(spanishPath, site);
-const socialImage = image ?? (lang === 'es' ? '/images/book-cover-esp.jpg' : '/images/book-cover.jpg');
+const socialImage = image ?? '/images/mt-logo-social.png';
 const imageUrl = new URL(socialImage, site);
 // Version the existing image URL so social crawlers re-fetch the corrected asset.
-imageUrl.searchParams.set('v', '2');
-const imageAlt = lang === 'es'
-	? 'Portada de Una Teoría de Tolerancia Mínima, de Fede Rodrigo'
-	: 'Cover of A Theory of Minimal Tolerance, by Fede Rodrigo';
+imageUrl.searchParams.set('v', '3');
+const imageAlt = socialImage.includes('book-cover')
+	? (lang === 'es'
+		? 'Portada de Una Teoría de Tolerancia Mínima'
+		: 'Cover of A Theory of Minimal Tolerance')
+	: (lang === 'es'
+		? 'Logo MT de Tolerancia Mínima'
+		: 'MT logo of Minimal Tolerance');
 ---
 
 <!-- Global Metadata -->
