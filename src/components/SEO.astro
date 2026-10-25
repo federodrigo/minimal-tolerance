@@ -41,6 +41,8 @@ const englishUrl = new URL(englishPath, site);
 const spanishUrl = new URL(spanishPath, site);
 const socialImage = image ?? (lang === 'es' ? '/images/book-cover-esp.jpg' : '/images/book-cover.jpg');
 const imageUrl = new URL(socialImage, site);
+// Version the existing image URL so social crawlers re-fetch the corrected asset.
+imageUrl.searchParams.set('v', '2');
 const imageAlt = lang === 'es'
 	? 'Portada de Una Teoría de Tolerancia Mínima, de Fede Rodrigo'
 	: 'Cover of A Theory of Minimal Tolerance, by Fede Rodrigo';
@@ -155,7 +157,7 @@ const imageAlt = lang === 'es'
 <!-- Twitter -->
 <meta
 	name="twitter:card"
-	content="summary_large_image"
+	content="summary"
 />
 
 <meta
