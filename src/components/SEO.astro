@@ -41,7 +41,7 @@ if (currentPath === '/es' || currentPath === '/es/') {
 const canonicalUrl = new URL(currentPath, site);
 const englishUrl = new URL(englishPath, site);
 const spanishUrl = new URL(spanishPath, site);
-const socialImage = image ?? '/images/mt-logo-social.png';
+const socialImage = image ?? (lang === 'es' ? '/images/mt-logo-social-es.png' : '/images/mt-logo-social.png');
 const imageUrl = new URL(socialImage, site);
 // Version the existing image URL so social crawlers re-fetch the corrected asset.
 imageUrl.searchParams.set('v', '3');
