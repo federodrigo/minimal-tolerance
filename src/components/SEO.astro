@@ -12,7 +12,7 @@ const {
 	title,
 	description,
 	lang = 'en',
-	image = '/mt.png',
+	image,
 } = Astro.props;
 
 const site = Astro.site ?? new URL('https://minimaltolerance.com');
@@ -39,7 +39,11 @@ if (currentPath === '/es' || currentPath === '/es/') {
 const canonicalUrl = new URL(currentPath, site);
 const englishUrl = new URL(englishPath, site);
 const spanishUrl = new URL(spanishPath, site);
-const imageUrl = new URL(image, site);
+const socialImage = image ?? (lang === 'es' ? '/images/book-cover-esp.jpg' : '/images/book-cover.jpg');
+const imageUrl = new URL(socialImage, site);
+const imageAlt = lang === 'es'
+	? 'Portada de Una Teoría de Tolerancia Mínima, de Fede Rodrigo'
+	: 'Cover of A Theory of Minimal Tolerance, by Fede Rodrigo';
 ---
 
 <!-- Global Metadata -->
@@ -130,7 +134,7 @@ const imageUrl = new URL(image, site);
 
 <meta
 	property="og:site_name"
-	content="Minimal Tolerance"
+	content={lang === 'es' ? 'Tolerancia Mínima' : 'Minimal Tolerance'}
 />
 
 <meta
@@ -141,6 +145,11 @@ const imageUrl = new URL(image, site);
 <meta
 	property="og:locale:alternate"
 	content={lang === 'es' ? 'en_US' : 'es_ES'}
+/>
+
+<meta
+	property="og:image:alt"
+	content={imageAlt}
 />
 
 <!-- Twitter -->
@@ -167,4 +176,9 @@ const imageUrl = new URL(image, site);
 <meta
 	name="twitter:image"
 	content={imageUrl}
+/>
+
+<meta
+	name="twitter:image:alt"
+	content={imageAlt}
 />
