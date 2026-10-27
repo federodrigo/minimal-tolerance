@@ -124,13 +124,8 @@ import SEO from "../components/SEO.astro";
               </p>
 
               <p>
-                <strong>What must be demonstrated before anyone can impose their will on another?</strong>
+                What must be demonstrated before anyone can impose their will on another?
               </p>
-
-              <figure class="book-inline-endorsement" aria-label="Book endorsement">
-                <blockquote>“This fascinating book of yours makes an <span class="quote-tail">important contribution”</span></blockquote>
-                <figcaption>Walter E. Block, Ph.D.</figcaption>
-              </figure>
 
               <div class="book-landing-actions">
                 <a
@@ -145,6 +140,11 @@ import SEO from "../components/SEO.astro";
                   Explore the Book
                 </a>
               </div>
+
+              <figure lang="en" class="book-inline-endorsement" aria-label="Book endorsement">
+                <blockquote>“This fascinating book of yours makes an <span class="quote-tail">important contribution”</span></blockquote>
+                <figcaption>Walter E. Block, Ph.D.</figcaption>
+              </figure>
             </div>
           </div>
         </div>
@@ -301,7 +301,7 @@ import SEO from "../components/SEO.astro";
 
       /* An endorsement inside the book presentation, not a second banner. */
       #book .book-inline-endorsement {
-        margin: 18px 0 22px;
+        margin: 28px 0 0;
         padding-left: 18px;
         border-left: 2px solid var(--gold);
         text-align: left;
@@ -316,7 +316,7 @@ import SEO from "../components/SEO.astro";
         line-height: 1.4;
         letter-spacing: -0.015em;
         text-align: left;
-        text-wrap: balance;
+        text-wrap: pretty;
       }
 
       #book .book-inline-endorsement .quote-tail {
@@ -324,8 +324,18 @@ import SEO from "../components/SEO.astro";
       }
 
       #book .book-inline-endorsement figcaption {
-        font-size: 0.92rem;
-        line-height: 1.35;
+        font-size: 1.23rem;
+        font-weight: 600;
+        line-height: 1.28;
+      }
+
+
+      /* Keep the English endorsement on one line when the book column has room. */
+      @media (min-width: 901px) {
+        #book .book-inline-endorsement[lang="en"] blockquote {
+          font-size: clamp(1rem, 1.36vw, 1.13rem);
+          white-space: nowrap;
+        }
       }
 
     </style>
