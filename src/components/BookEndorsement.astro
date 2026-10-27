@@ -6,7 +6,7 @@ interface Props {
 const { lang = "en" } = Astro.props;
 ---
 
-<section class="book-endorsement" aria-label={lang === "es" ? "Reconocimiento al libro" : "Praise for the book"}>
+<section lang={lang} class="book-endorsement" aria-label={lang === "es" ? "Reconocimiento al libro" : "Praise for the book"}>
   <div class="container endorsement-inner">
     <figure>
       <blockquote>
@@ -16,10 +16,7 @@ const { lang = "en" } = Astro.props;
             <span class="endorsement-line">hace una <span class="quote-tail">contribución importante»</span></span>
           </>
         ) : (
-          <>
-            “This fascinating book of yours
-            <span class="endorsement-line">makes an <span class="quote-tail">important contribution”</span></span>
-          </>
+          <>“This fascinating book of yours makes an important contribution”</>
         )}
       </blockquote>
       <figcaption>Walter E. Block, Ph.D.</figcaption>
@@ -72,8 +69,19 @@ const { lang = "en" } = Astro.props;
     }
   }
 
+  .book-endorsement[lang="en"] blockquote {
+    font-size: clamp(1.18rem, 2vw, 1.65rem);
+  }
+
+  @media (min-width: 760px) {
+    .book-endorsement[lang="en"] blockquote {
+      white-space: nowrap;
+    }
+  }
+
   figcaption {
-    font-size: 0.94rem;
+    font-size: clamp(1.16rem, 2vw, 1.32rem);
+    font-weight: 600;
     line-height: 1.25;
     letter-spacing: 0.015em;
   }
