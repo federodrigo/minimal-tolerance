@@ -297,6 +297,14 @@ import SEO from "../../components/SEO.astro";
         white-space: nowrap;
       }
 
+      /* One line on desktop; allow natural wrapping on narrow screens. */
+      @media (min-width: 901px) {
+        #book .book-inline-endorsement blockquote {
+          font-size: clamp(0.88rem, 1.25vw, 1.06rem);
+          white-space: nowrap;
+        }
+      }
+
       #book .book-inline-endorsement figcaption {
         font-size: 1.23rem;
         font-weight: 600;
