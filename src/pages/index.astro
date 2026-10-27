@@ -128,16 +128,16 @@ import SEO from "../components/SEO.astro";
               </p>
 
               <div class="book-landing-actions">
-                <a href="/book" class="secondary">
-                  Explore the Book
-                </a>
                 <a
                   href="https://www.amazon.com/dp/B0HMX14TDZ"
-                  class="secondary"
+                  class="book-buy"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
                   Buy on Amazon
+                </a>
+                <a href="/book" class="book-explore">
+                  Explore the Book
                 </a>
               </div>
             </div>
@@ -281,13 +281,6 @@ import SEO from "../components/SEO.astro";
     <Footer />
 
     <style>
-      .book-landing-actions {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 0.85rem;
-      }
-
       /* Place the landing cover beside the book title, not centered against all the copy. */
       @media (min-width: 901px) {
         #book .book-grid {
