@@ -2,7 +2,6 @@
 import Header from "../../components/Header.astro";
 import Footer from "../../components/Footer.astro";
 import SEO from "../../components/SEO.astro";
-import BookEndorsement from "../../components/BookEndorsement.astro";
 ---
 
 <!doctype html>
@@ -53,8 +52,6 @@ import BookEndorsement from "../../components/BookEndorsement.astro";
         </blockquote>
       </section>
 
-      <BookEndorsement lang="es" />
-
       <!-- LIBRO -->
 
       <section id="book" class="book">
@@ -94,6 +91,11 @@ import BookEndorsement from "../../components/BookEndorsement.astro";
               <p>
                 <strong>¿Qué debe demostrarse antes de que alguien pueda imponer su voluntad a otro?</strong>
               </p>
+
+              <figure class="book-inline-endorsement" aria-label="Reconocimiento al libro">
+                <blockquote>«Este fascinante libro tuyo hace una <span class="quote-tail">contribución importante»</span></blockquote>
+                <figcaption>Walter E. Block, Ph.D.</figcaption>
+              </figure>
 
               <div class="book-landing-actions">
                 <a
@@ -274,6 +276,36 @@ import BookEndorsement from "../../components/BookEndorsement.astro";
           font-size: clamp(1rem, 4.7vw, 1.65rem);
         }
       }
+
+      /* An endorsement inside the book presentation, not a second banner. */
+      #book .book-inline-endorsement {
+        margin: 18px 0 22px;
+        padding-left: 18px;
+        border-left: 2px solid var(--gold);
+        text-align: left;
+      }
+
+      #book .book-inline-endorsement blockquote {
+        max-width: none;
+        margin: 0 0 8px;
+        font-size: clamp(1.13rem, 1.7vw, 1.35rem);
+        font-style: italic;
+        font-weight: 400;
+        line-height: 1.4;
+        letter-spacing: -0.015em;
+        text-align: left;
+        text-wrap: balance;
+      }
+
+      #book .book-inline-endorsement .quote-tail {
+        white-space: nowrap;
+      }
+
+      #book .book-inline-endorsement figcaption {
+        font-size: 0.92rem;
+        line-height: 1.35;
+      }
+
     </style>
 
     <script is:inline>
