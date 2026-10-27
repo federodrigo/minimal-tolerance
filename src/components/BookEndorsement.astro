@@ -8,9 +8,12 @@ const { lang = "en" } = Astro.props;
 
 <section class="book-endorsement" aria-label={lang === "es" ? "Reconocimiento al libro" : "Praise for the book"}>
   <div class="container endorsement-inner">
-    <p class="eyebrow">{lang === "es" ? "SOBRE EL LIBRO" : "PRAISE FOR THE BOOK"}</p>
     <figure>
-      <blockquote>“This fascinating book of yours makes an important contribution.”</blockquote>
+      <blockquote>
+        {lang === "es"
+          ? "«Este fascinante libro tuyo hace una contribución importante»."
+          : "“This fascinating book of yours makes an important contribution.”"}
+      </blockquote>
       <figcaption>Walter E. Block, Ph.D.</figcaption>
     </figure>
   </div>
@@ -18,7 +21,7 @@ const { lang = "en" } = Astro.props;
 
 <style>
   .book-endorsement {
-    padding: clamp(42px, 5vw, 66px) 0;
+    padding: clamp(20px, 2.5vw, 30px) 0;
     background: var(--navy);
     color: var(--paper-light);
     text-align: center;
@@ -28,28 +31,23 @@ const { lang = "en" } = Astro.props;
     max-width: 960px;
   }
 
-  .book-endorsement .eyebrow {
-    margin-bottom: 18px;
-    color: #d2b16d;
-  }
-
   figure {
     margin: 0;
   }
 
   blockquote {
     max-width: 860px;
-    margin: 0 auto 24px;
-    font-size: clamp(1.55rem, 3vw, 2.4rem);
+    margin: 0 auto 9px;
+    font-size: clamp(1.3rem, 2.3vw, 1.85rem);
     font-style: italic;
     font-weight: 400;
-    line-height: 1.32;
+    line-height: 1.25;
     letter-spacing: -0.025em;
   }
 
   figcaption {
-    font-size: 1rem;
-    line-height: 1.45;
+    font-size: 0.94rem;
+    line-height: 1.25;
     letter-spacing: 0.015em;
   }
 </style>
