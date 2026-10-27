@@ -2,7 +2,6 @@
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import SEO from "../components/SEO.astro";
-import BookEndorsement from "../components/BookEndorsement.astro";
 ---
 
 <!doctype html>
@@ -88,8 +87,6 @@ import BookEndorsement from "../components/BookEndorsement.astro";
         </blockquote>
       </section>
 
-      <BookEndorsement lang="en" />
-
       <!-- BOOK -->
 
       <section id="book" class="book">
@@ -129,6 +126,11 @@ import BookEndorsement from "../components/BookEndorsement.astro";
               <p>
                 <strong>What must be demonstrated before anyone can impose their will on another?</strong>
               </p>
+
+              <figure class="book-inline-endorsement" aria-label="Book endorsement">
+                <blockquote>“This fascinating book of yours makes an <span class="quote-tail">important contribution”</span></blockquote>
+                <figcaption>Walter E. Block, Ph.D.</figcaption>
+              </figure>
 
               <div class="book-landing-actions">
                 <a
@@ -296,6 +298,36 @@ import BookEndorsement from "../components/BookEndorsement.astro";
           margin-top: 42px;
         }
       }
+
+      /* An endorsement inside the book presentation, not a second banner. */
+      #book .book-inline-endorsement {
+        margin: 18px 0 22px;
+        padding-left: 18px;
+        border-left: 2px solid var(--gold);
+        text-align: left;
+      }
+
+      #book .book-inline-endorsement blockquote {
+        max-width: none;
+        margin: 0 0 8px;
+        font-size: clamp(1.13rem, 1.7vw, 1.35rem);
+        font-style: italic;
+        font-weight: 400;
+        line-height: 1.4;
+        letter-spacing: -0.015em;
+        text-align: left;
+        text-wrap: balance;
+      }
+
+      #book .book-inline-endorsement .quote-tail {
+        white-space: nowrap;
+      }
+
+      #book .book-inline-endorsement figcaption {
+        font-size: 0.92rem;
+        line-height: 1.35;
+      }
+
     </style>
 
     <script is:inline>
