@@ -10,14 +10,9 @@ const { lang = "en" } = Astro.props;
   <div class="container endorsement-inner">
     <figure>
       <blockquote>
-        {lang === "es" ? (
-          <>
-            «Este fascinante libro tuyo
-            <span class="endorsement-line">hace una <span class="quote-tail">contribución importante»</span></span>
-          </>
-        ) : (
-          <>“This fascinating book of yours makes an important contribution”</>
-        )}
+        {lang === "es"
+          ? "«Este fascinante libro tuyo hace una contribución importante»"
+          : "“This fascinating book of yours makes an important contribution”"}
       </blockquote>
       <figcaption>Walter E. Block, Ph.D.</figcaption>
     </figure>
@@ -51,21 +46,14 @@ const { lang = "en" } = Astro.props;
     text-wrap: balance;
   }
 
-  .endorsement-line {
-    display: block;
+  /* Preserve the full Spanish quotation on one line where there is room. */
+  .book-endorsement[lang="es"] blockquote {
+    font-size: clamp(1.05rem, 1.9vw, 1.55rem);
   }
 
-  .quote-tail {
-    white-space: nowrap;
-  }
-
-  @media (max-width: 720px) {
-    .endorsement-line {
-      display: inline;
-    }
-
-    .endorsement-line::before {
-      content: " ";
+  @media (min-width: 760px) {
+    .book-endorsement[lang="es"] blockquote {
+      white-space: nowrap;
     }
   }
 
