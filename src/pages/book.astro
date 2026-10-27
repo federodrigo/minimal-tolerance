@@ -257,7 +257,7 @@ const conceptSchema = {
               <div class="book-access">
                 <a
                   href="https://www.amazon.com/dp/B0HMX14TDZ"
-                  class="book-action"
+                  class="book-buy"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -265,7 +265,7 @@ const conceptSchema = {
                 </a>
                 <a
                   href="/books/a-theory-of-minimal-tolerance.pdf"
-                  class="book-action"
+                  class="book-explore"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -530,76 +530,6 @@ const conceptSchema = {
     <Footer />
 
     <style>
-      /* Compact, matching book actions using the site's light and gold palette. */
-      .book-access {
-        display: grid;
-        grid-template-columns: repeat(2, minmax(0, 192px));
-        gap: 10px;
-        width: fit-content;
-        max-width: 100%;
-        margin-top: 28px;
-      }
-
-      .book-access .book-action {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        width: 100%;
-        min-height: 48px;
-        padding: 9px 13px;
-        border: 1px solid rgba(169, 131, 58, 0.55);
-        border-radius: 999px;
-        background: var(--cream);
-        color: var(--gold);
-        font-family: inherit;
-        font-size: 1rem;
-        font-weight: 700;
-        line-height: 1.3;
-        text-align: center;
-        text-decoration: none;
-        cursor: pointer;
-        appearance: none;
-        transition:
-          background-color 260ms var(--motion-ease),
-          border-color 260ms var(--motion-ease),
-          box-shadow 260ms var(--motion-ease),
-          transform 260ms var(--motion-ease);
-      }
-
-      .book-access .book-action:hover,
-      .book-access .book-action:focus-visible {
-        background: var(--paper-light);
-        border-color: var(--gold);
-        box-shadow: 0 8px 18px rgba(13, 27, 42, 0.09);
-        transform: translateY(-2px);
-      }
-
-      .book-access .book-action:focus-visible {
-        outline: 2px solid var(--gold);
-        outline-offset: 3px;
-      }
-
-      .book-access .book-action[aria-disabled="true"] {
-        cursor: not-allowed;
-      }
-
-      @media (max-width: 620px) {
-        .book-access {
-          grid-template-columns: minmax(0, 192px);
-        }
-      }
-
-      @media (prefers-reduced-motion: reduce) {
-        .book-access .book-action {
-          transition: none;
-        }
-
-        .book-access .book-action:hover,
-        .book-access .book-action:focus-visible {
-          transform: none;
-        }
-      }
-
       /* Anchor the cover to the text heading, independent of copy length. */
       .book-page-section .book-grid {
         align-items: start;
