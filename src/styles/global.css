@@ -1747,6 +1747,9 @@ main .section-action.section-action-centered{justify-content:center}
   line-height: 1.12;
   letter-spacing: -0.038em;
 }
+.approaches-heading-accent {
+  color: var(--gold);
+}
 .approaches-frame {
   width: 100%;
   margin-inline: auto;
