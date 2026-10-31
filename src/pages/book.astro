@@ -137,8 +137,8 @@ const bookPdfUrl = "https://minimaltolerance.com/books/a-theory-of-minimal-toler
 // Add the verified public book-record URLs here once both repositories publish them.
 // Keep this section hidden until the links can take visitors directly to the book.
 const mpraBookUrl = "";
-const philArchiveBookUrl = "";
-const showAcademicRepositories = Boolean(mpraBookUrl && philArchiveBookUrl);
+const philArchiveBookUrl = "https://philarchive.org/rec/RODATO-3";
+const showAcademicRepositories = Boolean(mpraBookUrl || philArchiveBookUrl);
 
 const bookSchema = {
   "@context": "https://schema.org",
@@ -277,11 +277,15 @@ const conceptSchema = {
               </div>
               {showAcademicRepositories && (
                 <div class="book-academic-repositories">
-                  <p>Also available in academic repositories</p>
+                  <p>{mpraBookUrl && philArchiveBookUrl ? "Also available in academic repositories" : "Available in an academic repository"}</p>
                   <div class="book-repository-links">
-                    <a href={mpraBookUrl} target="_blank" rel="noopener noreferrer">MPRA</a>
-                    <span aria-hidden="true">·</span>
-                    <a href={philArchiveBookUrl} target="_blank" rel="noopener noreferrer">PhilArchive</a>
+                    {mpraBookUrl && (
+                      <a href={mpraBookUrl} target="_blank" rel="noopener noreferrer">MPRA</a>
+                    )}
+                    {mpraBookUrl && philArchiveBookUrl && <span aria-hidden="true">·</span>}
+                    {philArchiveBookUrl && (
+                      <a href={philArchiveBookUrl} target="_blank" rel="noopener noreferrer">PhilArchive</a>
+                    )}
                   </div>
                 </div>
               )}
