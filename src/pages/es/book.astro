@@ -134,6 +134,12 @@ const pageUrl = new URL(
 
 const bookPdfUrl = "https://minimaltolerance.com/books/una-teoria-de-tolerancia-minima.pdf";
 
+// Add the verified public book-record URLs here once both repositories publish them.
+// Keep this section hidden until the links can take visitors directly to the book.
+const mpraBookUrl = "";
+const philArchiveBookUrl = "";
+const showAcademicRepositories = Boolean(mpraBookUrl && philArchiveBookUrl);
+
 const bookSchema = {
   "@context": "https://schema.org",
   "@type": "Book",
@@ -269,6 +275,16 @@ const conceptSchema = {
                   Leer gratis (PDF)
                 </a>
               </div>
+              {showAcademicRepositories && (
+                <div class="book-academic-repositories">
+                  <p>También disponible en repositorios académicos</p>
+                  <div class="book-repository-links">
+                    <a href={mpraBookUrl} target="_blank" rel="noopener noreferrer">MPRA</a>
+                    <span aria-hidden="true">·</span>
+                    <a href={philArchiveBookUrl} target="_blank" rel="noopener noreferrer">PhilArchive</a>
+                  </div>
+                </div>
+              )}
             </div>
           </div>
         </div>
@@ -536,6 +552,39 @@ const conceptSchema = {
     <Footer />
 
     <style>
+
+      /* Repository records are secondary to purchase and PDF access. */
+      .book-academic-repositories {
+        margin-top: 1.1rem;
+        font-size: 0.84rem;
+        line-height: 1.55;
+      }
+
+      .book-academic-repositories p {
+        margin: 0 0 0.18rem;
+        color: rgba(13, 27, 42, 0.65);
+        font-size: inherit;
+        line-height: inherit;
+      }
+
+      .book-repository-links {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 0.65rem;
+      }
+
+      .book-repository-links a {
+        color: var(--gold);
+        text-decoration: underline;
+        text-underline-offset: 3px;
+      }
+
+      .book-repository-links a:hover,
+      .book-repository-links a:focus-visible {
+        color: var(--navy);
+      }
+
       /* Anchor the cover to the text heading, independent of copy length. */
       .book-page-section .book-grid {
         align-items: start;
