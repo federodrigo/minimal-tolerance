@@ -472,7 +472,7 @@ const conceptSchema = {
 
           <!-- CONSEQUENCES -->
 
-          <div class="concept-group">
+          <div class="concept-group concept-group-final">
             <div class="concept-group-heading reveal">
               <span class="concept-number">03</span>
 
@@ -721,6 +721,16 @@ const conceptSchema = {
       .concept-card:nth-child(even) {
         padding-left: 1.65rem;
         border-left: 1px solid rgba(13, 27, 42, 0.16);
+      }
+
+      .concept-group-final .concept-card:last-child {
+        border-bottom: 0;
+      }
+
+      @media (min-width: 561px) {
+        .concept-group-final .concept-card:nth-last-child(2) {
+          border-bottom: 0;
+        }
       }
 
       .concept-card h4 {
